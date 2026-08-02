@@ -34,6 +34,7 @@
 ## 基本ルール
 
 - 回答は必ず **日本語** で行う。
+- **ブランチ運用（`AGENTS.md` §10）を厳守**: Unity 操作用 Cowork プロジェクト「Unity周り」では `develop`、本 Cowork プロジェクト（創作 DB 側）では `master` で作業する。`master` では Unity MCP 経由のバイブコーディングを行わない。
 - 本リポジトリは Unity プロジェクト。`Library/` `Temp/` `Logs/` `obj/` `UserSettings/` 等の生成物は編集・コミット対象にしない（詳細は `AGENTS.md` §9）。
 - 大きな変更（多数ファイル生成・構成変更など）を行う前に、まず計画を提示して User に確認する。
 

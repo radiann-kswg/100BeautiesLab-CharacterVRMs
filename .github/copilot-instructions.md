@@ -19,6 +19,7 @@
 - `Library/` `Temp/` `Logs/` `obj/` `UserSettings/` などの生成物ディレクトリは編集・コミット対象にしない。
 - `.meta` ファイルは Unity 管理。アセット操作時は整合に注意し、手動で乱造しない。
 - VRM 等のバイナリアセットの改変は User の明示的な依頼がある場合のみ。
+- ブランチ運用は `AGENTS.md` §10 を厳守（Unity MCP 作業は `develop`、非 Unity 作業は `master`）。
 - 詳細は `AGENTS.md` §9 を参照。
 
 ---
