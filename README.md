@@ -37,16 +37,27 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 
 ### ナンバーテールズ (NumberTales)
 
-| フォルダ | VRM ファイル | 備考 |
-| --- | --- | --- |
-| `NumberTales/Corefolder-4` | `vrm_corefolder4.vrm` | 導入済み |
-| `NumberTales/Corefolder-16` | `vrm_corefolder16.vrm` | 導入済み |
-| `NumberTales/Corefolder-20` | `vrm_corefolder20.vrm` | 導入済み |
-| `NumberTales/Corefolder-25` | `vrm_corefolder25.vrm` | 導入済み |
-| `NumberTales/Corefolder-9` | — | 準備中（プレースホルダー） |
-| `NumberTales/Corefolder-93` | — | 準備中（プレースホルダー） |
+| フォルダ | VRM ファイル | サムネイル | 備考 |
+| --- | --- | --- | --- |
+| `NumberTales/Corefolder-4` | `vrm_corefolder4.vrm` | `vrm_corefolder4.png` | 導入済み |
+| `NumberTales/Corefolder-16` | `vrm_corefolder16.vrm` | `vrm_corefolder16.png` | 導入済み |
+| `NumberTales/Corefolder-20` | `vrm_corefolder20.vrm` | `vrm_corefolder20.png` | 導入済み |
+| `NumberTales/Corefolder-25` | `vrm_corefolder25.vrm` | `vrm_corefolder25.png` | 導入済み |
+| `NumberTales/Corefolder-22` | `VRCModel_CoreFloder-22.vrm` | — | 導入済み（サムネイル未整備） |
+| `NumberTales/Corefolder-93` | `VRCModel_CoreFloder-93.vrm` | — | 導入済み（サムネイル未整備） |
 
 各キャラクターの公式設定は [100BeautiesLab_CreationsDB](https://github.com/radiann-kswg/100BeautiesLab_CreationsDB) のデータベース（Works_NumberTales）を参照してください。
+
+### AI 生成パイプラインからの参照（2026-08-29 新設）
+
+`vrm_corefolder<番号>.png`（各 `Corefolder-<番号>/` 直下のサムネイル）は、
+[100BeautiesLab_GeneratorsAI](https://github.com/radiann-kswg/100BeautiesLab_GeneratorsAI) の画像生成パイプラインが
+**「3D 原典モデルの作風アンカー」として最優先参照に注入**します（環境変数 `NT_VRM_STYLE_REFS_DIR` に
+`Assets/100BeautiesLab-CharacterVRM/NumberTales/` を指定。ファイル名 glob で解決）。
+
+- サムネイルの **ファイル名（`vrm_corefolder<番号>.png`）と配置を変更する場合**は、GeneratorsAI 側
+  （`src/utils/dataset.py` の `_collect_vrm_style_refs`）への影響を確認してください。
+- 新規モデル導入時は同名規則でサムネイルを書き出すと、追加作業なしで生成参照に反映されます。
 
 ---
 
