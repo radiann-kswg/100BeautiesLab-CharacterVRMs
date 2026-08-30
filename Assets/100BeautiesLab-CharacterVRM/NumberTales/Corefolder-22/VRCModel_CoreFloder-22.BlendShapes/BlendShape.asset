@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: BlendShape
   m_EditorClassIdentifier: VRM::VRM.BlendShapeAvatar
   Clips:
-  - {fileID: 11400000, guid: f68796a877847284186f81c5fa6f0758, type: 2}
-  - {fileID: 11400000, guid: 2eaf4f1d855d4274bb8f7d9535fb4e43, type: 2}
-  - {fileID: 11400000, guid: cbd51c5a8232dea4a9f4942197cdad52, type: 2}
-  - {fileID: 11400000, guid: e61a85ea93c22384d91290203bf9f436, type: 2}
-  - {fileID: 11400000, guid: 7b14c720f65872043ad1e3186d944a79, type: 2}
-  - {fileID: 11400000, guid: b446e5072f9dfe14e9ffd83bdb3940e1, type: 2}
-  - {fileID: 11400000, guid: 3145f6ccda94c934a85086da3213b092, type: 2}
-  - {fileID: 11400000, guid: f2919e37997427744bdef83a7b5c0332, type: 2}
-  - {fileID: 11400000, guid: 461bb997c3f31294585d9350c126d6af, type: 2}
-  - {fileID: 11400000, guid: 628718ff07ddc004e9b8b7502e3aa20e, type: 2}
-  - {fileID: 11400000, guid: 7f3b36a4b1ae55e45b30f3dcb7f6c9be, type: 2}
-  - {fileID: 11400000, guid: f3e6fac684323974e8b5c6a5672a5309, type: 2}
-  - {fileID: 11400000, guid: 647e81ebd0a0a424b87c0fc5e5e86500, type: 2}
-  - {fileID: 11400000, guid: d7f7bb501eab202418233adcde536481, type: 2}
-  - {fileID: 11400000, guid: bceea9296f490cd4e8e142a740d768cc, type: 2}
-  - {fileID: 11400000, guid: 3583dc4acdce410489b4764849f5c3ae, type: 2}
-  - {fileID: 11400000, guid: b34bb7e539b6b764892e795c02b67f8a, type: 2}
+  - {fileID: 11400000, guid: b8da5ea3cfc9b4ffcbba9a4f45084344, type: 2}
+  - {fileID: 11400000, guid: 24ff880423d434da8be3e62c29a276f6, type: 2}
+  - {fileID: 11400000, guid: 17ff8acfbaae14b9196684905d08d92b, type: 2}
+  - {fileID: 11400000, guid: cbb22b7ddfda54cb697f876274029002, type: 2}
+  - {fileID: 11400000, guid: 5d3d0d36bcbae46608cead4f40c2b640, type: 2}
+  - {fileID: 11400000, guid: 7aba6f966f4884f0ab9276638d1f9b29, type: 2}
+  - {fileID: 11400000, guid: 74c872c8de8e84b3b95080f6bee7752e, type: 2}
+  - {fileID: 11400000, guid: 5e8c9355ffa78482ab5a84d051528bcf, type: 2}
+  - {fileID: 11400000, guid: b123c27b5ac544408bc3f87d3680497d, type: 2}
+  - {fileID: 11400000, guid: 178e004681c1f409ea48d87c21243286, type: 2}
+  - {fileID: 11400000, guid: ef917195a515d4df0a92ec156b780c81, type: 2}
+  - {fileID: 11400000, guid: d9245a29c248c414d8e6276d23e7a444, type: 2}
+  - {fileID: 11400000, guid: f2e4c45bfbe4a4954b394dc1b118c767, type: 2}
+  - {fileID: 11400000, guid: 82b7be9ff54c6484d8b61c1fe1209a16, type: 2}
+  - {fileID: 11400000, guid: ab04daab30d8f4b73909da9bba5e328d, type: 2}
+  - {fileID: 11400000, guid: 32407678ee05a4b958abdec6b8c9c789, type: 2}
+  - {fileID: 11400000, guid: fe071e0be321d4e43af249696423ad48, type: 2}
