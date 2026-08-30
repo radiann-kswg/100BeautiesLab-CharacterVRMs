@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
   m_Name: Meta
   m_EditorClassIdentifier: VRM::VRM.VRMMetaObject
-  ExporterVersion: UniVRM-0.129.1
+  ExporterVersion: saturday06_blender_vrm_exporter_experimental_3.19.2
   Title: CoreFolder-93
   Version: 1
   Author: radian
