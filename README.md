@@ -63,7 +63,7 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 
 ## 技術情報
 
-- **Unity**: 6000.3.16f1（Unity 6）
+- **Unity**: 6000.3.23f1（Unity 6）
 - **VRM**: [UniVRM](https://github.com/vrm-c/UniVRM) v0.131.1（UniGLTF / VRM 0.x / VRM 1.0）
 
 ### ディレクトリ構成（抜粋）
