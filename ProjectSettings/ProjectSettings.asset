@@ -930,7 +930,7 @@ PlayerSettings:
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: 100BeautiesLab-CharacterVRMs
-  organizationId: nplottetrradian
+  organizationId: 100beautieslab
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
