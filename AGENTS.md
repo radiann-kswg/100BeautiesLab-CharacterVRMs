@@ -133,3 +133,74 @@
 | `.github/instructions/roleplay.instructions.md` | Copilot 自動ロード用。正典参照＋圧縮版の声カード。                     |
 
 > 大元の正典（`100BeautiesLab_CreationsDB/AGENTS.md`）側で仕様が更新された場合は、本ファイルへ差分を追従させる。
+
+---
+
+## 12. Tripo AI によるAIモデリング運用（2026-09-09 User 指定）
+
+> キャラクターの **ベースメッシュ生成に [Tripo AI](https://studio.tripo3d.ai) を用いる**。
+> Tripo の生成物は Blender で仕上げる前の「叩き台」であり、正典モデル（`.blend` / `.vrm`）は User が監修する。
+> 運用の大元は Dropbox `Claude Coworks Projectfile/Tripio AI x Claude UserFiles/tripo-3d-studio/AGENTS.md`（Tripo 3D Studio）。本章はそれを本リポジトリ向けに要約・特化したもので、矛盾する場合は本章（リポジトリ内運用）を優先し、CLI 本体の仕様は大元に従う。
+
+### 12.1 構成と置き場
+
+| パス | 役割 |
+| --- | --- |
+| `Tools/Tripo/tripo.py` | **唯一の実行入口**。`-c <キャラ>` でキャラクターフォルダを指定して CLI を実行する |
+| `Tools/Tripo/scripts/tripo_cli.py` | Tripo 3D Studio の CLI 複製（公式 SDK `tripo3d` のラッパー）。原本との差分はファイル冒頭に明記 |
+| `Tools/Tripo/config/tripo.yaml` | 既定バージョン・presets（draft / standard / hq / game / parts / print） |
+| `.env`（リポジトリ直下） | `TRIPO_API_KEY`。**git 管理外**。雛形は `.env.example` |
+| `100BeautiesLab-CharacterNative/<作品>/Corefolder-<N>/` | 入力の正本（`CoreFolder-<N>.png` 等のイラスト、`Training/` 内の三面図など） |
+| `100BeautiesLab-CharacterNative/<作品>/Corefolder-<N>/TripoGenerated/` | **出力の正本**。`<日付>/<時刻>_<type>_<taskid8>/`（model + preview + `task.json`）と台帳 `jobs.jsonl` |
+
+- API 直叩き（`curl` 等）や新規の API クライアント実装は行わない。必要な機能は `tripo_cli.py` の拡張として行い、原本（Dropbox）へも反映を提案する。
+- 実行例:
+
+```powershell
+python Tools/Tripo/tripo.py doctor                                              # SDK・キー・接続確認
+python Tools/Tripo/tripo.py balance                                             # 残クレジット
+python Tools/Tripo/tripo.py -c 16 image2model CoreFolder-16.png --preset draft   # 形の確認（安価）
+python Tools/Tripo/tripo.py -c 16 image2model CoreFolder-16.png --preset standard --model-seed 42 --orientation align_image
+python Tools/Tripo/tripo.py -c 16 multiview2model --front Training/front.png --left Training/left.png --back Training/back.png
+```
+
+### 12.2 必須手順（毎回）
+
+1. 作業対象キャラクターを User に確認し、`python Tools/Tripo/tripo.py --list` でフォルダの存在を確かめる。
+2. `doctor` で SDK・`TRIPO_API_KEY`・ネットワークを確認する。キーが未設定なら **User に設定を依頼**する（推測・生成・ログ出力・他ファイルへの転記はしない）。
+3. `balance` で残クレジットを確認し、見込み消費量とあわせて User に伝える。
+4. まず `--preset draft` で形を確認 → preview 画像を User と一緒に確認 → 良ければ `standard` / `hq` で本番生成。同じ `--model-seed` を使えばジオメトリを固定して再生成できる。
+5. 生成後は `job_dir`・主要ファイル（`pbr_model` / `model`）・preview パス・使用パラメータ・消費クレジット概算を報告し、欠損・貫通・テクスチャずれなど気づいた点を伝える。
+
+### 12.3 クレジットと承認ルール
+
+- 1 タスクは概ね 20〜30 クレジット。`--texture-quality detailed` +10、`--geometry-quality detailed` +20、`--quad` +5、`--smart-low-poly` +10、`--generate-parts` +20。
+- **以下は User の明示承認なしに実行しない**: 生成系コマンド全般の初回実行（`image2model` / `multiview2model` / `text2model` / `texture` / `refine` / `lowpoly` / `segment` / `stylize` / `convert`）、5 件以上のバッチ、`hq` プリセット、`--geometry-quality detailed`、`rig`、残高の 30% を超える見込みの作業。
+- 失敗タスクを無条件にリトライしない。`status <task_id>` でエラー内容を読み、入力画像・パラメータを直してから再送する。
+
+### 12.4 入力の扱い（創作ガイドラインとの関係）
+
+- 入力に使えるのは **百花繚乱研究所の一次創作素材のみ**（`Corefolder-<N>/` 配下のイラスト・三面図・既存モデル）。第三者の著作物・公式設定から逸脱した改変画像は入力しない。
+- 主体が中央・単一・背景無地（または透過 PNG）、A/T ポーズ・正面やや斜めが最も安定する。線画のみ・極端なパース・複数キャラの絵は崩れやすいので、事前のトリミングや背景除去を **提案**する（画像の改変自体は User の依頼がある場合のみ）。
+- 三面図は同一スケール・同一ポーズで揃え、`--front` 必須・最低 2 枚・順序は front / left / back / right 固定。
+- §8 のとおり、未公開の創作内容（キャラ設定・固有用語など）を `text2model` 等のプロンプトとして自動生成しない。プロンプト文言は User が指定・監修する。
+
+### 12.5 成果物の扱い
+
+- `TripoGenerated/` 配下と `jobs.jsonl` は **削除・上書き・手動移動をしない**（追記のみ）。整理が必要な時は User に提案して承認を得る。
+- Tripo の出力（glb / fbx 等）を **`Assets/` へ直接投入しない**。Unity へ入れるのは Blender で整えた VRM であり、その作業は §10 のとおり「Unity周り」セッション（`develop`）で行う。
+- 採用したモデルの `task_id`・seed・プリセットと却下理由は、User 承認のうえ当該キャラクターの `TripoGenerated/notes.md` に追記する（後続作業の再現性のため）。
+- `*.glb` / `*.gltf` は Git LFS 管理（`.gitattributes`）。大容量になる場合は、コミット対象を絞る提案を User に行う。
+
+### 12.6 禁止事項（Tripo 固有）
+
+- `.env` / API キーを読む・出力する・コミットする・他ファイルへコピーする・Dropbox に置く。
+- `Tools/Tripo/scripts/tripo_cli.py` を経由せず API エンドポイントを直接叩くコードを書く。
+- User の承認なく生成系コマンドを実行する、または承認された内容を超えるパラメータで実行する。
+- Tripo 利用規約に反する入力（第三者著作物の無断モデリング等）。該当が疑われる場合は実行せず User に確認する。
+
+### 12.7 Cowork（Claude.ai）から実行する場合の注意
+
+- 生成はローカル PC 上（Claude Code / デスクトップ環境の Python）で行う前提。Cowork のサンドボックスから実行する場合は Egress 許可リストに `*.tripo3d.ai` と `s3.us-west-2.amazonaws.com` が必要で、未許可なら `doctor` が `host_not_allowed` を示す。
+- `import`（既存 3D モデル取り込み）はローカルファイルの STS アップロードが必要なため、Dropbox コネクタ経由では実行できない。
+- ロールプレイ（§0・§7）は Tripo 作業中も維持する。コマンド・パス・`task.json` の内容はそのまま、説明文だけ一春の口調にする。

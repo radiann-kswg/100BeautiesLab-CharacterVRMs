@@ -1,0 +1,64 @@
+# Tripo AI 既定設定 — 100BeautiesLab-CharacterVRMs 用
+# 原本: Dropbox `Claude Coworks Projectfile/Tripio AI x Claude UserFiles/tripo-3d-studio/config/tripo.yaml`
+# 本ファイルは原本の複製に、リポジトリ内運用向けの変更 (末尾 dropbox セクション) を加えたもの。
+# 参照: https://docs.tripo3d.ai  (モデル世代: P1 / H3 / H2 / Turbo)
+
+# 生成 (image/multiview/text → model) の既定バージョン
+#   v3.1-20260211  : H3 最新。高忠実度ジオメトリ、最大 1.5M 面 (Ultra 2M)
+#   v3.0-20250812  : H3 前版
+#   P1-20260311    : ローポリ最適化 (ゲーム向け)
+#   v2.5-20250123  : H2 (安定・安価)
+#   Turbo-v1.0-20250506 : 高速ドラフト
+default_version: v3.1-20260211
+texture_version: v3.0-20250812     # texture_model の既定
+rig_version:     v2.0-20250506     # rig_model の既定
+
+poll_interval: 5      # 秒
+timeout: 1800         # 秒 (30 分)
+
+# --preset で呼び出せるパラメータ束。CLI の明示引数が優先される。
+# クレジット目安: 基本 20〜30 + detailed texture +10 / detailed geometry +20 / quad +5 / smart_low_poly +10 / parts +20
+presets:
+  draft:            # まず形を確認したい時 (最安・最速)
+    model_version: Turbo-v1.0-20250506
+    texture: false
+    pbr: false
+  standard:         # 通常品質
+    model_version: v3.1-20260211
+  hq:               # 最高品質 (Ultra ジオメトリ + 4K テクスチャ)
+    model_version: v3.1-20260211
+    geometry_quality: detailed
+    texture_quality: detailed
+  game:             # ゲームアセット向けローポリ (四角面, FBX)
+    model_version: P1-20260311
+    smart_low_poly: true
+    quad: true
+    face_limit: 8000
+  parts:            # パーツ分割 (テクスチャ無し)
+    model_version: v3.1-20260211
+    generate_parts: true
+    texture: false
+    pbr: false
+  print:            # 3D プリント向け (テクスチャ無し・実寸)
+    model_version: v3.1-20260211
+    texture: false
+    pbr: false
+    face_limit: 500000
+
+# ---- Dropbox コンテキスト -------------------------------------------------
+# 本リポジトリでは入力・成果物の正本を
+#   100BeautiesLab-CharacterNative/<作品>/Corefolder-<N>/TripoGenerated/
+# に置くため、Dropbox 側 (01_inputs / 02_outputs) への自動解決・ミラーは使わない。
+# Dropbox の資料 (00_context 等) を参照したい時だけ環境変数 TRIPO_DROPBOX_ROOT に同期先を指定する。
+dropbox:
+  remote_path: "/Claude Coworks Projectfile/Tripio AI x Claude UserFiles"
+  remote_ns_path: "ns:2227601027//Claude Coworks Projectfile/Tripio AI x Claude UserFiles"
+  local_root: ""            # 空 = 自動解決しない (TRIPO_DROPBOX_ROOT で任意指定)
+  layout:
+    context:   "00_context"
+    images:    "01_inputs/images"
+    multiview: "01_inputs/multiview"
+    models:    "01_inputs/models"
+    outputs:   "02_outputs"
+    logs:      "03_logs"
+  mirror_outputs: false     # 成果物はリポジトリ内 (TripoGenerated/) が正本。Dropbox へはコピーしない

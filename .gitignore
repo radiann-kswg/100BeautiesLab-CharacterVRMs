@@ -105,3 +105,13 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# ---- 100BeautiesLab: Tripo AI (Tools/Tripo) ----
+# API キー等のローカル環境変数 (雛形 .env.example はコミットする)
+.env
+.env.*
+!.env.example
+# キャラクター未指定で実行した時の一時出力
+/Tools/Tripo/outputs/
+/Tools/Tripo/logs/
+__pycache__/
