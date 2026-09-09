@@ -108,17 +108,31 @@
 
 ---
 
+## 9.1 ナンバーテールズ・コアフォルダの作風とモデル制作の規範
+
+> 2026-09-09 User指定。新規制作・修正・学習・評価に適用する。
+
+- **既存VRMの #4・#16・#20・#22・#25・#93 の6体を、作風・質感・モデル構造の規範とする。** `Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-{番号}/` の実VRMと、対応する `100BeautiesLab-CharacterNative/NumberTales/` の制作データを確認する。
+- 顔・目・頬・髪・尻尾の表現、体形と面の作り方、テクスチャ、MToonの陰影・輪郭、表情と骨格の扱いを6体と比較して制作する。正面・側面・背面を同じ撮影条件で並べ、差分と未調整部分を示す。
+- 対象キャラの形・色・尻尾数・付属品は `100BeautiesLab_CreationsDB` の公式設定・資料を優先する。規範モデル固有の衣装や特徴を移植する際は対象の設定との一致を確認する。#4（モチ）の肩衣装は共通素体に含めない。
+- 共通の胴体には `100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend` を活用する。規範モデルの骨格・表情・材質を再利用する場合は出典と変更点を記録する。
+- 画像学習では、6体の実VRMを撮影した三面図を作風・質感の規範として扱い、生成三面図は対象デザイン資料として役割を区別する。未承認の生成結果を規範6体の代わりに扱わない。
+- 点群の追加学習、画像の作風学習、実VRMの造形・材質調整の達成状況を別々に報告する。生成画像や粗い点群を完成VRMと評価しない。
+
+---
+
 ## 10. ブランチ運用（必読）
 
 > `NinthDeveloppersCreation/AGENTS.md` 2章と対をなす運用ルール（2026-08-02 User 指定）。
 
 | ブランチ | 役割 | AIエージェントの扱い |
 | --- | --- | --- |
-| `develop` | **Unity 操作用 Cowork プロジェクト「Unity周り」での作業用ブランチ** | Unity MCP 経由のバイブコーディング・Unity エディタ操作を伴う作業はすべてここで行う |
+| `develop` | **Unity 操作用 Cowork プロジェクト「Unity周り」での作業用ブランチ** | CodexのVRM学習・制作以外のUnity MCP・Unityエディタ作業を行う |
+| `codex-training` | **CodexによるVRMモデル学習・制作の作業用ブランチ** | 学習データ整備・追加訓練・キャラクター制作基盤の構築を行う。Blender MCP・OSS版Unity MCP・Unityエディタ操作もこのブランチで行う（2026-09-09 User指定） |
 | `master` | **本 Cowork プロジェクト（創作 DB 側）での作業用ブランチ・安定版** | **Unity MCP 経由でのバイブコーディングを行わない**。ドキュメント・設定ファイル等の非 Unity 作業はここで行う |
 
-- 作業開始前に `git branch --show-current` で現在ブランチを確認し、セッションの種類（Unity周り = `develop` ／ 本プロジェクト = `master`）と一致していることを確認する。
-- `develop` → `master` へのマージは **User が実施**する。エージェントはマージ・push を代行しない（push は User の明示指示があった場合のみ、そのセッションの作業ブランチに対して行う）。
+- 作業開始前に `git branch --show-current` で現在ブランチを確認し、作業の種類（CodexのVRM学習・制作 = `codex-training` ／ その他のUnity周り = `develop` ／ 創作DB側の非Unity作業 = `master`）と一致していることを確認する。
+- `codex-training` から他ブランチへのマージ、および `develop` → `master` へのマージは **User が実施**する。エージェントはマージ・push を代行しない（push は User の明示指示があった場合のみ、そのセッションの作業ブランチに対して行う）。
 - セッションの種類と異なるブランチにいる状態を検出した場合は作業を中断し、User に報告して指示を仰ぐこと。
 
 ---

@@ -5,16 +5,8 @@ import sys
 import bpy
 import numpy as np
 
-ap = argparse.ArgumentParser()
-ap.add_argument("--run", type=Path, required=True)
-args = ap.parse_args(sys.argv[sys.argv.index("--") + 1:])
-if not bpy.app.background:
-    raise RuntimeError("Use a separate Blender process")
-run = args.run.resolve()
-bpy.ops.object.select_all(action="SELECT")
-bpy.ops.object.delete(use_global=False)
-for i, name in enumerate(("before", "after")):
-    data = np.load(run / (name + ".npz"))
+def point_object(path, name):
+    data = np.load(path)
     xyz = data["coords"]
     rgb = np.stack([data[c] for c in "RGB"], axis=1)
     mesh = bpy.data.meshes.new(name)
@@ -24,7 +16,6 @@ for i, name in enumerate(("before", "after")):
         value.color_srgb = (*np.clip(color, 0, 1), 1)
     obj = bpy.data.objects.new(name, mesh)
     bpy.context.scene.collection.objects.link(obj)
-    obj.location.x = (i - .5) * 1.3
     mat = bpy.data.materials.new(name + "_colors")
     mat.use_nodes = True
     mat.node_tree.nodes.clear()
@@ -52,9 +43,28 @@ for i, name in enumerate(("before", "after")):
     links.new(instance.outputs["Instances"], realize.inputs["Geometry"])
     links.new(realize.outputs["Geometry"], material.inputs["Geometry"])
     links.new(material.outputs["Geometry"], out.inputs["Geometry"])
-for area in bpy.context.screen.areas:
-    if area.type == "VIEW_3D":
-        area.spaces.active.shading.type = "MATERIAL"
-        area.spaces.active.region_3d.view_distance = 3.5
-bpy.ops.wm.save_as_mainfile(filepath=str(run / "comparison.blend"))
+    return obj
 
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--run", type=Path, required=True)
+    args = ap.parse_args(sys.argv[sys.argv.index("--") + 1:])
+    if not bpy.app.background:
+        raise RuntimeError("Use a separate Blender process")
+    run = args.run.resolve()
+    bpy.ops.object.select_all(action="SELECT")
+    bpy.ops.object.delete(use_global=False)
+    for i, name in enumerate(("before", "after")):
+        obj = point_object(run / (name + ".npz"), name)
+        obj.location.x = (i - .5) * 1.3
+    for area in bpy.context.screen.areas:
+        if area.type == "VIEW_3D":
+            area.spaces.active.shading.type = "MATERIAL"
+            area.spaces.active.region_3d.view_distance = 3.5
+    bpy.ops.wm.save_as_mainfile(filepath=str(run / "comparison.blend"))
+
+
+
+if __name__ == "__main__":
+    main()

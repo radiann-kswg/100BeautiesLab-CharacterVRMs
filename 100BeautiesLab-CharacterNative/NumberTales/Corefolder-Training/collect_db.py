@@ -1,4 +1,4 @@
-"""学習許可済みマニフェストと現行創作DBを照合し、6体の画像・設定資料を関連付ける。"""
+"""学習許可済みマニフェストと現行創作DBを照合し、指定キャラの画像・設定資料を関連付ける（既定は学習元6体）。"""
 import argparse
 import hashlib
 import json
@@ -18,18 +18,22 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--db", type=Path, required=True)
     ap.add_argument("--manifest", type=Path, required=True)
+    ap.add_argument("--ids", type=int, nargs="+", default=sorted(IDS))
+    ap.add_argument("--output", type=Path, default=HERE)
     args = ap.parse_args()
+    ids = set(args.ids)
+    output_root = args.output.resolve()
     root = args.db.resolve()
     records = json.loads((root / "data/Works_NumberTales/DataBases/db_Primary.json").read_text(encoding="utf-8-sig"))
-    current = {str(r["Num"]): r for r in records if r.get("Num") in IDS}
+    current = {str(r["Num"]): r for r in records if r.get("Num") in ids}
     allowed = {}
     for line in args.manifest.read_text(encoding="utf-8-sig").splitlines():
         r = json.loads(line)
         if r.get("_type") == "character" and r.get("work_key") == "#Works_NumberTales" and r.get("db_source", "").endswith("/db_Primary.json"):
             if r.get("ai_training", {}).get("allowed") is True and r.get("id") in current:
                 allowed[r["id"]] = r
-    if set(allowed) != set(current) or len(allowed) != 6:
-        raise ValueError("All six IDs must have explicit training permission")
+    if set(allowed) != set(current) or set(current) != {str(n) for n in ids}:
+        raise ValueError("All requested IDs must have explicit training permission")
     commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
     output = {}
     for key in sorted(current, key=int):
@@ -38,7 +42,7 @@ def main():
             raise ValueError(f"Current DB excludes {key}")
         if record.get("Progress") != "released":
             raise ValueError(f"Review readiness of {key}")
-        dest = HERE / "db-assets" / f"Corefolder-{key}"
+        dest = output_root / "db-assets" / f"Corefolder-{key}"
         dest.mkdir(parents=True, exist_ok=True)
         images = record.get("Images", {})
         base = Path("data/Works_NumberTales/Images/DB_Primary")
@@ -59,7 +63,7 @@ def main():
                 raise ValueError("Path escaped DB root")
             target = dest / source.name
             shutil.copyfile(source, target)
-            local = target.relative_to(HERE).as_posix()
+            local = target.relative_to(output_root).as_posix()
             files.append({"role": role, "file": local, "source": relative.as_posix(), "sha256": sha(source)})
             if role == "train":
                 train.append(local)
@@ -71,7 +75,7 @@ def main():
                        "ai_hints": permission.get("ai_hints", {}),
                        "settings_use": "Reference and evaluation constraints; not language-model weight training",
                        "training_images": train, "files": files}
-    (HERE / "db-references.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    (output_root / "db-references.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"characters": len(output), "training_images": sum(len(r["training_images"]) for r in output.values()),
                       "reference_images": sum(len(r["files"])-len(r["training_images"]) for r in output.values())}))
 

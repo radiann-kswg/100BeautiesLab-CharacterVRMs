@@ -65,7 +65,7 @@ Blender MCP（localhost:9876）の実アドオンに接続し、比較シーン�
 既存共通ベースは `100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend`。
 生成形状の監修後は、このベースと既存6体の骨格・表情実装を参照してVRM制作へ進む。
 
-Unityは`develop`で作業。OSSの `com.coplaydev.unity-mcp` v10.1.2を導入済み。
+CodexのVRM学習・制作はUnity操作を含めて`codex-training`で作業（ルート`AGENTS.md` §10）。OSSの `com.coplaydev.unity-mcp` v10.1.2を導入済み。
 2026-09-09、Unityをアクティブにした後、パッケージ解決・コンパイル・MCP接続を確認。
 接続先は `100BeautiesLab-CharacterVRMs@a6d53b5a`、stdio／ローカルポート6400。
 Unity 6000.3.23f1、`ready_for_tools=true`、コンパイル・アセット更新は終了、Consoleのエラー・警告は0件。
@@ -82,3 +82,7 @@ Unity公式AI MCPは使用していない。VRM出力とUnityへの新規モデ�
 - 原作者の2026-09-09の依頼を根拠にVRM読み込みの確認を承認した。元Metaの改変・公開・アップロードはしていない。
 - 色の二重ガンマ補正を修正後に作り直した`v2`試験を採用。修正前の試験は`.cache/`へ退避。
 
+
+## 57・85への制作基盤の適用
+
+[制作基盤の使い方と未実施項目](targets/README.md)。追加訓練済み重みの推論点群、公式資料、共通素体の胴体と#4由来の骨格・顔を持つ編集ベースを個別Blenderファイルに収録。Unity確認用VRM/Prefab/シーンを作成した。完成キャラクターモデルではない。
