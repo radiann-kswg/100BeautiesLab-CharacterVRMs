@@ -1,0 +1,81 @@
+{
+  "id": 57,
+  "draft_sha256": "50aee651b37ad157af817909f0e7881577e846ea655e68213ab16a1aed7bd08c",
+  "vrm_sha256": "fb896aff7ede7b171a17af50c2aca6a7ba35caa51217fc1a8dc6b43349e8e756",
+  "common_base_sha256": "8ef5ca6dca24bd0b50ab0d5b7ebb14be775c49967d4f203155ab2550575e675c",
+  "db_sources": [
+    {
+      "path": "D:\\VisualStudio Code Userfile\\100BeautiesLab_CreationsDB\\data\\Works_NumberTales\\Images\\DB_Primary\\corefolder\\57\\emstk_corefolderNTS-57-1.png",
+      "sha256": "67f22ad897edd172fa42089e6c0e62fc5005155d2f1dbd7688fcbf37e5f445ef"
+    },
+    {
+      "path": "D:\\VisualStudio Code Userfile\\100BeautiesLab_CreationsDB\\data\\Works_NumberTales\\Images\\DB_Primary\\corefolder\\57\\emstk_corefolderNTS-57-2.png",
+      "sha256": "974e4dd2f6b690c5f5768e32ae449c3ed56b5690466c98e6ddee3983d54d57d9"
+    },
+    {
+      "path": "D:\\VisualStudio Code Userfile\\100BeautiesLab_CreationsDB\\data\\Works_NumberTales\\Images\\DB_Primary\\attr\\tailsUnit\\attr_tailsUnitNTS-57.png",
+      "sha256": "02e8debdf438a3d70c4e8c87827a43357edda8ca5700881c74b9e244ff5b773c"
+    },
+    {
+      "path": "D:\\VisualStudio Code Userfile\\100BeautiesLab_CreationsDB\\data\\Works_NumberTales\\DataBases\\db_Primary.json",
+      "sha256": "367d09c5c44194c26530e4f75a009aa68a8099abb78207313cbbedd8c83a4406"
+    },
+    {
+      "path": "D:\\VisualStudio Code Userfile\\100BeautiesLab_CreationsDB\\data\\Works_NumberTales\\Images\\DB_Primary\\attr\\numberMark\\attr_numberMarkNTS-57.png",
+      "sha256": "e6805ea7912180486eedd663e56cbb3bc0ec89dbb330e22c039806ea10256a57"
+    }
+  ],
+  "tail_count": 7,
+  "upper_count": 5,
+  "lower_count": 2,
+  "mesh_objects": [
+    "Body",
+    "Face",
+    "White belly fur",
+    "Hair scalp",
+    "Hair fringe 1",
+    "Hair fringe 2",
+    "Hair fringe 3",
+    "Hair fringe 4",
+    "Hair fringe 5",
+    "Hair side tuft -1 0",
+    "Hair side tuft -1 1",
+    "Hair side tuft 1 0",
+    "Hair side tuft 1 1",
+    "Fox ear R",
+    "Fox ear inset R",
+    "Fox ear L",
+    "Fox ear inset L",
+    "Tail_Upper_01",
+    "Tail_Upper_02",
+    "Tail_Upper_03",
+    "Tail_Upper_04",
+    "Tail_Upper_05",
+    "Tail_Lower_06",
+    "Tail_Lower_07",
+    "Hair ponytail",
+    "Hair ponytail fork",
+    "57 right shoulder armband",
+    "57 armband number",
+    "57 armband piping 0",
+    "57 armband piping 1",
+    "57 armband pin 0",
+    "57 armband pin 1"
+  ],
+  "changes": [
+    "canonical #4 face UV and alpha restored",
+    "#20 amber iris texture for 57; #4 cyan iris for 85",
+    "all exported materials MToon",
+    "seven/eight rounded tail volumes traced from official DB diagrams, including forked tips",
+    "DB side ponytails, asymmetric 85 ears and swept hair crown",
+    "DB eye aperture adjustment propagated to all expression keys",
+    "57 original number artwork packed on curved armband with piping and pins; 85 pale cord and cyan pendant",
+    "body widened up to 12 percent; belly follows",
+    "all deform weights normalized"
+  ],
+  "remaining": [
+    "secondary tail physics not configured",
+    "tail contacts and subtle silhouette need artistic review"
+  ],
+  "ai_use": "Image LoRA and generated sheets are visual reference only; actual meshes/materials are edited explicitly."
+}
