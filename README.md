@@ -85,6 +85,21 @@ Assets/
 └── Settings/                      # レンダリング設定等
 ```
 
+### Tripo AI によるベースメッシュ生成（2026-09-09 新設）
+
+イラスト・三面図からのベースメッシュ生成に [Tripo AI](https://studio.tripo3d.ai) を利用します。
+入口は `Tools/Tripo/tripo.py`、成果物は `100BeautiesLab-CharacterNative/<作品>/Corefolder-<番号>/TripoGenerated/` に保存されます
+（詳細: [Tools/Tripo/README.md](./Tools/Tripo/README.md)、運用ルール: [AGENTS.md](./AGENTS.md) §12）。
+
+```powershell
+python -m pip install -r Tools/Tripo/requirements.txt
+Copy-Item .env.example .env        # TRIPO_API_KEY を記入（.env は git 管理外）
+python Tools/Tripo/tripo.py doctor
+python Tools/Tripo/tripo.py -c 16 image2model CoreFolder-16.png --preset draft
+```
+
+Tripo の出力は Blender で仕上げる前の叩き台であり、`Assets/` へ直接投入しません。
+
 ### 開発メモ
 
 - `Library/` `Temp/` `Logs/` `obj/` `UserSettings/` などの生成物はコミット対象外です。
