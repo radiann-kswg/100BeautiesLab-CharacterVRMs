@@ -114,6 +114,7 @@ InitTestScene*.unity*
 # キャラクター未指定で実行した時の一時出力
 /Tools/Tripo/outputs/
 /Tools/Tripo/logs/
+/Tools/Tripo/.venv/
 __pycache__/
 
 # Local training dependencies and checkpoints

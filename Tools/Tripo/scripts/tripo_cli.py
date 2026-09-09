@@ -35,6 +35,7 @@ tripo_cli.py — Tripo AI (https://platform.tripo3d.ai) を使った 3D モデ�
   * LOG_DIR を環境変数 TRIPO_LOG_DIR で上書き可能にした (キャラクター単位の台帳を置くため)。
   * append_log の mkdir に parents=True を付けた。
   * doctor の出力に log dir を 1 行追加した。
+  * doctor は API キーの有無のみ表示し、先頭部分も出力しない。
 通常は本ファイルを直接呼ばず、`Tools/Tripo/tripo.py` (ラッパー) 経由で実行する。
 """
 from __future__ import annotations
@@ -331,7 +332,7 @@ async def cmd_doctor(args):
         except ImportError:
             print(f"{mod:<12}: MISSING")
     key = os.environ.get("TRIPO_API_KEY", "")
-    print(f"TRIPO_API_KEY: {'set (' + key[:8] + '…)' if key else 'NOT SET'}")
+    print(f"TRIPO_API_KEY: {'set' if key else 'NOT SET'}")
     for host in ("api.tripo3d.ai", "s3.us-west-2.amazonaws.com", "tripo-data.rg1.data.tripo3d.ai"):
         try:
             socket.getaddrinfo(host, 443, proto=socket.IPPROTO_TCP)
