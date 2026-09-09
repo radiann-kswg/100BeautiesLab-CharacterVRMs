@@ -39,6 +39,13 @@ python Tools/Tripo/tripo.py -c 16 convert <task_id> --format FBX
 
 ## 原本との同期
 
+### Tripo由来の中間Blenderネイティブファイル（2026-09-10 User指定）
+
+保存先は `100BeautiesLab-CharacterNative/<作品>/<種別>-<Num>/Tripo/`。
+今回の対象は `NumberTales/Corefolder-57/Tripo/` と `NumberTales/Corefolder-85/Tripo/`。
+過程の比較用 `.blend` はこの中の `Iterations/` に置く。
+`fit_reference_models.py` もこの配置で保存する。元の制作blendと、CLIが保存する原本 `TripoGenerated/` は移動しない。
+
 `scripts/tripo_cli.py` と `config/tripo.yaml` の原本は Dropbox
 `Claude Coworks Projectfile/Tripio AI x Claude UserFiles/tripo-3d-studio/` です。
 原本が更新されたら本フォルダへ複製し直し、各ファイル冒頭に記した差分を再適用してください。
