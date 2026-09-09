@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "canonical_ids": [
+    4,
+    16,
+    20,
+    22,
+    25,
+    93
+  ],
+  "examples": 26,
+  "style_examples": 24,
+  "target_design_examples": 2,
+  "preprocessing": "RGB, whole image padded to 768 square; no random or horizontal flip augmentation",
+  "split": "training only; before/after samples are qualitative, not a held-out generalization test",
+  "records": [
+    {
+      "file_name": "vrm-4-front.png",
+      "role": "canonical_vrm_style",
+      "sha256": "87ab4a3f1e43bed982f992852f9ed0e366e6948e34df6a7a6d4e01e2ffc8c739",
+      "caption": "nt_vrmstyle, orthographic front view of NumberTales Corefolder character 4, a round stylized chibi animal character, cyan hair and body, turquoise eyes, a shoulder cape, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-4/front.png",
+          "sha256": "709dee156cd21aaf5a45e32e104a8f54d8418605361e522da52be9716e167d90"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-4-side.png",
+      "role": "canonical_vrm_style",
+      "sha256": "67ec49103850cc8a2990c33f19757aee36ca8846dfb68fbbf4e7336207f663e1",
+      "caption": "nt_vrmstyle, orthographic side view of NumberTales Corefolder character 4, a round stylized chibi animal character, cyan hair and body, turquoise eyes, a shoulder cape, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-4/side.png",
+          "sha256": "7eaa15918be172856043dadd5cd640305eb67682f5aaacf8fd5500577a0e7480"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-4-back.png",
+      "role": "canonical_vrm_style",
+      "sha256": "0057746e8a08de2c9d2aec65af6006c43e41234a44df535320fac6a7739b61bc",
+      "caption": "nt_vrmstyle, orthographic back view of NumberTales Corefolder character 4, a round stylized chibi animal character, cyan hair and body, turquoise eyes, a shoulder cape, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-4/back.png",
+          "sha256": "11e6d430e3f47845836aca5c5a7cb85a6b6219339ecedc52dd4388085dd0aa94"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-4-three-view.png",
+      "role": "canonical_vrm_style",
+      "sha256": "5b434448a82256589fb9c964aca83a81e1b3c8d8d20b55a4428c52b25bd641ae",
+      "caption": "nt_vrmstyle, three view model sheet, front side and back views of NumberTales Corefolder character 4, a round stylized chibi animal character, cyan hair and body, turquoise eyes, a shoulder cape, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-4/front.png",
+          "sha256": "709dee156cd21aaf5a45e32e104a8f54d8418605361e522da52be9716e167d90"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-4/side.png",
+          "sha256": "7eaa15918be172856043dadd5cd640305eb67682f5aaacf8fd5500577a0e7480"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-4/back.png",
+          "sha256": "11e6d430e3f47845836aca5c5a7cb85a6b6219339ecedc52dd4388085dd0aa94"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-16-front.png",
+      "role": "canonical_vrm_style",
+      "sha256": "5751a3a198987dc69d4f72b80ee3f7fc62d9aed90c793d1e8944c0dd4b062c14",
+      "caption": "nt_vrmstyle, orthographic front view of NumberTales Corefolder character 16, a round stylized chibi animal character, pink hair and body, a blue cat ear hat, a ponytail, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-16/front.png",
+          "sha256": "5cef1febaee4007cb6e20ea50f2ee847a5a1cf5e2b1fa93d0bb40c6b2cb940ad"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-16-side.png",
+      "role": "canonical_vrm_style",
+      "sha256": "35c0ec7bc4fa266b140acc6e4a5b039b353c87df064a258ee02596ad327ac8ec",
+      "caption": "nt_vrmstyle, orthographic side view of NumberTales Corefolder character 16, a round stylized chibi animal character, pink hair and body, a blue cat ear hat, a ponytail, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-16/side.png",
+          "sha256": "429257717b60f5b5ce133e623b7960a7bb1ea4e8b824f16b758238492f24dd80"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-16-back.png",
+      "role": "canonical_vrm_style",
+      "sha256": "601d4bf2372e8f87c98d6db9bd66e2e54876b928327c21271654f1913444f466",
+      "caption": "nt_vrmstyle, orthographic back view of NumberTales Corefolder character 16, a round stylized chibi animal character, pink hair and body, a blue cat ear hat, a ponytail, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-16/back.png",
+          "sha256": "9042b42a8338d515c05e8c72c7d20796a14ee8c48c90054af46f6287ee22852e"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-16-three-view.png",
+      "role": "canonical_vrm_style",
+      "sha256": "ce9de16836fc4d62d3e60caa299c1e802bb38fd85972395377f71d539d233738",
+      "caption": "nt_vrmstyle, three view model sheet, front side and back views of NumberTales Corefolder character 16, a round stylized chibi animal character, pink hair and body, a blue cat ear hat, a ponytail, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-16/front.png",
+          "sha256": "5cef1febaee4007cb6e20ea50f2ee847a5a1cf5e2b1fa93d0bb40c6b2cb940ad"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-16/side.png",
+          "sha256": "429257717b60f5b5ce133e623b7960a7bb1ea4e8b824f16b758238492f24dd80"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-16/back.png",
+          "sha256": "9042b42a8338d515c05e8c72c7d20796a14ee8c48c90054af46f6287ee22852e"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-20-front.png",
+      "role": "canonical_vrm_style",
+      "sha256": "044add0d6a0335898366c27d5e9d52e0bbc7e6302a275090b042ac0024e63431",
+      "caption": "nt_vrmstyle, orthographic front view of NumberTales Corefolder character 20, a round stylized chibi animal character, white hair and body, golden eyes, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-20/front.png",
+          "sha256": "6ead156327d5f67456fc4f6bbac3ea417a01cc99a4a85010bbe022e144700fc0"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-20-side.png",
+      "role": "canonical_vrm_style",
+      "sha256": "3daa9e2252cb9cb6d3f4efa53924e4826907535a720b8ec4b5c93e10b7874e05",
+      "caption": "nt_vrmstyle, orthographic side view of NumberTales Corefolder character 20, a round stylized chibi animal character, white hair and body, golden eyes, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-20/side.png",
+          "sha256": "0393b91c7cbecc22044ca7615fd5e763dacfd1666b6439874351edf76f4a7a14"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-20-back.png",
+      "role": "canonical_vrm_style",
+      "sha256": "7441b31ee15b05375c15a4aaa95455712516cbc480427c81e8840539c170c616",
+      "caption": "nt_vrmstyle, orthographic back view of NumberTales Corefolder character 20, a round stylized chibi animal character, white hair and body, golden eyes, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-20/back.png",
+          "sha256": "1c367d2f826713164c90032ed249f8b97eb6c145b534151b9e820e4a6ed36899"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-20-three-view.png",
+      "role": "canonical_vrm_style",
+      "sha256": "e9a0b1192cf109367df8b17aa4e64f608afda887ff15445f3de2a9169a31671d",
+      "caption": "nt_vrmstyle, three view model sheet, front side and back views of NumberTales Corefolder character 20, a round stylized chibi animal character, white hair and body, golden eyes, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-20/front.png",
+          "sha256": "6ead156327d5f67456fc4f6bbac3ea417a01cc99a4a85010bbe022e144700fc0"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-20/side.png",
+          "sha256": "0393b91c7cbecc22044ca7615fd5e763dacfd1666b6439874351edf76f4a7a14"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-20/back.png",
+          "sha256": "1c367d2f826713164c90032ed249f8b97eb6c145b534151b9e820e4a6ed36899"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-22-front.png",
+      "role": "canonical_vrm_style",
+      "sha256": "f2c4e6c778cf4e0847d9607779d4cdad8e7be255dfe483e8b61ebf93e365c07e",
+      "caption": "nt_vrmstyle, orthographic front view of NumberTales Corefolder character 22, a round stylized chibi animal character, yellow hair and body, golden eyes, floating rings, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-22/front.png",
+          "sha256": "f75957edf487389c9dffa5e13cefefa496d43f9172996ce78ec3f803e88e44a6"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-22-side.png",
+      "role": "canonical_vrm_style",
+      "sha256": "f528281dd5195f4f7185079fce4c57f7bf1e02e944efe4e1030b99ab8d7102c3",
+      "caption": "nt_vrmstyle, orthographic side view of NumberTales Corefolder character 22, a round stylized chibi animal character, yellow hair and body, golden eyes, floating rings, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-22/side.png",
+          "sha256": "f28195dfa79b176563f5fb1cc17ea14bf5a1fb541eec894aa0b296172125c332"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-22-back.png",
+      "role": "canonical_vrm_style",
+      "sha256": "5306c7f291589ee834b9b454f7bd6ad97f516dca0d900e0f3c4e4a5e117f58db",
+      "caption": "nt_vrmstyle, orthographic back view of NumberTales Corefolder character 22, a round stylized chibi animal character, yellow hair and body, golden eyes, floating rings, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-22/back.png",
+          "sha256": "ab9b1ad887338c3c8406fc806b47c1bf28c3c74de6e25e6938d453f6f5603122"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-22-three-view.png",
+      "role": "canonical_vrm_style",
+      "sha256": "8a4d108b09605d43b8271a271ee45b2af629909b7ff7228c1777996d6601f6c9",
+      "caption": "nt_vrmstyle, three view model sheet, front side and back views of NumberTales Corefolder character 22, a round stylized chibi animal character, yellow hair and body, golden eyes, floating rings, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-22/front.png",
+          "sha256": "f75957edf487389c9dffa5e13cefefa496d43f9172996ce78ec3f803e88e44a6"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-22/side.png",
+          "sha256": "f28195dfa79b176563f5fb1cc17ea14bf5a1fb541eec894aa0b296172125c332"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-22/back.png",
+          "sha256": "ab9b1ad887338c3c8406fc806b47c1bf28c3c74de6e25e6938d453f6f5603122"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-25-front.png",
+      "role": "canonical_vrm_style",
+      "sha256": "2471a452a86da53bd53b3d2d71f8242ccadb075d33d9f2decee40a9a4f2ca3e9",
+      "caption": "nt_vrmstyle, orthographic front view of NumberTales Corefolder character 25, a round stylized chibi animal character, gray blue hair and body, blue green eyes, a green scarf, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-25/front.png",
+          "sha256": "f09dae35c0623ecd2b7bae94d786943904292eb8ba8d3c14bf5032c52db13898"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-25-side.png",
+      "role": "canonical_vrm_style",
+      "sha256": "2bce9fb4a6f422946ec75d590c8abcf18f5c1dc239c631f8cd2e325353363505",
+      "caption": "nt_vrmstyle, orthographic side view of NumberTales Corefolder character 25, a round stylized chibi animal character, gray blue hair and body, blue green eyes, a green scarf, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-25/side.png",
+          "sha256": "c985d48a523601a810fd78ed9bb2e90c1eb359422fc4965c851be30f558c109a"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-25-back.png",
+      "role": "canonical_vrm_style",
+      "sha256": "3aab8d60e2c537b50fd435c9ea63c0dce107fb6ac411f2f1e28e95afda6407f3",
+      "caption": "nt_vrmstyle, orthographic back view of NumberTales Corefolder character 25, a round stylized chibi animal character, gray blue hair and body, blue green eyes, a green scarf, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-25/back.png",
+          "sha256": "aab2db9d413865d6516c39eaea005d3c7529798801a6b41796539a129b2ce8bb"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-25-three-view.png",
+      "role": "canonical_vrm_style",
+      "sha256": "4c95e8b072ca45b6f7d58dd6b90d134aedbf3402d179fc3d04253ce48f6dee15",
+      "caption": "nt_vrmstyle, three view model sheet, front side and back views of NumberTales Corefolder character 25, a round stylized chibi animal character, gray blue hair and body, blue green eyes, a green scarf, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-25/front.png",
+          "sha256": "f09dae35c0623ecd2b7bae94d786943904292eb8ba8d3c14bf5032c52db13898"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-25/side.png",
+          "sha256": "c985d48a523601a810fd78ed9bb2e90c1eb359422fc4965c851be30f558c109a"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-25/back.png",
+          "sha256": "aab2db9d413865d6516c39eaea005d3c7529798801a6b41796539a129b2ce8bb"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-93-front.png",
+      "role": "canonical_vrm_style",
+      "sha256": "cbe1e1b15ac7b93e24a7e9bbbf63e0fab2e657fcdccb615174c14a697dffa9cd",
+      "caption": "nt_vrmstyle, orthographic front view of NumberTales Corefolder character 93, a round stylized chibi animal character, pale yellow hair and body, golden eyes, a white ribbon, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-93/front.png",
+          "sha256": "7f5ff278ae45a7a7220757c6e58807fb88956674bd40b2be14d589c22c56e908"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-93-side.png",
+      "role": "canonical_vrm_style",
+      "sha256": "0131cf07fa6f02d1949693c19f577904504dd628d76b8cfa849b626e17ae030a",
+      "caption": "nt_vrmstyle, orthographic side view of NumberTales Corefolder character 93, a round stylized chibi animal character, pale yellow hair and body, golden eyes, a white ribbon, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-93/side.png",
+          "sha256": "e8610a2c4d64ee4cfc911997c0c09792e6e5013bf13458add528af19e37f0c7b"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-93-back.png",
+      "role": "canonical_vrm_style",
+      "sha256": "e118f83b4c4623f5563ed7c602c5f003170a474a77ab0cc8a92aa8f33da75acd",
+      "caption": "nt_vrmstyle, orthographic back view of NumberTales Corefolder character 93, a round stylized chibi animal character, pale yellow hair and body, golden eyes, a white ribbon, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-93/back.png",
+          "sha256": "9fa54ece6af418609af7ad1519801f520170619957d97c16d4984c2de36bf9c1"
+        }
+      ]
+    },
+    {
+      "file_name": "vrm-93-three-view.png",
+      "role": "canonical_vrm_style",
+      "sha256": "11bc7d64c28ca97343c5f72773457a159052810196dae634a2a8739cd02dc44e",
+      "caption": "nt_vrmstyle, three view model sheet, front side and back views of NumberTales Corefolder character 93, a round stylized chibi animal character, pale yellow hair and body, golden eyes, a white ribbon, multiple stylized tails, painted anime face texture, MToon flat shaded VRM model, neutral gray background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-93/front.png",
+          "sha256": "7f5ff278ae45a7a7220757c6e58807fb88956674bd40b2be14d589c22c56e908"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-93/side.png",
+          "sha256": "e8610a2c4d64ee4cfc911997c0c09792e6e5013bf13458add528af19e37f0c7b"
+        },
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/captures/Corefolder-93/back.png",
+          "sha256": "9fa54ece6af418609af7ad1519801f520170619957d97c16d4984c2de36bf9c1"
+        }
+      ]
+    },
+    {
+      "file_name": "design-57.png",
+      "role": "generated_target_design",
+      "sha256": "74b55ead9c4a26c733c53bf5f934a240e4bae5ee1a24586aa2f7c4ca7147cba2",
+      "caption": "nt_designreference, a generated character design sheet with two rows of front side and back views, NumberTales Corefolder character 57, golden yellow fox ears and ponytail, amber eyes, white belly, seven tails, an armband numbered 57 on the right shoulder, white background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Training/ThreeView-CoreFolder-57.png",
+          "sha256": "21e80de2bf678216751d79e475e22b3fa2cbc12065c0fc682776a74bf92f9e06"
+        }
+      ]
+    },
+    {
+      "file_name": "design-85.png",
+      "role": "generated_target_design",
+      "sha256": "d00631303ffdcf8395bae1838a3fcc3c1f23c2e863a3f587a3503387d8b7503e",
+      "caption": "nt_designreference, a generated character design sheet with two rows of front side and back views, NumberTales Corefolder character 85, brown fox ears and ponytail, cyan eyes, white belly, eight tails, a cyan teardrop pendant, white background",
+      "sources": [
+        {
+          "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Training/ThreeView-CoreFolder-85.png",
+          "sha256": "7d9dbc0554999eecb39fe41833e0337606ef1a5e1983700b50aba37fecaf46b2"
+        }
+      ]
+    }
+  ]
+}
