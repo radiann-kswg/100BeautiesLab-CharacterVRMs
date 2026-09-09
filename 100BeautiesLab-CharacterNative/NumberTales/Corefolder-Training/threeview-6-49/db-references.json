@@ -1,0 +1,1110 @@
+{
+  "6": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "2526a7d6db33a5145dbfd2d90125009f1908b12a6a330a07485f851a4f91a04c",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 6,
+      "Name_JP": "6(ムイ)",
+      "Name_EN": "6(Sics)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#FF76A2",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_Hair",
+            "#BodyPart_Ear",
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Tail"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#A783B5",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#FFCEED",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Tail",
+            "#BodyPart_Ear"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#185EBD",
+          "ColorName_JP": "メインアクセントカラー（瞳, アクセサリー）",
+          "ColorName_EN": "Main Accent Color (Eye Color, Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Neck",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#6AA6D7",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Neck",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_Fox",
+          "Count": 6,
+          "TailsUnit_PNGName": "attr_tailsUnitNTS-6",
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": "#Lat_Left",
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "左襟,胸の正面中央にある青い六角形のペンダント付近",
+              "value_EN": "left collar, around the blue hexagonal pendant at the front center of the chest"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "dark"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「6」",
+              "value_EN": "Arabic numeral '6'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-6",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ピンクの髪",
+              "value_EN": "pink hair"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Eye"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ラベンダーブルーの目",
+              "value_EN": "lavender blue eyes"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "穏やかな笑顔",
+              "value_EN": "gentle warm smile"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "六角形のブローチ",
+              "value_EN": "hexagonal brooch"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "レーストリム",
+              "value_EN": "lace trim"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ビクトリアンドレス",
+              "value_EN": "Victorian dress"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ツートーンのピンク紫ドレス",
+              "value_EN": "two-tone pink purple dress"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox",
+          "pink hair",
+          "lavender blue eyes",
+          "hexagonal brooch",
+          "lace trim"
+        ],
+        "silhouette_features": [
+          "fox 6 tails",
+          "average stature (about 150cm)",
+          "Fox",
+          "pink hair",
+          "lavender blue eyes"
+        ],
+        "immutable_traits": [
+          "number '6' marking: left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6'"
+        ],
+        "expression_tendency": [
+          "gentle warm smile"
+        ],
+        "age_appearance": "teenager",
+        "palette_priority": {
+          "primary": "#FF76A2",
+          "secondary": "#6AA6D7",
+          "accent": "#A783B5"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img6.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img6.png",
+          "catalog": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalog6.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "hexagonal brooch",
+            "lace trim",
+            "Victorian dress",
+            "two-tone pink purple dress"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox",
+              "pink hair",
+              "lavender blue eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "fox 6 tails",
+            "average stature (about 150cm)",
+            "teenager",
+            "left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6'",
+            "Fox",
+            "pink hair",
+            "lavender blue eyes",
+            "gentle warm smile",
+            "hexagonal brooch",
+            "lace trim",
+            "Victorian dress",
+            "two-tone pink purple dress"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, fox 6 tails, average stature (about 150cm), teenager, left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6', Fox, pink hair, lavender blue eyes, gentle warm smile, hexagonal brooch, lace trim, Victorian dress, two-tone pink purple dress",
+          "negative_prompt_export": "",
+          "reference_images": null
+        },
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "hexagonal brooch",
+            "lace trim"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox",
+              "pink hair",
+              "lavender blue eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "fox 6 tails",
+            "average stature (about 150cm)",
+            "teenager",
+            "left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6'",
+            "Fox",
+            "pink hair",
+            "lavender blue eyes",
+            "gentle warm smile",
+            "hexagonal brooch",
+            "lace trim"
+          ],
+          "negative_visuals": [
+            "Victorian dress",
+            "two-tone pink purple dress"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox; pink hair; lavender blue eyes, with the number '6' marking (left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6').",
+          "prompt_export": "corefolder form, fox 6 tails, average stature (about 150cm), teenager, left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6', Fox, pink hair, lavender blue eyes, gentle warm smile, hexagonal brooch, lace trim",
+          "negative_prompt_export": "Victorian dress, two-tone pink purple dress",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img6.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/6/emstk_corefolder6-1.png"
+          }
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:ad672462d3792cabbc89c7f4fe248cc5424b826c5a139db27a17a60953cec88e",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox",
+            "pink hair",
+            "lavender blue eyes",
+            "hexagonal brooch",
+            "lace trim"
+          ],
+          "common.silhouette_features": [
+            "fox 6 tails",
+            "average stature (about 150cm)",
+            "Fox",
+            "pink hair",
+            "lavender blue eyes"
+          ],
+          "common.immutable_traits": [
+            "number '6' marking: left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6'"
+          ],
+          "common.expression_tendency": [
+            "gentle warm smile"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "fox 6 tails",
+            "average stature (about 150cm)",
+            "teenager",
+            "left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6'",
+            "Fox",
+            "pink hair",
+            "lavender blue eyes",
+            "gentle warm smile",
+            "hexagonal brooch",
+            "lace trim",
+            "Victorian dress",
+            "two-tone pink purple dress"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "fox 6 tails",
+            "average stature (about 150cm)",
+            "teenager",
+            "left collar, around the blue hexagonal pendant at the front center of the chest, dark, Arabic numeral '6'",
+            "Fox",
+            "pink hair",
+            "lavender blue eyes",
+            "gentle warm smile",
+            "hexagonal brooch",
+            "lace trim"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-6/emstk_corefolderNTS-6-1.png",
+      "db-assets/Corefolder-6/emstk_corefolderNTS-6-2.png",
+      "db-assets/Corefolder-6/emstk_corefolderNTS-6-3.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-6/emstk_corefolderNTS-6-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/6/emstk_corefolderNTS-6-1.png",
+        "sha256": "d876a50012e5499cc480fe1b7a3a06023d7039004e4386289467b48ae05dc4ed"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-6/emstk_corefolderNTS-6-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/6/emstk_corefolderNTS-6-2.png",
+        "sha256": "cc4129f12078557173955a3eaf8795b6aee8316a7d431a0aaa7ae63729b4898d"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-6/emstk_corefolderNTS-6-3.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/6/emstk_corefolderNTS-6-3.png",
+        "sha256": "1a27e14d9e281ea034c771a6a085a6e2dd153fd6cb38a479e89642dcb411c598"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-6/cnsp_imgNTS-6.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-6.png",
+        "sha256": "9f7b471c3ee253d1b91e56c8326d346e4eaddfeca4fb6a7901b8f6e23eed5143"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-6/chr-dsgn_catalogNTS-6.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalogNTS-6.png",
+        "sha256": "b688ef5d8993a1a1cd92da52df15c4e60af61fdff461bde23e77c5a803feabb8"
+      }
+    ]
+  },
+  "49": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "55b998602796ed96f33cae9acad92636612a94ede012482c1ed5acd518bf40bb",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 49,
+      "Name_JP": "49(ヨチカ)",
+      "Name_EN": "49(Fornins)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#6AA6D7",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_Shoulder",
+            "#BodyPart_Hair",
+            "#BodyPart_Eye",
+            "#BodyPart_Chest",
+            "#BodyPart_Leg"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#BD8AE6",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#9BC1E6",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Shoulder",
+            "#BodyPart_Hair",
+            "#BodyPart_Eye",
+            "#BodyPart_Chest",
+            "#BodyPart_Leg"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#405AB9",
+          "ColorName_JP": "メインアクセントカラー（瞳, アクセサリー）",
+          "ColorName_EN": "Main Accent Color (Eye Color, Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_Shoulder",
+            "#BodyPart_Hair",
+            "#BodyPart_Eye",
+            "#BodyPart_Chest",
+            "#BodyPart_Leg"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#4378C3",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Shoulder",
+            "#BodyPart_Hair",
+            "#BodyPart_Eye",
+            "#BodyPart_Chest",
+            "#BodyPart_Leg"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_FoxBranched",
+          "Count": 9,
+          "Branches": [
+            {
+              "Laterality": "#Lat_Upper",
+              "TailCount": 4,
+              "ClusterCount": 2
+            },
+            {
+              "Laterality": "#Lat_Lower",
+              "TailCount": 5,
+              "ClusterCount": 1
+            }
+          ],
+          "TailsUnit_PNGName": "attr_tailsUnitNTS-49",
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": "#Lat_Left",
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "球体の前面左胸の白色部分",
+              "value_EN": "on the front left chest of the white area of the sphere"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "dark"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「49」",
+              "value_EN": "Arabic numeral '49'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-49",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Shoulder"
+          ],
+          "Laterality": "#Lat_Left",
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "青い半袖制服ジャケットの左肩付近",
+              "value_EN": "on the left shoulder area of the blue short-sleeve uniform jacket"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "白",
+              "value_EN": "white"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「49」",
+              "value_EN": "Arabic numeral '49'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-49",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "濃い藍色のミディアムヘア",
+              "value_EN": "medium dark indigo hair"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Eye"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "紺色の目",
+              "value_EN": "dark blue eyes"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "少し不愛想で少年のような顔",
+              "value_EN": "a slightly unsociable, boyish face"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "目が死んだように笑っていない笑顔(笑顔を取り繕っているときの表情)",
+              "value_EN": "a smile that looks dead in the eyes (expression when trying to put on a smile)"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "白いトリムと番号付き青い半袖制服ジャケット",
+              "value_EN": "white-trimmed blue short-sleeve uniform jacket with number"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "紫のインナータートルネック",
+              "value_EN": "purple inner turtleneck"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "青のショートパンツ",
+              "value_EN": "blue short pants"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox",
+          "medium dark indigo hair",
+          "dark blue eyes"
+        ],
+        "silhouette_features": [
+          "branching fox 9 tails",
+          "short stature (about 148cm)",
+          "Fox",
+          "medium dark indigo hair",
+          "dark blue eyes"
+        ],
+        "immutable_traits": null,
+        "expression_tendency": [
+          "a slightly unsociable, boyish face",
+          "a smile that looks dead in the eyes (expression when trying to put on a smile)"
+        ],
+        "age_appearance": "teenager",
+        "palette_priority": {
+          "primary": "#BD8AE6",
+          "secondary": "#4378C3",
+          "accent": "#9BC1E6"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img49.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img49.png",
+          "catalog": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalog49.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox",
+              "medium dark indigo hair",
+              "dark blue eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "branching fox 9 tails",
+            "short stature (about 148cm)",
+            "teenager",
+            "Fox",
+            "medium dark indigo hair",
+            "dark blue eyes",
+            "a slightly unsociable, boyish face",
+            "a smile that looks dead in the eyes (expression when trying to put on a smile)",
+            "on the front left chest of the white area of the sphere, dark, Arabic numeral '49'"
+          ],
+          "negative_visuals": [
+            "white-trimmed blue short-sleeve uniform jacket with number",
+            "purple inner turtleneck",
+            "blue short pants"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox; medium dark indigo hair; dark blue eyes, with the number '49' marking (on the front left chest of the white area of the sphere, dark, Arabic numeral '49').",
+          "prompt_export": "corefolder form, branching fox 9 tails, short stature (about 148cm), teenager, Fox, medium dark indigo hair, dark blue eyes, a slightly unsociable, boyish face, a smile that looks dead in the eyes (expression when trying to put on a smile), on the front left chest of the white area of the sphere, dark, Arabic numeral '49'",
+          "negative_prompt_export": "white-trimmed blue short-sleeve uniform jacket with number, purple inner turtleneck, blue short pants",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img49.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/49/emstk_corefolder49-1.png",
+            "corefolder_arts": [
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/2023/art_img49-corefolder.png"
+            ]
+          }
+        },
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "white-trimmed blue short-sleeve uniform jacket with number",
+            "purple inner turtleneck",
+            "blue short pants"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox",
+              "medium dark indigo hair",
+              "dark blue eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "branching fox 9 tails",
+            "short stature (about 148cm)",
+            "teenager",
+            "Fox",
+            "medium dark indigo hair",
+            "dark blue eyes",
+            "a slightly unsociable, boyish face",
+            "a smile that looks dead in the eyes (expression when trying to put on a smile)",
+            "on the left shoulder area of the blue short-sleeve uniform jacket, white, Arabic numeral '49'",
+            "white-trimmed blue short-sleeve uniform jacket with number",
+            "purple inner turtleneck",
+            "blue short pants"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, branching fox 9 tails, short stature (about 148cm), teenager, Fox, medium dark indigo hair, dark blue eyes, a slightly unsociable, boyish face, a smile that looks dead in the eyes (expression when trying to put on a smile), on the left shoulder area of the blue short-sleeve uniform jacket, white, Arabic numeral '49', white-trimmed blue short-sleeve uniform jacket with number, purple inner turtleneck, blue short pants",
+          "negative_prompt_export": "",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img49.png",
+            "humanoid": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/humanoids/2023/art_img49-humanoid.png"
+          }
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:5243f5df0d0c7221d97ec1d3adaad92a002a1bc21f8432e45729116240787534",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox",
+            "medium dark indigo hair",
+            "dark blue eyes"
+          ],
+          "common.silhouette_features": [
+            "branching fox 9 tails",
+            "short stature (about 148cm)",
+            "Fox",
+            "medium dark indigo hair",
+            "dark blue eyes"
+          ],
+          "common.expression_tendency": [
+            "a slightly unsociable, boyish face",
+            "a smile that looks dead in the eyes (expression when trying to put on a smile)"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "branching fox 9 tails",
+            "short stature (about 148cm)",
+            "teenager",
+            "Fox",
+            "medium dark indigo hair",
+            "dark blue eyes",
+            "a slightly unsociable, boyish face",
+            "a smile that looks dead in the eyes (expression when trying to put on a smile)",
+            "on the front left chest of the white area of the sphere, dark, Arabic numeral '49'"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "branching fox 9 tails",
+            "short stature (about 148cm)",
+            "teenager",
+            "Fox",
+            "medium dark indigo hair",
+            "dark blue eyes",
+            "a slightly unsociable, boyish face",
+            "a smile that looks dead in the eyes (expression when trying to put on a smile)",
+            "on the left shoulder area of the blue short-sleeve uniform jacket, white, Arabic numeral '49'",
+            "white-trimmed blue short-sleeve uniform jacket with number",
+            "purple inner turtleneck",
+            "blue short pants"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-49/emstk_corefolderNTS-49-1.png",
+      "db-assets/Corefolder-49/emstk_corefolderNTS-49-2.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-49/emstk_corefolderNTS-49-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/49/emstk_corefolderNTS-49-1.png",
+        "sha256": "c6bb1ab5301eb23cbb3d1dfa489dee83c2e37768ccdf6fbbd449306af9d9a9e5"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-49/emstk_corefolderNTS-49-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/49/emstk_corefolderNTS-49-2.png",
+        "sha256": "22b1386459c4cd9e9263f0d14c174a0e6b55cd06769572ad0c09d1dddb10440a"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-49/cnsp_imgNTS-49.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-49.png",
+        "sha256": "e60c3240d40a8fd65665e849852481ca01ca68398252dde781db75f6fe3c9be1"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-49/chr-dsgn_catalogNTS-49.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalogNTS-49.png",
+        "sha256": "a719826c4e731576824732eec9b51cd59175bcb2d5d494ac7b74cc893e7091f3"
+      }
+    ]
+  }
+}
