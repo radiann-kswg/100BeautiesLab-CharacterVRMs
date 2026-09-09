@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "id": 57,
+      "humanoid_bones": 53,
+      "rig_bones": 58,
+      "exported_expressions": 15,
+      "packed_reference_images": 5,
+      "source_unchanged": true,
+      "common_body_exact_geometry": true,
+      "normalized_skin_weights": true,
+      "spine_pose_max_delta": 0.09609058792920705
+    },
+    {
+      "id": 85,
+      "humanoid_bones": 53,
+      "rig_bones": 58,
+      "exported_expressions": 15,
+      "packed_reference_images": 5,
+      "source_unchanged": true,
+      "common_body_exact_geometry": true,
+      "normalized_skin_weights": true,
+      "spine_pose_max_delta": 0.09609058792920705
+    }
+  ],
+  "distinct_ai_guides": true,
+  "six_source_vrms_unchanged": true,
+  "unity_console": {
+    "errors": 0,
+    "warnings": 4,
+    "messages": [
+      "VRM0 migration notice (2)",
+      "RenderQueue fallback default during migration (2)"
+    ],
+    "visual_check": "Both common-body models visible; humanoid and mouth/blink deformation verified"
+  }
+}

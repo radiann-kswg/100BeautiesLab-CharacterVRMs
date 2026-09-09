@@ -40,146 +40,146 @@
     {
       "id": 16,
       "view": "front",
-      "foreground_fraction": 0.3459310531616211,
+      "foreground_fraction": 0.3499155044555664,
       "bounds_pixels": [
-        132,
-        135,
-        891,
-        888
+        131,
+        134,
+        892,
+        889
       ],
-      "sha256": "5cef1febaee4007cb6e20ea50f2ee847a5a1cf5e2b1fa93d0bb40c6b2cb940ad"
+      "sha256": "9a71f99e735887a5b8f472d190ca97ff309b40abba9225d4720886cec5b258f2"
     },
     {
       "id": 16,
       "view": "side",
-      "foreground_fraction": 0.4230384826660156,
+      "foreground_fraction": 0.42734241485595703,
       "bounds_pixels": [
-        55,
+        54,
         135,
-        968,
-        888
+        969,
+        889
       ],
-      "sha256": "429257717b60f5b5ce133e623b7960a7bb1ea4e8b824f16b758238492f24dd80"
+      "sha256": "cb3ab13e429f52277827c095c62cb7b9cdeb9b8be27f1bac8d060bfeee75c913"
     },
     {
       "id": 16,
       "view": "back",
-      "foreground_fraction": 0.3459463119506836,
+      "foreground_fraction": 0.3499422073364258,
       "bounds_pixels": [
-        132,
-        135,
-        891,
-        888
+        131,
+        134,
+        892,
+        889
       ],
-      "sha256": "9042b42a8338d515c05e8c72c7d20796a14ee8c48c90054af46f6287ee22852e"
+      "sha256": "63cf772f089929765dd37c15362b411d9369eb3e26ab48a1bdd4c492827937c8"
     },
     {
       "id": 20,
       "view": "front",
-      "foreground_fraction": 0.35254478454589844,
+      "foreground_fraction": 0.35575008392333984,
       "bounds_pixels": [
-        97,
-        149,
-        926,
-        875
+        96,
+        147,
+        927,
+        876
       ],
-      "sha256": "6ead156327d5f67456fc4f6bbac3ea417a01cc99a4a85010bbe022e144700fc0"
+      "sha256": "d18c2a49b4a8afea3fe7d226527cd2cd23fb5f74e6e20cdc709b51152108373b"
     },
     {
       "id": 20,
       "view": "side",
-      "foreground_fraction": 0.394927978515625,
+      "foreground_fraction": 0.3988218307495117,
       "bounds_pixels": [
-        55,
-        149,
-        968,
-        875
+        54,
+        147,
+        969,
+        876
       ],
-      "sha256": "0393b91c7cbecc22044ca7615fd5e763dacfd1666b6439874351edf76f4a7a14"
+      "sha256": "5ef136d281fcf33ee57331c95b11806a5d6280a85f1cf40b73b6ff4c4898799e"
     },
     {
       "id": 20,
       "view": "back",
-      "foreground_fraction": 0.35370922088623047,
+      "foreground_fraction": 0.35669517517089844,
       "bounds_pixels": [
-        97,
-        149,
-        926,
-        875
+        96,
+        148,
+        927,
+        876
       ],
-      "sha256": "1c367d2f826713164c90032ed249f8b97eb6c145b534151b9e820e4a6ed36899"
+      "sha256": "a762dc4f8e261b399d830f2b23513f5bb45199d8b5156ccc2f7e42ebf406577f"
     },
     {
       "id": 22,
       "view": "front",
-      "foreground_fraction": 0.30141258239746094,
+      "foreground_fraction": 0.3024330139160156,
       "bounds_pixels": [
         58,
-        164,
+        163,
         965,
         860
       ],
-      "sha256": "f75957edf487389c9dffa5e13cefefa496d43f9172996ce78ec3f803e88e44a6"
+      "sha256": "faba1eafffa26c83770276faa13ae1a1c1358352d34092a9344ffdaf991b70ca"
     },
     {
       "id": 22,
       "view": "side",
-      "foreground_fraction": 0.2919330596923828,
+      "foreground_fraction": 0.29266834259033203,
       "bounds_pixels": [
         226,
         164,
         968,
-        859
+        860
       ],
-      "sha256": "f28195dfa79b176563f5fb1cc17ea14bf5a1fb541eec894aa0b296172125c332"
+      "sha256": "3ee57118c35f914f4a1c63915da014eade3b45b01b425a8393391d83a3753866"
     },
     {
       "id": 22,
       "view": "back",
-      "foreground_fraction": 0.30017566680908203,
+      "foreground_fraction": 0.3011503219604492,
       "bounds_pixels": [
         58,
         164,
         965,
         860
       ],
-      "sha256": "ab9b1ad887338c3c8406fc806b47c1bf28c3c74de6e25e6938d453f6f5603122"
+      "sha256": "25c7ff9b5494d03a6b05519384ae28c935bb5682fd8b7420829e3be23bd73340"
     },
     {
       "id": 25,
       "view": "front",
-      "foreground_fraction": 0.34449291229248047,
+      "foreground_fraction": 0.3453178405761719,
       "bounds_pixels": [
         206,
-        108,
+        107,
         817,
         948
       ],
-      "sha256": "f09dae35c0623ecd2b7bae94d786943904292eb8ba8d3c14bf5032c52db13898"
+      "sha256": "9dfa031297485007bfeac6fc626764456cffd57885558bc506c30b0713ff08e7"
     },
     {
       "id": 25,
       "view": "side",
-      "foreground_fraction": 0.4517402648925781,
+      "foreground_fraction": 0.4528636932373047,
       "bounds_pixels": [
         55,
         107,
         968,
         948
       ],
-      "sha256": "c985d48a523601a810fd78ed9bb2e90c1eb359422fc4965c851be30f558c109a"
+      "sha256": "fa8d8af9c2d35e143da4d8d9fb57c6b9159b66ed924d07e9de94bebf42350d85"
     },
     {
       "id": 25,
       "view": "back",
-      "foreground_fraction": 0.3447427749633789,
+      "foreground_fraction": 0.34552955627441406,
       "bounds_pixels": [
         206,
-        108,
+        107,
         817,
         948
       ],
-      "sha256": "aab2db9d413865d6516c39eaea005d3c7529798801a6b41796539a129b2ce8bb"
+      "sha256": "d6d99dc332b08301ec89b4c1ee057d92ffbe303e7557b6f39cb009bc7761f557"
     },
     {
       "id": 93,
@@ -218,5 +218,7 @@
       "sha256": "9fa54ece6af418609af7ad1519801f520170619957d97c16d4984c2de36bf9c1"
     }
   ],
-  "dataset_hashes_valid": true
+  "dataset_hashes_valid": true,
+  "training_examples": 26,
+  "outline_capture_enabled": true
 }

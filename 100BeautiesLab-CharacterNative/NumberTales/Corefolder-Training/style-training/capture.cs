@@ -49,6 +49,6 @@ foreach(var id in new[]{4,16,20,22,25,93}) {
     foreach(var obj in baked){UnityEngine.Object.DestroyImmediate(obj.GetComponent<MeshFilter>().sharedMesh);UnityEngine.Object.DestroyImmediate(obj);}
     root.SetActive(false);
 }
-var json=Newtonsoft.Json.JsonConvert.SerializeObject(new {unity=Application.unityVersion,lightIntensity=light.intensity,ambientColor=new[]{.6f,.6f,.6f},background="neutral gray RGB 0.75",pose="source neutral",camera="orthographic; same scale for all views of each character",capture="temporary static BakeMesh snapshot; original shared MToon materials",images=records},Newtonsoft.Json.Formatting.Indented);
+var json=Newtonsoft.Json.JsonConvert.SerializeObject(new {unity=Application.unityVersion,outlineRendererFeature="MToonOutlineRenderFeature",lightIntensity=light.intensity,ambientColor=new[]{.6f,.6f,.6f},background="neutral gray RGB 0.75",pose="source neutral",camera="orthographic; same scale for all views of each character",capture="temporary static BakeMesh snapshot; original shared MToon materials",images=records},Newtonsoft.Json.Formatting.Indented);
 System.IO.File.WriteAllText(folder+"/capture-manifest.json",json);
 return new {images=records.Count,manifest=folder+"/capture-manifest.json"};

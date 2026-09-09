@@ -1,5 +1,6 @@
 {
   "unity": "6000.3.23f1",
+  "outlineRendererFeature": "MToonOutlineRenderFeature",
   "lightIntensity": 1.0,
   "ambientColor": [
     0.6,
