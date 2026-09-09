@@ -1,0 +1,371 @@
+{
+  "status": "unfinished modeling foundation; not character-complete VRM",
+  "body_provenance": {
+    "donor_bare_body_vertices": 1078,
+    "body_vertices": 4306,
+    "common_source": "100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend",
+    "common_sha256": "8ef5ca6dca24bd0b50ab0d5b7ebb14be775c49967d4f203155ab2550575e675c",
+    "body_coordinate_sha256": "18f439746e8f9686f97bd80c3e30a12794ea8c6d934884361f79cf52c8309de8"
+  },
+  "source_blend": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-4/VRCModel_CoreFloder-4.blend",
+  "source_sha256": "612f09068d527fa5cfa59aee745ff1cb333764aef11450354010945a9beeb7c8",
+  "three_view_sha256": "21e80de2bf678216751d79e475e22b3fa2cbc12065c0fc682776a74bf92f9e06",
+  "checkpoint_sha256": "38eac59c339d86cfc1a6f723c8a7432049046bc4d493a457b54ee4691f86ca5c",
+  "sample_image": "db-assets/Corefolder-57/emstk_corefolderNTS-57-1.png",
+  "sample_seed": 2026,
+  "sample_sha256": "d72fbe6759f652bb459a55ee42b89dea1c8be6c70be982f37c60ed320b8be78e",
+  "ai_use": "image-conditioned inference from all6-v2; no new weight training in this step",
+  "settings": {
+    "Num": 57,
+    "Name_JP": "57(イズナ)",
+    "Name_EN": "57(Fivens)",
+    "Progress": "released",
+    "ColorPalette": [
+      {
+        "Role": "#ColorRole_Primary",
+        "Hex": "#FFEE62",
+        "ColorName_JP": "主色",
+        "ColorName_EN": "Primary Color",
+        "AppliesTo": [
+          "#BodyPart_Arm",
+          "#BodyPart_Foot"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Primary",
+        "Hex": "#E8F152",
+        "ColorName_JP": "主色(衣装)",
+        "ColorName_EN": "Primary Color (Costume)",
+        "AppliesTo": [
+          "#BodyPart_Arm",
+          "#BodyPart_Foot"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Secondary",
+        "Hex": "#FFFF6B",
+        "ColorName_JP": "副色",
+        "ColorName_EN": "Secondary Color",
+        "AppliesTo": [
+          "#BodyPart_Hair",
+          "#BodyPart_Tail"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Accent",
+        "Hex": "#4B79BE",
+        "ColorName_JP": "メインアクセントカラー（アクセサリー）",
+        "ColorName_EN": "Main Accent Color (Accessory Color)",
+        "AppliesTo": [
+          "#BodyPart_Chest"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Accent",
+        "Hex": "#F7FFB9",
+        "ColorName_JP": "サブアクセントカラー",
+        "ColorName_EN": "Sub Accent Color",
+        "AppliesTo": null,
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Sub",
+        "Hex": "#A6BC40",
+        "ColorName_JP": "副色（衣装）",
+        "ColorName_EN": "Secondary Color (Costume)",
+        "AppliesTo": [
+          "#BodyPart_Arm"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      }
+    ],
+    "TailsUnit": [
+      {
+        "TailShapeType": "#TailShapeType_FoxBranched",
+        "Count": 7,
+        "Branches": [
+          {
+            "Laterality": "#Lat_Upper",
+            "TailCount": 5,
+            "ClusterCount": 2
+          },
+          {
+            "Laterality": "#Lat_Lower",
+            "TailCount": 2,
+            "ClusterCount": 1
+          }
+        ],
+        "TailsUnit_PNGName": "attr_tailsUnitNTS-57",
+        "Note_JP": null,
+        "Note_EN": null
+      }
+    ],
+    "AppearanceDetail": [
+      {
+        "Formation": "corefolder",
+        "BodyPart": [
+          "#BodyPart_Arm"
+        ],
+        "Laterality": "#Lat_Right",
+        "DesignElement": "#Element_NumberMark",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Position",
+            "value_JP": "球体の側面右肩に付けられた腕章",
+            "value_EN": "On the armband attached to the right shoulder of the sphere"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Color",
+            "value_JP": "黄緑",
+            "value_EN": "yellow-green"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Notation",
+            "value_JP": "アラビア数字の「57」",
+            "value_EN": "Arabic numeral '57'"
+          }
+        ],
+        "img_PNGName": "attr_numberMarkNTS-57",
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Arm"
+        ],
+        "Laterality": "#Lat_Right",
+        "DesignElement": "#Element_NumberMark",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Position",
+            "value_JP": "右肩から二の腕にかけて付けられた腕章",
+            "value_EN": "On the armband attached to the right shoulder and upper arm"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Color",
+            "value_JP": "黄緑",
+            "value_EN": "yellow-green"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Notation",
+            "value_JP": "アラビア数字の「57」",
+            "value_EN": "Arabic numeral '57'"
+          }
+        ],
+        "img_PNGName": "attr_numberMarkNTS-57",
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Ear"
+        ],
+        "Laterality": "#Lat_Both",
+        "DesignElement": "#Element_Ear",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Ear",
+            "vdict_EarShapeType": "#EarShapeType_Fox"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Hair"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "金髪ポニーテール",
+            "value_EN": "blonde ponytail"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Eye"
+        ],
+        "Laterality": "#Lat_Both",
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "琥珀色の目",
+            "value_EN": "amber eyes"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Chest"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "黄色いブレザー",
+            "value_EN": "yellow blazer"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Leg"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_CostumeItem",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "オレンジ色のショートパンツ",
+            "value_EN": "orange shorts"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Foot"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_CostumeItem",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "黄色いブーツ",
+            "value_EN": "yellow boots"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Chest",
+          "#BodyPart_Neck"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "白いストライプ付き黄色いセーラーカラー制服",
+            "value_EN": "yellow sailor-collar uniform with white stripes"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Chest"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_CostumeItem",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "青いインナーシャツ",
+            "value_EN": "blue inner shirt"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Shoulder",
+          "#BodyPart_Arm"
+        ],
+        "Laterality": "#Lat_Right",
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "右肩の番号付きの腕章",
+            "value_EN": "armband with number on right shoulder"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      }
+    ]
+  },
+  "source_record_sha256": "da5ef8b3d9eb8a6bba32f6d5c8d7ea72ef7f462420c06f1126daed28c89f61e7",
+  "base_bones": 58,
+  "mapped_humanoid_bones": 53,
+  "face_shape_keys": [
+    "Basis",
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "EyeClose",
+    "EyeClose_L",
+    "EyeClose_R",
+    "Joy",
+    "Joy_Right",
+    "Joy_Left",
+    "Fun",
+    "Angry",
+    "Sorrow",
+    "Terrible"
+  ],
+  "pending": [
+    "character-specific mesh and textures",
+    "tail mesh and chains according to official branches",
+    "expression fitting",
+    "spring bones",
+    "final VRM validation"
+  ],
+  "vrm": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-57/ModelingFoundation/Corefolder-57-Foundation.vrm",
+  "vrm_sha256": "3ce4379c3213d272380d1d7072254c9a49bd463b23d3578b0bebaf3fc38b5026"
+}

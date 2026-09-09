@@ -1,0 +1,42 @@
+{
+  "id": 57,
+  "status": "reference-led modeling draft; not final",
+  "foundation_sha256": "59decfa4a50674d35adc2261469a7592e73a9518f2fec4f173cdae2ce57bd7f1",
+  "vrm_sha256": "1ecd21caf45aed8de30dc77c2dc2b837ce3a83810273911cd77fc2a868d1c906",
+  "tail_count": 7,
+  "upper_count": 5,
+  "lower_count": 2,
+  "tail_bones_per_tail": 3,
+  "mesh_objects": [
+    "Body",
+    "Face",
+    "White belly fur",
+    "Hair scalp",
+    "Hair fringe 1",
+    "Hair fringe 2",
+    "Hair fringe 3",
+    "Hair fringe 4",
+    "Hair ponytail",
+    "Fox ear R",
+    "Fox ear inset R",
+    "Fox ear L",
+    "Fox ear inset L",
+    "Tail_Upper_01",
+    "Tail_Upper_02",
+    "Tail_Upper_03",
+    "Tail_Upper_04",
+    "Tail_Upper_05",
+    "Tail_Lower_06",
+    "Tail_Lower_07",
+    "57 right shoulder armband",
+    "57 armband number"
+  ],
+  "provisional": [
+    "tail fan placement and intersections",
+    "hair silhouette and ear thickness",
+    "57 eye hue sampled approximately",
+    "inherited facial shape and expression fitting",
+    "spring bones/colliders not configured"
+  ],
+  "ai_use": "previous all6-v2 point cloud retained as reference; these meshes are built from the official sheets, not output directly by the generative model"
+}

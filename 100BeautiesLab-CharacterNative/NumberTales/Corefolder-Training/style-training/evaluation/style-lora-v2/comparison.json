@@ -1,0 +1,51 @@
+{
+  "purpose": "qualitative matched-seed diagnostic, not official character designs or VRM output",
+  "elapsed_seconds": 29.167032718658447,
+  "lora_sha256": "8624f90af4f5452c745319e9208ad653f731b9a694db282c94867251ab5d20a1",
+  "samples": [
+    {
+      "id": 57,
+      "stage": "base",
+      "prompt": "nt_vrmstyle, MToon flat shaded VRM model, orthographic front view, round chibi fox spirit, golden yellow ponytail, fox ears, amber anime eyes, white belly, seven tails, right shoulder armband numbered 57, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "guidance_scale": 5.5,
+      "lora_scale": 0,
+      "image": "evaluation/style-lora-v2/57-base.png",
+      "sha256": "e3cbcd89b5164f442b285d70a2a83dbdd8315a6d43151f8cbdaef8cab24fefc7"
+    },
+    {
+      "id": 85,
+      "stage": "base",
+      "prompt": "nt_vrmstyle, MToon flat shaded VRM model, orthographic front view, round chibi fox spirit, brown ponytail, fox ears, cyan anime eyes, white belly, eight tails, cyan teardrop pendant, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "guidance_scale": 5.5,
+      "lora_scale": 0,
+      "image": "evaluation/style-lora-v2/85-base.png",
+      "sha256": "11e92e0181ebefdb8b6cb3a7bc8e8624697c2f010965649c08db7c8f86b18103"
+    },
+    {
+      "id": 57,
+      "stage": "lora",
+      "prompt": "nt_vrmstyle, MToon flat shaded VRM model, orthographic front view, round chibi fox spirit, golden yellow ponytail, fox ears, amber anime eyes, white belly, seven tails, right shoulder armband numbered 57, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "guidance_scale": 5.5,
+      "lora_scale": 0.8,
+      "image": "evaluation/style-lora-v2/57-lora.png",
+      "sha256": "3d6afcc9a2ff51acc1f9d21a86fde3ddb324b089f355591178aa7343bc700633"
+    },
+    {
+      "id": 85,
+      "stage": "lora",
+      "prompt": "nt_vrmstyle, MToon flat shaded VRM model, orthographic front view, round chibi fox spirit, brown ponytail, fox ears, cyan anime eyes, white belly, eight tails, cyan teardrop pendant, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "guidance_scale": 5.5,
+      "lora_scale": 0.8,
+      "image": "evaluation/style-lora-v2/85-lora.png",
+      "sha256": "189483ed45073d13646cf19b8b45c6c3fe42228d46d786b0dcc42f1aa20b10d9"
+    }
+  ]
+}

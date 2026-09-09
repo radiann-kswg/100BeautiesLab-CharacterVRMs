@@ -169,3 +169,6 @@ Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# Trained Corefolder image-style adapters
+100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/style-training/models/*.safetensors lfs

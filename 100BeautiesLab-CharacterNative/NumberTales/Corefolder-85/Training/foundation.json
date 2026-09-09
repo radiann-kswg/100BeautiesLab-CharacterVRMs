@@ -1,0 +1,305 @@
+{
+  "status": "unfinished modeling foundation; not character-complete VRM",
+  "body_provenance": {
+    "donor_bare_body_vertices": 1078,
+    "body_vertices": 4306,
+    "common_source": "100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend",
+    "common_sha256": "8ef5ca6dca24bd0b50ab0d5b7ebb14be775c49967d4f203155ab2550575e675c",
+    "body_coordinate_sha256": "18f439746e8f9686f97bd80c3e30a12794ea8c6d934884361f79cf52c8309de8"
+  },
+  "source_blend": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-4/VRCModel_CoreFloder-4.blend",
+  "source_sha256": "612f09068d527fa5cfa59aee745ff1cb333764aef11450354010945a9beeb7c8",
+  "three_view_sha256": "7d9dbc0554999eecb39fe41833e0337606ef1a5e1983700b50aba37fecaf46b2",
+  "checkpoint_sha256": "38eac59c339d86cfc1a6f723c8a7432049046bc4d493a457b54ee4691f86ca5c",
+  "sample_image": "db-assets/Corefolder-85/emstk_corefolderNTS-85-1.png",
+  "sample_seed": 2026,
+  "sample_sha256": "2b29ba7a535e4e484334d5dfbe9f505efcbe9a7ea404d8580dd45e1f15da8f74",
+  "ai_use": "image-conditioned inference from all6-v2; no new weight training in this step",
+  "settings": {
+    "Num": 85,
+    "Name_JP": "85(ハッコ)\n85(パコ)",
+    "Name_EN": "85(Eightifie)\n85(Eigfie)",
+    "Progress": "released",
+    "ColorPalette": [
+      {
+        "Role": "#ColorRole_Primary",
+        "Hex": "#C48455",
+        "ColorName_JP": "主色",
+        "ColorName_EN": "Primary Color",
+        "AppliesTo": [
+          "#BodyPart_Hair"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Primary",
+        "Hex": "#00BACB",
+        "ColorName_JP": "主色(衣装)",
+        "ColorName_EN": "Primary Color (Costume)",
+        "AppliesTo": [
+          "#BodyPart_Shoulder",
+          "#BodyPart_Eye",
+          "#BodyPart_Leg",
+          "#BodyPart_Neck"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Secondary",
+        "Hex": "#EF9D46",
+        "ColorName_JP": "副色",
+        "ColorName_EN": "Secondary Color",
+        "AppliesTo": null,
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Accent",
+        "Hex": "#85E6EA",
+        "ColorName_JP": "メインアクセントカラー（瞳, アクセサリー）",
+        "ColorName_EN": "Main Accent Color (Eye Color, Accessory Color)",
+        "AppliesTo": [
+          "#BodyPart_Eye",
+          "#BodyPart_Neck",
+          "#BodyPart_Shoulder",
+          "#BodyPart_Leg"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Role": "#ColorRole_Sub",
+        "Hex": "#01A1C8",
+        "ColorName_JP": "副色（衣装）",
+        "ColorName_EN": "Secondary Color (Costume)",
+        "AppliesTo": [
+          "#BodyPart_Shoulder",
+          "#BodyPart_Eye",
+          "#BodyPart_Leg",
+          "#BodyPart_Neck"
+        ],
+        "Formation": null,
+        "Note_JP": null,
+        "Note_EN": null
+      }
+    ],
+    "TailsUnit": [
+      {
+        "TailShapeType": "#TailShapeType_FoxBranched",
+        "Count": 8,
+        "Branches": [
+          {
+            "Laterality": "#Lat_Upper",
+            "TailCount": 3,
+            "ClusterCount": 1
+          },
+          {
+            "Laterality": "#Lat_Lower",
+            "TailCount": 5,
+            "ClusterCount": 2
+          }
+        ],
+        "TailsUnit_PNGName": "attr_tailsUnitNTS-85",
+        "Note_JP": null,
+        "Note_EN": null
+      }
+    ],
+    "AppearanceDetail": [
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Shoulder"
+        ],
+        "Laterality": "#Lat_Left",
+        "DesignElement": "#Element_NumberMark",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Position",
+            "value_JP": "オフショルダーをちゃんと切ると左肩シアンブルー部分にある(基本見えない)",
+            "value_EN": "On the left shoulder cyan-blue part, visible only when the off-shoulder is properly cut"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Color",
+            "value_JP": "暗色",
+            "value_EN": "dark color"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Notation",
+            "value_JP": "アラビア数字の「85」",
+            "value_EN": "Arabic numeral '85'"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Ear"
+        ],
+        "Laterality": "#Lat_Both",
+        "DesignElement": "#Element_Ear",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Ear",
+            "vdict_EarShapeType": "#EarShapeType_Fox"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Hair"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "茶色のポニーテール",
+            "value_EN": "brown ponytail"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Eye"
+        ],
+        "Laterality": "#Lat_Both",
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "シアンの目",
+            "value_EN": "cyan eyes"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Leg"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_CostumeItem",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "シアンの短いパンツ",
+            "value_EN": "cyan short pants"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Foot"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_CostumeItem",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "白い膝上ソックス",
+            "value_EN": "white knee-high socks"
+          },
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "茶色のアンクルブーツ",
+            "value_EN": "brown ankle boots"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": null,
+        "BodyPart": [
+          "#BodyPart_Neck"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_CostumeItem",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "シアンの涙滴型ペンダントネックレス",
+            "value_EN": "cyan teardrop pendant necklace"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      },
+      {
+        "Formation": "humanoid",
+        "BodyPart": [
+          "#BodyPart_Neck",
+          "#BodyPart_Shoulder"
+        ],
+        "Laterality": null,
+        "DesignElement": "#Element_Motif",
+        "Attrs": [
+          {
+            "AttrLabel": "#DesignAttr_Overview",
+            "value_JP": "シアンブルーのオフショルダーのネックライン",
+            "value_EN": "cyan blue off-shoulder neckline"
+          }
+        ],
+        "img_PNGName": null,
+        "Note_JP": null,
+        "Note_EN": null
+      }
+    ]
+  },
+  "source_record_sha256": "403c5e646b338142b9c6d1e076999a9cee0e41db9d118d2810c1d8d0ca2ace6e",
+  "base_bones": 58,
+  "mapped_humanoid_bones": 53,
+  "face_shape_keys": [
+    "Basis",
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "EyeClose",
+    "EyeClose_L",
+    "EyeClose_R",
+    "Joy",
+    "Joy_Right",
+    "Joy_Left",
+    "Fun",
+    "Angry",
+    "Sorrow",
+    "Terrible"
+  ],
+  "pending": [
+    "character-specific mesh and textures",
+    "tail mesh and chains according to official branches",
+    "expression fitting",
+    "spring bones",
+    "final VRM validation"
+  ],
+  "vrm": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-85/ModelingFoundation/Corefolder-85-Foundation.vrm",
+  "vrm_sha256": "588e572269d6755a054a201fe2be9d92af0281c8029983c88a08933a3cdc21b1"
+}

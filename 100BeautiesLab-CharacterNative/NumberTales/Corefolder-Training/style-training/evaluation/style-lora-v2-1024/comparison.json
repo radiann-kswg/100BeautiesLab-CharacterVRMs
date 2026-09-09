@@ -1,0 +1,55 @@
+{
+  "purpose": "qualitative matched-seed diagnostic, not official character designs or VRM output",
+  "elapsed_seconds": 68.60035109519958,
+  "lora_sha256": "8624f90af4f5452c745319e9208ad653f731b9a694db282c94867251ab5d20a1",
+  "samples": [
+    {
+      "id": 57,
+      "stage": "base",
+      "prompt": "nt_vrmstyle, one single round chibi fox spirit, full body front view, centered, golden yellow fur and ponytail, fox ears, amber anime eyes, white belly, seven tails, white armband on right shoulder, flat cel shading, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0,
+      "image": "evaluation/style-lora-v2-1024/57-base.png",
+      "sha256": "53596b088b47a8aa6063506d80c4a5054e9ed7b4501193e158375e3d1c443e7f"
+    },
+    {
+      "id": 85,
+      "stage": "base",
+      "prompt": "nt_vrmstyle, one single round chibi fox spirit, full body front view, centered, brown fur and ponytail, fox ears, cyan anime eyes, white belly, eight tails, cyan teardrop pendant, flat cel shading, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0,
+      "image": "evaluation/style-lora-v2-1024/85-base.png",
+      "sha256": "a19e47adc6846b24d18808c72fceb92b13b2d17e75b46523ec15177f7f0f7a67"
+    },
+    {
+      "id": 57,
+      "stage": "lora",
+      "prompt": "nt_vrmstyle, one single round chibi fox spirit, full body front view, centered, golden yellow fur and ponytail, fox ears, amber anime eyes, white belly, seven tails, white armband on right shoulder, flat cel shading, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0.8,
+      "image": "evaluation/style-lora-v2-1024/57-lora.png",
+      "sha256": "e61a3e13f68e002ea5e2e0ac9d1fe18f10646b1f2e247eac6e0a0231868f7610"
+    },
+    {
+      "id": 85,
+      "stage": "lora",
+      "prompt": "nt_vrmstyle, one single round chibi fox spirit, full body front view, centered, brown fur and ponytail, fox ears, cyan anime eyes, white belly, eight tails, cyan teardrop pendant, flat cel shading, neutral gray background",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0.8,
+      "image": "evaluation/style-lora-v2-1024/85-lora.png",
+      "sha256": "36d4428b24305910af1927df6bddfd34f51cb18b545da584f0a10352a10710df"
+    }
+  ]
+}
