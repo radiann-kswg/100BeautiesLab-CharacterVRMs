@@ -61,6 +61,14 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 
 ---
 
+## ローカル3D追加学習
+
+既存VRM6体と創作DBのコアフォルダ画像を使った追加学習の試験基盤は、
+[Corefolder-Training](100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/README.md) を参照してください。
+Point-Eの色付き点群生成・学習重みの保存と再利用を検証済みです。完成VRMの自動生成は未対応です。
+
+---
+
 ## 技術情報
 
 - **Unity**: 6000.3.23f1（Unity 6）
