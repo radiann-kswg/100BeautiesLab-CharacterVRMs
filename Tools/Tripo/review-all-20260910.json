@@ -1,0 +1,42 @@
+[
+  {
+    "name": "draft-57",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-57\\TripoGenerated\\20260910\\082235_image_to_model_19c61367\\19c61367-3049-48a4-820c-27bef05ed89d_base.glb",
+    "vrm": false
+  },
+  {
+    "name": "draft-85",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\TripoGenerated\\20260910\\082312_image_to_model_a1155703\\a1155703-ffc7-4ee3-a4a6-1abc253633fe_base.glb",
+    "vrm": false
+  },
+  {
+    "name": "reference-4",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-4\\vrm_corefolder4.vrm",
+    "vrm": true
+  },
+  {
+    "name": "reference-16",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-16\\vrm_corefolder16.vrm",
+    "vrm": true
+  },
+  {
+    "name": "reference-20",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-20\\vrm_corefolder20.vrm",
+    "vrm": true
+  },
+  {
+    "name": "reference-22",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-22\\VRCModel_CoreFloder-22.vrm",
+    "vrm": true
+  },
+  {
+    "name": "reference-25",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-25\\vrm_corefolder25.vrm",
+    "vrm": true
+  },
+  {
+    "name": "reference-93",
+    "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-93\\VRCModel_CoreFloder-93.vrm",
+    "vrm": true
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "task_id": "a1155703-ffc7-4ee3-a4a6-1abc253633fe",
+  "type": "image_to_model",
+  "status": "success",
+  "progress": 100,
+  "input": {
+    "model_version": "v3.1-20260211",
+    "file": {
+      "type": "jpg",
+      "object": {
+        "bucket": "tripo-data",
+        "key": "tcli_708419b155da41ccababb93f8fd3f9a8/20260909/751643dc-db1c-4340-9baa-79ef568848f9/input.png"
+      }
+    },
+    "texture": false,
+    "pbr": false,
+    "model_seed": 42,
+    "orientation": "align_image",
+    "enable_image_autofix": false,
+    "export_uv": true,
+    "geometry_quality": "standard"
+  },
+  "output": {
+    "model": null,
+    "base_model": "https://tripo-data.rg1.data.tripo3d.com/tcli_708419b155da41ccababb93f8fd3f9a8/20260909/a1155703-ffc7-4ee3-a4a6-1abc253633fe/tripo_base_model_a1155703-ffc7-4ee3-a4a6-1abc253633fe.glb?Key-Pair-Id=K1676C64NMVM2J&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly90cmlwby1kYXRhLnJnMS5kYXRhLnRyaXBvM2QuY29tL3RjbGlfNzA4NDE5YjE1NWRhNDFjY2FiYWJiOTNmOGZkM2Y5YTgvMjAyNjA5MDkvYTExNTU3MDMtZmZjNy00ZWUzLWE0YTYtMWFiYzI1MzYzM2ZlL3RyaXBvX2Jhc2VfbW9kZWxfYTExNTU3MDMtZmZjNy00ZWUzLWE0YTYtMWFiYzI1MzYzM2ZlLmdsYiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc4ODk5ODQwMH19fV19&Signature=jl0Ts0EmtGjbb-RPf1r3dqCo9zYjiucqpoMpE77VvbQJ8RxlY-OiPZ9j4h3v42NpxTmI73AGyV0xyikR5v8CjZzjZF1kiHGuddeWgR8a4Zfg75coHQx0Lxxn69iVsafnqPW7uLS4XVYC7~bcskPXLbD7nDeG-kz-piYCax-qCEqqxebexFNR7lvCdJYl4~kbbvkY4vlcoIGX27JUP1EwHZ3im22cWq0zNPwvomgE~CF1ltJzTtmnGe2YDMZ2lN2CBKiQhSVf6J4qwbL33PQHIH6uvmWH-vpTJ5LTAe6wsy8gkci8yJNUktVPCAsgHNfYj66OWW1r-bT3YR6D61TRGg__",
+    "pbr_model": null,
+    "rendered_image": "https://tripo-data.rg1.data.tripo3d.com/tcli_708419b155da41ccababb93f8fd3f9a8/20260909/a1155703-ffc7-4ee3-a4a6-1abc253633fe/legacy_mesh.webp?Key-Pair-Id=K1676C64NMVM2J&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly90cmlwby1kYXRhLnJnMS5kYXRhLnRyaXBvM2QuY29tL3RjbGlfNzA4NDE5YjE1NWRhNDFjY2FiYWJiOTNmOGZkM2Y5YTgvMjAyNjA5MDkvYTExNTU3MDMtZmZjNy00ZWUzLWE0YTYtMWFiYzI1MzYzM2ZlL2xlZ2FjeV9tZXNoLndlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3ODg5OTg0MDB9fX1dfQ__&Signature=bWj6R5cxXZombMjsJgKnRntoSy3sFsRTYmaHAcLYikeBBWgiSJkno2jObrqZ43hMmTUmkKtCmsvh22gCe55-amuZFpCh~T5vxUqcRmL43VOiWvvaW2E9A4iJ76aaakJnEufdUToWyVq7AwObCLnmy0-XXA~ItDdUVZizebE1f3sfX6laMJPFLphMOt58540TdHVS-o439rGt3WDfOlnK9AdTipxpPlDY9~Mo6NyCFTM6ggeywkq~hdTy01yl7O9IGrL-ir5R1li-eh2r9~S2kjM~jcrdSwz4QZ6pSQSQ1bVDJ-VJ8EsM2mxWgyGdyM8NhPZ6qcMqdmxvnJ-LtFhKqQ__",
+    "riggable": null,
+    "rig_type": null
+  },
+  "error_code": null,
+  "error_msg": null,
+  "source": "Training/TripoInput-20260910/emstk_corefolderNTS-85-1.png",
+  "params": {
+    "model_version": "v3.1-20260211",
+    "texture": false,
+    "pbr": false,
+    "model_seed": 42,
+    "orientation": "align_image"
+  },
+  "files": {
+    "base_model": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\TripoGenerated\\20260910\\082312_image_to_model_a1155703\\a1155703-ffc7-4ee3-a4a6-1abc253633fe_base.glb",
+    "rendered_image": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\TripoGenerated\\20260910\\082312_image_to_model_a1155703\\a1155703-ffc7-4ee3-a4a6-1abc253633fe_rendered.webp"
+  },
+  "preview": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\TripoGenerated\\20260910\\082312_image_to_model_a1155703\\a1155703-ffc7-4ee3-a4a6-1abc253633fe_rendered.webp",
+  "job_dir": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\TripoGenerated\\20260910\\082312_image_to_model_a1155703"
+}
