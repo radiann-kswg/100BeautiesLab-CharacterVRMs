@@ -1,5 +1,4 @@
-"""Extract a separately observed iris for each eye in the NumberTales drawings."""
-from pathlib import Path
+"""Draw two independent reference-VRM-style irises from the character's visual attributes."""
 from PIL import Image, ImageDraw
 import numpy as np
 
@@ -30,58 +29,74 @@ EYES={
 }
 
 
-def catalogue_left_57():
-    """Re-ink the 29 px catalogue eye using its sampled outlines and the other eye's stroke width."""
-    factor=3
-    patch=Image.new('RGBA',(256*factor,256*factor))
-    pen=ImageDraw.Draw(patch)
-
-    def region(points,colour):
-        p=np.array(points,dtype=float)
-        curve=[]
-        for j in range(len(p)):
-            a,b,c,d=(p[k%len(p)] for k in (j-1,j,j+1,j+2))
+def iris(number,cell):
+    ss=4
+    y,x=np.mgrid[:256*ss,:256*ss]/ss
+    lean=(-.025,.035)[cell]
+    xx=(x-128-(y-128)*lean)/115
+    yy=(y-128)/121
+    radius=(abs(xx)**2.15+abs(yy)**2.15)**(1/2.15)
+    # #16's lightly outlined oval and pastel two-tone fill also appear on #93.
+    top,bottom=((180,155,188),(138,190,226)) if number==6 else ((168,187,77),(228,235,102))
+    edge=122-14*(1-xx*xx)+(-6,4)[cell]*xx
+    t=np.clip((y-edge)/2.4,0,1)[:,:,None]
+    rgb=(1-t)*np.array(top)+t*np.array(bottom)
+    ink=np.array([53,47,57])
+    outline=np.clip((radius-.953)/.012,0,1)[:,:,None]
+    a=np.uint8(np.clip((1-radius)/.008,0,1)*255)
+    arr=np.dstack((np.uint8((1-outline)*rgb+outline*ink),a))
+    im=Image.fromarray(arr)
+    pen=ImageDraw.Draw(im)
+    def curve(points,fill):
+        ring=np.asarray(points,float)
+        result=[]
+        for j in range(len(ring)):
+            a,b,c,d=(ring[k%len(ring)] for k in (j-1,j,j+1,j+2))
             for t in np.arange(0,1,.125):
-                q=(2*t**3-3*t*t+1)*b+(t**3-2*t*t+t)*.34*(c-a)+(-2*t**3+3*t*t)*c+(t**3-t*t)*.34*(d-b)
-                curve.append(tuple(q*factor))
-        pen.polygon(curve,fill=colour)
+                p=(2*t**3-3*t*t+1)*b+(t**3-2*t*t+t)*.35*(c-a)+(-2*t**3+3*t*t)*c+(t**3-t*t)*.35*(d-b)
+                result.append(tuple(p*ss))
+        pen.polygon(result,fill=fill)
+    if number==6:
+        cx,cy=((125,144),(120,150))[cell]
+        def star(w,h,fill):
+            points=((0,-h),(.35*w,-.32*h),(w,0),(.34*w,.32*h),(0,h),(-.35*w,.32*h),(-w,0),(-.34*w,-.32*h))
+            curve([(cx+px,cy+py) for px,py in points],fill)
+        # #22 places its identifying geometry inside a single fine iris perimeter.
+        star(39,62,'#514958');star(32,53,'#fffdfb')
+        hx,hy=((177,57),(189,67))[cell]
+    else:
+        # #93's narrow vertical pupil stays distinct through the two filled bands.
+        cx,cy=((131,130),(139,132))[cell]
+        def slit(w,h,fill):
+            points=((1,-1),(.75,-.82),(1,-.30),(.90,.25),(.35,.82),(-.25,1),(-.68,.77),(-.91,.24),(-.79,-.34),(-.24,-.8))
+            curve([(cx+u*w-(v*h)*.09,cy+v*h) for u,v in points],fill)
+        slit(22,68,'#494850');slit(17,61,'#547fbb')
+        hx,hy=((174,57),(184,64))[cell]
+    r=(18,19)[cell]
+    for rad,color in ((r+2.5,'#554e59'),(r,'#fffefd')):
+        pen.ellipse(tuple(ss*v for v in (hx-rad,hy-rad,hx+rad,hy+rad)),fill=color)
+    return im.resize((256,256),Image.Resampling.LANCZOS)
 
-    ink='#070708'
-    region([(32,26),(70,10),(116,12),(168,21),(212,38),(229,52),(229,75),(222,86),(233,104),
-            (242,145),(242,180),(236,210),(222,239),(204,245),(79,240),(53,223),(31,191),
-            (17,151),(15,107),(19,70)],ink)
-    region([(45,37),(76,24),(113,23),(158,31),(203,44),(214,63),(208,86),(221,115),
-            (229,152),(228,183),(220,208),(211,229),(86,226),(65,213),(45,185),(30,149),
-            (28,109),(33,71)],'#acbf40')
-    region([(31,139),(75,126),(125,115),(174,107),(216,112),(228,153),(227,186),
-            (217,215),(209,228),(87,225),(66,213),(44,184)],'#eff151')
-    region([(151,47),(168,49),(179,68),(179,108),(176,143),(164,172),(151,190),
-            (138,194),(126,181),(116,156),(116,126),(123,96),(134,66)],ink)
-    region([(150,65),(158,62),(166,76),(166,111),(163,140),(154,160),(145,174),
-            (138,178),(131,163),(128,142),(131,116),(138,90)],'#477bbf')
-    region([(160,42),(178,36),(204,38),(224,47),(233,59),(232,77),(224,83),
-            (209,80),(196,89),(177,94),(157,90),(145,79),(145,61)],ink)
-    region([(168,49),(183,46),(204,47),(221,54),(226,61),(226,72),(216,75),
-            (206,70),(194,78),(179,83),(164,80),(156,72),(158,58)],'#ffffff')
-    return patch.resize((246,246),Image.Resampling.LANCZOS)
 
-
-def prepare_eye_map(number,images,out):
-    board=Image.new("RGBA",(512,256),(255,255,255,0))
-    for j,(file,roll,points) in enumerate(EYES[number]):
-        with Image.open(Path(images)/file) as source:
-            x0=min(x for x,y in points)-2
-            y0=min(y for x,y in points)-2
-            box=(x0,y0,max(x for x,y in points)+3,max(y for x,y in points)+3)
-            patch=source.crop(box).convert("RGBA")
-        # The trim only isolates the iris from the adjoining lashes and sclera.
-        scale=4
-        mask=Image.new("L",(patch.width*scale,patch.height*scale))
-        ImageDraw.Draw(mask).polygon([((x-x0)*scale,(y-y0)*scale) for x,y in points],fill=255)
-        patch.putalpha(mask.resize(patch.size,Image.Resampling.LANCZOS))
-        if roll:patch=patch.rotate(roll,Image.Resampling.BICUBIC,expand=True)
-        patch=patch.crop(patch.getchannel("A").point(lambda v:255 if v>70 else 0).getbbox())
-        patch=patch.resize((246,246),Image.Resampling.LANCZOS)
-        if number==57 and j==0:patch=catalogue_left_57()
-        board.alpha_composite(patch,(j*256+5,5))
+def prepare_eye_map(number,out):
+    # The source landmarks above document feature identity and light direction.
+    # No pixels from the flat illustration are used in the VRM iris texture.
+    board=Image.new('RGBA',(512,256))
+    for cell in (0,1):board.alpha_composite(iris(number,cell),(cell*256,0))
     board.save(out,optimize=True)
+
+
+def cheek_detail(image,number):
+    """Keep the soft reference blush and add the character's restrained hatch accent."""
+    area=(49,133,145,202)
+    native=image.crop(area).convert('RGBA')
+    paper=Image.new('RGBA',native.size,'white')
+    native=Image.blend(paper,native,.72 if number==6 else .66)
+    scale=4
+    layer=Image.new('RGBA',(native.width*scale,native.height*scale))
+    pen=ImageDraw.Draw(layer)
+    for x,y in ((77,160),(87,163),(97,166),(107,169)):
+        x-=area[0];y-=area[1]
+        pen.line(((x-2)*scale,(y+2)*scale,(x+3)*scale,(y-3)*scale),fill=(227,142,111,92),width=4)
+    native.alpha_composite(layer.resize(native.size,Image.Resampling.LANCZOS))
+    image.paste(native,area[:2])

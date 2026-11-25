@@ -9,7 +9,7 @@
   },
   "Revised neutral VRM": {
     "width_over_height": 1.1183,
-    "silhouette_IoU_with_art": 0.849
+    "silhouette_IoU_with_art": 0.8129
   },
   "Official TailsUnit": {
     "width_over_height": 1.1683,
@@ -20,7 +20,7 @@
     "silhouette_IoU_with_art": 0.8045
   },
   "Revised neutral tails": {
-    "width_over_height": 1.1733,
-    "silhouette_IoU_with_art": 0.9683
+    "width_over_height": 1.155,
+    "silhouette_IoU_with_art": 0.81
   }
 }

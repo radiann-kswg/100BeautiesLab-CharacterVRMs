@@ -1,8 +1,8 @@
 {
   "Official corefolder art 1": {
     "width_over_height": 1.1633,
-    "screen_left_iris_y": 0.2356,
-    "screen_right_iris_y": 0.2621,
+    "screen_left_iris_y": 0.2357,
+    "screen_right_iris_y": 0.2622,
     "white_face_and_cheeks_width_over_height": 0.445,
     "lower_cheek_y": 0.4117,
     "collar_lower_y_p99": 0.4617,
@@ -15,7 +15,7 @@
   "Previous VRM": {
     "width_over_height": 1.275,
     "screen_left_iris_y": 0.2932,
-    "screen_right_iris_y": 0.3161,
+    "screen_right_iris_y": 0.3162,
     "white_face_and_cheeks_width_over_height": 0.5133,
     "lower_cheek_y": 0.43,
     "collar_lower_y_p99": 0.55,
@@ -26,16 +26,16 @@
     "silhouette_IoU_with_art": 0.8713
   },
   "Revised VRM": {
-    "width_over_height": 1.1933,
-    "screen_left_iris_y": 0.2475,
-    "screen_right_iris_y": 0.2711,
-    "white_face_and_cheeks_width_over_height": 0.4617,
-    "lower_cheek_y": 0.38,
-    "collar_lower_y_p99": 0.4533,
-    "sapphire_brooch_y": 0.5141,
+    "width_over_height": 1.1967,
+    "screen_left_iris_y": 0.2688,
+    "screen_right_iris_y": 0.2927,
+    "white_face_and_cheeks_width_over_height": 0.485,
+    "lower_cheek_y": 0.435,
+    "collar_lower_y_p99": 0.5,
+    "sapphire_brooch_y": 0.5604,
     "exposed_cream_ear_area_over_silhouette": 0.0045,
-    "exposed_pale_tail_tip_area_over_silhouette": 0.1157,
-    "tail_tips_y_centroid": 0.5324,
-    "silhouette_IoU_with_art": 0.8961
+    "exposed_pale_tail_tip_area_over_silhouette": 0.2156,
+    "tail_tips_y_centroid": 0.5874,
+    "silhouette_IoU_with_art": 0.8988
   }
 }

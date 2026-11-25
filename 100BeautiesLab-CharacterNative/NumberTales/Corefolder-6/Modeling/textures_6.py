@@ -1,8 +1,7 @@
 """Prepare Mui's packed image maps from the official corefolder art and starter UV atlas."""
 import argparse
 from pathlib import Path
-from eye_art import prepare_eye_map
-from scipy import ndimage
+from eye_art import cheek_detail, prepare_eye_map
 
 import numpy as np
 from PIL import Image, ImageDraw
@@ -24,13 +23,7 @@ def face_atlas(out):
     pixels[865:1024, 753:897, 3] = 0
     pixels[872:, 898:, 3] = 0
     im = Image.fromarray(pixels)
-    # The original uses a large airbrush spot. Mui's pose 1 uses four short cheek hatches.
-    swatch = Image.new("RGB",(840,1140),"white")
-    hatches = ImageDraw.Draw(swatch)
-    for x,y in ((79,162),(88,165),(97,168),(106,171)):
-        hatches.line((4*(x-3),4*(y+3),4*(x+4),4*(y-4)), fill="#eca386", width=6)
-    swatch = swatch.resize((210,285),Image.Resampling.LANCZOS)
-    im.paste(swatch.crop((50,137,139,196)),(50,137))
+    cheek_detail(im,6)
     # The two halves of the upper lip share UVs. Ink follows the existing animated lip rim.
     lip=im.crop((15,151,50,176)).resize((280,200),Image.Resampling.BICUBIC)
     pen=ImageDraw.Draw(lip)
@@ -44,13 +37,17 @@ def fur_map(out):
     """A symmetric curved white bib with its warm pink narrow transition, as on art 1."""
     h, w = 512, 1024
     y, x = np.mgrid[0:h, 0:w]
-    z = 1 - (y + .5)/h
-    half_angle = np.interp(z, [0,.08,.20,.42,.58,.75,1],
-                            [.77,.77,.70,.59,.55,.58,.65])
+    height = .713*(1-(y+.5)/h)
+    # The #16 front fur is widest at the waist and rounds back into the
+    # flank near the floor. Use its measured section angles with Mui's bib.
+    levels = [.009,.018,.033,.060,.100,.160,.250,.370,.460,.510,.575,.630,.713]
+    angles = [0,.23,.37,.51,.58,.63,.68,.69,.67,.65,.63,.61,.61]
+    half_angle = np.sqrt(np.interp(height, levels, np.square(angles)))
     a = np.abs(((x+.5)/w - .5)*2*np.pi)
     def smooth(t): return np.clip(t,0,1)[...,None]
-    blush = smooth((half_angle+.038-a)/.014)
-    belly = smooth((half_angle-a)/.012)
+    blend_at_foot = smooth((height-.009)/.006)
+    blush = smooth((half_angle+.031-a)/.018)*blend_at_foot
+    belly = smooth((half_angle-a)/.013)*blend_at_foot
     base = (1-blush)*np.array([255,118,162]) + blush*np.array([255,185,207])
     color = (1-belly)*base + belly*255
     Image.fromarray(np.uint8(np.round(color))).save(out / "Mui-Fur.png", optimize=True)
@@ -69,33 +66,9 @@ def prepare(database, out):
             paint.line((start,y,end,y),fill=tuple(rgb))
     band.save(out/"Mui-TailBand.png", optimize=True)
     image_root = database / "data/Works_NumberTales/Images/DB_Primary"
-    prepare_eye_map(6, image_root, out / "Mui-Eyes.png")
+    prepare_eye_map(6, out / "Mui-Eyes.png")
     art = Image.open(image_root / "corefolder/6/emstk_corefolderNTS-6-1.png").convert("RGBA")
     art.crop((753,590,909,791)).save(out / "Mui-Brooch.png", optimize=True)
-    # Undo the illustrated head roll and scale the drawing by its eye separation.
-    # Only pixels from the pink hair range are transferred. Eyelashes, face and cheek marks
-    # continue to come from the animated face mesh behind the fringe.
-    ny,nx=416,736
-    yy,xx=np.mgrid[:ny,:nx]
-    local_x=(xx+.5)/nx*.60-.30
-    local_z=1.062-(yy+.5)/ny*.254
-    angle=np.deg2rad(8)
-    sx=(831+1170*(local_x*np.cos(angle)+(local_z-.837)*np.sin(angle))).round().astype(int)
-    sy=(384+1170*(local_x*np.sin(angle)-(local_z-.837)*np.cos(angle))).round().astype(int)
-    sample=np.asarray(art)[sy,sx].astype(float)
-    red,green,blue=sample[:,:,:3].transpose(2,0,1)
-    coverage=np.clip((red-green-38)/38,0,1)*np.clip((blue-green-13)/18,0,1)
-    coverage*=np.clip((red-87)/60,0,1)
-    # In the drawing the black brow crosses the pink bang. Keep the mesh brow
-    # behind the fringe and restore the few pink pixels occupied by the drawn line.
-    band=(abs(local_x)<.18)&(abs(local_x)>.028)&(local_z>.875)&(local_z<.926)
-    fill=band&ndimage.binary_closing(coverage>.45,iterations=7)&(coverage<.45)
-    sample[fill,:3]=[255,118,162]
-    coverage[fill]=1
-    sample[:,:,3]=255*coverage
-    # Edge bleed is pink rather than black or skin when the alpha mip levels are sampled.
-    sample[:,:,:3]=np.where((coverage>.07)[:,:,None],sample[:,:,:3],[255,118,162])
-    Image.fromarray(np.uint8(sample)).save(out/"Mui-Bangs.png",optimize=True)
 
 
 if __name__ == "__main__":

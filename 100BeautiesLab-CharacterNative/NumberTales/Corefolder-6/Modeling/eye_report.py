@@ -18,13 +18,15 @@ def panel(image, size=(186,138)):
 
 
 def render_eye(image,n,j):
-    return image.crop((190+213*j,300,310+213*j,420))
+    return image.crop((186+213*j,299,316+213*j,445))
 
 
 def blue_x(image,number):
     r,g,b,_=np.asarray(image).astype(float).transpose(2,0,1)
     mask=(b-r>15)&(b-g>6) if number==6 else (b-r>20)&(b-g>12)
-    return np.where(mask)[1].mean()
+    blobs,_=ndimage.label(mask)
+    keep=1+np.argmax(np.bincount(blobs.ravel())[1:])
+    return np.where(blobs==keep)[1].mean()
 
 
 def landmarks(image):

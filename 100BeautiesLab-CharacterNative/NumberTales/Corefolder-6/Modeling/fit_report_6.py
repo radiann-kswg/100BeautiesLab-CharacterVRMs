@@ -28,9 +28,11 @@ def measure(im):
     valid=d[:,:,3]>180
     def near(color,tol):
         return valid&(np.linalg.norm(rgb-color,axis=2)<tol)
-    face=components(near((255,255,255),16)&(u>.28)&(u<.86)&(v>.15)&(v<.445),200)
+    r,g,b=rgb.transpose(2,0,1)
+    skin=valid&(r>238)&(g>184)&(b>155)&(b-g<11)
+    face=components(skin&(u>.28)&(u<.86)&(v>.15)&(v<.445),200)
     fy,fx=max(face,key=lambda item:len(item[0]))
-    eyes=near((163,133,171),30)&(v>.15)&(v<.374)
+    eyes=(near((163,133,171),30)|near((180,155,188),23))&(v>.15)&(v<.374)
     eyelines=[]
     for region in ((u>.30)&(u<fx.mean()/w), (u>=fx.mean()/w)&(u<.83)):
         yy,xx=max(components(eyes&region,40),key=lambda item:len(item[0]))
