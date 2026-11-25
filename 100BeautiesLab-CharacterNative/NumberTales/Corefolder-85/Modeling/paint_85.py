@@ -28,8 +28,8 @@ def paint():
     base[:]=brown
     # The reference coats leave a chestnut hem below the oval. The white
     # continues onto the shoulder sides, where a narrow stripe reads flat.
-    heights=[0,.055,.075,.14,.25,.40,.52,.675,.80,.90,1]
-    half_angles=[0,0,.16,.32,.47,.53,.57,.635,.55,.405,.39]
+    heights=[0,.055,.075,.14,.25,.40,.52,.675,.80,.865,.92,.97,1]
+    half_angles=[0,0,.16,.32,.47,.53,.57,.635,.55,.53,.66,.91,.98]
     border=np.sqrt(np.interp(v,heights,np.square(half_angles)))
     longitude=abs(2*np.pi*(x/(size-1)-.5))
     base[(longitude<border+.018)&(border>0)]=edge
@@ -82,7 +82,7 @@ def paint():
     a[(x<202)&(y<238),:3]=255
     face=Image.fromarray(a,'RGBA')
     face.paste(second,(10,500))
-    face=reference_cheeks(face,brown,13)
+    face=reference_cheeks(face,brown,2)
     draw=ImageDraw.Draw(face)
     # Both DB expressions put both highlights at screen upper-right. The right
     # eye's mapping reverses U, so it needs its own island and opposite offset.

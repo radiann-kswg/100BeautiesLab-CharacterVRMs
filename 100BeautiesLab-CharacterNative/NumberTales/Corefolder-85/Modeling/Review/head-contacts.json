@@ -1,0 +1,45 @@
+{
+  "method": "Neutral reimport. Independent welded head-region islands, min extent 3 mm, max extent >=55 mm. Exclude eye-weighted components, tails, small decals, exact contacts and grazing angles <5.7 degrees. For true triangle crossings, sample every 3 mm or less. Visible if the first two-sided scene ray is within 1 mm. Materials and alpha clipping are ignored. Internal seams are retained separately. Non-neighbour triangle crossings inside each selected island are reported separately and in the total. Shared-vertex neighbours, very small facial components and alpha visibility are outside this measure.",
+  "yaw_degrees": [
+    0,
+    -30,
+    30,
+    -90,
+    90,
+    180
+  ],
+  "previous_island_crossings_mm": [
+    1781.93,
+    1965.51,
+    1887.45,
+    1302.66,
+    1589.33,
+    353.72
+  ],
+  "previous_vrm_sha256": "101ef8023c853dc8cb6de50bcff88a869c6b61bdf4ffcdbac01a5ca73b38213a",
+  "revised_island_crossings_mm": [
+    518.49,
+    337.75,
+    315.48,
+    359.15,
+    262.58,
+    100.85
+  ],
+  "revised_self_crossings_mm": [
+    24.82,
+    20.97,
+    9.43,
+    24.64,
+    24.64,
+    23.94
+  ],
+  "revised_total_mm": [
+    543.31,
+    358.71,
+    324.91,
+    383.79,
+    287.21,
+    124.79
+  ],
+  "revised_vrm_sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde"
+}

@@ -81,9 +81,8 @@ class Hakko(Sculpt):
         # Use the final mouth and supporting skin to place the edge in all its
         # real poses. save_character detects the completed articulation pass.
         finish_face(85,face,self.arm)
-        self.close_neck(face)
-        self.chin_edge(face,body,self.swatch('Chin contour','#55453F',edge=0),.114,
-                      expressions=('a','i','u','e','o','Joy','Fun','Sorrow'),edge_lift=.013)
+        from torso_profile import add_cranial_base
+        self.items.append(add_cranial_base(self.arm,face,85,self.collection))
 
     def cranium(self):
         # A continuous fringe grows from the rounded crown. The reference
@@ -98,11 +97,11 @@ class Hakko(Sculpt):
         aa,hh=zip(*hem)
         def surface(angle,progress):
             bottom=float(np.interp(angle,aa,hh))
-            theta=math.acos((bottom-.898)/.230)*progress
+            theta=math.acos((bottom-.901)/.246)*progress
             st=math.sin(theta)
             nape=.032*math.exp(-((abs(angle)-1.88)/.27)**2)*progress**5
             x=(.252*st+nape)*math.sin(angle)
-            z=.898+.230*math.cos(theta)
+            z=.901+.246*math.cos(theta)
             y=-.053-.263*st*math.cos(angle)
             front=max(0,math.cos(angle))**2.4
             # Keep the forward hem just over the forehead and continue it into
@@ -148,15 +147,84 @@ class Hakko(Sculpt):
                 if ok:hits.append(v.y)
             return min(hits) if hits else -.19
         bpy.context.view_layer.update()
-        for s in (-1,1):
-            path=[]
-            for x,z in [(0,.532),(.060,.548),(.125,.582),(.170,.625),(.194,.663)]:
-                path.append((s*x,surface(s*x,z)-.004,z))
-            # After the clavicle, the string runs back under the nape. Sampling
-            # the protruding cheek at higher Z would bend it forward once more.
-            path.extend([(s*.202,-.205,.683),(s*.188,-.153,.694),(s*.158,-.110,.699)])
-            ob=self.tube('Necklace '+str(s),path,[.0025]*7,[.0025]*7,(0,0,1),self.cord)
-            bind(ob,self.arm,'chest')
+        from mathutils.interpolate import poly_3d_calc
+        # The necklace is a separate closed loop over the unadorned character.
+        # Cast to the body and skull at each station, then transfer that
+        # location's skin weights so the piece can follow the neck and chest.
+        supports=[body,face]
+        cranium=bpy.data.objects.get('Corefolder Cranial Base')
+        if cranium:supports.append(cranium)
+        count=96;sides=8;path=[];normals=[];weights=[]
+        for i in range(count):
+            angle=math.tau*i/count
+            theta=min(angle,math.tau-angle)
+            z=np.interp(theta,[0,.16,.34,.54,.74,.98,1.24,1.57,2.12,2.65,math.pi],
+                              [.530,.548,.583,.625,.652,.670,.683,.690,.695,.698,.699])
+            radial=Vector((math.sin(angle),-math.cos(angle),0))
+            outside=Vector((0,-.046,z))+radial
+            hits=[]
+            for ob in supports:
+                ok,q,normal,j=ob.ray_cast(outside,-radial,distance=1.30)
+                if ok:hits.append(((q-outside).length,ob,q,normal,j))
+            if not hits:raise ValueError(f'No nude surface for necklace station {i}')
+            _,ob,q,normal,j=min(hits,key=lambda h:h[0])
+            normal=normal.normalized()
+            if normal.dot(radial)<0:normal=-normal
+            path.append(q+normal*.0042);normals.append(normal)
+            poly=ob.data.polygons[j]
+            corners=[ob.data.vertices[k] for k in poly.vertices]
+            blend=poly_3d_calc([v.co for v in corners],q)
+            samples={}
+            for k,v in enumerate(corners):
+                for w in v.groups:
+                    name=ob.vertex_groups[w.group].name
+                    if self.arm.data.bones.get(name) and blend[k]>0:
+                        samples[name]=samples.get(name,0)+w.weight*blend[k]
+            weights.append(samples or {'chest':1})
+        verts=[];faces=[]
+        for i,p in enumerate(path):
+            tangent=(path[(i+1)%count]-path[i-1]).normalized()
+            side=tangent.cross(normals[i]).normalized()
+            away=side.cross(tangent).normalized()
+            for j in range(sides):
+                a=math.tau*j/sides
+                verts.append(p+.0025*(side*math.cos(a)+away*math.sin(a)))
+            for j in range(sides):
+                k=(j+1)%sides;n=(i+1)%count
+                faces.append((i*sides+j,i*sides+k,n*sides+k,n*sides+j))
+        # An edge spanning the chest / skull join can touch the neighboring
+        # surface before its endpoints do. Clear those segments in their own
+        # horizontal section, keeping each round cord section intact.
+        for _ in range(3):
+            shift=[0.]*count
+            for i in range(count):
+                n=(i+1)%count
+                for j in range(sides):
+                    a=verts[i*sides+j];b=verts[n*sides+j]
+                    for p in (a,(a+b)*.5):
+                        ray=Vector((p.x,p.y+.046,0)).normalized()
+                        for ob in supports:
+                            ok,hit,_,_=ob.ray_cast(p+ray,-ray,distance=1.4)
+                            if ok:
+                                extra=(hit-p).dot(ray)+.0005
+                                shift[i]=max(shift[i],extra)
+                                shift[n]=max(shift[n],extra)
+            if max(shift)<.00002:break
+            for i,amount in enumerate(shift):
+                delta=Vector((path[i].x,path[i].y+.046,0)).normalized()*amount
+                for j in range(sides):verts[i*sides+j]+=delta
+        chain=self.mesh('Necklace | fitted silver cord',verts,faces,self.cord)
+        groups={}
+        for i in range(count):
+            # Smooth the seam between adjacent head- and chest-weighted areas.
+            smooth={}
+            for j,f in ((i-1,.2),(i,.6),((i+1)%count,.2)):
+                for name,w in weights[j].items():smooth[name]=smooth.get(name,0)+f*w
+            total=sum(smooth.values())
+            for name,w in smooth.items():
+                if name not in groups:groups[name]=chain.vertex_groups.new(name=name)
+                groups[name].add(list(range(i*sides,(i+1)*sides)),w/total,'REPLACE')
+        chain.parent=self.arm;chain.modifiers.new('Armature','ARMATURE').object=self.arm
         def drop(name,scale,offset,mat):
             zs=[.414,.427,.451,.480,.500,.524]
             ws=[.0007,.022,.035,.031,.018,.0005]
@@ -180,6 +248,9 @@ class Hakko(Sculpt):
         y=surface(0,.53)-.008
         path=[(.006*math.sin(math.tau*i/8),y,.529+.0065*math.cos(math.tau*i/8)) for i in range(9)]
         ob=self.tube('Pendant bail',path,[.0021]*5,[.0021]*5,(0,1,0),self.rim);bind(ob,self.arm,'chest')
+        for ob in self.items:
+            if ob.name.startswith(('Necklace','Teardrop pendant','Pendant ')):
+                ob['corefolder_layer']='Outfit'
 
 
 def revise(arm,collection):

@@ -1,0 +1,21 @@
+{
+  "support_meshes": [
+    "Body",
+    "Face",
+    "Corefolder Cranial Base"
+  ],
+  "cord_rings": 96,
+  "samples": 2304,
+  "all": {
+    "min_mm": 0.33,
+    "median_mm": 4.2,
+    "max_mm": 6.993,
+    "inside_over_0.5mm": 0
+  },
+  "rear": {
+    "min_mm": 1.459,
+    "median_mm": 4.2,
+    "max_mm": 6.715,
+    "inside_over_0.5mm": 0
+  }
+}
