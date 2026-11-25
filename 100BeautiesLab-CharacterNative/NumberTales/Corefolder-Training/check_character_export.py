@@ -291,7 +291,9 @@ def inspect_editable_scene(ungrouped):
     keys = {o.name: len(o.data.shape_keys.key_blocks) for o in bpy.context.scene.objects
             if o.type == "MESH" and o.data.shape_keys}
     from face_articulation import LOWER, ORAL, UPPER
+    from canonical_face import compare_reference_face
     face, = [o for o in selected if o.get("corefolder_mouth_revision")]
+    reference_face = compare_reference_face(face, arm, set(ORAL) | {10, 30, 59, 238, 263, 268, 292, 298})
     face_keys = face.data.shape_keys.key_blocks
     human = {h.bone: h.node.bone_name for h in ext.humanoid.human_bones}
     head = arm.pose.bones[human["head"]]
@@ -344,7 +346,8 @@ def inspect_editable_scene(ungrouped):
             checks.append(dict(group=group.comment, mesh=obj.name, max_local_delta=moved,
                                max_rest_residual=residual, nonmanifold_edges=nonmanifold))
     return dict(blender=bpy.app.version_string, packed_images=images, reference_images=sorted(refs),
-                springs=groups, shape_keys=keys, root_rotation_0_2_rad=checks, mouth_poses=mouth)
+                springs=groups, shape_keys=keys, root_rotation_0_2_rad=checks, mouth_poses=mouth,
+                canonical_face_geometry=reference_face)
 
 
 def inspect_blend(path, blender, grouped, images, expected_groups, errors):
@@ -365,6 +368,8 @@ def inspect_blend(path, blender, grouped, images, expected_groups, errors):
     if not report["reference_images"] or report["springs"] != sorted(expected_groups) or not report["shape_keys"]:
         errors.append("Editable blend contents differ from VRM or lack reference images")
     poses = report["mouth_poses"]
+    if max(report["canonical_face_geometry"]["maximum_position_difference_mm"].values()) > .01:
+        errors.append("The exterior face or eyelids in one or more poses differ from the #4 reference geometry")
     if not (poses["Neutral"]["center_gap_mm"] < 1 and
             poses["Neutral"]["center_gap_mm"] < poses["Aa25"]["center_gap_mm"] <
             poses["Aa50"]["center_gap_mm"] < poses["Aa100"]["center_gap_mm"]):

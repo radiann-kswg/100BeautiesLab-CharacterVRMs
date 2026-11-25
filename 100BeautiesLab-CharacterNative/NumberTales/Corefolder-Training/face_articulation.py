@@ -4,6 +4,7 @@ from pathlib import Path
 
 import bpy
 import numpy as np
+from canonical_face import fit_reference_face
 
 HERE = Path(__file__).resolve().parent
 UPPER = (374, 373, 372, 371, 370, 129, 130, 131, 132)
@@ -93,8 +94,9 @@ def paint_lip(face, number, fraction):
 
 
 def finish_face(number, face, arm):
-    if face.get("corefolder_mouth_revision") == 1:
+    if face.get("corefolder_mouth_revision") == 1 and face.get("corefolder_canonical_face") == 4:
         return
+    fit_reference_face(face, arm)
     source, x_scale, stroke = PROFILES[number]
     mesh = face.data
     keys = mesh.shape_keys.key_blocks
