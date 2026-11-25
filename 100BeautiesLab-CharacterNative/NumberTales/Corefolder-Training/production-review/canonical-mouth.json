@@ -1,0 +1,131 @@
+{
+  "profile_sha256": "05846ee303ead357c23046023317612a3921d5857675783120975abe04da0458",
+  "references": [
+    {
+      "number": 4,
+      "native": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-4/VRCModel_CoreFloder-4.blend",
+      "sha256": "612f09068d527fa5cfa59aee745ff1cb333764aef11450354010945a9beeb7c8",
+      "face_mesh": "Cube.007",
+      "lip_corner_width_m": 0.07913856208324432,
+      "front_surface_span_at_cheek_height_m": 0.4807433485984802,
+      "width_to_span": 0.16461707651615143,
+      "rest_central_gap_m": 0.0012679100036621094,
+      "half_a_central_gap_m": 0.0208590030670166,
+      "full_a_central_gap_m": 0.040450096130371094,
+      "head": "head",
+      "neck": "neck",
+      "jaw": null,
+      "upper_lip_raw_deform_weights": {
+        "head": 0.9987705945968628
+      },
+      "lower_lip_raw_deform_weights": {
+        "head": 0.9987613558769226
+      }
+    },
+    {
+      "number": 16,
+      "native": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-16/VRCModel_CoreFloder-16.blend",
+      "sha256": "86918b2ba417bec64b2af3abfee12c4ce9c91aa6c6d6052301af7ad233ee5843",
+      "face_mesh": "Cube.005",
+      "lip_corner_width_m": 0.05440919101238251,
+      "front_surface_span_at_cheek_height_m": 0.4807433485984802,
+      "width_to_span": 0.11317721009254456,
+      "rest_central_gap_m": 0.0012679100036621094,
+      "half_a_central_gap_m": 0.0208590030670166,
+      "full_a_central_gap_m": 0.040450096130371094,
+      "head": "head",
+      "neck": "neck",
+      "jaw": null,
+      "upper_lip_raw_deform_weights": {
+        "head": 1.0
+      },
+      "lower_lip_raw_deform_weights": {
+        "head": 1.0
+      }
+    },
+    {
+      "number": 20,
+      "native": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-20/VRCModel_CoreFloder-20.blend",
+      "sha256": "ffd9ead2d7447002dd82ca22a3609bd500e78116d8f2becfe3ea2988067c7bdb",
+      "face_mesh": "Cube.010",
+      "lip_corner_width_m": 0.0389808751642704,
+      "front_surface_span_at_cheek_height_m": 0.5444481372833252,
+      "width_to_span": 0.07159703969955444,
+      "rest_central_gap_m": 0.0003923773765563965,
+      "half_a_central_gap_m": 0.008999764919281006,
+      "full_a_central_gap_m": 0.01760709285736084,
+      "head": "head",
+      "neck": "neck",
+      "jaw": null,
+      "upper_lip_raw_deform_weights": {
+        "head": 1.0
+      },
+      "lower_lip_raw_deform_weights": {
+        "head": 1.0
+      }
+    },
+    {
+      "number": 22,
+      "native": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-22/VRCModel_CoreFloder-22.blend",
+      "sha256": "5af2a4d02a7a51afeda6caded3de557d0f8789de0969138995efb69f29dcd6ef",
+      "face_mesh": "Cube.008",
+      "lip_corner_width_m": 0.04658929631114006,
+      "front_surface_span_at_cheek_height_m": 0.4927070140838623,
+      "width_to_span": 0.09455780684947968,
+      "rest_central_gap_m": 0.0006478428840637207,
+      "half_a_central_gap_m": 0.021621406078338623,
+      "full_a_central_gap_m": 0.0425950288772583,
+      "head": "head",
+      "neck": "neck",
+      "jaw": null,
+      "upper_lip_raw_deform_weights": {
+        "head": 1.0
+      },
+      "lower_lip_raw_deform_weights": {
+        "head": 1.0
+      }
+    },
+    {
+      "number": 25,
+      "native": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-25/VRCModel_CoreFloder-25.blend",
+      "sha256": "517cf66a7a79fc925592f37973500c920a1b547eb6f3b4851bd7bb3e066924cf",
+      "face_mesh": "Cube.009",
+      "lip_corner_width_m": 0.0201486237347126,
+      "front_surface_span_at_cheek_height_m": 0.5139886140823364,
+      "width_to_span": 0.03920052573084831,
+      "rest_central_gap_m": 0.0004604458808898926,
+      "half_a_central_gap_m": 0.017386913299560547,
+      "full_a_central_gap_m": 0.03431344032287598,
+      "head": "head",
+      "neck": "neck",
+      "jaw": null,
+      "upper_lip_raw_deform_weights": {
+        "head": 1.0
+      },
+      "lower_lip_raw_deform_weights": {
+        "head": 1.0
+      }
+    },
+    {
+      "number": 93,
+      "native": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-93/VRCModel_CoreFloder-93.blend",
+      "sha256": "fdef1ab0c8f5c2ab0971e97656714a730c55b356d85144850c87fe15545c4b3f",
+      "face_mesh": "Cube.003",
+      "lip_corner_width_m": 0.035513073205947876,
+      "front_surface_span_at_cheek_height_m": 0.4927070140838623,
+      "width_to_span": 0.07207746803760529,
+      "rest_central_gap_m": 0.0005293488502502441,
+      "half_a_central_gap_m": 0.021470189094543457,
+      "full_a_central_gap_m": 0.04241102933883667,
+      "head": "head",
+      "neck": "neck",
+      "jaw": null,
+      "upper_lip_raw_deform_weights": {
+        "head": 1.0
+      },
+      "lower_lip_raw_deform_weights": {
+        "head": 1.0
+      }
+    }
+  ]
+}
