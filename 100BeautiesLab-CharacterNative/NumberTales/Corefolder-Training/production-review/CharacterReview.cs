@@ -8,9 +8,9 @@ using UnityEngine.Rendering;
 using UniVRM10;
 using Object = UnityEngine.Object;
 
-public static class CharacterReview
+public static partial class CharacterReview
 {
-    [Serializable] public class Input { public int number; public string asset; public string sha256; public bool check; public bool artwork; public bool mouth; }
+    [Serializable] public class Input { public int number; public string asset; public string sha256; public bool check; public bool artwork; public bool mouth; public bool gaze; }
     [Serializable] public class Plan { public string output; public Input[] models; }
     [Serializable] public class Motion { public string chain; public int joints, weightedVertices; public float peakTipMeters, peakSkinMeters, finalTipMeters; }
     [Serializable] public class Face { public string expression; public float maxVertexMeters; }
@@ -114,6 +114,11 @@ public static class CharacterReview
 
     static void Review(Input input, string output)
     {
+        using var hasher = System.Security.Cryptography.SHA256.Create();
+        using var inputFile = File.OpenRead(Path.Combine(Project, input.asset));
+        var actualHash = BitConverter.ToString(hasher.ComputeHash(inputFile)).Replace("-", "").ToLowerInvariant();
+        if (!string.IsNullOrEmpty(input.sha256) && !string.Equals(actualHash, input.sha256, StringComparison.OrdinalIgnoreCase))
+            throw new InvalidDataException("VRM content changed before capture: " + input.asset);
         var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(input.asset);
         if (!prefab) throw new Exception("VRM importer did not produce prefab: " + input.asset);
         var obj = Object.Instantiate(prefab);
@@ -128,7 +133,7 @@ public static class CharacterReview
             foreach (var r in skins) r.updateWhenOffscreen = true;
             var shaders = skins.SelectMany(r => r.sharedMaterials).Select(m => m.shader.name).Distinct().ToArray();
             if (shaders.Any(s => !s.Contains("Universal Render Pipeline/MToon10"))) throw new Exception("Unexpected shaders: " + string.Join(", ", shaders));
-            var stats = new Result { number = input.number, sha256 = input.sha256, unity = Application.unityVersion,
+            var stats = new Result { number = input.number, sha256 = actualHash, unity = Application.unityVersion,
                 shader = string.Join(", ", shaders), meshes = skins.Length, validHumanoid = animator.avatar.isValid && animator.avatar.isHuman,
                 playMode = Application.isPlaying, humanoidBones = Enumerable.Range(0,(int)HumanBodyBones.LastBone).Count(i=>animator.GetBoneTransform((HumanBodyBones)i)),
                 colorSpace = QualitySettings.activeColorSpace.ToString(), renderPipeline = GraphicsSettings.currentRenderPipeline.name, orthographicSize = .88f,
@@ -142,6 +147,7 @@ public static class CharacterReview
             foreach (var view in new[]{("front",Vector3.forward),("side",Vector3.right),("back",Vector3.back)})
                 Shoot(Path.Combine(dir,view.Item1+".png"),bounds.center,view.Item2,stats.orthographicSize);
             if(input.mouth) CheckMouth(model,skins,stats,dir);
+            if(input.gaze || input.mouth) CheckGaze(model, skins, dir, input.check);
             if (input.artwork)
             {
                 foreach(int degree in new[]{-36,-27,-18,-9,0,9,18,27,36})
