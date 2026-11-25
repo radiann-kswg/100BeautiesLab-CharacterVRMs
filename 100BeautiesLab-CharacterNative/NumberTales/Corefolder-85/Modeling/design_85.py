@@ -10,8 +10,9 @@ from mathutils import Vector
 
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parents[1]/'Corefolder-49/Modeling'))
-from model_49 import Sculpt,catmull,bind,linear
+from model_49 import Sculpt,catmull,bind,linear,fit_eye_uv_and_pivots
 from refine_models import toon
+from face_articulation import finish_face
 
 
 class Hakko(Sculpt):
@@ -82,15 +83,26 @@ class Hakko(Sculpt):
             p.use_smooth=True
         rest=[v.co.copy() for v in face.data.shape_keys.key_blocks[0].data]
         keys=face.data.shape_keys.key_blocks
+        def chin_sag(x,y,z):
+            return .010*math.exp(-(x/.079)**2-((z-.676)/.042)**2-((y+.314)/.085)**2)
+        for vertex in body.data.vertices:
+            vertex.co.z-=chin_sag(*vertex.co)
         for key in keys:
             for q,r in zip(key.data,rest):
                 x,y,z=r;ax=abs(x)
+                q.co.z-=chin_sag(x,y,z)
                 eye=math.exp(-((ax-.105)/.096)**6-((z-.805)/.083)**6)
-                q.co.x+=math.copysign(.019,x)*eye
+                q.co.x-=math.copysign(.002,x)*eye
                 # Restore the recognizable turquoise eyes below their straight
                 # upper lids while retaining the original blink displacement.
                 q.co.z+=eye*.19*(q.co.z-.774)
+        fit_eye_uv_and_pivots(face,self.arm,rest)
+        # Use the final mouth and supporting skin to place the edge in all its
+        # real poses. save_character detects the completed articulation pass.
+        finish_face(85,face,self.arm)
         self.close_neck(face)
+        self.chin_edge(face,body,self.swatch('Chin contour','#55453F',edge=0),.114,
+                      expressions=('a','i','u','e','o','Joy','Fun','Sorrow'))
 
     def cranium(self):
         n,rows=48,15
@@ -151,8 +163,8 @@ class Hakko(Sculpt):
             return ob
         # A single long central point breaks the brow line. Adjacent fringe
         # panels sweep outwards, clearing the full near iris in the DB pose.
-        lock('Hair central tapered fringe',[(-.011,-.117,1.145),(-.020,-.214,1.075),(-.020,-.286,.996),(.008,-.332,.914),(.039,-.355,.849),(.069,-.352,.767)],
-             [.024,.086,.090,.077,.048,0],[.016,.044,.048,.041,.028,0])
+        lock('Hair central tapered fringe',[(-.011,-.117,1.145),(-.020,-.214,1.075),(-.022,-.286,.996),(-.002,-.332,.914),(.020,-.355,.849),(.048,-.352,.767)],
+             [.024,.086,.090,.072,.043,0],[.016,.044,.048,.041,.028,0])
         lock('Hair fringe R',[(-.047,-.127,1.142),(-.104,-.221,1.062),(-.145,-.276,.990),(-.171,-.300,.910),(-.192,-.296,.837)],
              [.036,.076,.075,.053,0],[.015,.033,.039,.030,0],axis=(.88,-.27,0))
         lock('Hair fringe L',[(.043,-.116,1.146),(.093,-.202,1.086),(.147,-.266,1.008),(.199,-.279,.921),(.209,-.268,.836)],

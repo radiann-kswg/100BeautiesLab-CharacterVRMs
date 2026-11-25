@@ -1,0 +1,68 @@
+{
+  "Official 1": {
+    "screen_left": {
+      "x": 280,
+      "y": 175,
+      "w": 21,
+      "h": 24,
+      "cx": 289.27,
+      "cy": 186.26,
+      "area": 404
+    },
+    "screen_right": {
+      "x": 379,
+      "y": 170,
+      "w": 17,
+      "h": 22,
+      "cx": 386.67,
+      "cy": 180.68,
+      "area": 278
+    },
+    "center_distance_px": 97.4,
+    "image_height_px": 500
+  },
+  "Official 2": {
+    "screen_left": {
+      "x": 282,
+      "y": 179,
+      "w": 21,
+      "h": 22,
+      "cx": 291.23,
+      "cy": 189.15,
+      "area": 364
+    },
+    "screen_right": {
+      "x": 379,
+      "y": 174,
+      "w": 17,
+      "h": 20,
+      "cx": 386.24,
+      "cy": 183.34,
+      "area": 236
+    },
+    "center_distance_px": 95.01,
+    "image_height_px": 500
+  },
+  "VRM +27 deg": {
+    "screen_left": {
+      "x": 232,
+      "y": 177,
+      "w": 26,
+      "h": 20,
+      "cx": 244.35,
+      "cy": 186.89,
+      "area": 411
+    },
+    "screen_right": {
+      "x": 309,
+      "y": 177,
+      "w": 17,
+      "h": 20,
+      "cx": 316.59,
+      "cy": 186.73,
+      "area": 272
+    },
+    "center_distance_px": 72.24,
+    "image_height_px": 500
+  }
+}

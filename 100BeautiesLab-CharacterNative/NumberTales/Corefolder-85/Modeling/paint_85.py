@@ -65,16 +65,25 @@ def paint():
     color=(g>r+9)&(b>r+9)
     a[color,:3]=255
     iris=(x>750)&(x<897)&(y>865)&color
-    a[iris&(r<125),:3]=(0,141,170)
-    a[iris&(r>=125),:3]=(112,218,226)
+    a[iris,:3]=(0,155,178)
+    a[iris&(y>946-.11*(x-828)),:3]=(117,217,225)
     a[865:1024,899:1024,:]=0
     a[(x<202)&(y<238),:3]=255
     face=Image.fromarray(a,'RGBA')
     draw=ImageDraw.Draw(face)
     draw.ellipse((773,873,889,1008),outline=(25,65,75,255),width=4)
+    right=np.array(face.crop((750,865,898,1024)))
+    yy,xx=np.mgrid[865:1024,750:898]
+    clear=iris[865:1024,750:898]&np.any(right[:,:,:3]!=(25,65,75),axis=2)
+    right[clear,:3]=(0,155,178)
+    right[clear&(yy>946+.11*(xx-828)),:3]=(117,217,225)
+    face.paste(Image.fromarray(right,'RGBA'),(10,500))
     for cx in (81,95,108):
         draw.line((cx-2,170,cx+4,163),fill=(222,183,147,255),width=2)
-    draw.ellipse((846,897,861,911),fill=(255,255,248,255))
+    # Both DB expressions put both highlights at screen upper-right. The right
+    # eye's mapping reverses U, so it needs its own island and opposite offset.
+    draw.ellipse((844,902,869,926),fill=(255,255,248,255))
+    draw.ellipse((54,537,79,561),fill=(255,255,248,255))
     face.save(HERE/'85-face.png')
 
 
