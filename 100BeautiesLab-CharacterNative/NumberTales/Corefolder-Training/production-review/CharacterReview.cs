@@ -147,7 +147,7 @@ public static partial class CharacterReview
             foreach (var view in new[]{("front",Vector3.forward),("side",Vector3.right),("back",Vector3.back)})
                 Shoot(Path.Combine(dir,view.Item1+".png"),bounds.center,view.Item2,stats.orthographicSize);
             if(input.mouth) CheckMouth(model,skins,stats,dir);
-            if(input.gaze || input.mouth) CheckGaze(model, skins, dir, input.check);
+            if(input.gaze || input.mouth) CheckGaze(model, skins, dir, input);
             if (input.artwork)
             {
                 foreach(int degree in new[]{-36,-27,-18,-9,0,9,18,27,36})

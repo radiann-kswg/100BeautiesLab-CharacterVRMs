@@ -20,7 +20,7 @@ public static partial class CharacterReview
         public List<GazeSample> samples = new();
     }
 
-    static void CheckGaze(Vrm10Instance model, SkinnedMeshRenderer[] skins, string dir, bool validate)
+    static void CheckGaze(Vrm10Instance model, SkinnedMeshRenderer[] skins, string dir, Input input)
     {
         var anim = model.GetComponent<Animator>();
         int[] Indices(SkinnedMeshRenderer skin, HumanBodyBones slot)
@@ -52,6 +52,9 @@ public static partial class CharacterReview
         Directory.CreateDirectory(folder);
         Shoot(Path.Combine(folder, "front.png"), center, Vector3.forward, .30f);
         Shoot(Path.Combine(folder, "oblique.png"), center, Quaternion.Euler(0,20,0) * Vector3.forward, .30f);
+        int artYaw = input.number switch { 6 => 9, 49 => -18, 57 => 27, 85 => 18, _ => 0 };
+        if (artYaw != 0)
+            Shoot(Path.Combine(folder, "art-angle.png"), center, Quaternion.Euler(0,artYaw,0) * Vector3.forward, .30f);
         foreach (var yaw in new[] {-12, 12})
         {
             renderer.SetYawPitchManually(yaw, 0);
@@ -63,14 +66,14 @@ public static partial class CharacterReview
                 maxVertexTravelMm=1000*both.Max(i => Vector3.Distance(pose[i], neutral[i])) };
             report.samples.Add(sample);
             Shoot(Path.Combine(folder, "yaw"+yaw+".png"), center, Vector3.forward, .30f);
-            if (validate && !(sample.leftCentroidXmm*sample.rightCentroidXmm > 0 && sample.maxVertexTravelMm > .1f))
+            if (input.check && !(sample.leftCentroidXmm*sample.rightCentroidXmm > 0 && sample.maxVertexTravelMm > .1f))
                 throw new InvalidDataException("Eye skins did not travel together: "+JsonUtility.ToJson(sample));
         }
         renderer.SetYawPitchManually(0, 0);
         model.Runtime.Process();
         var restored = World();
         report.returnErrorMm = 1000*both.Max(i => Vector3.Distance(restored[i], neutral[i]));
-        if (validate && report.returnErrorMm > .1f) throw new InvalidDataException("Eyes did not return to rest");
+        if (input.check && report.returnErrorMm > .1f) throw new InvalidDataException("Eyes did not return to rest");
         renderer.LookAtInput = previousInput;
         model.Runtime.Process();
         File.WriteAllText(Path.Combine(folder, "gaze.json"), JsonUtility.ToJson(report, true));
