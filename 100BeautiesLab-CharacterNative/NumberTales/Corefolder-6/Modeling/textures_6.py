@@ -1,6 +1,8 @@
 """Prepare Mui's packed image maps from the official corefolder art and starter UV atlas."""
 import argparse
 from pathlib import Path
+from eye_art import prepare_eye_map
+from scipy import ndimage
 
 import numpy as np
 from PIL import Image, ImageDraw
@@ -18,15 +20,8 @@ def face_atlas(out):
     r, g, b = np.moveaxis(pixels[:, :, :3].astype(float), -1, 0)
     cyan = (g - r > 9) & (b - r > 9)
     pixels[cyan, :3] = 255
-    # Mui has a small round catchlight above a large white four-point sparkle.
-    # Keep the donor's black iris perimeter, including its anti-aliasing.
-    src = np.asarray(im)[865:1024, 753:897, :3].astype(float)
-    lum = np.max(src, axis=2)
-    blend = np.clip((src[:, :, 2] - 189) / (237 - 189), 0, 1)[..., None]
-    color = (1 - blend) * [163, 133, 171] + blend * [106, 166, 215]
-    opacity = np.minimum(1, lum / (189 + 48 * blend[:, :, 0]))[..., None]
-    pixels[865:1024, 753:897, :3] = np.round(color * opacity)
-    # The separate canonical gloss polygons use the lower-right atlas corner.
+    # The two independently mapped official eyes include their own catchlights.
+    pixels[865:1024, 753:897, 3] = 0
     pixels[872:, 898:, 3] = 0
     im = Image.fromarray(pixels)
     # The original uses a large airbrush spot. Mui's pose 1 uses four short cheek hatches.
@@ -42,19 +37,6 @@ def face_atlas(out):
     lip_edge=[(20.6,167.2),(24,166.9),(27.5,166.4),(31,165.4),(35.2,164),(38.8,162.1)]
     pen.line([(round((x-15)*8),round((y-151)*8)) for x,y in lip_edge],fill="#594552",width=16,joint="curve")
     im.paste(lip.resize((35,25),Image.Resampling.LANCZOS),(15,151))
-    factor = 4
-    stars = Image.new("RGBA", (150*factor, 155*factor))
-    d = ImageDraw.Draw(stars)
-    def shape(pts, fill):
-        d.polygon([(int(x*factor), int(y*factor)) for x, y in pts], fill=fill)
-    shape([(75,44),(82,64),(88,72),(100,81),(88,89),(81,99),(74,121),
-           (68,102),(61,94),(51,86),(61,76),(68,65)], "#201b23")
-    shape([(75,57),(80,71),(85,77),(92,81),(82,90),(75,108),(69,95),
-           (60,86),(69,75)], "#ffffff")
-    d.ellipse(tuple(int(v*factor) for v in (95,35,120,60)),fill="#201b23")
-    d.ellipse(tuple(int(v*factor) for v in (98,38,118,57)),fill="white")
-    stars = stars.resize((180,180), Image.Resampling.LANCZOS)
-    im.alpha_composite(stars, (736,850))
     im.save(out / "Mui-Face.png", optimize=True)
 
 
@@ -87,6 +69,7 @@ def prepare(database, out):
             paint.line((start,y,end,y),fill=tuple(rgb))
     band.save(out/"Mui-TailBand.png", optimize=True)
     image_root = database / "data/Works_NumberTales/Images/DB_Primary"
+    prepare_eye_map(6, image_root, out / "Mui-Eyes.png")
     art = Image.open(image_root / "corefolder/6/emstk_corefolderNTS-6-1.png").convert("RGBA")
     art.crop((753,590,909,791)).save(out / "Mui-Brooch.png", optimize=True)
     # Undo the illustrated head roll and scale the drawing by its eye separation.
@@ -103,6 +86,12 @@ def prepare(database, out):
     red,green,blue=sample[:,:,:3].transpose(2,0,1)
     coverage=np.clip((red-green-38)/38,0,1)*np.clip((blue-green-13)/18,0,1)
     coverage*=np.clip((red-87)/60,0,1)
+    # In the drawing the black brow crosses the pink bang. Keep the mesh brow
+    # behind the fringe and restore the few pink pixels occupied by the drawn line.
+    band=(abs(local_x)<.18)&(abs(local_x)>.028)&(local_z>.875)&(local_z<.926)
+    fill=band&ndimage.binary_closing(coverage>.45,iterations=7)&(coverage<.45)
+    sample[fill,:3]=[255,118,162]
+    coverage[fill]=1
     sample[:,:,3]=255*coverage
     # Edge bleed is pink rather than black or skin when the alpha mip levels are sampled.
     sample[:,:,:3]=np.where((coverage>.07)[:,:,None],sample[:,:,:3],[255,118,162])

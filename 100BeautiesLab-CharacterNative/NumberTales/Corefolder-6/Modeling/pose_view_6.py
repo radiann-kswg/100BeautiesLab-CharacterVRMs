@@ -20,6 +20,8 @@ def render():
     parser.add_argument("--elevation",type=float,default=2.5)
     parser.add_argument("--neutral",action="store_true")
     parser.add_argument("--rear-tails",action="store_true")
+    parser.add_argument("--head",action="store_true",help="Frame the face for iris and expression inspection")
+    parser.add_argument("--gaze",type=float,default=0,help="Rotate both humanoid eye bones in degrees")
     p=parser.parse_args(sys.argv[sys.argv.index("--")+1:])
     bpy.ops.wm.read_homefile(use_empty=True)
     scene=bpy.context.scene
@@ -43,6 +45,11 @@ def render():
     if p.rear_tails:
         for o in model.objects:
             if o.type=="MESH":o.hide_render="tail" not in o.name.lower()
+    if p.gaze:
+        slots=arm.data.vrm_addon_extension.vrm0.humanoid.human_bones
+        for slot in slots:
+            if slot.bone in {'leftEye','rightEye'}:
+                rotate(slot.node.bone_name,[('Z',p.gaze)])
     inst=bpy.data.objects.new("Displayed character",None)
     scene.collection.objects.link(inst)
     inst.instance_type='COLLECTION'
@@ -52,8 +59,8 @@ def render():
     scene.collection.objects.link(cam)
     scene.camera=cam
     cam.data.type='ORTHO'
-    cam.data.ortho_scale=1.60
-    target=Vector((0,.030,.55))
+    cam.data.ortho_scale=.70 if p.head else 1.60
+    target=Vector((0,-.15,.837)) if p.head else Vector((0,.030,.55))
     theta=math.radians(0 if p.rear_tails else p.elevation)
     cam.location=target+Vector((0,-15*math.cos(theta),15*math.sin(theta)))
     cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler()

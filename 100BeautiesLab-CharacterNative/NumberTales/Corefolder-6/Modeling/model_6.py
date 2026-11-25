@@ -86,6 +86,26 @@ def mesh_uv(obj, mapping, name="UVMap"):
     uv.active_render = True
 
 
+def map_drawn_eyes(face, material):
+    """Use a distinct cell per iris while keeping the donor eye weights and expression loops."""
+    data=face.data
+    uv=data.uv_layers.active
+    basis=data.shape_keys.key_blocks['Basis'].data
+    data.materials.append(material)
+    slot=len(data.materials)-1
+    for cell,start in ((0,627),(1,578)):
+        indices=set(range(start,start+49))
+        coords=np.array([basis[i].co[:] for i in sorted(indices)])
+        x0,_,z0=coords.min(axis=0)
+        dx,_,dz=np.ptp(coords,axis=0)
+        for poly in data.polygons:
+            if not indices.issuperset(poly.vertices):continue
+            poly.material_index=slot
+            for li in poly.loop_indices:
+                x,_,z=basis[data.loops[li].vertex_index].co
+                uv.data[li].uv=((cell+(x-x0)/dx)/2,(z-z0)/dz)
+
+
 def prepare_body_and_face(body, face, arm, collection):
     # The torso from the common basis remains fully weighted on both sides.
     # Broaden its hips and upper flank to match the stocky egg silhouette in the three DB poses.
@@ -110,11 +130,12 @@ def prepare_body_and_face(body, face, arm, collection):
         body.data.uv_layers.remove(uv)
     mesh_uv(body, body_uv, "Mui cylindrical fur")
     face.data.materials.clear()
-    face.data.materials.append(texture("Mui • lavender iris and expression atlas",HERE/"Mui-Face.png",alpha=True))
+    face.data.materials.append(texture("Mui • expression atlas",HERE/"Mui-Face.png",alpha=True))
     face.data.materials.append(toon("Mui • inner lip line","#734E5B",0))
     for polygon in face.data.polygons:
         if 144<=polygon.index<=151 or 397<=polygon.index<=404:
             polygon.material_index=1
+    map_drawn_eyes(face,texture("Mui • drawn left and right irises",HERE/"Mui-Eyes.png",alpha=True))
     # Ease the donor's neutral eye aperture; every expression keeps the same coordinate transform.
     basis = face.data.shape_keys.key_blocks["Basis"]
     for i, point in enumerate(basis.data):
@@ -124,6 +145,7 @@ def prepare_body_and_face(body, face, arm, collection):
         eye *= np.clip((z-.74)/.025,0,1)*np.clip((.92-z)/.025,0,1) if y<-.26 else 0
         for key in face.data.shape_keys.key_blocks:
             co = key.data[i].co
+            co.x *= 1-.035*np.clip((ax-.145)/.085,0,1)
             co.z = .77+(co.z-.77)*(1-.12*eye)
             co.z += .030 + .005*eye - .011*eye*np.clip((ax-.104)/.065,0,1)
             if 482<=i<=675 and co.y<-.285:
@@ -135,7 +157,7 @@ def prepare_body_and_face(body, face, arm, collection):
             if y<-.295 and ax<.049 and .724<z<.751:
                 co.z += .0045*(ax/.049)**2
     body["source"] = "Verified Corefolder-6 starter; common naked Body"
-    face["source"] = "Verified Corefolder-6 starter; #4 UV, with #6 iris shape and hues"
+    face["source"] = "Verified Corefolder-6 starter, independent DB pose-1 iris UVs"
 
 
 def volume(name, outline, centre, depth, material, coll, attach=None, samples=2,levels=9):
@@ -250,7 +272,8 @@ def head(arm, coll, hair, cream, pale, white):
              (.270,-.279,.706),(.248,-.287,.703),(.250,-.292,.684),(.264,-.294,.664),
              (.241,-.299,.664),(.212,-.307,.680),(.193,-.313,.694),(.178,-.316,.682),
              (.164,-.317,.677),(.148,-.313,.700),(.125,-.311,.725)]
-        cheek = volume("Mui cheek tufts "+side,[(s*(x-.011),y-.013,.763+(z-.738)*1.17) for x,y,z in pts],
+        def cheek_x(x): return s*(x-.011-.010*np.clip((x-.17)/.108,0,1))
+        cheek = volume("Mui cheek tufts "+side,[(cheek_x(x),y-.013,.763+(z-.738)*1.17) for x,y,z in pts],
                        (s*.194,-.299,.763),.013,white,coll,samples=2,levels=6)
         bind(cheek,arm)
         # A short stroke follows only the exposed feather edge. An inverted outline across
@@ -258,7 +281,7 @@ def head(arm, coll, hair, cream, pale, white):
         edge_points=[(.303,-.260,.743,.0007),(.290,-.272,.719,.00165),(.271,-.280,.706,.00165),
                      (.248,-.288,.703,.00135),(.250,-.293,.684,.00145),(.263,-.295,.664,.0013),
                      (.244,-.301,.664,.00135),(.221,-.307,.672,.0006)]
-        contour=[(s*(x-.011),y-.016,.763+(z-.738)*1.17,w,.0009) for x,y,z,w in edge_points]
+        contour=[(cheek_x(x),y-.016,.763+(z-.738)*1.17,w,.0009) for x,y,z,w in edge_points]
         bind(strand("Mui outer cheek stroke "+side,contour,cheek_ink,coll,radial_count=4,samples_per_span=1),arm)
         # The wide, near-horizontal ear rim is visible between the outer pink edge and the draped side lock.
         edge=[(.324,.120,1.077),(.318,.068,1.037),(.312,-.002,.993),(.304,-.085,.955),
@@ -288,8 +311,8 @@ def head(arm, coll, hair, cream, pale, white):
         def mirror(stations): return [(s*x,y,z,w,d) for x,y,z,w,d in stations]
         # In the official front the side bangs form a single broad sweep with long rounded tips.
         path=mirror([(.173,-.20,.973,.020,.012),(.201,-.216,.937,.035,.016),
-                     (.236,-.219,.897,.049,.026),(.259,-.192,.846,.045,.027),
-                     (.265,-.178,.806,.034,.022),(.279,-.178,.770,.002,.001)])
+                     (.232,-.230,.897,.049,.026),(.252,-.209,.846,.045,.027),
+                     (.256,-.200,.806,.034,.022),(.272,-.204,.770,.002,.001)])
         side_obj=strand("Mui temple sweep "+side,path,hair,coll)
         add_spring_chain(arm,side_obj,"MuiHair"+side,[p[:3] for p in (path[1],path[2],path[3],path[-1])],
                          parent="head",kind="hair",radius=.010)
