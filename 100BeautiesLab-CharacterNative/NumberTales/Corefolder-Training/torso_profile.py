@@ -1,58 +1,78 @@
-"""Blend a little of the original cage contour into the common VRM torso."""
+"""Fit the common body to the real #4 torso and extend its neutral facial surface."""
+import json
 from pathlib import Path
 
 import bpy
 import numpy as np
-from mathutils import Vector
+from mathutils import Vector, kdtree
 
-BASE = Path(__file__).resolve().parents[2] / "Basis/Corefolder/VRCModel_CoreFloder-Base.blend"
+HERE = Path(__file__).resolve().parent
 
 
-def section_bounds(obj, levels):
-    points = np.asarray([obj.matrix_world @ v.co for v in obj.data.vertices],dtype=float)
-    edges = np.asarray([e.vertices[:] for e in obj.data.edges])
-    a,b = points[edges].transpose(1,0,2)
-    result = []
-    for height in levels:
-        select = (a[:,2] <= height) != (b[:,2] <= height)
-        start, end = a[select], b[select]
-        cross = start+(end-start)*((height-start[:,2])/(end[:,2]-start[:,2]))[:,None]
-        result.append([cross[:,0].min(),cross[:,0].max(),cross[:,1].min(),cross[:,1].max()])
-    return np.asarray(result)
+def reference():
+    return json.loads((HERE / "canonical-core-envelope.json").read_text(encoding="utf8"))
 
 
 def fit_common_torso(body):
-    """Keep placement and skinning, easing shoulders and hem toward the unsmoothed base."""
-    levels = np.arange(.01,.701,.01)
-    with bpy.data.libraries.load(str(BASE),link=False) as (_, target):
-        target.objects = ["body"]
-    original, = target.objects
-    source = original.data
-    bpy.context.scene.collection.objects.link(original)
-    try:
-        bpy.context.view_layer.update()
-        donor = original.evaluated_get(bpy.context.evaluated_depsgraph_get())
-        basis = section_bounds(donor,levels)
-    finally:
-        bpy.data.objects.remove(original,do_unlink=True)
-        if not source.users:
-            bpy.data.meshes.remove(source)
-    canonical = section_bounds(body,levels)
-    widths = canonical[:,[1,3]]-canonical[:,[0,2]]
-    basis_widths = basis[:,[1,3]]-basis[:,[0,2]]
-    # Limit the change at the low pole, neckline and the belly's widest section.
-    # Interpolating the measured sections keeps the upper shoulder round.
-    blend = np.interp(levels,[.01,.06,.13,.27,.36,.46,.57,.64,.68,.70],
-                      [0.,.36,.42,.28,.24,.30,.42,.42,.22,0.])
-    gain = 1 + blend[:,None] * np.clip(basis_widths/widths-1.,-.05,.07)
-    center = .5*(canonical[:,[0,2]]+canonical[:,[1,3]])
-    to_world = body.matrix_world
-    to_local = to_world.inverted()
-    for v in body.data.vertices:
-        before = to_world @ v.co
-        xy = np.asarray(before[:2])
-        mid = np.array([np.interp(before.z,levels,col) for col in center.T])
-        scale = np.array([np.interp(before.z,levels,col) for col in gain.T])
-        x,y = mid+(xy-mid)*scale
-        v.co = to_local @ Vector((x,y,before.z))
+    """Copy the positions of the actual reference body while preserving weights and UV topology."""
+    points = reference()["body_points"]
+    tree = kdtree.KDTree(len(points))
+    for i,point in enumerate(points):
+        tree.insert(Vector(point),i)
+    tree.balance()
+    world = body.matrix_world
+    local = world.inverted()
+    matched = set()
+    if len(body.data.vertices) != len(points):
+        raise ValueError("Common core torso topology has changed")
+    for vertex in body.data.vertices:
+        point,index,distance = tree.find(world @ vertex.co)
+        if distance>.006 or index in matched:
+            raise ValueError(f"Ambiguous common torso point {vertex.index}: {distance}")
+        matched.add(index)
+        vertex.co = local @ point
     body.data.update()
+
+
+def add_cranial_base(arm,face,number,collection):
+    from modeling_draft import bind
+    from refine_models import toon
+
+    info = reference()
+    rows = np.asarray(info["head_rows"],dtype=float)
+    first = np.asarray([face.matrix_world @ face.data.vertices[i].co for i in info["rim"]])
+    if np.max(abs(first-rows[0])) > .0003:
+        raise ValueError("Canonical face boundary does not match the reference")
+    rows[0] = first
+    points = rows.reshape(-1,3).tolist()+[info["head_pole"]]
+    count = rows.shape[1]
+    faces = []
+    for row in range(len(rows)-1):
+        for j in range(count):
+            i = row*count+j
+            k = row*count+(j+1)%count
+            faces.append((i,k,k+count,i+count))
+    last = (len(rows)-1)*count
+    faces.extend((last+j,last+(j+1)%count,len(points)-1) for j in range(count))
+    mesh = bpy.data.meshes.new("Canonical posterior cranium")
+    mesh.from_pydata(points,[],faces)
+    mesh.update()
+    # The patch remains open at the 34 vertices shared with the expression face.
+    center = Vector((0.,-.09,.81))
+    if np.median([p.normal.dot(p.center-center) for p in mesh.polygons]) < 0:
+        mesh.flip_normals()
+    obj = bpy.data.objects.new("Corefolder Cranial Base",mesh)
+    collection.objects.link(obj)
+    fur = {6:"#FF76A2",49:"#6AA6D7",57:"#FFEE62",85:"#C48455"}[number]
+    mat = toon(f"Corefolder Cranial Base #{number}",fur,0)
+    mesh.materials.append(mat)
+    uv = mesh.uv_layers.new(name="UVMap")
+    for poly in mesh.polygons:
+        poly.use_smooth = True
+        for loop in poly.loop_indices:
+            idx = mesh.loops[loop].vertex_index
+            uv.data[loop].uv = ((idx%count)/count, min(1.,(idx//count)/len(rows)))
+    obj["corefolder_layer"] = "Base"
+    obj["corefolder_sources"] = "VRM #4 facial boundary and torso; #4, #25, #93 posterior envelope"
+    bind(obj,arm,"head")
+    return obj

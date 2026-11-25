@@ -56,7 +56,7 @@ def section_data(vertices, triangles):
             "floor_mm":round(float(points_in[:,2].min())*1000,3),"support_mm":result}
 
 
-def frozen_vrm(path):
+def posed_parts(path, node_names):
     from check_exported_face_rig import Glb, pose_matrix
 
     glb = Glb(path)
@@ -68,9 +68,9 @@ def frozen_vrm(path):
             m = pose_matrix(nodes[i])
             world[i] = matrix(parents[i]) @ m if i in parents else m
         return world[i]
-    chunks, triangles, offset = [], [], 0
     for i,node in enumerate(nodes):
-        if not (node.get("name","").lower().startswith("body") and "mesh" in node):
+        name = node.get("name","")
+        if "mesh" not in node or not any(name.lower().startswith(n) for n in node_names):
             continue
         skin = glb.doc["skins"][node["skin"]]
         inverse = glb.array(skin["inverseBindMatrices"]).reshape(-1,4,4).transpose(0,2,1)
@@ -82,9 +82,18 @@ def frozen_vrm(path):
             weights = glb.array(attr["WEIGHTS_0"]).astype(float)
             weights /= weights.sum(axis=1,keepdims=True)
             xyz = np.einsum("nvij,nj,nv->ni",bones[joints],np.column_stack((p,np.ones(len(p)))),weights)
-            chunks.append(xyz[:,[0,2,1]])
-            triangles.append(glb.array(prim["indices"]).reshape(-1,3).astype(int)+offset)
-            offset += len(p)
+            material = glb.doc["materials"][prim["material"]]["name"]
+            # VRM 0.x faces +Z. The add-on reorients this to Blender -Y.
+            positions = xyz[:,[0,2,1]] * [-1,1,1]
+            yield name,material,positions,glb.array(prim["indices"]).reshape(-1,3).astype(int)
+
+
+def frozen_vrm(path):
+    chunks, triangles, offset = [], [], 0
+    for _,_,positions,faces in posed_parts(path,("body",)):
+        chunks.append(positions)
+        triangles.append(faces+offset)
+        offset += len(positions)
     return section_data(np.concatenate(chunks),np.concatenate(triangles))
 
 
