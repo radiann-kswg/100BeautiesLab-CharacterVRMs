@@ -42,6 +42,29 @@ def reverse_if_inward(ob):
     ob.data.update()
 
 
+def fit_eye_uv_and_pivots(face, arm, rest):
+    """Give the second iris its own artwork and keep gaze axes with the neutral eyes."""
+    mesh = face.data
+    uv = mesh.uv_layers.active.data
+    for loop in mesh.loops:
+        if 627 <= loop.vertex_index <= 675:
+            # Top-left PNG coordinates (750,865) move to the unused area (10,500).
+            uv[loop.index].uv += Vector((-740/1024,365/1024))
+    basis = mesh.shape_keys.key_blocks[0].data
+    bpy.ops.object.select_all(action='DESELECT')
+    arm.select_set(True)
+    bpy.context.view_layer.objects.active=arm
+    bpy.ops.object.mode_set(mode='EDIT')
+    try:
+        for name, first in [('eye.L',578),('eye.R',627)]:
+            delta=sum((basis[i].co-rest[i] for i in range(first,first+49)),Vector())/49
+            bone=arm.data.edit_bones[name]
+            bone.head+=delta
+            bone.tail+=delta
+    finally:
+        bpy.ops.object.mode_set(mode='OBJECT')
+
+
 class Sculpt:
     def __init__(self, arm, body, face):
         self.arm, self.collection = arm, body.users_collection[0]
@@ -209,7 +232,8 @@ class Sculpt:
                 eye = math.exp(-((ax-.117)/.093)**6-((z-.825)/.104)**6)
                 q.co.z -= eye*.32*(q.co.z-.797)
                 q.co.z -= eye*.040*(ax-.112)
-                q.co.x += eye*(math.copysign(.033,x)+.09*(q.co.x-math.copysign(.112,x)))
+                q.co.x += eye*(math.copysign(.001,x)+.055*(q.co.x-math.copysign(.105,x)))
+        fit_eye_uv_and_pivots(face,self.arm,rest)
 
     def close_neck(self, face):
         # Find the starter's outer face loop, then extend its exact edge into
@@ -255,6 +279,58 @@ class Sculpt:
             i,j=divmod(loop.vertex_index,n)
             layer.data[li].uv=(sections[i][0]/.257,max(.01,min(.99,(points[j].z-.62)/.37)))
         bind(ob,self.arm)
+
+    def chin_edge(self,face,body,ink,half_span,*,expressions=()):
+        """Place a tapered facial boundary on the chin, immediately above the bib."""
+        from mathutils.bvhtree import BVHTree
+        bpy.context.view_layer.update()
+        graph=bpy.context.evaluated_depsgraph_get()
+        skin=BVHTree.FromObject(face,graph)
+        chest=BVHTree.FromObject(body,graph)
+        sampled=[skin,chest]
+        for name in expressions:
+            key=face.data.shape_keys.key_blocks[name]
+            previous=key.value
+            try:
+                for strength in (.5,1.):
+                    key.value=strength
+                    bpy.context.view_layer.update()
+                    sampled.append(BVHTree.FromObject(face,graph))
+            finally:
+                key.value=previous
+                bpy.context.view_layer.update()
+        forward=Vector((0,1,0))
+        def hit(tree,x,z):
+            return tree.ray_cast(Vector((x,-1.5,z)),forward,3.)[0]
+        def visible(x,z):
+            a=hit(skin,x,z);b=hit(chest,x,z)
+            return a is not None and (b is None or a.y <= b.y)
+        verts=[];polys=[]
+        for i in range(37):
+            u=i/36
+            x=(2*u-1)*half_span
+            low,high=.60,.739
+            if not visible(x,high):
+                raise ValueError(f'No exposed jaw above bib at x={x}')
+            for _ in range(15):
+                mid=(low+high)*.5
+                if visible(x,mid):high=mid
+                else:low=mid
+            # Both edges lie on the exposed facial surface. The bottom edge
+            # abuts the measured skin/bib intersection; the ends fade to a point.
+            width=.00012+.0050*math.sin(math.pi*u)**.85
+            for dz in (.0004,.0004+width):
+                p=hit(skin,x,high+dz)
+                if expressions:
+                    # The lip rig can push its supporting cheek triangles in
+                    # front of the neutral border. Sample the real surface in
+                    # intermediate and extreme poses at each end of each quad.
+                    pts=[hit(tree,x,high+dz) for tree in sampled]
+                    p=min((pt for pt in pts if pt is not None),key=lambda pt:pt.y)
+                verts.append((x,p.y-.0008,high+dz))
+            if i:polys.append((2*i-2,2*i,2*i+1,2*i-1))
+        ob=self.mesh('Cheek and jaw | skin boundary',verts,polys,ink)
+        bind(ob,self.arm,'head')
 
     def scalp(self):
         count, rows = 44, 13
@@ -311,9 +387,9 @@ class Sculpt:
             return ob
         # Three interleaving, asymmetrical forelocks. The longest curves past the
         # character's right brow; the middle one turns toward the opposite eye.
-        lock('right sweep',[(-.023,-.177,1.044),(-.066,-.268,1.003),(-.083,-.324,.939),(-.087,-.352,.874),(-.085,-.357,.817),(-.064,-.365,.779)],
-             [.027,.060,.059,.047,.026,0],[.014,.024,.027,.022,.014,0])
-        lock('middle forelock',[(.003,-.189,1.039),(-.010,-.275,.990),(-.033,-.323,.932),(-.049,-.349,.871),(-.042,-.357,.832),(-.015,-.361,.798)],
+        lock('right sweep',[(-.023,-.177,1.044),(-.063,-.268,1.003),(-.068,-.324,.939),(-.057,-.352,.874),(-.052,-.357,.817),(-.032,-.365,.779)],
+             [.027,.060,.054,.043,.024,0],[.014,.024,.027,.022,.014,0])
+        lock('middle forelock',[(.003,-.189,1.039),(-.004,-.275,.990),(-.018,-.323,.932),(-.028,-.349,.871),(-.020,-.357,.832),(.007,-.361,.798)],
              [.030,.057,.049,.039,.022,0],[.016,.026,.026,.020,.012,0])
         lock('left brow sweep',[(.005,-.187,1.046),(.065,-.257,1.013),(.133,-.295,.967),(.183,-.281,.921),(.203,-.263,.868)],
              [.033,.076,.069,.054,0],[.016,.024,.027,.018,0],axis=(.8,.32,0))
@@ -444,6 +520,7 @@ def build(starter, output):
     sculpt.body(body)
     sculpt.face(face)
     sculpt.close_neck(face)
+    sculpt.chin_edge(face,body,sculpt.material('Chin contour','#43434A',edge=False),.126)
     sculpt.scalp()
     sculpt.locks()
     sculpt.ears()

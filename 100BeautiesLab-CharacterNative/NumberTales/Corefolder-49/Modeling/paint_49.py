@@ -66,21 +66,32 @@ def paint(db, destination):
     cyan = (green > red + 9) & (blue > red + 9)
     rgba[cyan, :3] = 255   # white backing and white muzzle of this Corefolder
     eye = (x > 750) & (x < 897) & (y > 865) & cyan
-    rgba[eye & (red < 125), :3] = (64, 90, 185)
-    rgba[eye & (red >= 125), :3] = (67, 120, 195)
+    rgba[eye, :3] = (64, 90, 185)
+    rgba[eye & (y > 942-.16*(x-828)), :3] = (67, 120, 195)
     # Existing overlay geometry remains available for every eyelid morph. Its
     # donor's two large white discs are replaced by #49's single iris catchlight.
     rgba[865:1024,899:1024,:] = 0
     face = Image.fromarray(rgba, 'RGBA')
+    second=np.array(face.crop((750,865,898,1024)))
+    yy,xx=np.mgrid[865:1024,750:898]
+    field=eye[865:1024,750:898]
+    second[field,:3]=(64,90,185)
+    second[field & (yy>942+.16*(xx-828)),:3]=(67,120,195)
+    face.paste(Image.fromarray(second,'RGBA'),(10,500))
     scale = 4
-    pupil = Image.new('RGBA', (140*scale, 155*scale))
-    pen = ImageDraw.Draw(pupil)
-    def poly(points, color):
-        pen.polygon([(round((u-755)*scale),round((v-865)*scale)) for u,v in points],fill=color)
-    poly([(828,891),(834,902),(839,928),(837,949),(829,969),(822,951),(820,933),(822,911)], (21,28,46,255))
-    poly([(828,900),(833,915),(835,931),(833,948),(829,958),(825,945),(824,929),(825,913)], (189,138,230,255))
-    pen.ellipse([(a*scale,b*scale) for a,b in [(88,17),(108,35)]], fill=(255,254,248,255))
-    face.alpha_composite(pupil.resize((140,155),Image.Resampling.LANCZOS), (755,865))
+    for near,origin in [(True,(750,865)),(False,(10,500))]:
+        pupil = Image.new('RGBA', (148*scale,159*scale))
+        pen = ImageDraw.Draw(pupil)
+        def poly(points, color):
+            pts=[((u if near else 1656-u)-750,v-865) for u,v in points]
+            pen.polygon([(round(u*scale),round(v*scale)) for u,v in pts],fill=color)
+        poly([(831,890),(835,906),(837,928),(834,949),(827,969),(821,951),(819,933),(823,910)], (21,28,46,255))
+        poly([(830,900),(833,916),(833,932),(830,948),(827,958),(824,944),(823,928),(826,913)], (189,138,230,255))
+        if near:
+            # In official expression 1, the near eye alone catches the light;
+            # the fringe and upper lid frame the uninterrupted far iris.
+            pen.ellipse((92*scale,38*scale,118*scale,62*scale), fill=(255,254,248,255))
+        face.alpha_composite(pupil.resize((148,159),Image.Resampling.LANCZOS),origin)
     # The source UV cheek island is symmetric. Paint three fine peach strokes
     # over the soft canonical blush and mute its bubble highlights.
     cheek = np.array(face)

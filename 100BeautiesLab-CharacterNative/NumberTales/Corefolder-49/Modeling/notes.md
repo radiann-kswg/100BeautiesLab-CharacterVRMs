@@ -1,18 +1,33 @@
 # コアフォルダ #49 ヨチカ
 
-`Corefolder-49.blend` は編集用、`Corefolder-49.vrm` は VRM 0.x の書き出し。Blender 5.3.0 と VRM Add-on 4.10.5 を使用した。
+`Corefolder-49.blend` は編集用、`Corefolder-49.vrm` は VRM 0.x の実行用。Blender 5.3.0 と VRM Add-on 4.10.5 で書き出した。
 
 ## デザインと出典
 
-- 公式 CreationsDB の `data/Works_NumberTales/DataBases/db_Primary.json` の Num 49 と、`Images/DB_Primary/corefolder/49/emstk_corefolderNTS-49-{1,2}.png` を参照した。空色の毛・白腹・明るい青のミディアムヘア、両側の狐耳、紺色の虹彩・紫の縦瞳、頬の短線、横長の口を立体化した。左胸の「49」は `attr/numberMark/attr_numberMarkNTS-49.png` の透過原図を白い前身に焼き込んだ。制服などは DB のヒューマノイド形態に属する。
-- 配色は毛の主色 `#6AA6D7`、淡い毛先と耳内側 `#9BC1E6`、虹彩 `#405AB9` と `#4378C3`、瞳の差し色 `#BD8AE6`。やや下がった上瞼・長短のある前髪・外向きの頬毛・後ろへ重なる襟足を形状にした。正面寄りの設定画に見えない後頭部の厚みと喉の奥行きは立体化時の補間。
-- `attr/tailsUnit/attr_tailsUnitNTS-49.png` と DB の上4本・下5本を照合した。上は左右に2房ずつ、各房の淡色の端面を実際に二分して長短の毛先を作った。下は手前へ回る左右、外側左右、中央下の5房。背面の根元から前へ回り込む距離は正面絵と背面アトラスに合わせて定めた。毛先の分岐は同じ房の中で動く。
-- 公式デザインカタログ `catalog/chr-dsgn_catalogNTS-49.png` とイラスト `arts/corefolders/2023/art_imgNTS-49-corefolder.png` でも照合した。2023年の絵には白い喉毛の線が出ている。顔と胸の接続はカタログのコアフォルダ図・上記の表情立ち絵2枚に合わせた。
-- 共通素体は `Basis/Corefolder/VRCModel_CoreFloder-Base.blend` 由来。#4の顔・UV・骨格・表情を備えた #49 編集用スターターを使い、胴体の下部を広げ、顔の全モーフに同じ眼裂・唇の変形を適用した。顔アトラスの頬・虹彩・瞳・ハイライト・口縁を #49 用に描き直した。#22 の本体・顔 MToon 設定を起点に、白い毛の陰影と青い毛束の輪郭幅・色を調整した。
+- 公式 CreationsDB の `data/Works_NumberTales/DataBases/db_Primary.json` の Num 49、`Images/DB_Primary/corefolder/49/emstk_corefolderNTS-49-{1,2}.png`、`catalog/chr-dsgn_catalogNTS-49.png`、`arts/corefolders/2023/art_imgNTS-49-corefolder.png` を照合した。左胸の「49」は `attr/numberMark/attr_numberMarkNTS-49.png` を球面 UV の白腹に焼き込んだ。2023年の絵の白い喉毛は腹側へ続く浅い起伏と毛先の線で表現した。
+- 毛・髪の主色は `#6AA6D7`、淡色の毛先と耳の内毛は `#9BC1E6`。左右の面が立った後頭部、中央へ流れる長短の前髪、頭頂の返り、外へ跳ねる頬毛を別々の形状にした。紺色 `#405AB9` と青 `#4378C3` の虹彩に紫 `#BD8AE6` の縦瞳とハイライトを描いた。
+- **顔・頬・下顎を分けて編集できる。** #4 由来の眼球・上瞼・眉・口腔のトポロジーを残し、目の間隔と高さの変更を全表情に反映した。頬の短線は顔の UV に沿い、奥の目は投影方向に応じて前髪が部分的に隠す。後頭部と白い頬の間を、顔の後縁と同じ頂点位置を持つ首・喉のメッシュで閉じた。公式2表情の差分で動く小さな線が口、その下の固定した長い境界が下顎に対応する。口腔・舌・唇は共通の仕上げで規範 #25 の192点を参照した。下顎は頬と胸毛が交わる位置を実寸で求め、顔側の表面で両端が細く消えるようにした。
+- **尻尾は9本。** `attr/tailsUnit/attr_tailsUnitNTS-49.png` の上4本・下5本を参照した。上4房、左右の中段、中央下は元絵の輪郭・二叉・毛先をトレースし、前後へふくらみを持つ閉じた面にした。残る左右の下房は立ち絵を優先し、白腹の手前で淡い毛先が上を向くように巻いた。背面からはこの2房と中央下の重なりが平面アトラスと異なる。房の奥行き、背面から手前へ回る距離、後頭部の厚さは立体化時の補間。
+- 胴は共通素体 `Basis/Corefolder/VRCModel_CoreFloder-Base.blend` 由来。編集用スターターの胴を元の四角面密度に戻し、横・前後、とくに下半球と肩を広げた。規範 #22 の MToon を基に、白い頬・青の毛束・裏表の毛先で陰影を調整した。書き出し時は編集パーツを4メッシュに集約する。尻尾9チェインと頬毛2チェインは規範 #93 のばね設定を参照した。
 
-## 編集と再生成
+## 実VRMと原画の投影比較
 
-- 胴と顔、髪の房、耳の外殻・裏地・内毛、9本の尾は Blender で個別に編集できる。4枚の PNG は blend に同梱した UV 画像と同じ内容。尾9系統と左右の頬毛2系統にはウェイトと VRM SpringBone を設定した。番号と頬線は表面に追従する。
-- `paint_49.py <CreationsDB のパス>` は Pillow と NumPy で塗りを再生成する。編集済みの PNG を使う場合はこの工程を省ける。
-- Blender バックグラウンドで `model_49.py -- --starter <Corefolder-49-Starter.blend> --out <別の出力先>` を実行する。スターターを作り直す場合は隣接する `Corefolder-Training/create_corefolder_base.py` に `--number 49 --style 22 --material CoreFolder022.001 --face-style 22 --face-material CoreFolder022-2.001` と DB・出力先を指定する。
-- 書き出した VRM を再読込し、正面・斜め・側面・背面で番号の向き、喉の閉じ、白腹の幅、上房の分岐、下房の前への巻きを照合した。表情13種は元の VRM のバインドを継承する。
+実VRMを再読込し、同じ正投影・光源で −18°、−24°、−30°、−36°を撮影した。外輪郭に対する両目の中点位置で改稿前の角度を選び、−18°を改稿後にも固定した。Pillow・NumPy・SciPy で不透明部分を切り出し、全高500pxに揃えて色領域を計測した。公式2枚・改稿前・今回の画像は `Review/artwork-comparison.png`、全測定値と書き出しハッシュは `Review/projection.json`、尻尾単体の背面投影は `Review/tail-overlap.png` に記録した。
+
+| 比較項目 | 公式 | 改稿前 | 改稿後 |
+| --- | ---: | ---: | ---: |
+| 全身幅（高さ500px時） | 622px | 571px | 606px |
+| 両虹彩の中心間隔 | 119–120px | 90px | 89px |
+| 手前の紫瞳の高さ | 12px前後 | 6px | 11px |
+| 尾単体の幅／高さ | 1.102 | 1.361 | 1.148 |
+| 正対背面での尾とアトラスの輪郭IoU | 1.000 | 0.631 | 0.851 |
+
+原画2枚では手前の虹彩は幅35px・高さ26〜32px、改稿後は幅32px・高さ24px。奥の虹彩は原画の約11〜12pxに対し26px見えている。原画1の近側にだけある右上の反射を描き、両目それぞれの紫の縦瞳が同じ方向を向くよう、反転していた片目のUVを専用の領域に展開した。顔と下顎の同角度拡大を `Review/eyes-and-chin.png` に載せた。
+
+実メッシュの眼球スキンの中心間は263.4mmから202.2mmに詰め、左右のまぶたと眼球の回転中心も移した。中立の上唇から18mm上の頬断面に対する比は0.548から0.423になり、規範6体の0.360〜0.422に近づいた。この規範寄りの間隔では、全高を揃えた斜視の両虹彩の中心間隔が原画より約30px短くなる。巻いた左右の毛先は原画より淡色部分が広く、横向きの奥行きは図からの推定を含む。各画像のポーズと光源の差もあるため、UV色のみを抽出した値は目視の補助として使う。
+
+## 再生成
+
+1. `paint_49.py <CreationsDBのパス>` が胴・顔・喉・前側の毛先と背面アトラスを生成する。背面の連結領域は共通の `trace_tail_atlas.py` を使う。出力済みの編集画像から続ける場合は省ける。
+2. Blender をバックグラウンドで起動し、`model_49.py -- --starter <Corefolder-49-Starter.blend> --out <別の出力先>` を実行する。スターターを再作成する場合は `Corefolder-Training/create_corefolder_base.py` に `--number 49 --style 22 --material CoreFolder022.001 --face-style 22 --face-material CoreFolder022-2.001` と DB・出力先を渡す。
+3. `render_measurements.py <VRM> <角度シート.png>` と `compare_49.py <DB> <改稿前シート> <レビュー先> --after <改稿後シート> --before-vrm <改稿前VRM> --after-vrm <改稿後VRM>` で計測を再現できる。
