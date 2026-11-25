@@ -108,6 +108,18 @@ def mtoon_materials(glb):
             for m in glb.vrm["materialProperties"]}
 
 
+def display_layers(glb, errors):
+    doc = glb.doc
+    by_node = {node["name"]: sorted({doc["materials"][p["material"]]["name"]
+               for p in doc["meshes"][node["mesh"]]["primitives"]}) for node in doc["nodes"] if "mesh" in node}
+    if not by_node.get("Outfit"):
+        errors.append("Missing independently switchable Outfit renderer")
+    skull = {node for node, mats in by_node.items() if any(m.startswith("Corefolder Cranial Base") for m in mats)}
+    if skull != {"Body"}:
+        errors.append("The naked cranial skin must remain visible with Hair and Outfit disabled")
+    return {"materials_by_renderer":by_node, "cranial_skin_nodes":sorted(skull)}
+
+
 def canonical_stats():
     refs = json.loads((HERE / "style-training/source-vrms.json").read_text(encoding="utf-8-sig"))
     result = []
@@ -429,7 +441,8 @@ def audit(path, starter, record, validator, blender, unity_root):
             "source_blend": source_blend.name, "source_blend_sha256": sha(source_blend.read_bytes()),
             "generator": doc["asset"]["generator"],
             "vrm_version": ext["specVersion"], "metadata": ext["meta"], "humanoid_slots": len(slots),
-            "geometry": geometry(glb), "skins": len(doc["skins"]), "skinning": skin,
+            "geometry": geometry(glb), "display_layers":display_layers(glb, errors),
+            "skins": len(doc["skins"]), "skinning": skin,
             "materials": materials, "textures": images, "bound_expressions": morphs,
             "secondary_animation": secondary, "khronos_gltf_validator": report, "editable_blend": blend,
             "unity_asset": deployed, "errors": errors}

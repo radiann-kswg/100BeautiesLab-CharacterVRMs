@@ -70,16 +70,24 @@ def build(number, output, design):
     arm = bpy.data.objects["Armature"]
     col = bpy.data.objects["Body"].users_collection[0]
     guides = {}
+    finish_hair = None
     if design.is_file():
         spec = importlib.util.spec_from_file_location(f"corefolder_design_{number}", design)
         module = importlib.util.module_from_spec(spec)
         sys.path.insert(0, str(design.parent))
         spec.loader.exec_module(module)
         guides = module.revise(arm, col) or {}
+        finish_hair = getattr(module, "finish_hair", None)
     guides.update(revise_tails(number, arm, col))
     bpy.context.view_layer.update()
     rump = add_collider_group(arm, "Rump", "hips", [((0, .01, .34), .215)])
-    head = add_collider_group(arm, "Head", "head", [((0, -.065, .87), .180)])
+    # The cranium alone stops at y=-.245, while the #4-derived eye/cheek
+    # surface is near -.34. Forward lobes keep sweeping locks outside it.
+    head = add_collider_group(arm, "Head", "head", [
+        ((0, -.065, .87), .180),
+        ((-.080, -.228, .817), .130),
+        ((.080, -.228, .817), .130),
+    ])
     tails = [o for o in col.objects if o.type == "MESH" and o.name.startswith("Tail_")]
     expected = {57: 7, 85: 8}[number]
     if len(tails) != expected:
@@ -96,10 +104,15 @@ def build(number, output, design):
         points = guides.get(obj.name)
         if points is None:
             points = json.loads(obj["spring_path"]) if "spring_path" in obj else ring_guides(obj)
+        # The long #85 cheek locks overshoot the eye under lateral acceleration.
+        # Keep their canonical stiffness and damp them independently of the ponytail.
+        drag = .75 if number == 85 and spring.startswith("Hair_Side_") else None
         bones = add_spring_chain(arm, obj, spring, points, parent="head", kind="hair", radius=.012,
-                                 colliders=[head])
+                                 colliders=[head], drag_force=drag)
         if spring == "Hair_Ponytail" and (fork := col.objects.get("Hair ponytail fork")):
             bind_to_chain(arm, fork, bones)
+    if finish_hair:
+        finish_hair(arm, col)
     meshes = [o for o in col.objects if o.type == "MESH"]
     return save_character(arm, meshes, output / f"Corefolder-{number}.blend", output / f"Corefolder-{number}.vrm",
                           title=f"Corefolder-{number}", version="1.0", character_number=number)

@@ -133,13 +133,13 @@ def finish_face(number, face, arm):
             opening = closed + np.maximum(0, profile[ai, 2] - profile[bi, 2] - gap)
             profile[ai, 2], profile[bi, 2] = middle + opening / 2, middle - opening / 2
             coords[ORAL] = profile
-            if number in (49, 85):
+            if number in (49, 57, 85):
                 # The #25/#93 lip rings have extra supporting loops. Redistribute
                 # their samples across the eight segments of each starter rim;
                 # clustered samples next to a vertical corner fold its broad cheek fan.
                 for upper_side, lower_side in ((UPPER[4:], LOWER[4:]), (UPPER[4::-1], LOWER[4::-1])):
                     corner = coords[upper_side[-1]].copy()
-                    if key.name in ("Joy", "Fun"):
+                    if number != 57 and key.name in ("Joy", "Fun"):
                         corner[0] *= 1.6 if number == 49 else 1.16
                         corner[2] += .002
                     for side in (upper_side, lower_side):
