@@ -10,7 +10,7 @@ using Object = UnityEngine.Object;
 
 public static partial class CharacterReview
 {
-    [Serializable] public class Input { public int number; public string asset; public string sha256; public bool check; public bool artwork; public bool mouth; public bool gaze; }
+    [Serializable] public class Input { public int number; public string asset; public string sha256; public bool check; public bool artwork; public bool angles; public bool mouth; public bool gaze; }
     [Serializable] public class Plan { public string output; public Input[] models; }
     [Serializable] public class Motion { public string chain; public int joints, weightedVertices; public float peakTipMeters, peakSkinMeters, finalTipMeters; }
     [Serializable] public class Face { public string expression; public float maxVertexMeters; }
@@ -148,10 +148,11 @@ public static partial class CharacterReview
                 Shoot(Path.Combine(dir,view.Item1+".png"),bounds.center,view.Item2,stats.orthographicSize);
             if(input.mouth) CheckMouth(model,skins,stats,dir);
             if(input.gaze || input.mouth) CheckGaze(model, skins, dir, input);
-            if (input.artwork)
-            {
+            if (input.artwork || input.angles)
                 foreach(int degree in new[]{-36,-27,-18,-9,0,9,18,27,36})
                     Shoot(Path.Combine(dir,"angle"+degree+".png"),bounds.center,Quaternion.Euler(0,degree,0)*Vector3.forward,stats.orthographicSize);
+            if (input.artwork)
+            {
                 var tails = skins.Where(r=>r.name.IndexOf("Tail",StringComparison.OrdinalIgnoreCase)>=0 && r.name.IndexOf("ponytail",StringComparison.OrdinalIgnoreCase)<0).ToArray();
                 if(tails.Length==0) throw new Exception("No tail meshes found: "+string.Join(", ",skins.Select(r=>r.name)));
                 var hidden = skins.Except(tails).ToArray();
