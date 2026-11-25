@@ -45,6 +45,36 @@ def contour_region(mask,ctr):
     for a,b in zip(sorted(chosen)[:-1],sorted(chosen)[1:]):refine(a,b)
     return points[sorted(chosen)]
 
+def fur_colors(pixels, mask, base, tip):
+    """Fit a broad, curved tip marking and carry it smoothly around the volume."""
+    colors=pixels[:,:,:3].astype(float)
+    a=mask & (np.linalg.norm(colors-base,axis=2)<6)
+    b=mask & (np.linalg.norm(colors-tip,axis=2)<6)
+    if min(a.sum(),b.sum())<12:
+        raise ValueError("Both fur colors must be visible on every plume")
+    grid=np.indices(mask.shape).transpose(1,2,0)
+    origin=grid[a].mean(axis=0)
+    axis=grid[b].mean(axis=0)-origin
+    axis/=np.linalg.norm(axis)
+    across=np.array([-axis[1],axis[0]])
+    reach=(grid-origin)@axis
+    cross=(grid-origin)@across
+    da=nd.distance_transform_edt(~a)
+    db=nd.distance_transform_edt(~b)
+    seam=(da+db<5)&(np.abs(da-db)<=1.5)
+    if np.count_nonzero(seam)<6:
+        raise ValueError("Insufficient visible boundary between fur and tip")
+    x,y=cross[seam],reach[seam]
+    # Cap extrapolation at the slope measured at the last visible boundary.
+    # Nearest-pixel filling casts sawtooth streaks along the previously hidden
+    # side surface when a viewer rotates the model away from the back.
+    poly=np.polynomial.Polynomial.fit(x,y,2)
+    lo,hi=np.quantile(x,[.025,.975])
+    sample=np.clip(cross,lo,hi)
+    boundary=poly(sample)+(cross-sample)*np.clip(poly.deriv()(sample),-1.,1.)
+    fraction=np.clip(.5+reach-boundary,0,1)
+    return np.uint8(np.rint(base+fraction[:,:,None]*(tip-base)))
+
 def bake(n,db,dest):
     f=db/f'data/Works_NumberTales/Images/DB_Primary/attr/tailsUnit/attr_tailsUnitNTS-{n}.png'
     pixels=np.asarray(Image.open(f).convert('RGBA'));h,w=pixels.shape[:2]
@@ -65,19 +95,8 @@ def bake(n,db,dest):
         full=nd.binary_dilation(full,iterations=2)
         ctr=seed
         points=contour_region(full,ctr)
-        # Select the nearest unobstructed paint on this same plume for the hidden band.
         base,tip=np.array(PALETTES[n],float)
-        # Anti-aliased black ink around a plume is neither fur color. Extrapolating
-        # those edge pixels would paint a row of dark triangular streaks on its side.
-        colors=pixels[:,:,:3].astype(float)
-        error=np.minimum(np.linalg.norm(colors-base,axis=2),np.linalg.norm(colors-tip,axis=2))
-        paint=mask & (error<12)
-        near=nd.distance_transform_edt(~paint,return_distances=False,return_indices=True)
-        rgb=colors[near[0],near[1]]
-        blend=np.clip(np.sum((rgb-base)*(tip-base),axis=2)/np.sum((tip-base)**2),0,1)
-        # Ink belongs to the MToon contour. Baking a stroke on a projected rim
-        # stretches it across the side of a rounded lobe when the view rotates.
-        image=np.uint8(np.clip(base[None,None,:]+blend[:,:,None]*(tip-base),0,255))
+        image=fur_colors(pixels,mask,base,tip)
         x0,y0=np.floor(points.min(0)-3).astype(int); x1,y1=np.ceil(points.max(0)+4).astype(int)
         tile=Image.fromarray(image).crop((x0,y0,x1,y1)).resize((252,252),Image.Resampling.LANCZOS)
         tx=(i%4)*256+2;ty=(i//4)*256+2
