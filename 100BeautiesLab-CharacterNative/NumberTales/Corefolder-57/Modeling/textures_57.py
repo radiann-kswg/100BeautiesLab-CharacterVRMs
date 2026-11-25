@@ -1,15 +1,28 @@
 """Prepare Fivens' expression, fringe, body and armband maps from official art."""
 from pathlib import Path
+import sys
 import numpy as np
 from PIL import Image, ImageDraw
-from scipy import ndimage
 
 HERE=Path(__file__).resolve().parent
 NATIVE=HERE.parents[1]
+sys.path.insert(0,str(NATIVE/"Corefolder-6/Modeling"))
+from eye_art import cheek_detail, prepare_eye_map
 DB=Path("D:/VisualStudio Code Userfile/100BeautiesLab_CreationsDB/data/Works_NumberTales/Images/DB_Primary")
 
 
 def prepare():
+    # One continuous UV shell carries the ivory inner ear and the smaller pale pad.
+    y,x=np.mgrid[:256,:512]
+    t=1-(y+.5)/256
+    angle=(x+.5)/512*2*np.pi
+    half=np.interp(t,[0,.13,.28,.48,.74,.96,1],[0,.13,.54,.68,.62,.25,0])
+    center=.91+.24*t
+    ivory=np.clip((half-np.abs(angle-center))/.031,0,1)[:,:,None]
+    pad_radius=((angle-.82)/.40)**2+((t-.36)/.115)**2
+    inside=np.clip((1-pad_radius)*8,0,1)[:,:,None]*ivory
+    base=(1-ivory)*np.array([255,238,98])+ivory*np.array([255,253,242])
+    Image.fromarray(np.uint8(np.round((1-inside)*base+inside*np.array([239,244,173])))).save(HERE/'Fivens-Ear.png',optimize=True)
     im=Image.open(NATIVE/"Corefolder-4/CoreFolder-4.png").convert("RGBA")
     pixels=np.array(im)
     red,green,blue=pixels[:,:,:3].astype(float).transpose(2,0,1)
@@ -17,59 +30,22 @@ def prepare():
     pixels[865:1024,753:898,:]=0
     pixels[872:,898:,3]=0
     im=Image.fromarray(pixels)
-    # The lower rim is flat. Pose 2 has a divided olive/yellow-green iris; pose 1
-    # shows the narrow blue pupil specified in the database.
-    eye=Image.new("RGBA",(152*3,160*3))
-    pen=ImageDraw.Draw(eye)
-    def poly(p,fill):pen.polygon([(int(x*3),int(y*3)) for x,y in p],fill=fill)
-    poly([(19,35),(33,14),(56,6),(88,6),(110,14),(126,31),(132,55),(132,96),(123,128),
-          (118,139),(30,139),(20,127),(12,92),(11,56)],"#211d24")
-    poly([(25,39),(37,22),(57,14),(85,14),(105,22),(118,39),(124,58),(124,94),
-          (116,126),(112,131),(35,131),(27,119),(20,92),(19,56)],"#a6bc40")
-    poly([(21,97),(43,94),(83,95),(122,99),(116,125),(112,131),(35,131),(27,119)],"#e8f152")
-    poly([(79,30),(87,35),(94,52),(94,81),(87,104),(79,116),(71,111),(66,92),(65,62),(70,42)],"#21202a")
-    poly([(79,39),(84,45),(87,59),(86,81),(81,99),(78,104),(73,93),(73,67),(75,48)],"#4b79be")
-    pen.ellipse((84*3,29*3,101*3,49*3),fill="#fffcf0")
-    im.alpha_composite(eye.resize((152,160),Image.Resampling.LANCZOS),(750,862))
-    patch=Image.new("RGB",(500,290),"white")
-    pen=ImageDraw.Draw(patch)
-    for k in range(4):
-        x=117+47*k
-        pen.line((x,155,x+36,118),fill="#ed9f7a",width=8)
-    im.paste(patch.resize((100,58),Image.Resampling.LANCZOS),(50,137))
+    prepare_eye_map(57, HERE/"Fivens-Eyes.png")
+    cheek_detail(im,57)
     im.save(HERE/"Fivens-Face.png",optimize=True)
-    art=np.array(Image.open(DB/"corefolder/57/emstk_corefolderNTS-57-1.png").convert("RGBA"))
-    y,x=np.mgrid[:432,:700]
-    wx=(x+.5)/700*.62-.31
-    wz=1.08-(y+.5)/432*.33
-    # Landmarks, from native 1459 x 1427 pose 1, are the wink and visible iris.
-    sx=(692+1260*wx).round().astype(int)
-    sy=(480-1260*(wz-.81)).round().astype(int)
-    rgba=art[sy,sx].astype(float)
-    r,g,b=rgba[:,:,:3].transpose(2,0,1)
-    alpha=np.clip((r-b-85)/45,0,1)*np.clip((r-g+1)/7,0,1)*np.clip((r-150)/62,0,1)
-    alpha*=np.clip((g-177)/27,0,1)*np.clip((g-b-83)/26,0,1)
-    labels,n=ndimage.label(alpha>.15)
-    largest=1+np.argmax(np.bincount(labels.ravel())[1:])
-    island=labels==largest
-    alpha*=ndimage.binary_dilation(island,iterations=1)
-    gaps=ndimage.binary_fill_holes(island)&~island
-    gap_labels,_=ndimage.label(gaps)
-    areas=np.bincount(gap_labels.ravel())
-    repair=gaps&(areas[gap_labels]<1150)
-    rgba[repair,:3]=[225,211,83]
-    alpha[repair]=1
-    rgba[:,:,3]=255*alpha
-    rgba[:,:,:3]=np.where((alpha>.06)[:,:,None],rgba[:,:,:3],[255,238,98])
-    Image.fromarray(np.uint8(rgba)).save(HERE/"Fivens-Fringe.png",optimize=True)
     h,w=384,768
     y,x=np.mgrid[:h,:w]
-    z=1-(y+.5)/h
+    height=.713*(1-(y+.5)/h)
     a=np.abs(((x+.5)/w-.5)*2*np.pi)
-    width=np.interp(z,[0,.10,.30,.55,.76,1],[.68,.66,.59,.48,.44,.56])
-    gold=np.clip((width+.033-a)/.012,0,1)[...,None]
-    ivory=np.clip((width-a)/.011,0,1)[...,None]
-    fur=(1-gold)*np.array([255,238,98])+gold*np.array([220,204,71])
+    # Sampled #93 / #16 belly cross-sections give the lower sweep.
+    # Fivens has a broader white front and a gold gap before the armband.
+    levels=[.014,.025,.040,.060,.100,.160,.250,.370,.460,.510,.575,.630,.713]
+    angles=[0,.17,.30,.41,.49,.55,.61,.64,.63,.60,.575,.56,.55]
+    width=np.sqrt(np.interp(height,levels,np.square(angles)))
+    blend_at_foot=np.clip((height-.014)/.007,0,1)[...,None]
+    gold=np.clip((width+.030-a)/.018,0,1)[...,None]*blend_at_foot
+    ivory=np.clip((width-a)/.013,0,1)[...,None]*blend_at_foot
+    fur=(1-gold)*np.array([255,238,98])+gold*np.array([242,224,104])
     Image.fromarray(np.uint8(np.round((1-ivory)*fur+ivory*255))).save(HERE/"Fivens-Fur.png",optimize=True)
     # Bake the supplied digits into the band; use one curved, skinned surface for the print and piping.
     band=Image.new("RGBA",(480,256),"white")
