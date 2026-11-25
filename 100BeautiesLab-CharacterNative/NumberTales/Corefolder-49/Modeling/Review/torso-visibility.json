@@ -1,0 +1,1197 @@
+{
+  "method": "Eight world-Z planes, 0.5 mm rays. First opaque base-color texel; white means min RGB >228 and range <20. The Body export group may contain accessories in earlier VRMs.",
+  "reference_vrms": {
+    "4": {
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "sections_m": {
+        "0.045": {
+          "front": {
+            "shell_mm": 473.0,
+            "visible_mm": 473.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 511.0,
+            "visible_mm": 511.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.1": {
+          "front": {
+            "shell_mm": 669.0,
+            "visible_mm": 669.0,
+            "white_mm": 195.0,
+            "visible_white_mm": 195.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 677.0,
+            "visible_mm": 638.5,
+            "white_mm": 3.5,
+            "visible_white_mm": 3.5,
+            "tail_over_body_mm": 38.5,
+            "visible_fraction": 0.943
+          }
+        },
+        "0.18": {
+          "front": {
+            "shell_mm": 916.0,
+            "visible_mm": 916.0,
+            "white_mm": 353.0,
+            "visible_white_mm": 353.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 788.5,
+            "visible_mm": 716.5,
+            "white_mm": 28.0,
+            "visible_white_mm": 28.0,
+            "tail_over_body_mm": 72.0,
+            "visible_fraction": 0.909
+          }
+        },
+        "0.28": {
+          "front": {
+            "shell_mm": 846.0,
+            "visible_mm": 846.0,
+            "white_mm": 451.0,
+            "visible_white_mm": 451.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 858.5,
+            "visible_mm": 799.0,
+            "white_mm": 47.5,
+            "visible_white_mm": 47.5,
+            "tail_over_body_mm": 59.5,
+            "visible_fraction": 0.931
+          }
+        },
+        "0.36": {
+          "front": {
+            "shell_mm": 853.0,
+            "visible_mm": 853.0,
+            "white_mm": 478.0,
+            "visible_white_mm": 478.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 872.5,
+            "visible_mm": 818.5,
+            "white_mm": 54.0,
+            "visible_white_mm": 54.0,
+            "tail_over_body_mm": 54.0,
+            "visible_fraction": 0.938
+          }
+        },
+        "0.48": {
+          "front": {
+            "shell_mm": 829.0,
+            "visible_mm": 829.0,
+            "white_mm": 301.0,
+            "visible_white_mm": 301.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 844.5,
+            "visible_mm": 748.0,
+            "white_mm": 12.5,
+            "visible_white_mm": 12.5,
+            "tail_over_body_mm": 96.5,
+            "visible_fraction": 0.886
+          }
+        },
+        "0.57": {
+          "front": {
+            "shell_mm": 789.0,
+            "visible_mm": 789.0,
+            "white_mm": 83.0,
+            "visible_white_mm": 83.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 786.0,
+            "visible_mm": 703.5,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 82.5,
+            "visible_fraction": 0.895
+          }
+        },
+        "0.64": {
+          "front": {
+            "shell_mm": 669.0,
+            "visible_mm": 669.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 663.0,
+            "visible_mm": 642.5,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 20.5,
+            "visible_fraction": 0.969
+          }
+        }
+      }
+    },
+    "16": {
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "sections_m": {
+        "0.045": {
+          "front": {
+            "shell_mm": 473.0,
+            "visible_mm": 473.0,
+            "white_mm": 205.0,
+            "visible_white_mm": 205.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 511.0,
+            "visible_mm": 511.0,
+            "white_mm": 3.5,
+            "visible_white_mm": 3.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.1": {
+          "front": {
+            "shell_mm": 651.0,
+            "visible_mm": 651.0,
+            "white_mm": 359.0,
+            "visible_white_mm": 359.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 677.0,
+            "visible_mm": 636.5,
+            "white_mm": 39.0,
+            "visible_white_mm": 39.0,
+            "tail_over_body_mm": 40.5,
+            "visible_fraction": 0.94
+          }
+        },
+        "0.18": {
+          "front": {
+            "shell_mm": 769.0,
+            "visible_mm": 769.0,
+            "white_mm": 465.0,
+            "visible_white_mm": 465.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 788.5,
+            "visible_mm": 701.0,
+            "white_mm": 62.5,
+            "visible_white_mm": 62.5,
+            "tail_over_body_mm": 87.5,
+            "visible_fraction": 0.889
+          }
+        },
+        "0.28": {
+          "front": {
+            "shell_mm": 840.0,
+            "visible_mm": 840.0,
+            "white_mm": 550.0,
+            "visible_white_mm": 550.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 858.5,
+            "visible_mm": 765.0,
+            "white_mm": 81.5,
+            "visible_white_mm": 81.5,
+            "tail_over_body_mm": 93.5,
+            "visible_fraction": 0.891
+          }
+        },
+        "0.36": {
+          "front": {
+            "shell_mm": 853.0,
+            "visible_mm": 853.0,
+            "white_mm": 564.0,
+            "visible_white_mm": 564.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 872.5,
+            "visible_mm": 750.5,
+            "white_mm": 84.0,
+            "visible_white_mm": 84.0,
+            "tail_over_body_mm": 122.0,
+            "visible_fraction": 0.86
+          }
+        },
+        "0.48": {
+          "front": {
+            "shell_mm": 829.0,
+            "visible_mm": 829.0,
+            "white_mm": 522.0,
+            "visible_white_mm": 522.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 844.5,
+            "visible_mm": 760.0,
+            "white_mm": 74.5,
+            "visible_white_mm": 74.5,
+            "tail_over_body_mm": 84.5,
+            "visible_fraction": 0.9
+          }
+        },
+        "0.57": {
+          "front": {
+            "shell_mm": 788.5,
+            "visible_mm": 788.5,
+            "white_mm": 727.5,
+            "visible_white_mm": 727.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 805.5,
+            "visible_mm": 786.0,
+            "white_mm": 512.0,
+            "visible_white_mm": 509.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 0.976
+          }
+        },
+        "0.64": {
+          "front": {
+            "shell_mm": 673.0,
+            "visible_mm": 673.0,
+            "white_mm": 408.0,
+            "visible_white_mm": 408.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 790.0,
+            "visible_mm": 633.5,
+            "white_mm": 789.0,
+            "visible_white_mm": 632.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 0.802
+          }
+        }
+      }
+    },
+    "20": {
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "sections_m": {
+        "0.045": {
+          "front": {
+            "shell_mm": 473.0,
+            "visible_mm": 473.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 511.0,
+            "visible_mm": 511.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.1": {
+          "front": {
+            "shell_mm": 651.0,
+            "visible_mm": 651.0,
+            "white_mm": 201.0,
+            "visible_white_mm": 201.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 677.0,
+            "visible_mm": 675.0,
+            "white_mm": 4.0,
+            "visible_white_mm": 4.0,
+            "tail_over_body_mm": 2.0,
+            "visible_fraction": 0.997
+          }
+        },
+        "0.18": {
+          "front": {
+            "shell_mm": 769.0,
+            "visible_mm": 769.0,
+            "white_mm": 357.0,
+            "visible_white_mm": 357.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 788.5,
+            "visible_mm": 684.5,
+            "white_mm": 29.0,
+            "visible_white_mm": 29.0,
+            "tail_over_body_mm": 104.0,
+            "visible_fraction": 0.868
+          }
+        },
+        "0.28": {
+          "front": {
+            "shell_mm": 840.0,
+            "visible_mm": 840.0,
+            "white_mm": 456.0,
+            "visible_white_mm": 456.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 858.5,
+            "visible_mm": 728.0,
+            "white_mm": 49.0,
+            "visible_white_mm": 49.0,
+            "tail_over_body_mm": 130.5,
+            "visible_fraction": 0.848
+          }
+        },
+        "0.36": {
+          "front": {
+            "shell_mm": 853.0,
+            "visible_mm": 853.0,
+            "white_mm": 485.0,
+            "visible_white_mm": 485.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 872.5,
+            "visible_mm": 746.0,
+            "white_mm": 56.0,
+            "visible_white_mm": 56.0,
+            "tail_over_body_mm": 126.5,
+            "visible_fraction": 0.855
+          }
+        },
+        "0.48": {
+          "front": {
+            "shell_mm": 829.0,
+            "visible_mm": 829.0,
+            "white_mm": 460.0,
+            "visible_white_mm": 460.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 852.0,
+            "visible_mm": 773.5,
+            "white_mm": 56.0,
+            "visible_white_mm": 56.0,
+            "tail_over_body_mm": 78.5,
+            "visible_fraction": 0.908
+          }
+        },
+        "0.57": {
+          "front": {
+            "shell_mm": 743.0,
+            "visible_mm": 743.0,
+            "white_mm": 340.5,
+            "visible_white_mm": 340.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 798.0,
+            "visible_mm": 798.0,
+            "white_mm": 51.0,
+            "visible_white_mm": 51.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.64": {
+          "front": {
+            "shell_mm": 610.0,
+            "visible_mm": 610.0,
+            "white_mm": 156.5,
+            "visible_white_mm": 156.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 633.0,
+            "visible_mm": 565.5,
+            "white_mm": 16.5,
+            "visible_white_mm": 16.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 0.893
+          }
+        }
+      }
+    },
+    "22": {
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "sections_m": {
+        "0.045": {
+          "front": {
+            "shell_mm": 492.0,
+            "visible_mm": 492.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 529.0,
+            "visible_mm": 529.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.1": {
+          "front": {
+            "shell_mm": 659.5,
+            "visible_mm": 659.5,
+            "white_mm": 160.5,
+            "visible_white_mm": 160.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 686.0,
+            "visible_mm": 686.0,
+            "white_mm": 1.5,
+            "visible_white_mm": 1.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.18": {
+          "front": {
+            "shell_mm": 773.5,
+            "visible_mm": 773.5,
+            "white_mm": 316.5,
+            "visible_white_mm": 316.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 793.0,
+            "visible_mm": 793.0,
+            "white_mm": 19.5,
+            "visible_white_mm": 19.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.28": {
+          "front": {
+            "shell_mm": 841.5,
+            "visible_mm": 775.0,
+            "white_mm": 413.5,
+            "visible_white_mm": 413.5,
+            "tail_over_body_mm": 66.5,
+            "visible_fraction": 0.921
+          },
+          "side": {
+            "shell_mm": 860.0,
+            "visible_mm": 742.5,
+            "white_mm": 36.5,
+            "visible_white_mm": 34.0,
+            "tail_over_body_mm": 117.5,
+            "visible_fraction": 0.863
+          }
+        },
+        "0.36": {
+          "front": {
+            "shell_mm": 853.5,
+            "visible_mm": 752.0,
+            "white_mm": 445.5,
+            "visible_white_mm": 445.5,
+            "tail_over_body_mm": 101.5,
+            "visible_fraction": 0.881
+          },
+          "side": {
+            "shell_mm": 872.5,
+            "visible_mm": 0.0,
+            "white_mm": 44.5,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 872.5,
+            "visible_fraction": 0.0
+          }
+        },
+        "0.48": {
+          "front": {
+            "shell_mm": 826.5,
+            "visible_mm": 826.5,
+            "white_mm": 438.5,
+            "visible_white_mm": 438.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 841.0,
+            "visible_mm": 798.5,
+            "white_mm": 46.0,
+            "visible_white_mm": 46.0,
+            "tail_over_body_mm": 42.5,
+            "visible_fraction": 0.949
+          }
+        },
+        "0.57": {
+          "front": {
+            "shell_mm": 736.5,
+            "visible_mm": 736.5,
+            "white_mm": 361.0,
+            "visible_white_mm": 361.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 745.5,
+            "visible_mm": 737.0,
+            "white_mm": 39.5,
+            "visible_white_mm": 39.5,
+            "tail_over_body_mm": 8.5,
+            "visible_fraction": 0.989
+          }
+        },
+        "0.64": {
+          "front": {
+            "shell_mm": 794.5,
+            "visible_mm": 783.0,
+            "white_mm": 138.5,
+            "visible_white_mm": 138.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 0.986
+          },
+          "side": {
+            "shell_mm": 799.5,
+            "visible_mm": 786.5,
+            "white_mm": 22.5,
+            "visible_white_mm": 22.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 0.984
+          }
+        }
+      }
+    },
+    "25": {
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "sections_m": {
+        "0.045": {
+          "front": {
+            "shell_mm": 473.0,
+            "visible_mm": 473.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 511.0,
+            "visible_mm": 511.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.1": {
+          "front": {
+            "shell_mm": 651.0,
+            "visible_mm": 651.0,
+            "white_mm": 67.0,
+            "visible_white_mm": 67.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 677.0,
+            "visible_mm": 636.5,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 40.5,
+            "visible_fraction": 0.94
+          }
+        },
+        "0.18": {
+          "front": {
+            "shell_mm": 769.0,
+            "visible_mm": 769.0,
+            "white_mm": 228.0,
+            "visible_white_mm": 228.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 788.5,
+            "visible_mm": 701.0,
+            "white_mm": 6.0,
+            "visible_white_mm": 6.0,
+            "tail_over_body_mm": 87.5,
+            "visible_fraction": 0.889
+          }
+        },
+        "0.28": {
+          "front": {
+            "shell_mm": 840.0,
+            "visible_mm": 840.0,
+            "white_mm": 317.0,
+            "visible_white_mm": 317.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 858.5,
+            "visible_mm": 777.0,
+            "white_mm": 15.0,
+            "visible_white_mm": 15.0,
+            "tail_over_body_mm": 81.5,
+            "visible_fraction": 0.905
+          }
+        },
+        "0.36": {
+          "front": {
+            "shell_mm": 853.0,
+            "visible_mm": 853.0,
+            "white_mm": 336.0,
+            "visible_white_mm": 336.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 872.5,
+            "visible_mm": 806.0,
+            "white_mm": 18.5,
+            "visible_white_mm": 18.5,
+            "tail_over_body_mm": 66.5,
+            "visible_fraction": 0.924
+          }
+        },
+        "0.48": {
+          "front": {
+            "shell_mm": 829.0,
+            "visible_mm": 829.0,
+            "white_mm": 316.0,
+            "visible_white_mm": 316.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 844.5,
+            "visible_mm": 782.0,
+            "white_mm": 15.0,
+            "visible_white_mm": 15.0,
+            "tail_over_body_mm": 62.5,
+            "visible_fraction": 0.926
+          }
+        },
+        "0.57": {
+          "front": {
+            "shell_mm": 744.0,
+            "visible_mm": 744.0,
+            "white_mm": 199.5,
+            "visible_white_mm": 199.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 769.0,
+            "visible_mm": 769.0,
+            "white_mm": 6.5,
+            "visible_white_mm": 6.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.64": {
+          "front": {
+            "shell_mm": 617.5,
+            "visible_mm": 617.5,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 642.0,
+            "visible_mm": 642.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        }
+      }
+    },
+    "93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "sections_m": {
+        "0.045": {
+          "front": {
+            "shell_mm": 473.0,
+            "visible_mm": 473.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 511.0,
+            "visible_mm": 511.0,
+            "white_mm": 0.0,
+            "visible_white_mm": 0.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          }
+        },
+        "0.1": {
+          "front": {
+            "shell_mm": 651.0,
+            "visible_mm": 651.0,
+            "white_mm": 177.0,
+            "visible_white_mm": 177.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 677.0,
+            "visible_mm": 597.5,
+            "white_mm": 2.5,
+            "visible_white_mm": 2.5,
+            "tail_over_body_mm": 79.5,
+            "visible_fraction": 0.883
+          }
+        },
+        "0.18": {
+          "front": {
+            "shell_mm": 769.0,
+            "visible_mm": 769.0,
+            "white_mm": 329.0,
+            "visible_white_mm": 329.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 788.5,
+            "visible_mm": 694.0,
+            "white_mm": 22.5,
+            "visible_white_mm": 22.5,
+            "tail_over_body_mm": 94.5,
+            "visible_fraction": 0.88
+          }
+        },
+        "0.28": {
+          "front": {
+            "shell_mm": 840.0,
+            "visible_mm": 840.0,
+            "white_mm": 420.0,
+            "visible_white_mm": 420.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 858.5,
+            "visible_mm": 605.0,
+            "white_mm": 38.5,
+            "visible_white_mm": 38.5,
+            "tail_over_body_mm": 253.5,
+            "visible_fraction": 0.705
+          }
+        },
+        "0.36": {
+          "front": {
+            "shell_mm": 853.0,
+            "visible_mm": 853.0,
+            "white_mm": 444.0,
+            "visible_white_mm": 444.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 872.5,
+            "visible_mm": 601.0,
+            "white_mm": 44.0,
+            "visible_white_mm": 44.0,
+            "tail_over_body_mm": 271.5,
+            "visible_fraction": 0.689
+          }
+        },
+        "0.48": {
+          "front": {
+            "shell_mm": 829.0,
+            "visible_mm": 829.0,
+            "white_mm": 449.0,
+            "visible_white_mm": 449.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 844.5,
+            "visible_mm": 655.0,
+            "white_mm": 49.0,
+            "visible_white_mm": 49.0,
+            "tail_over_body_mm": 189.5,
+            "visible_fraction": 0.776
+          }
+        },
+        "0.57": {
+          "front": {
+            "shell_mm": 743.0,
+            "visible_mm": 743.0,
+            "white_mm": 398.0,
+            "visible_white_mm": 398.0,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 1.0
+          },
+          "side": {
+            "shell_mm": 752.5,
+            "visible_mm": 567.5,
+            "white_mm": 46.5,
+            "visible_white_mm": 46.5,
+            "tail_over_body_mm": 185.0,
+            "visible_fraction": 0.754
+          }
+        },
+        "0.64": {
+          "front": {
+            "shell_mm": 610.0,
+            "visible_mm": 587.0,
+            "white_mm": 243.5,
+            "visible_white_mm": 243.5,
+            "tail_over_body_mm": 0.0,
+            "visible_fraction": 0.962
+          },
+          "side": {
+            "shell_mm": 601.0,
+            "visible_mm": 389.0,
+            "white_mm": 32.0,
+            "visible_white_mm": 32.0,
+            "tail_over_body_mm": 206.5,
+            "visible_fraction": 0.647
+          }
+        }
+      }
+    }
+  },
+  "previous": {
+    "sha256": "1201cc49673b2ccecf75825ebe721abf6d480c3a5ceb00d2aef25af9d5ac1cbe",
+    "sections_m": {
+      "0.045": {
+        "front": {
+          "shell_mm": 473.0,
+          "visible_mm": 449.5,
+          "white_mm": 365.0,
+          "visible_white_mm": 365.0,
+          "tail_over_body_mm": 23.5,
+          "visible_fraction": 0.95
+        },
+        "side": {
+          "shell_mm": 510.5,
+          "visible_mm": 311.5,
+          "white_mm": 47.5,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 199.0,
+          "visible_fraction": 0.61
+        }
+      },
+      "0.1": {
+        "front": {
+          "shell_mm": 651.0,
+          "visible_mm": 384.5,
+          "white_mm": 460.0,
+          "visible_white_mm": 384.5,
+          "tail_over_body_mm": 266.5,
+          "visible_fraction": 0.591
+        },
+        "side": {
+          "shell_mm": 677.0,
+          "visible_mm": 260.5,
+          "white_mm": 81.5,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 416.5,
+          "visible_fraction": 0.385
+        }
+      },
+      "0.18": {
+        "front": {
+          "shell_mm": 769.0,
+          "visible_mm": 317.5,
+          "white_mm": 506.0,
+          "visible_white_mm": 317.5,
+          "tail_over_body_mm": 451.5,
+          "visible_fraction": 0.413
+        },
+        "side": {
+          "shell_mm": 788.5,
+          "visible_mm": 171.0,
+          "white_mm": 79.0,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 617.5,
+          "visible_fraction": 0.217
+        }
+      },
+      "0.28": {
+        "front": {
+          "shell_mm": 840.0,
+          "visible_mm": 288.5,
+          "white_mm": 525.0,
+          "visible_white_mm": 288.5,
+          "tail_over_body_mm": 551.5,
+          "visible_fraction": 0.343
+        },
+        "side": {
+          "shell_mm": 858.5,
+          "visible_mm": 501.0,
+          "white_mm": 72.0,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 357.5,
+          "visible_fraction": 0.584
+        }
+      },
+      "0.36": {
+        "front": {
+          "shell_mm": 853.0,
+          "visible_mm": 731.5,
+          "white_mm": 513.0,
+          "visible_white_mm": 415.5,
+          "tail_over_body_mm": 121.5,
+          "visible_fraction": 0.858
+        },
+        "side": {
+          "shell_mm": 872.5,
+          "visible_mm": 872.5,
+          "white_mm": 65.5,
+          "visible_white_mm": 65.5,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        }
+      },
+      "0.48": {
+        "front": {
+          "shell_mm": 829.0,
+          "visible_mm": 829.0,
+          "white_mm": 484.0,
+          "visible_white_mm": 484.0,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        },
+        "side": {
+          "shell_mm": 844.5,
+          "visible_mm": 820.5,
+          "white_mm": 60.0,
+          "visible_white_mm": 60.0,
+          "tail_over_body_mm": 24.0,
+          "visible_fraction": 0.972
+        }
+      },
+      "0.57": {
+        "front": {
+          "shell_mm": 743.0,
+          "visible_mm": 743.0,
+          "white_mm": 437.0,
+          "visible_white_mm": 437.0,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        },
+        "side": {
+          "shell_mm": 752.5,
+          "visible_mm": 745.5,
+          "white_mm": 58.5,
+          "visible_white_mm": 58.5,
+          "tail_over_body_mm": 7.0,
+          "visible_fraction": 0.991
+        }
+      },
+      "0.64": {
+        "front": {
+          "shell_mm": 610.0,
+          "visible_mm": 610.0,
+          "white_mm": 357.5,
+          "visible_white_mm": 357.5,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        },
+        "side": {
+          "shell_mm": 601.0,
+          "visible_mm": 601.0,
+          "white_mm": 57.0,
+          "visible_white_mm": 57.0,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        }
+      }
+    }
+  },
+  "revised": {
+    "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+    "sections_m": {
+      "0.045": {
+        "front": {
+          "shell_mm": 473.0,
+          "visible_mm": 473.0,
+          "white_mm": 365.0,
+          "visible_white_mm": 365.0,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        },
+        "side": {
+          "shell_mm": 511.0,
+          "visible_mm": 333.5,
+          "white_mm": 47.5,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 177.5,
+          "visible_fraction": 0.653
+        }
+      },
+      "0.1": {
+        "front": {
+          "shell_mm": 651.0,
+          "visible_mm": 452.0,
+          "white_mm": 460.0,
+          "visible_white_mm": 446.0,
+          "tail_over_body_mm": 199.0,
+          "visible_fraction": 0.694
+        },
+        "side": {
+          "shell_mm": 677.0,
+          "visible_mm": 242.0,
+          "white_mm": 81.5,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 435.0,
+          "visible_fraction": 0.357
+        }
+      },
+      "0.18": {
+        "front": {
+          "shell_mm": 769.0,
+          "visible_mm": 401.0,
+          "white_mm": 506.0,
+          "visible_white_mm": 401.0,
+          "tail_over_body_mm": 368.0,
+          "visible_fraction": 0.521
+        },
+        "side": {
+          "shell_mm": 788.5,
+          "visible_mm": 146.5,
+          "white_mm": 79.0,
+          "visible_white_mm": 0.0,
+          "tail_over_body_mm": 642.0,
+          "visible_fraction": 0.186
+        }
+      },
+      "0.28": {
+        "front": {
+          "shell_mm": 840.0,
+          "visible_mm": 432.5,
+          "white_mm": 525.0,
+          "visible_white_mm": 370.5,
+          "tail_over_body_mm": 407.5,
+          "visible_fraction": 0.515
+        },
+        "side": {
+          "shell_mm": 858.5,
+          "visible_mm": 840.0,
+          "white_mm": 72.0,
+          "visible_white_mm": 53.5,
+          "tail_over_body_mm": 18.5,
+          "visible_fraction": 0.978
+        }
+      },
+      "0.36": {
+        "front": {
+          "shell_mm": 853.0,
+          "visible_mm": 844.0,
+          "white_mm": 513.0,
+          "visible_white_mm": 504.0,
+          "tail_over_body_mm": 9.0,
+          "visible_fraction": 0.989
+        },
+        "side": {
+          "shell_mm": 872.5,
+          "visible_mm": 872.5,
+          "white_mm": 65.5,
+          "visible_white_mm": 65.5,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        }
+      },
+      "0.48": {
+        "front": {
+          "shell_mm": 829.0,
+          "visible_mm": 829.0,
+          "white_mm": 484.0,
+          "visible_white_mm": 484.0,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        },
+        "side": {
+          "shell_mm": 844.5,
+          "visible_mm": 820.5,
+          "white_mm": 60.0,
+          "visible_white_mm": 60.0,
+          "tail_over_body_mm": 24.0,
+          "visible_fraction": 0.972
+        }
+      },
+      "0.57": {
+        "front": {
+          "shell_mm": 743.0,
+          "visible_mm": 743.0,
+          "white_mm": 437.0,
+          "visible_white_mm": 437.0,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        },
+        "side": {
+          "shell_mm": 752.5,
+          "visible_mm": 745.5,
+          "white_mm": 58.5,
+          "visible_white_mm": 58.5,
+          "tail_over_body_mm": 7.0,
+          "visible_fraction": 0.991
+        }
+      },
+      "0.64": {
+        "front": {
+          "shell_mm": 610.0,
+          "visible_mm": 597.5,
+          "white_mm": 379.0,
+          "visible_white_mm": 366.5,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 0.98
+        },
+        "side": {
+          "shell_mm": 601.0,
+          "visible_mm": 601.0,
+          "white_mm": 57.5,
+          "visible_white_mm": 57.5,
+          "tail_over_body_mm": 0.0,
+          "visible_fraction": 1.0
+        }
+      }
+    }
+  }
+}

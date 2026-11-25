@@ -87,20 +87,12 @@ def paint(db, destination):
     base[distance < .005] = (251, 251, 249)
     base[distance < -.015] = (255, 255, 255)
     body = Image.fromarray(base, 'RGB')
-    # The 2023 artwork shows a white collar of fur with two downward points.
-    # Its upper edge opens into the white muzzle. Draw on the actual chest UV
-    # so the marking stretches with the torso and remains beside the number.
-    pen=ImageDraw.Draw(body)
-    fur=[(483,61),(479,80),(477,99),(470,113),(460,124),(470,126),(480,125),(489,118),
-         (489,131),(493,144),(494,162),(502,151),(508,142),(512,126),(516,141),(522,151),
-         (528,162),(529,145),(534,131),(534,118),(542,124),(551,126),(558,124),
-         (551,114),(546,99),(544,80),(540,61)]
-    pen.polygon(fur,fill=(255,255,253))
-    pen.line(fur[1:-1],fill=(192,188,185),width=2,joint='curve')
     mark = Image.open(db / 'data/Works_NumberTales/Images/DB_Primary/attr/numberMark/attr_numberMarkNTS-49.png').convert('RGBA')
     # UV width and height differ on the spherical upper chest.
     mark = mark.resize((43, 107), Image.Resampling.LANCZOS)
-    body.paste(mark, (559, 91), mark.getchannel('A'))
+    decal=Image.new('RGBA',(size,size),(255,255,255,0))
+    decal.paste(mark,(559,91))
+    decal.save(destination/'49-chest-number.png')
     body.save(destination / '49-body.png')
 
     # Blend the cheek panel back into the blue flank, along the same direction

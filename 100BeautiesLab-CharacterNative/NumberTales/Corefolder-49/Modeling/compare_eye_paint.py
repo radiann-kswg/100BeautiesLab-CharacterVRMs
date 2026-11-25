@@ -52,6 +52,31 @@ def compare(number,db,strip,slot,angle,out,vrm=None):
         metrics['source_vrm_sha256']=hashlib.sha256(vrm.read_bytes()).hexdigest()
     (out/'eyes-and-chin.json').write_text(json.dumps(metrics,indent=2)+'\n',encoding='utf8')
 
+def compare_heads(number,db,previous,current,out,angle):
+    tilew,tileh=300,253
+    canvas=Image.new('RGB',(4*tilew,2*(tileh+34)),'#E6E8EB')
+    draw=ImageDraw.Draw(canvas)
+    font=ImageFont.truetype('segoeui.ttf',16)
+    art=db/f'data/Works_NumberTales/Images/DB_Primary/corefolder/{number}'
+    for row,version in enumerate((previous,current)):
+        strip=Image.open(version).convert('RGBA')
+        off=row*(tileh+34)
+        source=frame(Image.open(art/f'emstk_corefolderNTS-{number}-{row+1}.png').convert('RGBA'))
+        l,r=iris_pair(source,number)
+        middle=(l['cx']+r['cx'])/2
+        eye_y=(l['cy']+r['cy'])/2
+        origin=(int(middle)-155,int(eye_y)-164)
+        artwork=source.crop((*origin,origin[0]+310,origin[1]+262))
+        samples=[(f'Official illustration {row+1}',artwork)]
+        for i,yaw in enumerate((angle,0,90)):
+            samples.append((f'{"Previous" if row==0 else "Revised"} VRM  {yaw:+g}°',
+                strip.crop((720*i+169,4,720*i+551,326))))
+        for col,(label,pic) in enumerate(samples):
+            pic=pic.resize((tilew,tileh),Image.Resampling.LANCZOS)
+            canvas.paste(pic,(col*tilew,off+32),pic)
+            draw.text((col*tilew+7,off+4),label,fill='#29343E',font=font)
+    canvas.save(out/'head-shape.png')
+
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -62,5 +87,7 @@ if __name__=='__main__':
     p.add_argument('angle',type=float)
     p.add_argument('out',type=Path)
     p.add_argument('--vrm',type=Path,help='The actual VRM used to render the input strip.')
+    p.add_argument('--previous',type=Path,help='Prior VRM strip with the same artwork yaw, front, side and back.')
     args=p.parse_args()
     compare(args.number,args.db,args.strip,args.slot,args.angle,args.out,args.vrm)
+    if args.previous:compare_heads(args.number,args.db,args.previous,args.strip,args.out,args.angle)

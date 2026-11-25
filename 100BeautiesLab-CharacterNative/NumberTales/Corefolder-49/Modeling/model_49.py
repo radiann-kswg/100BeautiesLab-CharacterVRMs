@@ -170,31 +170,6 @@ class Sculpt:
                     layer.data[li].uv = (u+1. if wrap and u<.5 else u,t)
         return ob
 
-    def plate(self, name, edge, surface, mat, rise=.006, thickness=.004):
-        """Rounded relief with a closed back, for the ear lining and its inner fur."""
-        n = 32
-        bounds = [catmull(edge,i/n,True) for i in range(n)]
-        center = sum(bounds, Vector((0,0))) / n
-        verts = [surface(*center, rise)]
-        faces = []
-        for r in (.65,1.,.99):
-            back = len(verts) > 1 + n
-            for q in bounds:
-                uv = center.lerp(q,r)
-                lift = -thickness if back else rise * max(0,1-r*r)
-                verts.append(surface(*uv,lift))
-        verts.append(surface(*center,-thickness))
-        for j in range(n):
-            k=(j+1)%n
-            faces.append((0,1+j,1+k))
-            for row in range(2):
-                a=1+row*n
-                faces.append((a+j,a+n+j,a+n+k,a+k))
-            faces.append((len(verts)-1,1+2*n+k,1+2*n+j))
-        ob = self.mesh(name,verts,faces,mat)
-        bind(ob,self.arm,'head')
-        return ob
-
     def body(self, body):
         restore_body_surface(body)
         bpy.ops.object.select_all(action='DESELECT')
@@ -226,6 +201,39 @@ class Sculpt:
         for old in list(body.data.uv_layers):
             if old.name != layer.name:
                 body.data.uv_layers.remove(old)
+        self.chest_number(body)
+
+    def chest_number(self,body):
+        mesh=body.data
+        layer=mesh.uv_layers.active.data
+        faces=[];source=[]
+        coords=[];uvs=[];ids={}
+        mesh.calc_loop_triangles()
+        for tri in mesh.loop_triangles:
+            uv=[layer[i].uv[:] for i in tri.loops]
+            us,vs=zip(*uv)
+            if max(us)<559/1024 or min(us)>602/1024 or max(vs)<1-198/1024 or min(vs)>1-91/1024:
+                continue
+            corners=[]
+            for i,t in zip(tri.vertices,uv):
+                if i not in ids:
+                    ids[i]=len(coords);source.append(i)
+                    v=mesh.vertices[i];coords.append(v.co+v.normal*.0009);uvs.append(t)
+                corners.append(ids[i])
+            faces.append(tuple(corners))
+        mat=self.material('Chest number','#FFFFFF',face=True,texture='49-chest-number.png',edge=False)
+        decal=self.mesh('Chest number 49 | removable',coords,faces,mat)
+        decal['corefolder_layer']='Outfit'
+        uv=decal.data.uv_layers.new(name='Chest number')
+        for loop in decal.data.loops:uv.data[loop.index].uv=uvs[loop.vertex_index]
+        groups={}
+        for i,idx in enumerate(source):
+            for weight in mesh.vertices[idx].groups:
+                name=body.vertex_groups[weight.group].name
+                if name not in groups:groups[name]=decal.vertex_groups.new(name=name)
+                groups[name].add([i],weight.weight,'REPLACE')
+        decal.parent=self.arm
+        decal.modifiers.new('Armature','ARMATURE').object=self.arm
 
     def face(self, face):
         face.data.materials.clear()
@@ -380,43 +388,40 @@ class Sculpt:
             y=-.064-.279*st*math.cos(angle)-.033*front**3*drop
             return Vector((x,y,z))
         crown=self.material('Swept crown','#FFFFFF',texture='49-crown.png')
-        make_crown(self,'Hair | continuous swept crown',angles,17,surface,crown,self.strand)
+        make_crown(self,'Hair | swept crown and fox ears',angles,17,surface,crown,self.strand,
+                   cups=[(-1,self.ear_cup),(1,self.ear_cup)])
 
-    def ears(self):
-        for sign,side in ((-1,'R'),(1,'L')):
-            def plane(u,z,offset):
-                return (sign*(.210+u*.085+.85*offset),-.208+u*.169+.23*(z-.94)-.52*offset,z)
-            # Low swept fox ears sit on the sides of the crown, as in both official drawings.
-            outer = [(-.58,.914),(-.66,.986),(-.55,1.041),(.40,1.054),(.90,1.060),
-                     (.87,1.012),(.82,.970),(.66,.930),(.24,.880),(-.19,.861)]
-            inner = [(-.44,.924),(-.43,.971),(-.13,1.004),(.51,1.032),(.823,1.050),
-                     (.79,1.008),(.73,.970),(.53,.930),(.21,.898),(-.13,.879)]
-            inner_tuft = [(-.37,.928),(-.38,.965),(-.15,.982),(.14,.988),(.35,.977),
-                          (.44,.958),(.58,.951),(.49,.94),(.34,.922),(.12,.913),(-.13,.910)]
-            # The white lining and central tuft are adjoining faces of one
-            # cupped ear. Each rim ring has the same winding and start corner.
-            count=32
-            verts=[];faces=[];indices=[]
-            for curve,offset in ((outer,-.034),(outer,0),(inner,.013),(inner_tuft,.016)):
-                for j in range(count):
-                    v=catmull(curve,j/count,True)
-                    verts.append(plane(v.x,v.y,offset))
-            for row,material in enumerate((0,0,1)):
-                for j in range(count):
-                    k=(j+1)%count;a=row*count
-                    faces.append((a+j,a+k,a+count+k,a+count+j));indices.append(material)
-            for ring,offset,material in ((0,-.036,0),(3,.019,2)):
-                u=sum(q[0] for q in (outer if ring==0 else inner_tuft))/len(outer if ring==0 else inner_tuft)
-                z=sum(q[1] for q in (outer if ring==0 else inner_tuft))/len(outer if ring==0 else inner_tuft)
-                hub=len(verts);verts.append(plane(u,z,offset))
-                for j in range(count):
-                    k=(j+1)%count
-                    faces.append((hub,ring*count+k,ring*count+j) if ring==0 else (hub,ring*count+j,ring*count+k))
-                    indices.append(material)
-            ear=self.mesh('Fox ear | rolled lining '+side,verts,faces,self.blue)
-            ear.data.materials.append(self.cream);ear.data.materials.append(self.pale)
-            for poly,idx in zip(ear.data.polygons,indices):poly.material_index=idx
-            bind(ear,self.arm)
+    def ear_cup(self,sign,angles):
+        # The ear is a colored relief inside a real opening in the scalp.
+        # Rays in its local YZ contour make the head and all three colors share
+        # the same edge loops, including the shallow notch in the ice-blue tuft.
+        outer=[(-.58,.914),(-.66,.986),(-.55,1.041),(.40,1.054),(.90,1.060),
+               (.87,1.012),(.82,.970),(.66,.930),(.24,.880),(-.19,.861)]
+        inner=[(-.44,.924),(-.43,.971),(-.13,1.004),(.51,1.032),(.823,1.050),
+               (.79,1.008),(.73,.970),(.53,.930),(.21,.898),(-.13,.879)]
+        tuft=[(-.37,.928),(-.38,.965),(-.15,.982),(.14,.988),(.35,.977),
+              (.44,.958),(.58,.951),(.49,.94),(.34,.922),(.12,.913),(-.13,.910)]
+        def plane(u,z,lift):
+            return ((u+.72)/1.72,(1.070-z)/.224,lift)
+        def cross(a,b):return a[0]*b[1]-a[1]*b[0]
+        def ring(points,lift):
+            path=np.asarray([catmull(points,i/96,True) for i in range(96)])
+            path[:,0]*=.169;path[:,1]*=.86
+            core=path.mean(0)
+            edges=np.roll(path,-1,axis=0)-path
+            result=[]
+            for a in angles:
+                ray=np.array([math.cos(a)*.115,math.sin(a)*.084])
+                hits=[]
+                for q,e in zip(path,edges):
+                    den=cross(ray,e)
+                    if abs(den)<1e-12:continue
+                    t=cross(q-core,e)/den;u=cross(q-core,ray)/den
+                    if t>=0 and 0<=u<=1:hits.append(t)
+                q=core+ray*min(hits)
+                result.append(plane(q[0]/.169,q[1]/.86,lift))
+            return result
+        return [(ring(outer,0),self.blue),(ring(inner,.010),self.blue),(ring(tuft,.014),self.cream)],plane(.04,.946,.016),self.pale
 
     def locks(self):
         def lock(name, path, widths, depths, *, axis=(1,0,0), swinging=False, mat=None):
@@ -431,8 +436,8 @@ class Sculpt:
             def mirror(points):
                 return [(sign*x,y,z) for x,y,z in points]
             # The terminal hook points outward along the cheek in the official artwork.
-            cheek=lock('cheek '+side,mirror([(.157,-.192,.979),(.215,-.215,.920),(.252,-.229,.856),(.257,-.256,.797),(.241,-.262,.745),(.251,-.258,.708),(.282,-.233,.716)]),
-                       [.022,.043,.052,.044,.037,.021,0],[.016,.029,.033,.030,.021,.012,0],axis=(sign*.78,.51,0),swinging=True)
+            cheek=lock('cheek '+side,mirror([(.173,-.210,.966),(.209,-.231,.917),(.248,-.243,.857),(.263,-.257,.807),(.252,-.262,.760),(.260,-.256,.728),(.290,-.231,.736)]),
+                       [.017,.034,.043,.038,.030,.018,0],[.013,.023,.029,.025,.018,.011,0],axis=(sign*.78,.51,0),swinging=True)
             cheek.data.materials.append(self.strand)
             for polygon in cheek.data.polygons:
                 if polygon.center.z<.87 and polygon.normal.x*sign<-.42 and polygon.normal.y>-.58:
@@ -474,12 +479,10 @@ def build(starter, output):
     sculpt = Sculpt(arm,body,face)
     sculpt.body(body)
     sculpt.face(face)
-    sculpt.close_neck(face)
-    sculpt.chin_edge(face,body,sculpt.material('Chin contour','#43434A',edge=False),.126,
-                     expressions=('a','i','u','e','o','Joy','Fun','Sorrow'))
+    from torso_profile import add_cranial_base
+    sculpt.items.append(add_cranial_base(arm,face,49,sculpt.collection))
     sculpt.scalp()
     sculpt.locks()
-    sculpt.ears()
     sculpt.tails()
     bpy.context.scene.name = 'Corefolder 49 - Yochika'
     output.mkdir(parents=True,exist_ok=True)

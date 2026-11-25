@@ -302,113 +302,6 @@
   },
   "before": {
     "dimensions_mm": [
-      1118.34,
-      946.98,
-      711.72
-    ],
-    "ground_z_mm": 0.92,
-    "sections": {
-      "0.01": {
-        "width_mm": 367.81,
-        "depth_mm": 292.9,
-        "front_y_mm": -180.07,
-        "back_y_mm": 112.83
-      },
-      "0.025": {
-        "width_mm": 477.7,
-        "depth_mm": 431.96,
-        "front_y_mm": -242.27,
-        "back_y_mm": 189.69
-      },
-      "0.05": {
-        "width_mm": 613.86,
-        "depth_mm": 581.55,
-        "front_y_mm": -310.48,
-        "back_y_mm": 271.07
-      },
-      "0.1": {
-        "width_mm": 816.5,
-        "depth_mm": 743.19,
-        "front_y_mm": -410.23,
-        "back_y_mm": 332.96
-      },
-      "0.15": {
-        "width_mm": 929.68,
-        "depth_mm": 829.46,
-        "front_y_mm": -467.03,
-        "back_y_mm": 362.43
-      },
-      "0.2": {
-        "width_mm": 1011.51,
-        "depth_mm": 889.26,
-        "front_y_mm": -506.65,
-        "back_y_mm": 382.61
-      },
-      "0.3": {
-        "width_mm": 1101.91,
-        "depth_mm": 943.86,
-        "front_y_mm": -543.7,
-        "back_y_mm": 400.16
-      },
-      "0.4": {
-        "width_mm": 1117.98,
-        "depth_mm": 940.11,
-        "front_y_mm": -542.89,
-        "back_y_mm": 397.21
-      },
-      "0.5": {
-        "width_mm": 1079.28,
-        "depth_mm": 892.19,
-        "front_y_mm": -514.79,
-        "back_y_mm": 377.4
-      },
-      "0.57": {
-        "width_mm": 980.92,
-        "depth_mm": 809.26,
-        "front_y_mm": -466.06,
-        "back_y_mm": 343.2
-      },
-      "0.6": {
-        "width_mm": 915.39,
-        "depth_mm": 757.15,
-        "front_y_mm": -436.6,
-        "back_y_mm": 320.55
-      },
-      "0.64": {
-        "width_mm": 784.99,
-        "depth_mm": 649.8,
-        "front_y_mm": -373.04,
-        "back_y_mm": 276.75
-      },
-      "0.67": {
-        "width_mm": 635.7,
-        "depth_mm": 511.65,
-        "front_y_mm": -288.49,
-        "back_y_mm": 223.16
-      },
-      "0.69": {
-        "width_mm": 491.77,
-        "depth_mm": 380.38,
-        "front_y_mm": -209.33,
-        "back_y_mm": 171.05
-      },
-      "0.7": {
-        "width_mm": 395.23,
-        "depth_mm": 290.68,
-        "front_y_mm": -152.69,
-        "back_y_mm": 137.99
-      },
-      "0.71": {
-        "width_mm": 230.73,
-        "depth_mm": 96.45,
-        "front_y_mm": -31.13,
-        "back_y_mm": 65.32
-      }
-    },
-    "vrm_sha256": "da791329d3df0ff887e9a378b7946346ec7cb9b09f4d8557c6e4a65971c9a975"
-  },
-  "after": {
-    "dimensions_mm": [
       853.94,
       872.96,
       711.72
@@ -513,5 +406,112 @@
       }
     },
     "vrm_sha256": "1201cc49673b2ccecf75825ebe721abf6d480c3a5ceb00d2aef25af9d5ac1cbe"
+  },
+  "after": {
+    "dimensions_mm": [
+      853.94,
+      872.9,
+      711.64
+    ],
+    "ground_z_mm": 0.96,
+    "sections": {
+      "0.01": {
+        "width_mm": 300.76,
+        "depth_mm": 270.32,
+        "front_y_mm": -171.51,
+        "back_y_mm": 98.81
+      },
+      "0.025": {
+        "width_mm": 389.27,
+        "depth_mm": 397.98,
+        "front_y_mm": -228.78,
+        "back_y_mm": 169.2
+      },
+      "0.05": {
+        "width_mm": 497.35,
+        "depth_mm": 534.71,
+        "front_y_mm": -291.07,
+        "back_y_mm": 243.64
+      },
+      "0.1": {
+        "width_mm": 653.27,
+        "depth_mm": 679.22,
+        "front_y_mm": -380.94,
+        "back_y_mm": 298.28
+      },
+      "0.15": {
+        "width_mm": 734.17,
+        "depth_mm": 755.04,
+        "front_y_mm": -431.41,
+        "back_y_mm": 323.63
+      },
+      "0.2": {
+        "width_mm": 789.55,
+        "depth_mm": 808.67,
+        "front_y_mm": -467.09,
+        "back_y_mm": 341.58
+      },
+      "0.3": {
+        "width_mm": 846.33,
+        "depth_mm": 864.87,
+        "front_y_mm": -504.05,
+        "back_y_mm": 360.82
+      },
+      "0.4": {
+        "width_mm": 851.58,
+        "depth_mm": 869.89,
+        "front_y_mm": -507.57,
+        "back_y_mm": 362.32
+      },
+      "0.5": {
+        "width_mm": 815.02,
+        "depth_mm": 829.01,
+        "front_y_mm": -483.27,
+        "back_y_mm": 345.74
+      },
+      "0.57": {
+        "width_mm": 741.94,
+        "depth_mm": 751.06,
+        "front_y_mm": -436.83,
+        "back_y_mm": 314.23
+      },
+      "0.6": {
+        "width_mm": 696.79,
+        "depth_mm": 700.51,
+        "front_y_mm": -407.34,
+        "back_y_mm": 293.17
+      },
+      "0.64": {
+        "width_mm": 606.5,
+        "depth_mm": 597.5,
+        "front_y_mm": -345.01,
+        "back_y_mm": 252.49
+      },
+      "0.67": {
+        "width_mm": 498.0,
+        "depth_mm": 468.89,
+        "front_y_mm": -266.41,
+        "back_y_mm": 202.48
+      },
+      "0.69": {
+        "width_mm": 388.92,
+        "depth_mm": 349.38,
+        "front_y_mm": -195.39,
+        "back_y_mm": 153.99
+      },
+      "0.7": {
+        "width_mm": 313.9,
+        "depth_mm": 267.28,
+        "front_y_mm": -144.25,
+        "back_y_mm": 123.03
+      },
+      "0.71": {
+        "width_mm": 182.68,
+        "depth_mm": 84.86,
+        "front_y_mm": -30.96,
+        "back_y_mm": 53.89
+      }
+    },
+    "vrm_sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1"
   }
 }

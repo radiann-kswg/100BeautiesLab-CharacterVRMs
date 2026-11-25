@@ -45,25 +45,25 @@
   },
   "VRM -18 deg": {
     "screen_left": {
-      "x": 180,
-      "y": 110,
-      "w": 24,
-      "h": 36,
-      "cx": 190.28,
-      "cy": 129.35,
-      "area": 553
+      "x": 174,
+      "y": 112,
+      "w": 23,
+      "h": 35,
+      "cx": 183.25,
+      "cy": 130.85,
+      "area": 497
     },
     "screen_right": {
-      "x": 265,
-      "y": 111,
-      "w": 31,
+      "x": 259,
+      "y": 112,
+      "w": 30,
       "h": 35,
-      "cx": 279.06,
-      "cy": 128.53,
-      "area": 776
+      "cx": 272.87,
+      "cy": 129.18,
+      "area": 775
     },
-    "center_distance_px": 88.78,
+    "center_distance_px": 89.62,
     "image_height_px": 500
   },
-  "source_vrm_sha256": "1201cc49673b2ccecf75825ebe721abf6d480c3a5ceb00d2aef25af9d5ac1cbe"
+  "source_vrm_sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1"
 }

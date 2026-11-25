@@ -21,7 +21,8 @@ def inspect(path):
     parts=[]
     for node in doc['nodes']:
         if 'mesh' not in node:continue
-        group=node.get('name','').lower().split('.')[0]
+        name=node.get('name','').lower()
+        group=next((s for s in ('body','tail','hair','face') if name.startswith(s)),name)
         for prim in doc['meshes'][node['mesh']]['primitives']:
             pos=glb.array(prim['attributes']['POSITION'])
             faces=glb.array(prim['indices']).reshape(-1,3)
@@ -85,6 +86,8 @@ if __name__=='__main__':
     p.add_argument('out',type=Path)
     p.add_argument('--numbers',type=int,nargs='+',default=[4,16,20,22,25,93,49,85])
     p.add_argument('--candidate',type=Path)
+    p.add_argument('--review',type=int,choices=(49,85),help='Store the six references beside one before/after result.')
+    p.add_argument('--before',type=Path,help='JSON measured from the earlier references and candidates.')
     args=p.parse_args()
     data={}
     for n in args.numbers:
@@ -94,4 +97,10 @@ if __name__=='__main__':
         else:
             path,=(ROOT/f'Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-{n}').glob('*.vrm')
         data[str(n)]=inspect(path)
+    if args.review:
+        prev=json.loads(args.before.read_text(encoding='utf8'))
+        n=str(args.review)
+        data={'method':'Eight world-Z planes, 0.5 mm rays. First opaque base-color texel; white means min RGB >228 and range <20. The Body export group may contain accessories in earlier VRMs.',
+              'reference_vrms':{s:prev[s] for s in ('4','16','20','22','25','93')},
+              'previous':prev[n],'revised':data[n]}
     args.out.write_text(json.dumps(data,indent=2)+'\n',encoding='utf8')
