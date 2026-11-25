@@ -146,7 +146,41 @@ public static partial class CharacterReview
                 throw new Exception("Camera clips #" + input.number + ", bounds " + bounds);
             foreach (var view in new[]{("front",Vector3.forward),("side",Vector3.right),("back",Vector3.back)})
                 Shoot(Path.Combine(dir,view.Item1+".png"),bounds.center,view.Item2,stats.orthographicSize);
-            if(input.mouth) CheckMouth(model,skins,stats,dir);
+            // One world centre for every character, including their original ground offset.
+            var torsoCenter = new Vector3(0, .57f, 0);
+            Shoot(Path.Combine(dir,"torso-front.png"),torsoCenter,Vector3.forward,.75f);
+            Shoot(Path.Combine(dir,"torso-side.png"),torsoCenter,Vector3.right,.75f);
+            var torsoNodes = skins.Where(r => r.name.StartsWith("Body",StringComparison.OrdinalIgnoreCase)).ToArray();
+            if (torsoNodes.Length == 0) throw new Exception("Missing Body renderer for #"+input.number);
+            var others = skins.Except(torsoNodes).ToArray();
+            foreach (var skin in others) skin.enabled=false;
+            visibleSkins=torsoNodes;
+            Shoot(Path.Combine(dir,"torso-body-front.png"),torsoCenter,Vector3.forward,.75f);
+            Shoot(Path.Combine(dir,"torso-body-side.png"),torsoCenter,Vector3.right,.75f);
+            visibleSkins=skins;
+            foreach (var skin in others) skin.enabled=true;
+            if (skins.Any(r => r.name == "Outfit"))
+            {
+                foreach (var layer in new[]{"core","undressed","dressed"})
+                {
+                    var selected = skins.Where(r => layer=="dressed" ||
+                        (layer=="undressed" ? r.name!="Outfit" : r.name=="Body" || r.name=="Face")).ToArray();
+                    foreach (var r in skins.Except(selected)) r.enabled=false;
+                    visibleSkins=selected;
+                    foreach (var view in new[]{("front",Vector3.forward),("side",Vector3.right),("back",Vector3.back)})
+                        Shoot(Path.Combine(dir,layer+"-"+view.Item1+".png"),torsoCenter,view.Item2,.78f);
+                    foreach (var r in skins) r.enabled=true;
+                }
+                visibleSkins=skins;
+            }
+            var eyeMid = .5f * (animator.GetBoneTransform(HumanBodyBones.LeftEye).position +
+                                 animator.GetBoneTransform(HumanBodyBones.RightEye).position);
+            var headBase = animator.GetBoneTransform(HumanBodyBones.Head).position;
+            var headCenter = new Vector3(eyeMid.x, eyeMid.y + .055f, .5f*(headBase.z+eyeMid.z));
+            foreach (int yaw in new[]{0,-30,30,-90,90,180})
+                Shoot(Path.Combine(dir,"head"+yaw+".png"),headCenter,
+                      Quaternion.Euler(0,yaw,0)*Vector3.forward,.50f);
+            if(input.mouth) CheckMouth(model,skins,stats,dir,bounds.center);
             if(input.gaze || input.mouth) CheckGaze(model, skins, dir, input);
             if (input.artwork || input.angles)
                 foreach(int degree in new[]{-36,-27,-18,-9,0,9,18,27,36})
@@ -203,7 +237,7 @@ public static partial class CharacterReview
         public List<JointSample> joints = new();
     }
 
-    static void CheckMouth(Vrm10Instance model, SkinnedMeshRenderer[] skins, Result stats, string dir)
+    static void CheckMouth(Vrm10Instance model, SkinnedMeshRenderer[] skins, Result stats, string dir, Vector3 bodyCenter)
     {
         var faces=skins.Where(r=>r.sharedMesh.blendShapeCount>0).ToArray();
         Vector3[] WorldFace() => faces.SelectMany(r=>Bake(r).Select(r.transform.TransformPoint)).ToArray();
@@ -234,6 +268,7 @@ public static partial class CharacterReview
         // Include the eyes and chin at an identical real-world scale for reference and production VRMs.
         Vector3 cropCenter=center+Vector3.up*.065f;
         var angle=Quaternion.Euler(0,25,0)*Vector3.forward;
+        SpringClearance(model,skins,stats,dir,"neutral-25deg",angle);
         Shoot(Path.Combine(mouthDir,"neutral-front.png"),cropCenter,Vector3.forward,.205f);
         Shoot(Path.Combine(mouthDir,"neutral-oblique.png"),cropCenter,angle,.205f);
         Shoot(Path.Combine(mouthDir,"neutral-profile.png"),cropCenter,Vector3.right,.205f);
@@ -272,7 +307,9 @@ public static partial class CharacterReview
             if(pair.Item1==HumanBodyBones.Head && keys.Contains(ExpressionKey.Aa))
             {
                 expression.SetWeight(ExpressionKey.Aa,.65f);model.Runtime.Process();
+                SpringClearance(model,skins,stats,dir,"head-12-aa-065",angle);
                 Shoot(Path.Combine(mouthDir,"head-turn-speaking.png"),cropCenter,angle,.205f);
+                Shoot(Path.Combine(mouthDir,"head-turn-whole.png"),bodyCenter,angle,stats.orthographicSize);
                 expression.SetWeight(ExpressionKey.Aa,0);model.Runtime.Process();
             }
             joint.localRotation=rot;model.Runtime.Process();
@@ -323,11 +360,14 @@ public static partial class CharacterReview
         var angle = new Vector3(.42f, .08f, -1).normalized;
         string frames = Path.Combine(dir,"motion"); Directory.CreateDirectory(frames);
         Shoot(Path.Combine(frames,"000.png"),center,angle,stats.orthographicSize);
+        SpringClearance(model,skins,stats,dir,"root-000",Vector3.forward);
         for (int frame=1;frame<=150;frame++)
         {
             float travel=frame<=24?Mathf.Sin(frame * Mathf.PI / 12f):0;
             root.localPosition=new Vector3(.09f*travel,0,.03f*travel);
             runtime.Process(Dt);
+            if(frame==6 || frame==12 || frame==18 || frame==24 || frame==36 || frame==90 || frame==150)
+                SpringClearance(model,skins,stats,dir,"root-"+frame.ToString("D3"),Vector3.forward);
             if ((frame<=48 && frame%2==0) || frame==90)
                 Shoot(Path.Combine(frames,frame.ToString("D3")+".png"),center+root.localPosition,angle,stats.orthographicSize);
             var sampled=frame<=36?atRest.Keys.ToDictionary(r=>r,Bake):null;

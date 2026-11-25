@@ -69,7 +69,7 @@ def _triangles(glb, bone_index):
     return {k: np.concatenate(v) for k, v in result.items()}
 
 
-def compare_triangles(original, grouped, tol=2e-5):
+def compare_triangles(original, grouped, tol=2e-5, normal_degrees=.01):
     binds, rest = _skin_matrices(original, tol)
     grouped_binds, grouped_rest = _skin_matrices(grouped, tol)
     if rest != grouped_rest or binds.keys() != grouped_binds.keys():
@@ -82,7 +82,8 @@ def compare_triangles(original, grouped, tol=2e-5):
     before, after = (_triangles(g, bone_index) for g in (original, grouped))
     if before.keys() != after.keys():
         raise ValueError("Materials, UV/skin attributes or morph targets differ in the grouped export")
-    total, peak = 0, 0.0
+    total, peak, peak_non_normal, peak_normal_chord = 0, 0.0, 0.0, 0.0
+    normal_chord = 2 * np.sin(np.deg2rad(normal_degrees) / 2)
     for key, src in before.items():
         dst = after[key]
         if src.shape != dst.shape:
@@ -91,27 +92,42 @@ def compare_triangles(original, grouped, tol=2e-5):
         tree = cKDTree(src[:, :, :3].mean(axis=1))
         _, near = tree.query(centroids)
         def difference(a, b):
-            # A different first index is valid. Reversed winding is significant.
-            return np.minimum.reduce([np.abs(a - np.roll(b, i, axis=1)).max(axis=(1, 2)) for i in range(3)])
+            # A different first corner is valid, reversed winding is significant.
+            # A baked split-normal direction has units of angle; coordinate, UV,
+            # weight and morph data retain the original absolute tolerance.
+            readings = []
+            for turn in range(3):
+                d = abs(a - np.roll(b, turn, axis=1))
+                other = np.maximum(d[:,:,:3].max((1,2)),d[:,:,6:].max((1,2)))
+                chord = np.linalg.norm(d[:,:,3:6],axis=2).max(1)
+                score = np.maximum(other / tol, chord / normal_chord)
+                readings.append(np.stack((score, d.max((1,2)), other, chord),axis=1))
+            readings = np.stack(readings)
+            return readings[np.argmin(readings[:,:,0],axis=0), np.arange(a.shape[0])]
         delta = difference(src[near], dst)
         counts = np.bincount(near, minlength=len(src))
-        single = (counts[near] == 1) & (delta <= tol)
+        single = (counts[near] == 1) & (delta[:,0] <= 1)
         used = set(near[single])
         for i in np.flatnonzero(~single):
             matches = [j for j in tree.query_ball_point(centroids[i], tol * 2) if j not in used]
             if not matches:
                 raise ValueError(f"No corresponding triangle on {key[0]}, row {i}")
             errors = difference(src[matches], dst[i:i+1])
-            best = int(np.argmin(errors))
-            if errors[best] > tol:
+            best = int(np.argmin(errors[:,0]))
+            if errors[best,0] > 1:
                 raise ValueError(f"Triangle attributes differ on {key[0]}, row {i}: {errors[best]}")
             delta[i] = errors[best]
             used.add(matches[best])
         total += len(delta)
-        peak = max(peak, float(delta.max()))
+        peak = max(peak, float(delta[:,1].max()))
+        peak_non_normal = max(peak_non_normal,float(delta[:,2].max()))
+        peak_normal_chord = max(peak_normal_chord,float(delta[:,3].max()))
     return {"triangles_compared_one_to_one": total, "max_absolute_attribute_delta": peak,
             "material_definitions_and_embedded_textures_match": True, "skin_joints_compared": len(rest),
             "max_inverse_bind_matrix_delta": bind_error,
+            "max_non_normal_attribute_delta":peak_non_normal,
+            "max_vertex_normal_angle_degrees":float(np.rad2deg(2*np.arcsin(peak_normal_chord/2))),
+            "vertex_normal_tolerance_degrees":normal_degrees,
             "absolute_tolerance": tol, "ungrouped_meshes": len(original.doc["meshes"]),
             "exported_meshes": len(grouped.doc["meshes"]),
             "ungrouped_primitives": sum(len(m["primitives"]) for m in original.doc["meshes"]),
