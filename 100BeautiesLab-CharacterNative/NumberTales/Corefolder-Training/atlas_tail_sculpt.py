@@ -45,9 +45,9 @@ def revise_tails(n,arm,collection):
                 # around the flanks. Keep their shared rump and bend the bulbs.
                 reach=bend*min(1,max(0,(abs(x)-.08)/.32))*min(1,max(0,(.68-z)/.36))
                 sign=1 if x>=0 else -1
-                x+=.158*sign*reach
-                z-=min(max(0,z-.022),.215*reach)
-                y-=.29*reach
+                x+=.060*sign*reach
+                z-=min(max(0,z-.022),.093*reach)
+                y-=.32*reach
             return Vector((x,y,z))
         side=1 if center.x>w/2+18 else -1 if center.x<w/2-18 else 0
         root=Vector((side*.075,.264,.36 if i<count else .27))
