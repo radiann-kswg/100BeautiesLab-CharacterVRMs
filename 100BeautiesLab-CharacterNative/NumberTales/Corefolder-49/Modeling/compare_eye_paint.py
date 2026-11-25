@@ -1,5 +1,6 @@
 """Compare both eyes, mouth and chin at the fixed artwork yaw of #49 or #85."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 
@@ -24,7 +25,7 @@ def iris_pair(image, number):
     return sorted(pair,key=lambda box:box['cx'])
 
 
-def compare(number,db,strip,slot,angle,out):
+def compare(number,db,strip,slot,angle,out,vrm=None):
     art=db/'data/Works_NumberTales/Images/DB_Primary/corefolder'/str(number)
     pictures=[frame(Image.open(art/f'emstk_corefolderNTS-{number}-{i}.png').convert('RGBA')) for i in (1,2)]
     pictures.append(cell(Image.open(strip).convert('RGBA'),slot))
@@ -46,8 +47,10 @@ def compare(number,db,strip,slot,angle,out):
                         'image_height_px':image.height}
     out.mkdir(parents=True,exist_ok=True)
     canvas.save(out/'eyes-and-chin.png')
-    (out/'eyes-and-chin.json').write_text(json.dumps(metrics,indent=2)+'\n',encoding='utf8')
     print(json.dumps({k:[v['center_distance_px'],v['screen_left']['w'],v['screen_right']['w']] for k,v in metrics.items()}))
+    if vrm is not None:
+        metrics['source_vrm_sha256']=hashlib.sha256(vrm.read_bytes()).hexdigest()
+    (out/'eyes-and-chin.json').write_text(json.dumps(metrics,indent=2)+'\n',encoding='utf8')
 
 
 if __name__=='__main__':
@@ -58,5 +61,6 @@ if __name__=='__main__':
     p.add_argument('slot',type=int)
     p.add_argument('angle',type=float)
     p.add_argument('out',type=Path)
+    p.add_argument('--vrm',type=Path,help='The actual VRM used to render the input strip.')
     args=p.parse_args()
-    compare(args.number,args.db,args.strip,args.slot,args.angle,args.out)
+    compare(args.number,args.db,args.strip,args.slot,args.angle,args.out,args.vrm)

@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 
 HERE = Path(__file__).resolve().parent
@@ -12,9 +12,69 @@ NATIVE = HERE.parents[1]
 BLUE = (106, 166, 215)
 LIGHT = (155, 193, 230)
 
+def crown_paint(base_color, shade_color, strands, destination):
+    """Paint tapered breaks between locks in the azimuth/hem UV of the scalp."""
+    size=768
+    yy,xx=np.mgrid[:size,:size]
+    theta=(xx/(size-1)-.5)*np.pi*2
+    t=yy/(size-1)
+    ink=np.zeros_like(theta)
+    for start,end,begin,finish,curve in strands:
+        v=np.clip((t-begin)/(finish-begin),0,1)
+        mid=start+(end-start)*v+curve*np.sin(np.pi*v)
+        width=.017*np.sin(np.pi*v)**.72
+        a=np.clip((width-np.abs(theta-mid)+.005)/.01,0,1)
+        ink=np.maximum(ink,a*((t>begin)&(t<finish)))
+    rgb=np.array(base_color)+(np.array(shade_color)-np.array(base_color))*ink[:,:,None]
+    Image.fromarray(np.rint(rgb).astype(np.uint8),'RGB').save(destination)
+
+
+def reference_cheeks(face, fur, margin):
+    """Transfer the reference face-flank transition, airbrushed cheek and small reflected spot."""
+    w,h=203,274
+    native=Image.open(NATIVE/'Corefolder-4/CoreFolder-4.png').convert('RGB').crop((0,0,w,h))
+    yy,xx=np.mgrid[:h,:w]
+    # White/fur boundary sampled on the native #25 face UV. Interpolate
+    # through the blush, which overlays the lateral coat in that reference.
+    boundary=np.interp(yy,[0,40,70,90,110,130,150,170,190,210,230,250,270],
+                       [114,114,111,107,102,99,101,103,105,107,110,116,135])+margin
+    blend=np.clip((xx-boundary+.8)/1.6,0,1)
+    layer=255+blend[:,:,None]*(np.array(fur,dtype=float)-255)
+    sample_x=np.clip(np.rint((xx-104)*1.18+96).astype(int),0,w-1)
+    source=np.asarray(native,dtype=float)[yy,sample_x,1]
+    soft=np.asarray(native.filter(ImageFilter.GaussianBlur(3)),dtype=float)[yy,sample_x,1]
+    active=(sample_x>49)&(sample_x<147)&(yy>136)&(yy<198)
+    pigment=.79*np.clip((255-soft)/85,0,1)*active
+    layer+=pigment[:,:,None]*(np.array((255,181,145))-layer)
+    shine=np.clip((source-soft-3)/29,0,1)*active
+    layer+=shine[:,:,None]*(255-layer)
+    # Write RGB only; the face atlas's native alpha silhouette remains intact.
+    a=np.array(face)
+    a[:h,:w,:3]=np.rint(layer).clip(0,255).astype('uint8')
+    return Image.fromarray(a,'RGBA')
+
+
+def reference_iris_colors(rgba, iris, donor_red, upper, lower):
+    """The native #4/#25 iris has a rounded highlight pool, with a hand-inked limbus."""
+    light=np.clip((donor_red-100)/44,0,1)
+    rgb=np.array(upper)+(np.array(lower)-np.array(upper))*light[:,:,None]
+    rgba[iris,:3]=np.rint(rgb[iris]).clip(0,255).astype('uint8')
+    tile=rgba[865:1024,750:898].copy()
+    # Map the same lighting direction to the second horizontally mirrored UV.
+    col=np.clip(1656-np.arange(750,898),750,896)
+    amount=light[865:1024,col]
+    mask=iris[865:1024,750:898]
+    rgb=np.array(upper)+(np.array(lower)-np.array(upper))*amount[:,:,None]
+    tile[mask,:3]=np.rint(rgb[mask]).clip(0,255).astype('uint8')
+    return Image.fromarray(tile,'RGBA')
+
 
 def paint(db, destination):
     destination.mkdir(parents=True, exist_ok=True)
+    crown_paint(BLUE,(72,124,166),[(-.77,-.29,.24,.98,-.14),
+        (-.35,.09,.19,.98,-.15),(.32,.85,.22,.99,-.11),
+        (-1.30,-1.57,.42,.98,-.18),(1.45,1.66,.44,.98,-.16)],
+        destination/'49-crown.png')
     size = 1024
     y, x = np.mgrid[:size, :size]
     height = 1 - y / (size - 1)
@@ -48,9 +108,11 @@ def paint(db, destination):
     neck = np.empty((256,256,3),np.uint8)
     ny,nx=np.mgrid[:256,:256]
     vz=1-ny/255
-    seam=.064+.50*vz**1.5+.035*np.sin(vz*25)*np.exp(-((vz-.36)/.28)**2)
+    white=np.clip((.40-vz)/.25,0,1)
+    white=white*white*(3-2*white)
+    seam=(.064+.50*vz**1.5+.035*np.sin(vz*25)*np.exp(-((vz-.36)/.28)**2))*white
     neck[:] = BLUE
-    neck[nx/255 < seam+.012] = (91,155,205)
+    neck[nx/255 < seam+.012*white] = (91,155,205)
     neck[nx/255 < seam] = (255,255,255)
     Image.fromarray(neck,'RGB').save(destination / '49-neck.png')
 
@@ -66,18 +128,12 @@ def paint(db, destination):
     cyan = (green > red + 9) & (blue > red + 9)
     rgba[cyan, :3] = 255   # white backing and white muzzle of this Corefolder
     eye = (x > 750) & (x < 897) & (y > 865) & cyan
-    rgba[eye, :3] = (64, 90, 185)
-    rgba[eye & (y > 942-.16*(x-828)), :3] = (67, 120, 195)
+    second=reference_iris_colors(rgba,eye,red,(64,90,185),(67,120,195))
     # Existing overlay geometry remains available for every eyelid morph. Its
     # donor's two large white discs are replaced by #49's single iris catchlight.
     rgba[865:1024,899:1024,:] = 0
     face = Image.fromarray(rgba, 'RGBA')
-    second=np.array(face.crop((750,865,898,1024)))
-    yy,xx=np.mgrid[865:1024,750:898]
-    field=eye[865:1024,750:898]
-    second[field,:3]=(64,90,185)
-    second[field & (yy>942+.16*(xx-828)),:3]=(67,120,195)
-    face.paste(Image.fromarray(second,'RGBA'),(10,500))
+    face.paste(second,(10,500))
     scale = 4
     for near,origin in [(True,(750,865)),(False,(10,500))]:
         pupil = Image.new('RGBA', (148*scale,159*scale))
@@ -92,17 +148,7 @@ def paint(db, destination):
             # the fringe and upper lid frame the uninterrupted far iris.
             pen.ellipse((92*scale,38*scale,118*scale,62*scale), fill=(255,254,248,255))
         face.alpha_composite(pupil.resize((148,159),Image.Resampling.LANCZOS),origin)
-    # The source UV cheek island is symmetric. Paint three fine peach strokes
-    # over the soft canonical blush and mute its bubble highlights.
-    cheek = np.array(face)
-    mask = (x<202) & (y<238)
-    d = ((x-96)/36)**2 + ((y-167)/16)**2
-    for k, channel in enumerate((255, 217, 200)):
-        cheek[:,:,k][mask] = (255-(255-channel)*.38*np.exp(-d[mask])).astype(np.uint8)
-    face = Image.fromarray(cheek, 'RGBA')
-    pen = ImageDraw.Draw(face)
-    for cx in (82, 96, 108):
-        pen.line([(cx-1,169),(cx+2,165)], fill=(248,176,143,255), width=2)
+    face=reference_cheeks(face,BLUE,3)
     face.save(destination / '49-face.png')
     # Trace the published isolated rear unit using its own nine differently
     # occluded lobes. Lower flank lobes run around the torso in the posed model.

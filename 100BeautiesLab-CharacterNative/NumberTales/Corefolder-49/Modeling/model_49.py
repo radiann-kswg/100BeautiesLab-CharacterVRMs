@@ -13,7 +13,9 @@ HERE = Path(__file__).resolve().parent
 TRAINING = HERE.parents[1] / 'Corefolder-Training'
 ROOT = HERE.parents[3]
 sys.path.insert(0, str(TRAINING))
+sys.path.insert(0, str(HERE))
 from corefolder_springs import add_collider_group, add_spring_chain, save_character
+from face_articulation import finish_face
 from modeling_draft import bind, mesh_object
 from refine_models import linear
 
@@ -42,27 +44,40 @@ def reverse_if_inward(ob):
     ob.data.update()
 
 
-def fit_eye_uv_and_pivots(face, arm, rest):
-    """Give the second iris its own artwork and keep gaze axes with the neutral eyes."""
+def independent_iris_uv(face):
+    """Give the second iris its own artwork on the reference face's unchanged topology."""
     mesh = face.data
     uv = mesh.uv_layers.active.data
     for loop in mesh.loops:
         if 627 <= loop.vertex_index <= 675:
             # Top-left PNG coordinates (750,865) move to the unused area (10,500).
             uv[loop.index].uv += Vector((-740/1024,365/1024))
-    basis = mesh.shape_keys.key_blocks[0].data
-    bpy.ops.object.select_all(action='DESELECT')
-    arm.select_set(True)
-    bpy.context.view_layer.objects.active=arm
-    bpy.ops.object.mode_set(mode='EDIT')
+
+
+def restore_body_surface(body):
+    """Use the real common body's mirrored Subdivision Surface while retaining skin weights."""
+    source=ROOT/'100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend'
+    with bpy.data.libraries.load(str(source),link=False) as (_,target):
+        target.objects=['body']
+    base,=target.objects
+    bpy.context.scene.collection.objects.link(base)
+    original_mesh=base.data
     try:
-        for name, first in [('eye.L',578),('eye.R',627)]:
-            delta=sum((basis[i].co-rest[i] for i in range(first,first+49)),Vector())/49
-            bone=arm.data.edit_bones[name]
-            bone.head+=delta
-            bone.tail+=delta
+        subdivision=base.modifiers.new('Reference surface','SUBSURF')
+        subdivision.levels=2
+        bpy.context.view_layer.update()
+        shape=base.evaluated_get(bpy.context.evaluated_depsgraph_get()).data
+        source_edges=np.array([e.vertices[:] for e in shape.edges])
+        target_edges=np.array([e.vertices[:] for e in body.data.edges])
+        if len(body.data.vertices)!=len(shape.vertices) or not np.array_equal(source_edges,target_edges):
+            raise ValueError('The editable torso no longer matches the common body vertex order')
+        coordinates=np.empty(3*len(shape.vertices),np.float32)
+        shape.vertices.foreach_get('co',coordinates)
+        body.data.vertices.foreach_set('co',coordinates)
+        body.data.update()
     finally:
-        bpy.ops.object.mode_set(mode='OBJECT')
+        bpy.data.objects.remove(base,do_unlink=True)
+        if not original_mesh.users:bpy.data.meshes.remove(original_mesh)
 
 
 class Sculpt:
@@ -181,6 +196,7 @@ class Sculpt:
         return ob
 
     def body(self, body):
+        restore_body_surface(body)
         bpy.ops.object.select_all(action='DESELECT')
         body.select_set(True)
         bpy.context.view_layer.objects.active=body
@@ -189,25 +205,20 @@ class Sculpt:
         dec.iterations=2
         bpy.ops.object.modifier_move_to_index(modifier=dec.name,index=0)
         bpy.ops.object.modifier_apply(modifier=dec.name)
+        from torso_profile import fit_common_torso
+        fit_common_torso(body)
         body.data.materials.clear()
         body.data.materials.append(self.belly)
         layer = body.data.uv_layers.new(name='49 wrapped belly')
         body.data.uv_layers.active = layer
         layer.active_render = True
-        for v in body.data.vertices:
-            # The illustration fills out below the cheeks, then tapers at the base.
-            z = v.co.z
-            v.co.x *= 1.223+.082*math.sin(math.pi*min(1,z/.72))**1.3+.058*math.exp(-((z-.59)/.14)**2)
-            v.co.y=-.07+(v.co.y+.07)*(1.075+.025*math.exp(-((z-.19)/.17)**2))
-            if v.co.y<-.10:
-                v.co.y-=.008*math.exp(-((z-.65)/.06)**2-(v.co.x/.12)**2)
         for p in body.data.polygons:
             p.material_index=0
             p.use_smooth=True
             uv = []
             for vi in p.vertices:
                 q = body.data.vertices[vi].co
-                uv.append((.5+math.atan2(q.x/1.165,-(q.y+.07))/math.tau, min(1,q.z/.713)))
+                uv.append((.5+math.atan2(q.x,-(q.y+.07))/math.tau, min(1,q.z/.713)))
             wrap = max(a for a,b in uv)-min(a for a,b in uv)>.5
             for li,(u,v) in zip(p.loop_indices,uv):
                 layer.data[li].uv = (u+1 if wrap and u<.5 else u,v)
@@ -222,18 +233,8 @@ class Sculpt:
         for p in face.data.polygons:
             p.material_index = 0
             p.use_smooth=True
-        # Apply a continuous affine warp to each key. It changes the resting face and
-        # applies the same Jacobian to the lid, eye, lip and phoneme displacements.
-        rest = [v.co.copy() for v in face.data.shape_keys.key_blocks[0].data]
-        for key in face.data.shape_keys.key_blocks:
-            for q,base in zip(key.data,rest):
-                x,y,z = base
-                ax = abs(x)
-                eye = math.exp(-((ax-.117)/.093)**6-((z-.825)/.104)**6)
-                q.co.z -= eye*.32*(q.co.z-.797)
-                q.co.z -= eye*.040*(ax-.112)
-                q.co.x += eye*(math.copysign(.001,x)+.055*(q.co.x-math.copysign(.105,x)))
-        fit_eye_uv_and_pivots(face,self.arm,rest)
+        independent_iris_uv(face)
+        finish_face(49,face,self.arm)
 
     def close_neck(self, face):
         # Find the starter's outer face loop, then extend its exact edge into
@@ -277,10 +278,14 @@ class Sculpt:
         layer=ob.data.uv_layers.new(name='Cheek boundary')
         for li,loop in enumerate(ob.data.loops):
             i,j=divmod(loop.vertex_index,n)
-            layer.data[li].uv=(sections[i][0]/.257,max(.01,min(.99,(points[j].z-.62)/.37)))
+            lateral=np.clip((abs(points[j].x)-.065)/.090,0,1)
+            # Match the colored cheek flank at the seam; white continues only
+            # below the chin into the bib, where the adjacent face is also white.
+            u=sections[i][0]/.257+.55*lateral*lateral*(3-2*lateral)
+            layer.data[li].uv=(min(.995,u),max(.01,min(.99,(points[j].z-.62)/.37)))
         bind(ob,self.arm)
 
-    def chin_edge(self,face,body,ink,half_span,*,expressions=()):
+    def chin_edge(self,face,body,ink,half_span,*,expressions=(),edge_lift=0):
         """Place a tapered facial boundary on the chin, immediately above the bib."""
         from mathutils.bvhtree import BVHTree
         bpy.context.view_layer.update()
@@ -302,6 +307,9 @@ class Sculpt:
         forward=Vector((0,1,0))
         def hit(tree,x,z):
             return tree.ray_cast(Vector((x,-1.5,z)),forward,3.)[0]
+        def front_depth(x,z):
+            hits=[hit(tree,x,z) for tree in sampled]
+            return min(pt.y for pt in hits if pt is not None)
         def visible(x,z):
             a=hit(skin,x,z);b=hit(chest,x,z)
             return a is not None and (b is None or a.y <= b.y)
@@ -316,50 +324,63 @@ class Sculpt:
                 mid=(low+high)*.5
                 if visible(x,mid):high=mid
                 else:low=mid
+            high+=edge_lift*(abs(x)/half_span)**1.7
             # Both edges lie on the exposed facial surface. The bottom edge
             # abuts the measured skin/bib intersection; the ends fade to a point.
             width=.00012+.0050*math.sin(math.pi*u)**.85
             for dz in (.0004,.0004+width):
-                p=hit(skin,x,high+dz)
-                if expressions:
-                    # The lip rig can push its supporting cheek triangles in
-                    # front of the neutral border. Sample the real surface in
-                    # intermediate and extreme poses at each end of each quad.
-                    pts=[hit(tree,x,high+dz) for tree in sampled]
-                    p=min((pt for pt in pts if pt is not None),key=lambda pt:pt.y)
-                verts.append((x,p.y-.0008,high+dz))
+                verts.append(Vector((x,front_depth(x,high+dz)-.0008,high+dz)))
             if i:polys.append((2*i-2,2*i,2*i+1,2*i-1))
+        # These reference skins use comparatively large cheek triangles. At a
+        # skin-triangle boundary, the middle of a quad may still cross the skin
+        # although its four corners clear it. Correct only the affected quads.
+        clearance=[0.]*37
+        for i,(a,b,c,d) in enumerate(polys):
+            for t in (.2,.5,.8):
+                low=verts[a].lerp(verts[b],t)
+                high=verts[d].lerp(verts[c],t)
+                for s in (.2,.5,.8):
+                    p=low.lerp(high,s)
+                    extra=p.y-front_depth(p.x,p.z)+.00035
+                    clearance[i]=max(clearance[i],extra)
+                    clearance[i+1]=max(clearance[i+1],extra)
+        for i,extra in enumerate(clearance):
+            verts[2*i].y-=extra
+            verts[2*i+1].y-=extra
         ob=self.mesh('Cheek and jaw | skin boundary',verts,polys,ink)
         bind(ob,self.arm,'head')
 
     def scalp(self):
-        count, rows = 44, 13
-        v, f = [(0,-.064,1.062)], []
-        for i in range(1,rows+1):
-            for j in range(count):
-                a = math.tau*j/count
-                ang = min(a,math.tau-a)
-                # Lower hem follows the temples, then the rounded nape.
-                zmin = np.interp(ang,[0,.48,.77,1.01,1.26,1.51,2.05,math.pi],
-                                 [.95,.960,.923,.837,.750,.709,.682,.679])
-                if ang>1.15:
-                    zmin += .012*math.cos(7*a)
-                q=np.clip((zmin-.86)/.202,-1,1)
-                theta = math.acos(math.copysign(abs(q)**(1/.54),q))*i/rows
-                # The crown in both artworks stays high out to the lateral ears.
-                s=math.sin(theta); c=math.cos(theta)
-                v.append((.274*s**.80*math.sin(a),-.064-.278*s*math.cos(a),
-                          .86+.202*math.copysign(abs(c)**.54,c)))
-        v.append((0,-.06,.786))
-        for j in range(count):
-            k=(j+1)%count
-            f.append((0,1+j,1+k))
-            for i in range(rows-1):
-                a=1+i*count
-                f.append((a+j,a+k,a+count+k,a+count+j))
-            f.append((len(v)-1,1+(rows-1)*count+k,1+(rows-1)*count+j))
-        cap=self.mesh('Hair | rounded occiput and nape',v,f,self.hair)
-        bind(cap,self.arm)
+        from crown_surface import make_crown
+        # The angular forehead grows from the whole cap. Its points turn
+        # toward the eyes while the temples flare into the cheek-side flick.
+        outline=[(-math.pi,.690),(-2.48,.689),(-2.23,.723),(-1.91,.686),
+                 (-1.72,.738),(-1.53,.766),(-1.34,.783),(-1.20,.854),
+                 (-1.00,.870),(-.80,.905),(-.65,.937),(-.49,.917),
+                 (-.39,.866),(-.29,.790),(-.21,.860),(-.12,.905),
+                 (-.04,.861),(.09,.817),(.17,.881),(.31,.935),
+                 (.54,.951),(.75,.920),(.85,.860),(.93,.890),
+                 (1.08,.870),(1.21,.824),(1.34,.788),(1.53,.765),
+                 (1.72,.740),(1.91,.690),(2.22,.725),(2.49,.692),(math.pi,.690)]
+        aa,zz=zip(*outline)
+        angles=sorted({round(-math.pi+i*math.tau/72,6) for i in range(72)}
+                      | {round(a,6) for a in aa[:-1]})
+        def surface(a,t):
+            hem=np.interp(a,aa,zz)
+            q=np.clip((hem-.86)/.202,-1,1)
+            theta=math.acos(math.copysign(abs(q)**(1/.63),q))*t
+            st=math.sin(theta);ct=math.cos(theta)
+            z=.86+.202*math.copysign(abs(ct)**.63,ct)
+            angle=a-.15*math.sin(math.pi*t)*math.exp(-(a/1.1)**2)
+            flick=(.065*math.exp(-((abs(a)-1.53)/.25)**2)
+                   +.033*math.exp(-((abs(a)-1.91)/.17)**2))*t**5
+            x=(.274*st**.82+flick)*math.sin(angle)
+            front=max(0,math.cos(angle))
+            drop=min(1,max(0,(.955-z)/.14))
+            y=-.064-.279*st*math.cos(angle)-.033*front**3*drop
+            return Vector((x,y,z))
+        crown=self.material('Swept crown','#FFFFFF',texture='49-crown.png')
+        make_crown(self,'Hair | continuous swept crown',angles,17,surface,crown,self.strand)
 
     def ears(self):
         for sign,side in ((-1,'R'),(1,'L')):
@@ -372,9 +393,30 @@ class Sculpt:
                      (.79,1.008),(.73,.970),(.53,.930),(.21,.898),(-.13,.879)]
             inner_tuft = [(-.37,.928),(-.38,.965),(-.15,.982),(.14,.988),(.35,.977),
                           (.44,.958),(.58,.951),(.49,.94),(.34,.922),(.12,.913),(-.13,.910)]
-            self.plate('Fox ear shell '+side,outer,plane,self.blue,.027,.043)
-            self.plate('Ivory ear rim '+side,inner,lambda u,z,d:plane(u,z,d+.030),self.cream,.003,.002)
-            self.plate('Ice blue ear tuft '+side,inner_tuft,lambda u,z,d:plane(u,z,d+.037),self.pale,.005,.002)
+            # The white lining and central tuft are adjoining faces of one
+            # cupped ear. Each rim ring has the same winding and start corner.
+            count=32
+            verts=[];faces=[];indices=[]
+            for curve,offset in ((outer,-.034),(outer,0),(inner,.013),(inner_tuft,.016)):
+                for j in range(count):
+                    v=catmull(curve,j/count,True)
+                    verts.append(plane(v.x,v.y,offset))
+            for row,material in enumerate((0,0,1)):
+                for j in range(count):
+                    k=(j+1)%count;a=row*count
+                    faces.append((a+j,a+k,a+count+k,a+count+j));indices.append(material)
+            for ring,offset,material in ((0,-.036,0),(3,.019,2)):
+                u=sum(q[0] for q in (outer if ring==0 else inner_tuft))/len(outer if ring==0 else inner_tuft)
+                z=sum(q[1] for q in (outer if ring==0 else inner_tuft))/len(outer if ring==0 else inner_tuft)
+                hub=len(verts);verts.append(plane(u,z,offset))
+                for j in range(count):
+                    k=(j+1)%count
+                    faces.append((hub,ring*count+k,ring*count+j) if ring==0 else (hub,ring*count+j,ring*count+k))
+                    indices.append(material)
+            ear=self.mesh('Fox ear | rolled lining '+side,verts,faces,self.blue)
+            ear.data.materials.append(self.cream);ear.data.materials.append(self.pale)
+            for poly,idx in zip(ear.data.polygons,indices):poly.material_index=idx
+            bind(ear,self.arm)
 
     def locks(self):
         def lock(name, path, widths, depths, *, axis=(1,0,0), swinging=False, mat=None):
@@ -385,129 +427,42 @@ class Sculpt:
             else:
                 bind(ob,self.arm)
             return ob
-        # Three interleaving, asymmetrical forelocks. The longest curves past the
-        # character's right brow; the middle one turns toward the opposite eye.
-        lock('right sweep',[(-.023,-.177,1.044),(-.063,-.268,1.003),(-.068,-.324,.939),(-.057,-.352,.874),(-.052,-.357,.817),(-.032,-.365,.779)],
-             [.027,.060,.054,.043,.024,0],[.014,.024,.027,.022,.014,0])
-        lock('middle forelock',[(.003,-.189,1.039),(-.004,-.275,.990),(-.018,-.323,.932),(-.028,-.349,.871),(-.020,-.357,.832),(.007,-.361,.798)],
-             [.030,.057,.049,.039,.022,0],[.016,.026,.026,.020,.012,0])
-        lock('left brow sweep',[(.005,-.187,1.046),(.065,-.257,1.013),(.133,-.295,.967),(.183,-.281,.921),(.203,-.263,.868)],
-             [.033,.076,.069,.054,0],[.016,.024,.027,.018,0],axis=(.8,.32,0))
         for sign,side in ((-1,'R'),(1,'L')):
             def mirror(points):
                 return [(sign*x,y,z) for x,y,z in points]
             # The terminal hook points outward along the cheek in the official artwork.
-            lock('cheek '+side,mirror([(.172,-.220,.974),(.220,-.220,.920),(.248,-.235,.856),(.251,-.264,.797),(.231,-.273,.745),(.247,-.265,.708),(.282,-.233,.716)]),
-                 [.022,.043,.055,.047,.040,.022,0],[.016,.029,.033,.030,.021,.012,0],axis=(sign*.78,.51,0),swinging=True)
-            lock('temple flick '+side,mirror([(.214,-.096,.933),(.235,-.141,.873),(.252,-.158,.811),(.277,-.148,.772),(.311,-.123,.755),(.350,-.093,.770)]),
-                 [.021,.046,.055,.049,.027,0],[.016,.031,.039,.036,.021,0],axis=(sign*.61,.77,0))
-            lock('nape '+side,mirror([(.184,.052,.868),(.228,.066,.827),(.242,.069,.767),(.259,.085,.716),(.300,.121,.702)]),
-                 [.032,.055,.059,.038,0],[.020,.039,.043,.026,0],axis=(sign*.62,-.75,0))
-            lock('nape undercurl '+side,mirror([(.104,.148,.821),(.161,.130,.782),(.189,.133,.728),(.218,.156,.682),(.261,.180,.676)]),
-                 [.027,.051,.054,.036,0],[.014,.036,.038,.021,0],axis=(sign*.7,-.55,0),mat=self.strand)
+            cheek=lock('cheek '+side,mirror([(.157,-.192,.979),(.215,-.215,.920),(.252,-.229,.856),(.257,-.256,.797),(.241,-.262,.745),(.251,-.258,.708),(.282,-.233,.716)]),
+                       [.022,.043,.052,.044,.037,.021,0],[.016,.029,.033,.030,.021,.012,0],axis=(sign*.78,.51,0),swinging=True)
+            cheek.data.materials.append(self.strand)
+            for polygon in cheek.data.polygons:
+                if polygon.center.z<.87 and polygon.normal.x*sign<-.42 and polygon.normal.y>-.58:
+                    polygon.material_index=1
         # Low crown whorl, a shallow crescent rather than an upright antenna.
         curl=[(.021,-.249,1.037),(-.003,-.245,1.061),(-.043,-.250,1.074),(-.075,-.266,1.057),(-.087,-.291,1.030),(-.077,-.315,1.008),(-.053,-.335,.993)]
         fold=self.material('Crown crease','#426783',edge=False)
-        lock('curl crease',[(x,y+.003,z-.002) for x,y,z in curl],
-             [.001,.013,.021,.023,.018,.011,0],[.001,.006,.007,.007,.006,.005,0],axis=(0,0,1),mat=fold)
-        lock('crown curl',curl,[.001,.011,.018,.020,.015,.009,0],[.001,.007,.009,.010,.008,.006,0],axis=(0,0,1))
+        whorl=lock('crown curl',curl,[.001,.011,.018,.020,.015,.009,0],[.001,.007,.009,.010,.008,.006,0],axis=(0,0,1))
+        whorl.data.materials.append(fold)
+        for poly in whorl.data.polygons:
+            if poly.normal.z<-.34:poly.material_index=1
 
     def tails(self):
-        torso=add_collider_group(self.arm,'49 back', 'hips', [((0,.00,.355),.265)])
-        self.rear_lobes(torso)
-        # These two broad hooks sweep around the sides into the foreground.
-        # The back unit flattens their distal curvature when viewed in isolation.
-        tail_designs = [
-           ('low wrap',[(.042,.260,.348),(.310,.268,.259),(.482,.074,.184),(.485,-.150,.157),(.408,-.349,.161),(.312,-.467,.192),(.223,-.539,.254),(.188,-.551,.345)],
-             [.018,.066,.126,.161,.180,.169,.112,0],[.018,.064,.108,.136,.158,.138,.092,0],(.17,0,.985)),
-        ]
-        for name,path,widths,depths,axis in tail_designs:
-            for sign,side in ((-1,'R'),(1,'L')):
-                def wrap_position(x,y,z):
-                    # Narrow the low flank toward its seated rear silhouette.
-                    # Keep the pale end above the hips, turned around the bib.
-                    amount=max(0.,min(1.,(.36-z)/.22))
-                    return (x*(1-.094*amount),y,z+.025*amount)
-                points=[(sign*x,y,z) for x,y,z in path]
-                ob=self.tube('Tail | '+name+' '+side,points,widths,depths,(sign*axis[0],*axis[1:]),self.plume,textured=True)
-                for v in ob.data.vertices:v.co=wrap_position(*v.co)
-                points=[wrap_position(*p) for p in points]
-                add_spring_chain(self.arm,ob,'Tail49_'+name.replace(' ','_')+'_'+side,points,radius=.015,colliders=[torso])
-
-    def rear_lobes(self,collider):
-        source=json.loads((HERE/'Tails-49.json').read_text(encoding='utf-8'))
-        w,h=source['size']
-        span=1.23
-        locations=[('upper inner R',(178,11),.045),('upper inner L',(344,10),.045),
-                   ('upper outer R',(75,69),-.032),('upper outer L',(451,69),-.032),
-                   ('low outside R',(9,231),.006),('low outside L',(523,231),.006),
-                   None,None,('low middle',(268,464),.095)]
-        mat=self.material('Rear plume atlas','#FFFFFF',texture='Tails-49.png')
-        toon=mat.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon
-        toon.outline_width_mode='none';toon.outline_width_factor=0.
-        toon.shade_color_factor=(1,1,1)
-        frontmat=self.material('Forward facing plume','#FFFFFF',texture='49-tail.png',edge=False)
-        for rec,loc in zip(source['plumes'],locations):
-            if loc is None:continue
-            name,tip,layer=loc
-            center=Vector(rec['center'])
-            outline=[Vector(p) for p in rec['outline']]
-            root=Vector((.04*math.copysign(1,center.x-w/2) if abs(center.x-w/2)>30 else 0,.267,.37))
-            def projected(p):
-                x=(p.x-w/2)*span/(w-12)
-                z=.017+(h-6-p.y)*span/(w-12)
-                # Behind the torso, the upper plumage tilts down into the
-                # shoulder line; the two lateral fans stay visible in oblique view.
-                z-=.36*max(0.,z-.868)
-                if name.startswith('upper'):
-                    x*=1.-.14*max(0.,min(1.,(z-.74)/.21))
-                    z-=.047*max(0.,min(1.,(abs(x)-.18)/.23))*max(0.,min(1.,(z-.65)/.17))
-                if name=='low middle':z-=.075*max(0.,1-z/.26)**1.3
-                side=abs(x)/(.50*span)
-                y=.400-.095*side**1.65+layer
-                y-=.20*max(0.,z-.76)/.32
-                if name.startswith('low outside'):y+=.245*side**1.35
-                return Vector((x,y,z))
-            vs=[];fs=[];uvs=[]
-            def vert(p,offset=0,root_mix=0):
-                xyz=projected(p);xyz.y+=offset
-                vs.append(tuple(xyz.lerp(root,root_mix)))
-                x0,y0,x1,y1=rec['crop'];tx,ty=rec['tile']
-                uvs.append(((tx+.5+(p.x-x0)/(x1-x0)*251)/1024,1-(ty+.5+(p.y-y0)/(y1-y0)*251)/1024))
-                return len(vs)-1
-            front=vert(center,-.12,1.)
-            rings=[]
-            for ang in (18,45,72,90,119,150):
-                a=math.radians(ang)
-                rings.append([vert(center.lerp(q,math.sin(a)),-math.cos(a)*(.152 if ang<90 else .140),
-                                   max(0,math.cos(a))**3*.93) for q in outline])
-            back=vert(center,.14)
-            for j in range(len(outline)):
-                k=(j+1)%len(outline)
-                fs.append((front,rings[0][j],rings[0][k]))
-                for a,b in zip(rings,rings[1:]):fs.append((a[j],a[k],b[k],b[j]))
-                fs.append((rings[-1][j],rings[-1][k],back))
-            ob=self.mesh('Tail | '+name,vs,fs,mat)
-            ob.data.materials.append(frontmat)
-            uv=ob.data.uv_layers.new(name='49 official plume')
-            for p in ob.data.polygons:
-                frontside=max(p.vertices)<=rings[3][-1] and not name.startswith('low middle')
-                if frontside:
-                    p.material_index=1
-                for li in p.loop_indices:
-                    vi=ob.data.loops[li].vertex_index
-                    coords=uvs[vi]
-                    if frontside:
-                        vertex=Vector(vs[vi])
-                        delta=vertex-root
-                        tip_delta=projected(Vector(tip))-root
-                        length=max(.08,math.hypot(tip_delta.x,tip_delta.z))
-                        progress=min(1,math.hypot(delta.x,delta.z)/length)
-                        coords=(min(.99,max(.01,.5+.6*delta.x)),progress**1.90)
-                    uv.data[li].uv=coords
-            mid=projected(center);end=projected(Vector(tip))
-            path=[root,root.lerp(mid,.50),mid,mid.lerp(end,.63),end]
-            add_spring_chain(self.arm,ob,'Tail49_'+name.replace(' ','_'),path,radius=.013,colliders=[collider])
+        from native_plumes_49 import build_rear
+        torso=add_collider_group(self.arm,'49 back','hips',[((0,.00,.355),.265)])
+        build_rear(self,json.loads((HERE/'Tails-49.json').read_text(encoding='utf8')),torso)
+        for sign,side in ((-1,'R'),(1,'L')):
+            # Stay narrow beside the hip and swell into two rounded forward-
+            # curling lower plumes; the actual body underneath has the basis width.
+            path=[(.061,.242,.345),(.241,.239,.288),(.386,.113,.209),(.425,-.075,.146),
+                  (.421,-.280,.124),(.350,-.414,.152),(.294,-.493,.215),(.231,-.534,.288),(.208,-.529,.346)]
+            points=[]
+            for i,(x,y,z) in enumerate(path):
+                t=i/(len(path)-1)
+                pose=math.sin(math.pi*t*.75)
+                points.append((sign*x,y+sign*.038*pose,z+sign*.024*pose))
+            widths=[.018,.043,.071,.080,.116,.143,.116,.059,0]
+            depths=[.018,.042,.065,.080,.108,.121,.085,.044,0]
+            ob=self.tube('Tail | low wrap '+side,points,widths,depths,(sign*.22,0,.976),self.plume,textured=True)
+            add_spring_chain(self.arm,ob,'Tail49_low_wrap_'+side,points,radius=.015,colliders=[torso])
 
 
 def build(starter, output):
@@ -520,7 +475,8 @@ def build(starter, output):
     sculpt.body(body)
     sculpt.face(face)
     sculpt.close_neck(face)
-    sculpt.chin_edge(face,body,sculpt.material('Chin contour','#43434A',edge=False),.126)
+    sculpt.chin_edge(face,body,sculpt.material('Chin contour','#43434A',edge=False),.126,
+                     expressions=('a','i','u','e','o','Joy','Fun','Sorrow'))
     sculpt.scalp()
     sculpt.locks()
     sculpt.ears()

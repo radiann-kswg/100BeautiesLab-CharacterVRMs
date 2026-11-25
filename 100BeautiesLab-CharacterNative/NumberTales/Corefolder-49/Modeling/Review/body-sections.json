@@ -1,0 +1,517 @@
+{
+  "method": "Unclothed native body, ground-relative plane sections in Blender world coordinates. Millimetres.",
+  "basis": {
+    "dimensions_mm": [
+      853.94,
+      872.99,
+      711.73
+    ],
+    "ground_z_mm": 0.9,
+    "sections": {
+      "0.01": {
+        "width_mm": 302.04,
+        "depth_mm": 273.65,
+        "front_y_mm": -172.07,
+        "back_y_mm": 101.58
+      },
+      "0.025": {
+        "width_mm": 389.6,
+        "depth_mm": 399.25,
+        "front_y_mm": -229.11,
+        "back_y_mm": 170.14
+      },
+      "0.05": {
+        "width_mm": 497.71,
+        "depth_mm": 537.04,
+        "front_y_mm": -291.43,
+        "back_y_mm": 245.61
+      },
+      "0.1": {
+        "width_mm": 653.19,
+        "depth_mm": 680.37,
+        "front_y_mm": -381.04,
+        "back_y_mm": 299.34
+      },
+      "0.15": {
+        "width_mm": 735.38,
+        "depth_mm": 756.15,
+        "front_y_mm": -432.23,
+        "back_y_mm": 323.92
+      },
+      "0.2": {
+        "width_mm": 790.62,
+        "depth_mm": 809.59,
+        "front_y_mm": -467.83,
+        "back_y_mm": 341.75
+      },
+      "0.3": {
+        "width_mm": 847.28,
+        "depth_mm": 865.87,
+        "front_y_mm": -504.71,
+        "back_y_mm": 361.16
+      },
+      "0.4": {
+        "width_mm": 852.44,
+        "depth_mm": 870.9,
+        "front_y_mm": -508.15,
+        "back_y_mm": 362.74
+      },
+      "0.5": {
+        "width_mm": 817.05,
+        "depth_mm": 830.99,
+        "front_y_mm": -484.26,
+        "back_y_mm": 346.73
+      },
+      "0.57": {
+        "width_mm": 743.01,
+        "depth_mm": 752.56,
+        "front_y_mm": -437.9,
+        "back_y_mm": 314.66
+      },
+      "0.6": {
+        "width_mm": 696.95,
+        "depth_mm": 702.32,
+        "front_y_mm": -408.75,
+        "back_y_mm": 293.57
+      },
+      "0.64": {
+        "width_mm": 609.8,
+        "depth_mm": 599.9,
+        "front_y_mm": -346.79,
+        "back_y_mm": 253.11
+      },
+      "0.67": {
+        "width_mm": 502.41,
+        "depth_mm": 471.07,
+        "front_y_mm": -267.33,
+        "back_y_mm": 203.74
+      },
+      "0.69": {
+        "width_mm": 391.37,
+        "depth_mm": 353.33,
+        "front_y_mm": -197.49,
+        "back_y_mm": 155.83
+      },
+      "0.7": {
+        "width_mm": 318.5,
+        "depth_mm": 269.81,
+        "front_y_mm": -146.15,
+        "back_y_mm": 123.67
+      },
+      "0.71": {
+        "width_mm": 188.3,
+        "depth_mm": 99.53,
+        "front_y_mm": -36.6,
+        "back_y_mm": 62.93
+      }
+    }
+  },
+  "ref25": {
+    "dimensions_mm": [
+      853.94,
+      872.9,
+      677.79
+    ],
+    "ground_z_mm": 0.96,
+    "sections": {
+      "0.01": {
+        "width_mm": 300.76,
+        "depth_mm": 270.32,
+        "front_y_mm": -171.51,
+        "back_y_mm": 98.81
+      },
+      "0.025": {
+        "width_mm": 389.27,
+        "depth_mm": 398.25,
+        "front_y_mm": -228.78,
+        "back_y_mm": 169.47
+      },
+      "0.05": {
+        "width_mm": 497.35,
+        "depth_mm": 534.71,
+        "front_y_mm": -291.06,
+        "back_y_mm": 243.64
+      },
+      "0.1": {
+        "width_mm": 653.27,
+        "depth_mm": 679.22,
+        "front_y_mm": -380.94,
+        "back_y_mm": 298.28
+      },
+      "0.15": {
+        "width_mm": 734.17,
+        "depth_mm": 755.03,
+        "front_y_mm": -431.41,
+        "back_y_mm": 323.63
+      },
+      "0.2": {
+        "width_mm": 789.55,
+        "depth_mm": 808.67,
+        "front_y_mm": -467.09,
+        "back_y_mm": 341.58
+      },
+      "0.3": {
+        "width_mm": 846.33,
+        "depth_mm": 864.87,
+        "front_y_mm": -504.05,
+        "back_y_mm": 360.82
+      },
+      "0.4": {
+        "width_mm": 851.58,
+        "depth_mm": 869.89,
+        "front_y_mm": -507.57,
+        "back_y_mm": 362.32
+      },
+      "0.5": {
+        "width_mm": 815.02,
+        "depth_mm": 829.01,
+        "front_y_mm": -483.27,
+        "back_y_mm": 345.74
+      },
+      "0.57": {
+        "width_mm": 741.94,
+        "depth_mm": 751.06,
+        "front_y_mm": -436.83,
+        "back_y_mm": 314.23
+      },
+      "0.6": {
+        "width_mm": 696.79,
+        "depth_mm": 699.07,
+        "front_y_mm": -405.9,
+        "back_y_mm": 293.17
+      },
+      "0.64": {
+        "width_mm": 606.09,
+        "depth_mm": 478.65,
+        "front_y_mm": -226.15,
+        "back_y_mm": 252.5
+      },
+      "0.67": {
+        "width_mm": 266.93,
+        "depth_mm": 52.6,
+        "front_y_mm": 143.39,
+        "back_y_mm": 195.99
+      }
+    }
+  },
+  "ref93": {
+    "dimensions_mm": [
+      853.94,
+      872.9,
+      711.64
+    ],
+    "ground_z_mm": 0.96,
+    "sections": {
+      "0.01": {
+        "width_mm": 300.76,
+        "depth_mm": 270.32,
+        "front_y_mm": -171.51,
+        "back_y_mm": 98.81
+      },
+      "0.025": {
+        "width_mm": 389.27,
+        "depth_mm": 397.98,
+        "front_y_mm": -228.78,
+        "back_y_mm": 169.2
+      },
+      "0.05": {
+        "width_mm": 497.35,
+        "depth_mm": 534.71,
+        "front_y_mm": -291.06,
+        "back_y_mm": 243.64
+      },
+      "0.1": {
+        "width_mm": 653.27,
+        "depth_mm": 679.22,
+        "front_y_mm": -380.94,
+        "back_y_mm": 298.28
+      },
+      "0.15": {
+        "width_mm": 734.17,
+        "depth_mm": 755.03,
+        "front_y_mm": -431.41,
+        "back_y_mm": 323.63
+      },
+      "0.2": {
+        "width_mm": 789.55,
+        "depth_mm": 808.67,
+        "front_y_mm": -467.09,
+        "back_y_mm": 341.58
+      },
+      "0.3": {
+        "width_mm": 846.33,
+        "depth_mm": 864.87,
+        "front_y_mm": -504.05,
+        "back_y_mm": 360.82
+      },
+      "0.4": {
+        "width_mm": 851.58,
+        "depth_mm": 869.89,
+        "front_y_mm": -507.57,
+        "back_y_mm": 362.32
+      },
+      "0.5": {
+        "width_mm": 815.02,
+        "depth_mm": 829.01,
+        "front_y_mm": -483.27,
+        "back_y_mm": 345.74
+      },
+      "0.57": {
+        "width_mm": 741.94,
+        "depth_mm": 751.06,
+        "front_y_mm": -436.83,
+        "back_y_mm": 314.23
+      },
+      "0.6": {
+        "width_mm": 696.79,
+        "depth_mm": 700.51,
+        "front_y_mm": -407.34,
+        "back_y_mm": 293.17
+      },
+      "0.64": {
+        "width_mm": 606.5,
+        "depth_mm": 597.5,
+        "front_y_mm": -345.01,
+        "back_y_mm": 252.49
+      },
+      "0.67": {
+        "width_mm": 498.0,
+        "depth_mm": 468.89,
+        "front_y_mm": -266.41,
+        "back_y_mm": 202.48
+      },
+      "0.69": {
+        "width_mm": 388.92,
+        "depth_mm": 349.38,
+        "front_y_mm": -195.4,
+        "back_y_mm": 153.99
+      },
+      "0.7": {
+        "width_mm": 313.9,
+        "depth_mm": 267.28,
+        "front_y_mm": -144.25,
+        "back_y_mm": 123.03
+      },
+      "0.71": {
+        "width_mm": 182.68,
+        "depth_mm": 84.86,
+        "front_y_mm": -30.96,
+        "back_y_mm": 53.9
+      }
+    }
+  },
+  "before": {
+    "dimensions_mm": [
+      1118.34,
+      946.98,
+      711.72
+    ],
+    "ground_z_mm": 0.92,
+    "sections": {
+      "0.01": {
+        "width_mm": 367.81,
+        "depth_mm": 292.9,
+        "front_y_mm": -180.07,
+        "back_y_mm": 112.83
+      },
+      "0.025": {
+        "width_mm": 477.7,
+        "depth_mm": 431.96,
+        "front_y_mm": -242.27,
+        "back_y_mm": 189.69
+      },
+      "0.05": {
+        "width_mm": 613.86,
+        "depth_mm": 581.55,
+        "front_y_mm": -310.48,
+        "back_y_mm": 271.07
+      },
+      "0.1": {
+        "width_mm": 816.5,
+        "depth_mm": 743.19,
+        "front_y_mm": -410.23,
+        "back_y_mm": 332.96
+      },
+      "0.15": {
+        "width_mm": 929.68,
+        "depth_mm": 829.46,
+        "front_y_mm": -467.03,
+        "back_y_mm": 362.43
+      },
+      "0.2": {
+        "width_mm": 1011.51,
+        "depth_mm": 889.26,
+        "front_y_mm": -506.65,
+        "back_y_mm": 382.61
+      },
+      "0.3": {
+        "width_mm": 1101.91,
+        "depth_mm": 943.86,
+        "front_y_mm": -543.7,
+        "back_y_mm": 400.16
+      },
+      "0.4": {
+        "width_mm": 1117.98,
+        "depth_mm": 940.11,
+        "front_y_mm": -542.89,
+        "back_y_mm": 397.21
+      },
+      "0.5": {
+        "width_mm": 1079.28,
+        "depth_mm": 892.19,
+        "front_y_mm": -514.79,
+        "back_y_mm": 377.4
+      },
+      "0.57": {
+        "width_mm": 980.92,
+        "depth_mm": 809.26,
+        "front_y_mm": -466.06,
+        "back_y_mm": 343.2
+      },
+      "0.6": {
+        "width_mm": 915.39,
+        "depth_mm": 757.15,
+        "front_y_mm": -436.6,
+        "back_y_mm": 320.55
+      },
+      "0.64": {
+        "width_mm": 784.99,
+        "depth_mm": 649.8,
+        "front_y_mm": -373.04,
+        "back_y_mm": 276.75
+      },
+      "0.67": {
+        "width_mm": 635.7,
+        "depth_mm": 511.65,
+        "front_y_mm": -288.49,
+        "back_y_mm": 223.16
+      },
+      "0.69": {
+        "width_mm": 491.77,
+        "depth_mm": 380.38,
+        "front_y_mm": -209.33,
+        "back_y_mm": 171.05
+      },
+      "0.7": {
+        "width_mm": 395.23,
+        "depth_mm": 290.68,
+        "front_y_mm": -152.69,
+        "back_y_mm": 137.99
+      },
+      "0.71": {
+        "width_mm": 230.73,
+        "depth_mm": 96.45,
+        "front_y_mm": -31.13,
+        "back_y_mm": 65.32
+      }
+    },
+    "vrm_sha256": "da791329d3df0ff887e9a378b7946346ec7cb9b09f4d8557c6e4a65971c9a975"
+  },
+  "after": {
+    "dimensions_mm": [
+      853.94,
+      872.96,
+      711.72
+    ],
+    "ground_z_mm": 0.92,
+    "sections": {
+      "0.01": {
+        "width_mm": 300.34,
+        "depth_mm": 270.38,
+        "front_y_mm": -171.61,
+        "back_y_mm": 98.77
+      },
+      "0.025": {
+        "width_mm": 389.04,
+        "depth_mm": 398.16,
+        "front_y_mm": -228.79,
+        "back_y_mm": 169.37
+      },
+      "0.05": {
+        "width_mm": 497.19,
+        "depth_mm": 534.57,
+        "front_y_mm": -291.05,
+        "back_y_mm": 243.52
+      },
+      "0.1": {
+        "width_mm": 653.16,
+        "depth_mm": 679.33,
+        "front_y_mm": -381.0,
+        "back_y_mm": 298.33
+      },
+      "0.15": {
+        "width_mm": 734.11,
+        "depth_mm": 755.07,
+        "front_y_mm": -431.44,
+        "back_y_mm": 323.63
+      },
+      "0.2": {
+        "width_mm": 789.51,
+        "depth_mm": 808.72,
+        "front_y_mm": -467.12,
+        "back_y_mm": 341.6
+      },
+      "0.3": {
+        "width_mm": 846.31,
+        "depth_mm": 864.95,
+        "front_y_mm": -504.1,
+        "back_y_mm": 360.85
+      },
+      "0.4": {
+        "width_mm": 851.58,
+        "depth_mm": 869.97,
+        "front_y_mm": -507.61,
+        "back_y_mm": 362.35
+      },
+      "0.5": {
+        "width_mm": 815.04,
+        "depth_mm": 829.16,
+        "front_y_mm": -483.36,
+        "back_y_mm": 345.81
+      },
+      "0.57": {
+        "width_mm": 742.01,
+        "depth_mm": 751.24,
+        "front_y_mm": -436.93,
+        "back_y_mm": 314.31
+      },
+      "0.6": {
+        "width_mm": 696.86,
+        "depth_mm": 700.77,
+        "front_y_mm": -407.5,
+        "back_y_mm": 293.28
+      },
+      "0.64": {
+        "width_mm": 606.63,
+        "depth_mm": 597.77,
+        "front_y_mm": -345.22,
+        "back_y_mm": 252.55
+      },
+      "0.67": {
+        "width_mm": 498.2,
+        "depth_mm": 469.42,
+        "front_y_mm": -266.72,
+        "back_y_mm": 202.7
+      },
+      "0.69": {
+        "width_mm": 389.19,
+        "depth_mm": 349.17,
+        "front_y_mm": -194.94,
+        "back_y_mm": 154.23
+      },
+      "0.7": {
+        "width_mm": 314.27,
+        "depth_mm": 266.77,
+        "front_y_mm": -143.29,
+        "back_y_mm": 123.48
+      },
+      "0.71": {
+        "width_mm": 184.32,
+        "depth_mm": 89.72,
+        "front_y_mm": -33.84,
+        "back_y_mm": 55.88
+      }
+    },
+    "vrm_sha256": "1201cc49673b2ccecf75825ebe721abf6d480c3a5ceb00d2aef25af9d5ac1cbe"
+  }
+}
