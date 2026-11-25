@@ -8,16 +8,18 @@ HERE=Path(__file__).resolve().parent
 NATIVE=HERE.parents[1]
 sys.path.insert(0,str(NATIVE/"Corefolder-6/Modeling"))
 from eye_art import cheek_detail, prepare_eye_map
+from swept_hair import hair_map
 DB=Path("D:/VisualStudio Code Userfile/100BeautiesLab_CreationsDB/data/Works_NumberTales/Images/DB_Primary")
 
 
 def prepare():
+    hair_map(57,HERE/'Fivens-Fringe.png')
     # One continuous UV shell carries the ivory inner ear and the smaller pale pad.
     y,x=np.mgrid[:256,:512]
     t=1-(y+.5)/256
     angle=(x+.5)/512*2*np.pi
     half=np.interp(t,[0,.13,.28,.48,.74,.96,1],[0,.13,.54,.68,.62,.25,0])
-    center=.91+.24*t
+    center=.74+.25*t
     ivory=np.clip((half-np.abs(angle-center))/.031,0,1)[:,:,None]
     pad_radius=((angle-.82)/.40)**2+((t-.36)/.115)**2
     inside=np.clip((1-pad_radius)*8,0,1)[:,:,None]*ivory

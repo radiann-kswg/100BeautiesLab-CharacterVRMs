@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 import sys
 
-import bmesh
 import bpy
 import numpy as np
 from mathutils import Vector
@@ -13,7 +12,7 @@ from mathutils.bvhtree import BVHTree
 HERE=Path(__file__).resolve().parent
 NATIVE=HERE.parents[1]
 sys.path.insert(0,str(NATIVE/"Corefolder-6/Modeling"))
-from model_6 import bind, forelock, map_drawn_eyes, mesh_object, mesh_uv, restore_reference_body, rings_mesh, sampled_ring, strand, texture, toon, volume
+from model_6 import bind, cheek_surface, fit_outfit_skin, join_hair_roots, skin_temples, swept_scalp, temple_guide, map_drawn_eyes, mesh_object, mesh_uv, restore_reference_body, rings_mesh, strand, texture, toon
 
 
 def grade(mat):
@@ -29,6 +28,9 @@ def grade(mat):
 
 def make_body(arm,coll):
     obj=restore_reference_body(arm,coll)
+    from torso_profile import add_cranial_base
+    core=add_cranial_base(arm,bpy.data.objects["Face"],57,coll)
+    grade(core.data.materials[0])
     obj.data.materials.clear()
     obj.data.materials.append(grade(texture("Fivens • warm yellow and white fur",HERE/"Fivens-Fur.png",.002)))
     for uv in list(obj.data.uv_layers):obj.data.uv_layers.remove(uv)
@@ -41,7 +43,7 @@ def make_body(arm,coll):
     return BVHTree.FromObject(obj,bpy.context.evaluated_depsgraph_get())
 
 
-def make_face(arm,coll,ink):
+def make_face():
     obj=bpy.data.objects["Face"]
     obj.data.materials.clear()
     obj.data.materials.append(grade(texture("Fivens • expression atlas",HERE/"Fivens-Face.png",alpha=True)))
@@ -50,75 +52,37 @@ def make_face(arm,coll,ink):
         p.material_index=1 if 144<=p.index<=151 or 397<=p.index<=404 else 0
     map_drawn_eyes(obj,grade(texture("Fivens • drawn left and right irises",HERE/"Fivens-Eyes.png",alpha=True)))
     bpy.context.view_layer.update()
-    # Dark chin separation above the contiguous white bib in both official corefolder drawings.
-    mesh=BVHTree.FromObject(obj,bpy.context.evaluated_depsgraph_get())
-    torso=BVHTree.FromObject(bpy.data.objects["Body"],bpy.context.evaluated_depsgraph_get())
-    controls=[]
-    for x,z,w in ((-.134,.683,.0008),(-.089,.670,.0024),(-.03,.663,.0026),
-                  (.031,.663,.0026),(.091,.673,.0023),(.133,.686,.0008)):
-        z-=.016
-        origin=Vector((x,-1,z))
-        points=[tree.ray_cast(origin,Vector((0,1,0)),2)[0] for tree in (mesh,torso)]
-        ys=[p.y for p in points if p is not None]
-        if ys:controls.append((x,min(ys)-.005,z,w,.0011))
-    if len(controls)>2:bind(strand("Fivens chin line",controls,ink,coll,radial_count=4,samples_per_span=2),arm)
 
 
 def build_head(arm,coll,hair,white):
-    rings=[]
-    n=46
-    for i in range(10):
-        row=[]
-        for j in range(n):
-            a=2*pi*j/n
-            front=max(0,cos(a))
-            bottom=.689+.259*front**2.4+.008*cos(7*a)
-            th=.008+(np.arccos(np.clip((bottom-.859)/.210,-1,1))-.008)*i/9
-            x=.273*sin(th)**.90*sin(a)
-            y=-.073-.288*sin(th)**.92*cos(a)
-            z=.859+.210*cos(th)
-            row.append((x,y,z))
-        rings.append(row)
-    edge=rings[-1]
-    for inset in (.045,.76):
-        rings.append([((1-inset)*x,-.073+(1-inset)*(y+.073),z+inset*(.81-z)) for x,y,z in edge])
-    cap=rings_mesh("Hair scalp",rings,hair,coll)
-    bind(cap,arm)
+    face=bpy.data.objects["Face"]
+    cap_mat=grade(texture("Fivens • swept forelocks",HERE/'Fivens-Fringe.png',.0016))
+    cap=swept_scalp(57,arm,coll,cap_mat)
     bpy.context.view_layer.update()
-    tree=BVHTree.FromObject(cap,bpy.context.evaluated_depsgraph_get())
-    face_tree=BVHTree.FromObject(bpy.data.objects["Face"],bpy.context.evaluated_depsgraph_get())
-    front=grade(toon('Fivens • rounded forelocks','#FFEE62',0))
-    rim=grade(toon('Fivens • forelock edge','#DACB55',0))
-    # One central, tapered lock as in #93; a long outer sweep as on #25.
-    # The uneven outside tips and the single low centre belong to Fivens.
-    locks=[('left outer',[(.990,-.212,-.062),(.944,-.237,-.069),(.896,-.243,-.098),(.853,-.224,-.135),(.799,-.209,-.157),(.757,-.194,-.170),(.728,-.164,-.159)],.003,'right'),
-           ('right outer',[(.978,.020,.220),(.944,.045,.240),(.912,.069,.247),(.880,.107,.239),(.857,.150,.235),(.816,.165,.218),(.772,.171,.193),(.749,.162,.168)],.004,'left'),
-           ('central taper',[(.990,-.108,.093),(.950,-.093,.094),(.914,-.074,.087),(.878,-.051,.075),(.842,-.035,.045),(.806,-.019,.021),(.782,-.014,.003),(.769,-.007,-.004)],.008,'right')]
-    for label,profile,layer,edge in locks:
-        forelock('Hair forehead '+label,profile,tree,face_tree,front,rim,coll,arm,layer=layer,edge=edge)
-    cheek_ink=toon("Fivens • outer cheek stroke","#4c443c",0)
+    face_tree=BVHTree.FromObject(face,bpy.context.evaluated_depsgraph_get())
     ear_mat=grade(texture('Fivens • fur and inward ear bowl',HERE/'Fivens-Ear.png',.0018))
     for s,side in ((-1,"R"),(1,"L")):
         # The native fox ears taper from a wide seated base. The front inset,
         # outer rim and rear surface share the same rounded, closed shell.
-        sections=[(.901,.210,-.029,.092,.083),(.931,.216,-.025,.106,.087),
-                  (.972,.224,-.012,.098,.077),(1.030,.233,.006,.081,.066),
-                  (1.090,.238,.024,.061,.052),(1.143,.243,.043,.039,.037),
-                  (1.190,.246,.058,.018,.019),(1.219,.249,.069,.002,.003)]
+        sections=[(.852,.171,-.026,.040,.042),(.895,.180,-.026,.073,.073),
+                  (.934,.193,-.024,.098,.089),(.977,.207,-.012,.105,.094),
+                  (1.032,.223,.001,.091,.079),(1.089,.237,.018,.071,.063),
+                  (1.145,.250,.034,.048,.046),(1.187,.261,.048,.023,.027),
+                  (1.212,.267,.058,.003,.004)]
         rings=[];n=24
         for z,cx,cy,rx,ry in sections:
-            height=np.clip((z-.901)/.318,0,1)
+            height=np.clip((z-.852)/.360,0,1)
             row=[]
             for j in range(n):
                 a=2*pi*j/n
                 angle=(a+pi)%(2*pi)-pi
-                bowl=ry*.39*np.exp(-((angle-.82)/.54)**2)*np.sin(pi*height)**.70
-                row.append((s*(cx+rx*sin(a)),cy-ry*cos(a)+bowl,z))
+                bowl=ry*.48*np.exp(-((angle-.70)/.55)**2)*np.sin(pi*height)**.70
+                row.append((s*(cx+rx*sin(a)),cy-ry*np.sign(cos(a))*abs(cos(a))**.83+bowl,z))
             rings.append(row)
         ear=rings_mesh('Fox ear '+side,rings,ear_mat,coll)
         uv=ear.data.uv_layers.new(name='Fivens fox ear')
         for poly in ear.data.polygons:
-            values=[((ear.data.loops[i].vertex_index%n)/n,(sections[ear.data.loops[i].vertex_index//n][0]-.901)/.318) for i in poly.loop_indices]
+            values=[((ear.data.loops[i].vertex_index%n)/n,(sections[ear.data.loops[i].vertex_index//n][0]-.852)/.360) for i in poly.loop_indices]
             seam=max(a for a,h in values)-min(a for a,h in values)>.5
             for i,(a,h) in zip(poly.loop_indices,values):uv.data[i].uv=(a+1 if seam and a<.5 else a,h)
         bind(ear,arm,'head_Ear'+side+'_001')
@@ -132,25 +96,9 @@ def build_head(arm,coll,hair,white):
             hit=face_tree.ray_cast(Vector((xx,-1,z)),Vector((0,1,0)),2)[0]
             yy=y-.002 if hit is None else (1-join)*(hit.y+.022)+join*(y-.002)
             return (xx,yy,z)
-        tuft=volume("Fivens cheek fluff "+side,[cheek_point(x,y,z) for x,y,z in cheek],
-                    cheek_point(.210,-.249,.746),.017,white,coll,samples=2,levels=6)
+        tuft=cheek_surface("Fivens cheek fluff "+side,[cheek_point(x,y,z) for x,y,z in cheek],white,coll,.014)
         bind(tuft,arm)
-        contour=[(.263,-.219,.791,.0008),(.258,-.229,.774,.0017),(.246,-.240,.753,.0015),
-                 (.237,-.252,.742,.0007)]
-        stroke=strand("Fivens outer cheek "+side,[(s*x,y-.004,z-.015,w,.0012) for x,y,z,w in contour],cheek_ink,coll,radial_count=4,samples_per_span=1)
-        bind(stroke,arm)
-        lock=[(.180,-.195,.963),(.220,-.217,.893),(.242,-.213,.810),(.244,-.180,.746),
-              (.268,-.151,.698),(.300,-.133,.673),(.267,-.134,.673),(.233,-.151,.690),
-              (.206,-.191,.723),(.196,-.219,.792),(.158,-.244,.882)]
-        def temple_point(x,y,z):
-            # The side lock sits ahead of the cheek in the official oblique views.
-            front=.068*np.exp(-((z-.838)/.123)**2)
-            return (s*x,y-front,z)
-        sidehair=volume("Hair cheek "+side,[temple_point(*v) for v in lock],
-                       temple_point(.222,-.206,.806),.041,hair,coll,samples=2,levels=7)
-        sidehair["spring_path"]=json.dumps([temple_point(*p) for p in
-                 ((.188,-.199,.931),(.225,-.210,.855),(.240,-.18,.756),(.293,-.139,.677))])
-        bind(sidehair,arm)
+        temple_guide(cap,"Hair cheek "+side,side,coll)
     pony=[(-.187,.040,.994,.026,.025),(-.255,.088,1.037,.058,.055),
           (-.331,.141,1.049,.089,.080),(-.398,.166,1.012,.104,.101),
           (-.432,.174,.944,.101,.098),(-.442,.156,.865,.082,.078),
@@ -166,6 +114,7 @@ def build_head(arm,coll,hair,white):
 
 
 def make_band(arm,coll,torso,ink,gold):
+    existing=set(coll.objects)
     def point(u,v,offset=.006):
         a=-1.36+.69*u
         z=.469+.135*v-.118*(u-.5)
@@ -190,6 +139,15 @@ def make_band(arm,coll,torso,ink,gold):
     loop=[(.29,.89),(.29,1.04),(.32,1.11),(.36,1.13),(.40,1.10),(.42,1.02),(.40,.92),(.38,.90)]
     path=[(*point(u,v,.011),.0034,.0021) for u,v in loop]
     bind(strand("57 armband paperclip",path,ink,coll,radial_count=5,samples_per_span=2),arm,"chest")
+    fit_outfit_skin(bpy.data.objects['Body'],set(coll.objects)-existing)
+
+
+def finish_hair(arm,collection):
+    cap=collection.objects["Hair scalp and swept forelocks"]
+    skin_temples(cap,[(side,collection.objects["Hair cheek "+side]) for side in ("R","L")])
+    parts=[collection.objects[n] for n in ("Fox ear R","Fox ear L",
+                                           "Hair ponytail","Hair ponytail fork")]
+    join_hair_roots(arm,cap,parts)
 
 
 def revise(arm,collection):
@@ -200,9 +158,10 @@ def revise(arm,collection):
             bpy.data.objects.remove(obj,do_unlink=True)
     hair=grade(toon("Fivens • golden fox hair","#FFEE62",.0024))
     white=grade(toon("Fivens • white cheek","#FFFFFF",0))
+    white.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.shade_color_factor=(.74,.735,.74)
     ink=toon("Fivens • dark warm outlines","#36312F",0)
     torso=make_body(arm,collection)
-    make_face(arm,collection,ink)
+    make_face()
     build_head(arm,collection,hair,white)
     make_band(arm,collection,torso,ink,hair)
     arm.data.vrm_addon_extension.vrm0.meta.title="NumberTales #57 — 57(イズナ) / 57(Fivens)"
