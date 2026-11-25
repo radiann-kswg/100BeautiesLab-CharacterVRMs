@@ -1,0 +1,4207 @@
+{
+  "camera_span_m": 1.76,
+  "tile_px": 448,
+  "views": [
+    "Front",
+    "Side",
+    "Back"
+  ],
+  "renderer": "Workbench studio.sl, single grey",
+  "surface": "Neutral evaluated skinned meshes and evaluated base modifiers; vertex normals retained. Material textures, opacity and MToon inverted-hull outlines are omitted.",
+  "groups": [
+    "undressed",
+    "bare-torso",
+    "cranial-base"
+  ],
+  "cavity": "world + screen, distance 0.071m, 32 samples",
+  "models": {
+    "Base": {
+      "sha256": "8ef5ca6dca24bd0b50ab0d5b7ebb14be775c49967d4f203155ab2550575e675c",
+      "bounds_m": [
+        [
+          -0.4307102560997009,
+          -0.512283980846405,
+          -0.0010400637984275818
+        ],
+        [
+          0.4307102560997009,
+          0.7971515655517578,
+          1.151090383529663
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.07330404222011566,
+        0.5989599823951721
+      ],
+      "meshes": {
+        "tail": [
+          {
+            "triangles": 384,
+            "materials": [],
+            "include": [],
+            "part": "tail"
+          }
+        ],
+        "body": [
+          {
+            "triangles": 528,
+            "materials": [],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          }
+        ],
+        "head": [
+          {
+            "triangles": 670,
+            "materials": [],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "cranial skin"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 220,
+          "half_silhouette_height_m": 0.8642857142857142,
+          "world_z_0_36_px": 220,
+          "world_z_0_36_m": 0.8642857142857142
+        },
+        "depth": {
+          "half_silhouette_height_px": 224,
+          "half_silhouette_height_m": 0.88,
+          "world_z_0_36_px": 224,
+          "world_z_0_36_m": 0.88
+        }
+      }
+    },
+    "4": {
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "bounds_m": [
+        [
+          -0.5080017447471619,
+          -0.5092601180076599,
+          -0.06514514982700348
+        ],
+        [
+          0.4923425316810608,
+          0.5716617107391357,
+          1.032649040222168
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.07280813157558441,
+        0.6009597778320312
+      ],
+      "meshes": {
+        "Body": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 244,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 254,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 182,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 280,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 210,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 182,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 280,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 210,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          }
+        ],
+        "Face": [
+          {
+            "triangles": 756,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Hair": [
+          {
+            "triangles": 912,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "the canonical rear skull is continuous with this head covering"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          }
+        ],
+        "Tail": [
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder004"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "16": {
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "bounds_m": [
+        [
+          -0.6394571661949158,
+          -0.5110360980033875,
+          -0.0010334070539101958
+        ],
+        [
+          0.4813203513622284,
+          0.8385169506072998,
+          1.1110643148422241
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.0728081613779068,
+        0.6009597778320312
+      ],
+      "meshes": {
+        "Body.002": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 290,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 46,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          }
+        ],
+        "Face.001": [
+          {
+            "triangles": 756,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 50,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 50,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Tail.001": [
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 567,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ],
+        "Hair.001": [
+          {
+            "triangles": 498,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "cap surface"
+          },
+          {
+            "triangles": 12,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "cap surface"
+          },
+          {
+            "triangles": 50,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "cap surface"
+          },
+          {
+            "triangles": 34,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 278,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 21,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 126,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 13,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 9,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 21,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 126,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 13,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 9,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "hair of the canonical head"
+          },
+          {
+            "triangles": 90,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "detachable blue cap ear"
+          },
+          {
+            "triangles": 90,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [],
+            "part": "detachable blue cap ear"
+          },
+          {
+            "triangles": 600,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 1070,
+            "materials": [
+              "CoreFolder016.001"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-16/vrm_corefolder16.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "20": {
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "bounds_m": [
+        [
+          -0.6292440891265869,
+          -0.5093887448310852,
+          0.0009597660391591489
+        ],
+        [
+          0.6292428374290466,
+          0.8777474761009216,
+          1.1042284965515137
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.0728081613779068,
+        0.6009597778320312
+      ],
+      "meshes": {
+        "Body.003": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 330,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 282,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          }
+        ],
+        "Face.002": [
+          {
+            "triangles": 1752,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 14,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 568,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "separable lock"
+          },
+          {
+            "triangles": 140,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 140,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 64,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 64,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 2,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "tail.001": [
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder020.001"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-20/vrm_corefolder20.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "22": {
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "bounds_m": [
+        [
+          -0.7206184267997742,
+          -0.6283746957778931,
+          -0.003496396355330944
+        ],
+        [
+          0.7258970737457275,
+          0.8284662365913391,
+          1.1071295738220215
+        ]
+      ],
+      "camera_center_m": [
+        0.0026406943798065186,
+        -0.02388279139995575,
+        0.5965036153793335
+      ],
+      "meshes": {
+        "Body.005": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 32,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 32,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 164,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 164,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 164,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 164,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 480,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 224,
+            "materials": [
+              "CoreFolder022-2.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 224,
+            "materials": [
+              "CoreFolder022-2.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          }
+        ],
+        "Face.001": [
+          {
+            "triangles": 108,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 1484,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 54,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 54,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 7,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 116,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "small spherical ear decoration"
+          },
+          {
+            "triangles": 116,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "small spherical ear decoration"
+          },
+          {
+            "triangles": 116,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "small spherical ear decoration"
+          },
+          {
+            "triangles": 116,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "small spherical ear decoration"
+          },
+          {
+            "triangles": 244,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 244,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Body.006": [
+          {
+            "triangles": 46,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          }
+        ],
+        "Tail.005": [
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 232,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 240,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 232,
+            "materials": [
+              "CoreFolder022.001"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-22/VRCModel_CoreFloder-22.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "25": {
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "bounds_m": [
+        [
+          -0.4269709587097168,
+          -0.5092601776123047,
+          -0.0010334283579140902
+        ],
+        [
+          0.4269709587097168,
+          0.7666751742362976,
+          1.1731116771697998
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.0728081613779068,
+        0.6009597778320312
+      ],
+      "meshes": {
+        "Body.002": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 96,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 78,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 30,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 78,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 30,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 78,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 30,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 78,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 30,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 78,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 30,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 60,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 320,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          },
+          {
+            "triangles": 144,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "attached accessory outside the actual torso island"
+          }
+        ],
+        "Face.002": [
+          {
+            "triangles": 1786,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 7,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 59,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 59,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 236,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 236,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 330,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "separable lock"
+          },
+          {
+            "triangles": 18,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 18,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Tail.001": [
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 565,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 565,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder025.001"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-25/vrm_corefolder25.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "bounds_m": [
+        [
+          -0.6243733763694763,
+          -0.5092601776123047,
+          -0.003276754869148135
+        ],
+        [
+          0.6243735551834106,
+          0.7264417409896851,
+          1.1115857362747192
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.0728081613779068,
+        0.6009597778320312
+      ],
+      "meshes": {
+        "Body": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          }
+        ],
+        "Face": [
+          {
+            "triangles": 108,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 1632,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 7,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 51,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 51,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 216,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "detached headband and ties"
+          },
+          {
+            "triangles": 186,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "detached headband and ties"
+          },
+          {
+            "triangles": 186,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "detached headband and ties"
+          },
+          {
+            "triangles": 156,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 156,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 36,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 36,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Tail": [
+          {
+            "triangles": 616,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 432,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 432,
+            "materials": [
+              "CoreFolder093"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-93/VRCModel_CoreFloder-93.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "6": {
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "bounds_m": [
+        [
+          -0.6060000658035278,
+          -0.5366328358650208,
+          0.0009599999757483602
+        ],
+        [
+          0.6060000061988831,
+          0.8018609881401062,
+          1.0769999027252197
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.07280799746513367,
+        0.6009600162506104
+      ],
+      "meshes": {
+        "Face": [
+          {
+            "triangles": 756,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "Mui \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "Mui \u2022 drawn left and right irises"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "Mui \u2022 drawn left and right irises"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Body": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "Mui \u2022 raspberry and white belly"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 782,
+            "materials": [
+              "Corefolder Cranial Base #6"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "cranial skin"
+          }
+        ],
+        "Hair": [
+          {
+            "triangles": 4646,
+            "materials": [
+              "Mui \u2022 ivory ear fur",
+              "Mui \u2022 pink inner ear",
+              "Mui \u2022 raspberry hair",
+              "Mui \u2022 swept crown and forelocks"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 552,
+            "materials": [
+              "Mui \u2022 white cheek fur"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 568,
+            "materials": [
+              "Mui \u2022 white cheek fur"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          }
+        ],
+        "Tail": [
+          {
+            "triangles": 384,
+            "materials": [
+              "Mui tail \u2022 curved pale pink tips"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "Mui tail \u2022 curved pale pink tips"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "Mui tail \u2022 curved pale pink tips"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "Mui tail \u2022 curved pale pink tips"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "Mui tail \u2022 curved pale pink tips"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "Mui tail \u2022 curved pale pink tips"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ],
+        "Outfit": [
+          {
+            "triangles": 1428,
+            "materials": [
+              "Mui collar \u2022 sky blue"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 176,
+            "materials": [
+              "Mui \u2022 seam and dark bezel"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 176,
+            "materials": [
+              "Mui \u2022 seam and dark bezel"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 46,
+            "materials": [
+              "Mui brooch \u2022 sapphire edge",
+              "Mui \u2022 seam and dark bezel",
+              "Mui \u2022 six-petal official brooch"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 60,
+            "materials": [
+              "Mui \u2022 official collar 6"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 176,
+            "materials": [
+              "Mui brooch \u2022 sapphire edge"
+            ],
+            "include": [],
+            "part": "outfit"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-6/Modeling/Corefolder-6.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "49": {
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "bounds_m": [
+        [
+          -0.6126391887664795,
+          -0.6169303059577942,
+          -0.020457681268453598
+        ],
+        [
+          0.6055566072463989,
+          0.7080156803131104,
+          1.0908706188201904
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.07280799746513367,
+        0.6009600162506104
+      ],
+      "meshes": {
+        "Face": [
+          {
+            "triangles": 756,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "49 Yochika face"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Body": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "49 White bib and chest mark"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 782,
+            "materials": [
+              "Corefolder Cranial Base #49"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "cranial skin"
+          }
+        ],
+        "Hair": [
+          {
+            "triangles": 3585,
+            "materials": [
+              "49 Ear lining",
+              "49 Hair underlayers",
+              "49 Inner ear blue",
+              "49 Sky fur",
+              "49 Swept crown"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 220,
+            "materials": [
+              "49 Hair underlayers",
+              "49 Sky hair"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 220,
+            "materials": [
+              "49 Hair underlayers",
+              "49 Sky hair"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 220,
+            "materials": [
+              "49 Crown crease",
+              "49 Sky hair"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          }
+        ],
+        "Tail": [
+          {
+            "triangles": 918,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 918,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 920,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 920,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 384,
+            "materials": [
+              "49 Rear plume atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1196,
+            "materials": [
+              "49 Blue tipped plume"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1196,
+            "materials": [
+              "49 Blue tipped plume"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ],
+        "Outfit": [
+          {
+            "triangles": 28,
+            "materials": [
+              "49 Chest number"
+            ],
+            "include": [],
+            "part": "outfit"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-49/Modeling/Corefolder-49.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "57": {
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "bounds_m": [
+        [
+          -0.5938575267791748,
+          -0.5092599987983704,
+          0.0009599999757483602
+        ],
+        [
+          0.5921422243118286,
+          0.720596969127655,
+          1.2119998931884766
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.07280799746513367,
+        0.6009600162506104
+      ],
+      "meshes": {
+        "Face": [
+          {
+            "triangles": 756,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "Fivens \u2022 expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "Fivens \u2022 drawn left and right irises"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "Fivens \u2022 drawn left and right irises"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Body": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "Fivens \u2022 warm yellow and white fur"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 782,
+            "materials": [
+              "Corefolder Cranial Base #57"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "cranial skin"
+          }
+        ],
+        "Hair": [
+          {
+            "triangles": 5928,
+            "materials": [
+              "Fivens \u2022 fur and inward ear bowl",
+              "Fivens \u2022 golden fox hair",
+              "Fivens \u2022 swept forelocks"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 340,
+            "materials": [
+              "Fivens \u2022 white cheek"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 332,
+            "materials": [
+              "Fivens \u2022 white cheek"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          }
+        ],
+        "Tail": [
+          {
+            "triangles": 1880,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1664,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1664,
+            "materials": [
+              "57 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ],
+        "Outfit": [
+          {
+            "triangles": 190,
+            "materials": [
+              "Fivens \u2022 DB number 57 and piping"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "Fivens \u2022 dark warm outlines"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "Fivens \u2022 dark warm outlines"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 52,
+            "materials": [
+              "Fivens \u2022 dark warm outlines"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 52,
+            "materials": [
+              "Fivens \u2022 dark warm outlines"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 146,
+            "materials": [
+              "Fivens \u2022 dark warm outlines"
+            ],
+            "include": [],
+            "part": "outfit"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Modeling/Corefolder-57.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "85": {
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "bounds_m": [
+        [
+          -0.5986759662628174,
+          -0.5320641398429871,
+          0.0009599999757483602
+        ],
+        [
+          0.5951969623565674,
+          0.6349865198135376,
+          1.2170000076293945
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        -0.07280799746513367,
+        0.6009600162506104
+      ],
+      "meshes": {
+        "Face": [
+          {
+            "triangles": 756,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 49,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 76,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 80,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 108,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 6,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 40,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 28,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          },
+          {
+            "triangles": 56,
+            "materials": [
+              "85 Expression atlas"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "face or integrated cranium/ear"
+          }
+        ],
+        "Body": [
+          {
+            "triangles": 2152,
+            "materials": [
+              "85 White bib and brown flank"
+            ],
+            "include": [
+              "undressed",
+              "bare-torso",
+              "cranial-base"
+            ],
+            "part": "torso skin"
+          },
+          {
+            "triangles": 782,
+            "materials": [
+              "Corefolder Cranial Base #85"
+            ],
+            "include": [
+              "undressed",
+              "cranial-base"
+            ],
+            "part": "cranial skin"
+          }
+        ],
+        "Hair": [
+          {
+            "triangles": 4128,
+            "materials": [
+              "85 Chestnut undercoat",
+              "85 Fur ear L",
+              "85 Fur ear R",
+              "85 Swept crown"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 428,
+            "materials": [
+              "85 Chestnut strands",
+              "85 Chestnut undercoat"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 428,
+            "materials": [
+              "85 Chestnut strands",
+              "85 Chestnut undercoat"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 428,
+            "materials": [
+              "85 Chestnut strands"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          },
+          {
+            "triangles": 428,
+            "materials": [
+              "85 Chestnut strands"
+            ],
+            "include": [
+              "undressed"
+            ],
+            "part": "hair, ears or cheek fur"
+          }
+        ],
+        "Tail": [
+          {
+            "triangles": 1664,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1664,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1664,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1880,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          },
+          {
+            "triangles": 1664,
+            "materials": [
+              "85 \u2022 fox-tail rear atlas"
+            ],
+            "include": [],
+            "part": "tail"
+          }
+        ],
+        "Outfit": [
+          {
+            "triangles": 1536,
+            "materials": [
+              "85 Silver necklace"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 676,
+            "materials": [
+              "85 Petrol pendant rim"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 220,
+            "materials": [
+              "85 Petrol pendant rim"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 676,
+            "materials": [
+              "85 Cyan pendant"
+            ],
+            "include": [],
+            "part": "outfit"
+          },
+          {
+            "triangles": 220,
+            "materials": [
+              "85 Pendant light"
+            ],
+            "include": [],
+            "part": "outfit"
+          }
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Modeling/Corefolder-85.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    }
+  },
+  "body_width_method": {
+    "metres_per_pixel": 0.003928571428571429,
+    "image_threshold_8bit": 5,
+    "area": "The isolated torso skin, measured with all attached clothing and head meshes hidden.",
+    "levels": "At half height of each isolated silhouette and at the shared character-space height z=0.36m."
+  },
+  "alignment": "Center each model on the torso island's bounding-box midpoint in XY and 0.60m above its floor.",
+  "selection": "Weld positions to 10 micrometres for island membership. Preserve evaluated positions and per-corner normals. #4 and #16 have an open face front. Retain the real hair-backed shell. Remove #16's cap and bill by its blue/grey atlas UV islands. An uncovered opening remains where the artist supplied no second skin beneath the cap. #20, #22, #25, #93 have an integrated skin/ear shell. Clothing and tails are excluded; each part is enumerated below."
+}

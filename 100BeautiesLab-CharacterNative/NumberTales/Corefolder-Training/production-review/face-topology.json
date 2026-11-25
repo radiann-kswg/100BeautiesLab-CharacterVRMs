@@ -1,0 +1,65 @@
+{
+  "method": "Frontal world-space section of the continuous outer cheek, 18 mm above the neutral upper lip. Weld coincident seams and omit surface behind 175 mm depth relative to the lip. Eye spacing uses horizontal extent midpoints of each eye skin (bone influence > 0.45).",
+  "models": {
+    "4": {
+      "cheekWidthMM": 475.66500306129456,
+      "eyeSpacingMM": 200.62194764614105,
+      "eyeSpacingOverCheekWidth": 0.4217715122091687,
+      "nativeSHA256": "612f09068d527fa5cfa59aee745ff1cb333764aef11450354010945a9beeb7c8"
+    },
+    "16": {
+      "cheekWidthMM": 475.66500306129456,
+      "eyeSpacingMM": 200.62191784381866,
+      "eyeSpacingOverCheekWidth": 0.42177144955515333,
+      "nativeSHA256": "86918b2ba417bec64b2af3abfee12c4ce9c91aa6c6d6052301af7ad233ee5843"
+    },
+    "20": {
+      "cheekWidthMM": 542.5963401794434,
+      "eyeSpacingMM": 195.3277736902237,
+      "eyeSpacingOverCheekWidth": 0.3599872671931889,
+      "nativeSHA256": "ffd9ead2d7447002dd82ca22a3609bd500e78116d8f2becfe3ea2988067c7bdb"
+    },
+    "22": {
+      "cheekWidthMM": 487.28975653648376,
+      "eyeSpacingMM": 193.2995468378067,
+      "eyeSpacingOverCheekWidth": 0.3966829678746473,
+      "nativeSHA256": "5af2a4d02a7a51afeda6caded3de557d0f8789de0969138995efb69f29dcd6ef"
+    },
+    "25": {
+      "cheekWidthMM": 513.4273171424866,
+      "eyeSpacingMM": 194.0804123878479,
+      "eyeSpacingOverCheekWidth": 0.37800951742890343,
+      "nativeSHA256": "517cf66a7a79fc925592f37973500c920a1b547eb6f3b4851bd7bb3e066924cf"
+    },
+    "93": {
+      "cheekWidthMM": 487.26728558540344,
+      "eyeSpacingMM": 193.29959154129028,
+      "eyeSpacingOverCheekWidth": 0.3967013531578668,
+      "nativeSHA256": "fdef1ab0c8f5c2ab0971e97656714a730c55b356d85144850c87fe15545c4b3f"
+    },
+    "6": {
+      "cheekWidthMM": 475.60611367225647,
+      "eyeSpacingMM": 200.62191784381866,
+      "eyeSpacingOverCheekWidth": 0.42182367315418623,
+      "nativeSHA256": "232d838598fe828c0e14b1184a5dea5311601ba31b534bf10cb895ad742d91bb"
+    },
+    "49": {
+      "cheekWidthMM": 477.3726761341095,
+      "eyeSpacingMM": 200.62191784381866,
+      "eyeSpacingOverCheekWidth": 0.4202626749995583,
+      "nativeSHA256": "e52f67c0f6798a20c387211eb1eae5e2bdc0076cdd406081015a857fe1da750e"
+    },
+    "57": {
+      "cheekWidthMM": 477.74598002433777,
+      "eyeSpacingMM": 200.62191784381866,
+      "eyeSpacingOverCheekWidth": 0.419934287743454,
+      "nativeSHA256": "16f5bd9cb06d4bc30fcf7d9c297effe4089bea82952764ded9c0c0be26164cbf"
+    },
+    "85": {
+      "cheekWidthMM": 477.3677885532379,
+      "eyeSpacingMM": 200.62191784381866,
+      "eyeSpacingOverCheekWidth": 0.4202669779036516,
+      "nativeSHA256": "ab30a4a9b35084fff66bdbbcc78712ea2bb2ea16bd5c0824d50c34621c4491f9"
+    }
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "reference": 4,
+  "coordinateSystem": "glTF metres, joint rest local to physical parent; each eye surface evaluated with joint rest and inverse bind matrices in the head frame; duplicated UV seam points deduplicated.",
+  "references": {
+    "4": {
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            3.4281617544706933e-06,
+            411.5787446498871,
+            3.725290298461914e-05
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            9.78031877707508e-07,
+            117.4209713935852,
+            3.725290298461914e-06
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51195794343948,
+            70.40411233901978,
+            -242.046520113945
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51184618473053,
+            70.40411233901978,
+            -242.046520113945
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.0
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.0
+        }
+      }
+    },
+    "16": {
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -7.66164e-07,
+            411.57890000000003,
+            0.000100582838
+          ],
+          "restTranslationErrorMM": 0.00016781516805151398,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -2.18580709e-07,
+            117.421031,
+            4.09781933e-05
+          ],
+          "restTranslationErrorMM": 7.030032253021219e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.512018,
+            70.40417000000001,
+            -242.046565
+          ],
+          "restTranslationErrorMM": 9.458507828285335e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51180000000001,
+            70.40417000000001,
+            -242.0465
+          ],
+          "restTranslationErrorMM": 7.656623771814583e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 98,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 7.9355555545909935
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 7.935561876137061
+        }
+      }
+    },
+    "20": {
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            1.24608235e-06,
+            411.578923,
+            0.000167638063
+          ],
+          "restTranslationErrorMM": 0.00022093848509114683,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            3.5550940000000003e-07,
+            117.42099999999999,
+            5.21540642e-05
+          ],
+          "restTranslationErrorMM": 5.6249983494426635e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51205499999999,
+            70.40417000000001,
+            -242.046326
+          ],
+          "restTranslationErrorMM": 0.00022455508950548092,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.511757,
+            70.40428999999999,
+            -242.046416
+          ],
+          "restTranslationErrorMM": 0.0002244037735870351,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 6.4677673017819775
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 6.467942475780082
+        }
+      }
+    },
+    "22": {
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -4.330649971961975e-05,
+            411.5787148475647,
+            7.35744833946228e-05
+          ],
+          "restTranslationErrorMM": 6.626887811241654e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -6.845220923423767e-05,
+            117.42103099822998,
+            2.7008354663848877e-05
+          ],
+          "restTranslationErrorMM": 9.44212536768396e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51179403066635,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 0.00016458870496134848,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51198774576187,
+            70.4042911529541,
+            -242.04635620117188
+          ],
+          "restTranslationErrorMM": 0.0002808582309629137,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 98,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 11.432595686894576
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 11.432769271703185
+        }
+      }
+    },
+    "25": {
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            1.9327916999999998e-05,
+            411.57877399999995,
+            6.70552254e-05
+          ],
+          "restTranslationErrorMM": 4.474829343342311e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            5.514135e-06,
+            117.421031,
+            3.7252903e-06
+          ],
+          "restTranslationErrorMM": 5.977876642808262e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.511958,
+            70.40417000000001,
+            -242.046535
+          ],
+          "restTranslationErrorMM": 5.955154467556126e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.511816,
+            70.40417000000001,
+            -242.0465
+          ],
+          "restTranslationErrorMM": 6.812104947800783e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 98,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 14.6968590338208
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 14.696884998189244
+        }
+      }
+    },
+    "93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -6.516311934490204e-06,
+            411.5787744522095,
+            2.60770320892334e-05
+          ],
+          "restTranslationErrorMM": 3.334623017555194e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -1.8590657901995655e-06,
+            117.42103099822998,
+            7.450580596923828e-06
+          ],
+          "restTranslationErrorMM": 5.9788298100761826e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.5119132399559,
+            70.404052734375,
+            -242.0465052127838
+          ],
+          "restTranslationErrorMM": 7.598131170262075e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51186853647232,
+            70.404052734375,
+            -242.0465052127838
+          ],
+          "restTranslationErrorMM": 6.537857940340134e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 98,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 10.78412848680875
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 10.784067138607769
+        }
+      }
+    }
+  },
+  "candidates": {
+    "6": {
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            3.4281617544706933e-06,
+            411.5787446498871,
+            3.725290298461914e-05
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            9.78031877707508e-07,
+            117.4209713935852,
+            3.725290298461914e-06
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51186108589172,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 9.799708752308716e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51184618473053,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 1.4901161193847656e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.000173205080753856
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.00014142135624137616
+        }
+      }
+    },
+    "49": {
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            3.4281617544706933e-06,
+            411.5787446498871,
+            3.725290298461914e-05
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            9.78031877707508e-07,
+            117.4209713935852,
+            3.725290298461914e-06
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51186108589172,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 9.799708752308716e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51184618473053,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 1.4901161193847656e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.000173205080753856
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.00014142135624137616
+        }
+      }
+    },
+    "57": {
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            3.4281617544706933e-06,
+            411.5787446498871,
+            3.725290298461914e-05
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            9.78031877707508e-07,
+            117.4209713935852,
+            3.725290298461914e-06
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51186108589172,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 9.799708752308716e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51184618473053,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 1.4901161193847656e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.000173205080753856
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.00014142135624137616
+        }
+      }
+    },
+    "85": {
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "jawMapped": false,
+      "lookAt": "Bone",
+      "joints": {
+        "neck": {
+          "parent": "chest",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            3.4281617544706933e-06,
+            411.5787446498871,
+            3.725290298461914e-05
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "head": {
+          "parent": "neck",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            9.78031877707508e-07,
+            117.4209713935852,
+            3.725290298461914e-06
+          ],
+          "restTranslationErrorMM": 0.0,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "leftEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            -106.51186108589172,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 9.799708752308716e-05,
+          "maxAxisOrScaleDifference": 0.0
+        },
+        "rightEye": {
+          "parent": "head",
+          "matchesParent": true,
+          "parentTranslationMM": [
+            106.51184618473053,
+            70.40411233901978,
+            -242.0465350151062
+          ],
+          "restTranslationErrorMM": 1.4901161193847656e-05,
+          "maxAxisOrScaleDifference": 0.0
+        }
+      },
+      "eyes": {
+        "leftEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.000173205080753856
+        },
+        "rightEye": {
+          "uniqueWeightedPositions": 97,
+          "referencePositions": 97,
+          "maxBidirectionalDistanceMM": 0.00014142135624137616
+        }
+      }
+    }
+  }
+}

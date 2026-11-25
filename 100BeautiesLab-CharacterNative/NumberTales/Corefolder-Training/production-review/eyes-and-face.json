@@ -1,0 +1,319 @@
+{
+  "method": "Official illustration crops are centered individually. All Unity face crops use the same orthographic half-height of 0.30 m. Eye direction comes from UniVRM LookAt YawPitch. Motion uses skinned vertices with eye-bone influence above 0.45 in actual Play Mode.",
+  "references": {
+    "4": {
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "face": {
+        "cheekWidthMM": 475.66500306129456,
+        "eyeSpacingMM": 200.62194764614105,
+        "eyeSpacingOverCheekWidth": 0.4217715122091687,
+        "nativeSHA256": "612f09068d527fa5cfa59aee745ff1cb333764aef11450354010945a9beeb7c8"
+      },
+      "gaze": {
+        "leftEyeVertices": 97,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.5351545214653015,
+            "rightCentroidXmm": -0.5291854739189148,
+            "maxVertexTravelMm": 1.3071247339248657
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.5335666537284851,
+            "rightCentroidXmm": 0.5307732820510864,
+            "maxVertexTravelMm": 1.3071032762527466
+          }
+        ]
+      }
+    },
+    "16": {
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "face": {
+        "cheekWidthMM": 475.66500306129456,
+        "eyeSpacingMM": 200.62191784381866,
+        "eyeSpacingOverCheekWidth": 0.42177144955515333,
+        "nativeSHA256": "86918b2ba417bec64b2af3abfee12c4ce9c91aa6c6d6052301af7ad233ee5843"
+      },
+      "gaze": {
+        "leftEyeVertices": 98,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.5317139029502869,
+            "rightCentroidXmm": -0.5278197526931763,
+            "maxVertexTravelMm": 1.1948820352554321
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.530044674873352,
+            "rightCentroidXmm": 0.529636025428772,
+            "maxVertexTravelMm": 1.194856882095337
+          }
+        ]
+      }
+    },
+    "20": {
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "face": {
+        "cheekWidthMM": 542.5963401794434,
+        "eyeSpacingMM": 195.3277736902237,
+        "eyeSpacingOverCheekWidth": 0.3599872671931889,
+        "nativeSHA256": "ffd9ead2d7447002dd82ca22a3609bd500e78116d8f2becfe3ea2988067c7bdb"
+      },
+      "gaze": {
+        "leftEyeVertices": 97,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.4943775236606598,
+            "rightCentroidXmm": -0.4875650107860565,
+            "maxVertexTravelMm": 1.2600284814834595
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.49159571528434753,
+            "rightCentroidXmm": 0.49033865332603455,
+            "maxVertexTravelMm": 1.2600163221359253
+          }
+        ]
+      }
+    },
+    "22": {
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "face": {
+        "cheekWidthMM": 487.28975653648376,
+        "eyeSpacingMM": 193.2995468378067,
+        "eyeSpacingOverCheekWidth": 0.3966829678746473,
+        "nativeSHA256": "5af2a4d02a7a51afeda6caded3de557d0f8789de0969138995efb69f29dcd6ef"
+      },
+      "gaze": {
+        "leftEyeVertices": 98,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.45562511682510376,
+            "rightCentroidXmm": -0.45094242691993713,
+            "maxVertexTravelMm": 1.2845207452774048
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.4521145224571228,
+            "rightCentroidXmm": 0.45459407567977905,
+            "maxVertexTravelMm": 1.2844527959823608
+          }
+        ]
+      }
+    },
+    "25": {
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "face": {
+        "cheekWidthMM": 513.4273171424866,
+        "eyeSpacingMM": 194.0804123878479,
+        "eyeSpacingOverCheekWidth": 0.37800951742890343,
+        "nativeSHA256": "517cf66a7a79fc925592f37973500c920a1b547eb6f3b4851bd7bb3e066924cf"
+      },
+      "gaze": {
+        "leftEyeVertices": 98,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.4914895296096802,
+            "rightCentroidXmm": -0.4899953603744507,
+            "maxVertexTravelMm": 1.2066859006881714
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.48801901936531067,
+            "rightCentroidXmm": 0.4936072528362274,
+            "maxVertexTravelMm": 1.2066859006881714
+          }
+        ]
+      }
+    },
+    "93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "face": {
+        "cheekWidthMM": 487.26728558540344,
+        "eyeSpacingMM": 193.29959154129028,
+        "eyeSpacingOverCheekWidth": 0.3967013531578668,
+        "nativeSHA256": "fdef1ab0c8f5c2ab0971e97656714a730c55b356d85144850c87fe15545c4b3f"
+      },
+      "gaze": {
+        "leftEyeVertices": 98,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.4558928906917572,
+            "rightCentroidXmm": -0.450644850730896,
+            "maxVertexTravelMm": 1.186125636100769
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.4521711766719818,
+            "rightCentroidXmm": 0.45448657870292664,
+            "maxVertexTravelMm": 1.1861129999160767
+          }
+        ]
+      }
+    }
+  },
+  "models": {
+    "6": {
+      "originalArt": "emstk_corefolderNTS-6-1.png",
+      "beforeVRM": "75aa90f082b41b0c5e9be1a7d5427fe86b44bdeca7411b4ecedb1dda2016bd4e",
+      "afterVRM": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "beforeFace": {
+        "cheekWidthMM": 475.83574056625366,
+        "eyeSpacingMM": 200.62194764614105,
+        "eyeSpacingOverCheekWidth": 0.4216201738175386,
+        "nativeSHA256": "3cea0af965fb19920738143debc37c10e52f092a6a4eb96d79b48073643f1013"
+      },
+      "afterFace": {
+        "cheekWidthMM": 475.60611367225647,
+        "eyeSpacingMM": 200.62191784381866,
+        "eyeSpacingOverCheekWidth": 0.42182367315418623,
+        "nativeSHA256": "232d838598fe828c0e14b1184a5dea5311601ba31b534bf10cb895ad742d91bb"
+      },
+      "gaze": {
+        "leftEyeVertices": 97,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.6423444151878357,
+            "rightCentroidXmm": -0.423484742641449,
+            "maxVertexTravelMm": 1.5685101747512817
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.4269862473011017,
+            "rightCentroidXmm": 0.6370924711227417,
+            "maxVertexTravelMm": 1.5479081869125366
+          }
+        ]
+      }
+    },
+    "49": {
+      "originalArt": "emstk_corefolderNTS-49-1.png",
+      "beforeVRM": "ab52bd83179bb988987b5c736ab6c8c28f3fb49469468b9cdc0c939533668676",
+      "afterVRM": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "beforeFace": {
+        "cheekWidthMM": 480.3028106689453,
+        "eyeSpacingMM": 263.37727904319763,
+        "eyeSpacingOverCheekWidth": 0.5483567307806859,
+        "nativeSHA256": "f3912963a3d5061bc4a51b7923ea47805bf828710d85268076a9aae47a59c38a"
+      },
+      "afterFace": {
+        "cheekWidthMM": 477.3726761341095,
+        "eyeSpacingMM": 200.62191784381866,
+        "eyeSpacingOverCheekWidth": 0.4202626749995583,
+        "nativeSHA256": "e52f67c0f6798a20c387211eb1eae5e2bdc0076cdd406081015a857fe1da750e"
+      },
+      "gaze": {
+        "leftEyeVertices": 97,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.6423444151878357,
+            "rightCentroidXmm": -0.423484742641449,
+            "maxVertexTravelMm": 1.5685101747512817
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.4269862473011017,
+            "rightCentroidXmm": 0.6370924711227417,
+            "maxVertexTravelMm": 1.5479081869125366
+          }
+        ]
+      }
+    },
+    "57": {
+      "originalArt": "emstk_corefolderNTS-57-2.png",
+      "beforeVRM": "49724d993ff0e44be2e5eb725ed5eed549e8d994c0c64defd583f1e7584cc87c",
+      "afterVRM": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "beforeFace": {
+        "cheekWidthMM": 477.12984681129456,
+        "eyeSpacingMM": 199.66347515583038,
+        "eyeSpacingOverCheekWidth": 0.4184677954862831,
+        "nativeSHA256": "27e60d5769ac40347139c12eeb8256eabaf066cd42d78e8729b1ec027f57df0f"
+      },
+      "afterFace": {
+        "cheekWidthMM": 477.74598002433777,
+        "eyeSpacingMM": 200.62191784381866,
+        "eyeSpacingOverCheekWidth": 0.419934287743454,
+        "nativeSHA256": "16f5bd9cb06d4bc30fcf7d9c297effe4089bea82952764ded9c0c0be26164cbf"
+      },
+      "gaze": {
+        "leftEyeVertices": 97,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.6423444151878357,
+            "rightCentroidXmm": -0.423484742641449,
+            "maxVertexTravelMm": 1.5685101747512817
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.4269862473011017,
+            "rightCentroidXmm": 0.6370924711227417,
+            "maxVertexTravelMm": 1.5479081869125366
+          }
+        ]
+      }
+    },
+    "85": {
+      "originalArt": "emstk_corefolderNTS-85-1.png",
+      "beforeVRM": "0f19d570c19a953a79db2e548c01a6c91138cd7c4b5f60792f549201089f9355",
+      "afterVRM": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "beforeFace": {
+        "cheekWidthMM": 477.2604703903198,
+        "eyeSpacingMM": 238.44361305236816,
+        "eyeSpacingOverCheekWidth": 0.4996089721349872,
+        "nativeSHA256": "11ab5661976d87ce65b6e15da84efd4504353e3dcadc74605877a61dc5df6d95"
+      },
+      "afterFace": {
+        "cheekWidthMM": 477.3677885532379,
+        "eyeSpacingMM": 200.62191784381866,
+        "eyeSpacingOverCheekWidth": 0.4202669779036516,
+        "nativeSHA256": "ab30a4a9b35084fff66bdbbcc78712ea2bb2ea16bd5c0824d50c34621c4491f9"
+      },
+      "gaze": {
+        "leftEyeVertices": 97,
+        "rightEyeVertices": 97,
+        "returnErrorMm": 0.0,
+        "samples": [
+          {
+            "yaw": -12,
+            "leftCentroidXmm": -0.6423444151878357,
+            "rightCentroidXmm": -0.423484742641449,
+            "maxVertexTravelMm": 1.5685101747512817
+          },
+          {
+            "yaw": 12,
+            "leftCentroidXmm": 0.4269862473011017,
+            "rightCentroidXmm": 0.6370924711227417,
+            "maxVertexTravelMm": 1.5479081869125366
+          }
+        ]
+      }
+    }
+  }
+}

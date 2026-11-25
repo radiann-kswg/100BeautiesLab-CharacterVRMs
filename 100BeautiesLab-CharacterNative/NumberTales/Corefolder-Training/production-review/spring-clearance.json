@@ -1,0 +1,1264 @@
+{
+  "method": "Actual Unity Play Mode BakeMesh. Orthographic 160×160 rays over a 0.40m square centred on the midpoint of the eye bones. A spring triangle must be more than 0.5mm in front of an eye triangle. All three vertices belong to the same measured chain or eye; each has an owner with greater than 0.30 weight. Counts describe projected geometry; opacity and intervening static hair are evaluated separately in the photographs. Lateral hair travel counts vertices more than 5mm beyond the opposite side of the eye-bone midsagittal plane.",
+  "poses": "Neutral and head yaw +12° with Aa 65% use a 25° camera. Root movement uses a frontal camera at rest and frames 6, 12, 18, 24, 36, 90, and 150 of the fixed 60 Hz perturbation.",
+  "implementation": "CharacterReview.SpringClearance.cs",
+  "models": {
+    "6": {
+      "before": {
+        "sha256": "5d264ad3792cb495cd26e1b1dd53fc8a560326393cd59ef49074d80db597a801",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "feaf6c1c98480aa95ad90608a09625d310cd6a67c4b887350e789a7338132fd4",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "MuiHairL_01": {
+            "weighted_vertices": 108,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 186.53546273708344,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiHairR_01": {
+            "weighted_vertices": 108,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 140.48784971237183,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailUpperL_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 205.42095601558685,
+            "terminal_displacement_after_150_steps_mm": 0.2402712416369468
+          },
+          "MuiTailMiddleL_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 180.4002821445465,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailLowerL_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 182.6220154762268,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailUpperR_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 204.1778713464737,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailMiddleR_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 204.5460343360901,
+            "terminal_displacement_after_150_steps_mm": 0.15429478662554175
+          },
+          "MuiTailLowerR_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 207.2135955095291,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          }
+        }
+      },
+      "after": {
+        "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "a078b7916ab9e0e98294103cd6f3f8090775ed2a6b4624689b56c181e9bc0f38",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "MuiHairL_01": {
+            "weighted_vertices": 58,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 133.22213292121887,
+            "terminal_displacement_after_150_steps_mm": 0.04973712202627212
+          },
+          "MuiHairR_01": {
+            "weighted_vertices": 59,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 122.54120409488678,
+            "terminal_displacement_after_150_steps_mm": 0.06557023880304769
+          },
+          "MuiTailUpperL_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 205.42095601558685,
+            "terminal_displacement_after_150_steps_mm": 0.2402712416369468
+          },
+          "MuiTailMiddleL_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 180.4002821445465,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailLowerL_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 182.6220154762268,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailUpperR_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 204.1778713464737,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "MuiTailMiddleR_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 204.5460343360901,
+            "terminal_displacement_after_150_steps_mm": 0.15429478662554175
+          },
+          "MuiTailLowerR_01": {
+            "weighted_vertices": 185,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 207.2135955095291,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          }
+        }
+      }
+    },
+    "49": {
+      "before": {
+        "sha256": "4bbbace3b19f4f4028cdfb415cb05103b7a4185524e9f4d760535d58175519fc",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "37b4a4ecbcfd91c32d2d1d05a6d6cdff636fc874e25075a4ef3a59a882689476",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": [
+              {
+                "chain": "Hair49_cheek_L_01",
+                "left_px": 5,
+                "right_px": 0,
+                "hair_across_midline": 0
+              }
+            ]
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "Hair49_cheek_R_01": {
+            "weighted_vertices": 104,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 261.64954900741577,
+            "terminal_displacement_after_150_steps_mm": 0.07034783629933372
+          },
+          "Hair49_cheek_L_01": {
+            "weighted_vertices": 104,
+            "max_left_eye_overlap_px": 5,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.005841121495327103,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 270.6294357776642,
+            "terminal_displacement_after_150_steps_mm": 0.08456179784843698
+          },
+          "Tail49_upper_inner_R_01": {
+            "weighted_vertices": 454,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 161.24555468559265,
+            "terminal_displacement_after_150_steps_mm": 0.050264468882232904
+          },
+          "Tail49_upper_inner_L_01": {
+            "weighted_vertices": 454,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 168.5856580734253,
+            "terminal_displacement_after_150_steps_mm": 0.09082842734642327
+          },
+          "Tail49_upper_outer_R_01": {
+            "weighted_vertices": 455,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 147.15109765529633,
+            "terminal_displacement_after_150_steps_mm": 0.07429868855979294
+          },
+          "Tail49_upper_outer_L_01": {
+            "weighted_vertices": 454,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 144.16731894016266,
+            "terminal_displacement_after_150_steps_mm": 0.006914909590705065
+          },
+          "Tail49_low_outside_R_01": {
+            "weighted_vertices": 192,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 131.4290314912796,
+            "terminal_displacement_after_150_steps_mm": 0.05031179171055555
+          },
+          "Tail49_low_outside_L_01": {
+            "weighted_vertices": 192,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 164.54121470451355,
+            "terminal_displacement_after_150_steps_mm": 0.07114992331480607
+          },
+          "Tail49_low_middle_01": {
+            "weighted_vertices": 193,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 206.8619579076767,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail49_low_wrap_R_01": {
+            "weighted_vertices": 611,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 178.69576811790466,
+            "terminal_displacement_after_150_steps_mm": 0.27248336118645966
+          },
+          "Tail49_low_wrap_L_01": {
+            "weighted_vertices": 611,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 157.85174071788788,
+            "terminal_displacement_after_150_steps_mm": 0.1768015936249867
+          }
+        }
+      },
+      "after": {
+        "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "6d6ccf1d24d565419a16222a1bd204165f70b443806e6db6f3d999da5d6a77b0",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": [
+              {
+                "chain": "Hair49_cheek_L_01",
+                "left_px": 4,
+                "right_px": 0,
+                "hair_across_midline": 0
+              }
+            ]
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "Hair49_cheek_R_01": {
+            "weighted_vertices": 104,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 238.85558545589447,
+            "terminal_displacement_after_150_steps_mm": 0.02512653918529395
+          },
+          "Hair49_cheek_L_01": {
+            "weighted_vertices": 104,
+            "max_left_eye_overlap_px": 4,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.004672897196261682,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 275.4305899143219,
+            "terminal_displacement_after_150_steps_mm": 0.03409974306123331
+          },
+          "Tail49_upper_inner_R_01": {
+            "weighted_vertices": 454,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 161.17382049560547,
+            "terminal_displacement_after_150_steps_mm": 0.050264468882232904
+          },
+          "Tail49_upper_inner_L_01": {
+            "weighted_vertices": 454,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 168.59517991542816,
+            "terminal_displacement_after_150_steps_mm": 0.09082842734642327
+          },
+          "Tail49_upper_outer_R_01": {
+            "weighted_vertices": 455,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 147.1511572599411,
+            "terminal_displacement_after_150_steps_mm": 0.07429868855979294
+          },
+          "Tail49_upper_outer_L_01": {
+            "weighted_vertices": 454,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 144.16727423667908,
+            "terminal_displacement_after_150_steps_mm": 0.006914909590705065
+          },
+          "Tail49_low_outside_R_01": {
+            "weighted_vertices": 192,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 131.4290314912796,
+            "terminal_displacement_after_150_steps_mm": 0.05031179171055555
+          },
+          "Tail49_low_outside_L_01": {
+            "weighted_vertices": 192,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 164.54121470451355,
+            "terminal_displacement_after_150_steps_mm": 0.07114992331480607
+          },
+          "Tail49_low_middle_01": {
+            "weighted_vertices": 193,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 206.8619579076767,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail49_low_wrap_R_01": {
+            "weighted_vertices": 611,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 178.69576811790466,
+            "terminal_displacement_after_150_steps_mm": 0.27248336118645966
+          },
+          "Tail49_low_wrap_L_01": {
+            "weighted_vertices": 611,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 157.85174071788788,
+            "terminal_displacement_after_150_steps_mm": 0.1768015936249867
+          }
+        }
+      }
+    },
+    "57": {
+      "before": {
+        "sha256": "2ad72938fec5c43a839bf2d22a793f7d7992bf78e664969577be3607348ab18f",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "960066b45479682bec821d2cde61ed6a3f9d6b6019af5312ae15ee330a93c8c0",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": [
+              {
+                "chain": "Hair_Side_L_01",
+                "left_px": 37,
+                "right_px": 0,
+                "hair_across_midline": 0
+              }
+            ]
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": [
+              {
+                "chain": "Hair_Side_L_01",
+                "left_px": 20,
+                "right_px": 0,
+                "hair_across_midline": 0
+              }
+            ]
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "Tail_Upper_01.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 184.13010239601135,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Upper_02.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 178.6806881427765,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Upper_03.001": {
+            "weighted_vertices": 895,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 197.14301824569702,
+            "terminal_displacement_after_150_steps_mm": 0.12623541988432407
+          },
+          "Tail_Upper_04.001": {
+            "weighted_vertices": 896,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 205.80479502677917,
+            "terminal_displacement_after_150_steps_mm": 0.23876743216533214
+          },
+          "Tail_Upper_05.001": {
+            "weighted_vertices": 895,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 286.7293655872345,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_06.001": {
+            "weighted_vertices": 784,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 200.15475153923035,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_07.001": {
+            "weighted_vertices": 784,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 195.84575295448303,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Hair_Ponytail_01": {
+            "weighted_vertices": 342,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 147.78964221477509,
+            "terminal_displacement_after_150_steps_mm": 0.06738358933944255
+          },
+          "Hair_Side_R_01": {
+            "weighted_vertices": 147,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 185.33532321453094,
+            "terminal_displacement_after_150_steps_mm": 0.07953763997647911
+          },
+          "Hair_Side_L_01": {
+            "weighted_vertices": 147,
+            "max_left_eye_overlap_px": 37,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.04322429906542056,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 221.54748439788818,
+            "terminal_displacement_after_150_steps_mm": 0.19418701413087547
+          }
+        }
+      },
+      "after": {
+        "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "dc0f16a535bf068cb2d654bb2a6e0df546fef74360b67b1b0cbbf4c0451885ea",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "Tail_Upper_01.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 184.13010239601135,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Upper_02.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 178.6806881427765,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Upper_03.001": {
+            "weighted_vertices": 895,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 197.14301824569702,
+            "terminal_displacement_after_150_steps_mm": 0.12623541988432407
+          },
+          "Tail_Upper_04.001": {
+            "weighted_vertices": 896,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 205.80479502677917,
+            "terminal_displacement_after_150_steps_mm": 0.23876743216533214
+          },
+          "Tail_Upper_05.001": {
+            "weighted_vertices": 895,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 286.7293655872345,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_06.001": {
+            "weighted_vertices": 784,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 200.15475153923035,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_07.001": {
+            "weighted_vertices": 784,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 195.84575295448303,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Hair_Ponytail_01": {
+            "weighted_vertices": 263,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 147.7896124124527,
+            "terminal_displacement_after_150_steps_mm": 0.06738358933944255
+          },
+          "Hair_Side_R_01": {
+            "weighted_vertices": 58,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 121.1671382188797,
+            "terminal_displacement_after_150_steps_mm": 0.024180264517781325
+          },
+          "Hair_Side_L_01": {
+            "weighted_vertices": 56,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 112.11726069450378,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          }
+        }
+      }
+    },
+    "85": {
+      "before": {
+        "sha256": "101ef8023c853dc8cb6de50bcff88a869c6b61bdf4ffcdbac01a5ca73b38213a",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "84664b6b156769e046784e46a7d0741d8abc3d2ce5170693f2ee392db17b7d27",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": [
+              {
+                "chain": "Hair_Side_R_01",
+                "left_px": 0,
+                "right_px": 91,
+                "hair_across_midline": 0
+              }
+            ]
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": [
+              {
+                "chain": "Hair_Side_L_01",
+                "left_px": 32,
+                "right_px": 0,
+                "hair_across_midline": 18
+              }
+            ]
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": [
+              {
+                "chain": "Hair_Side_R_01",
+                "left_px": 0,
+                "right_px": 0,
+                "hair_across_midline": 18
+              }
+            ]
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "Tail_Upper_01.001": {
+            "weighted_vertices": 783,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 194.63975727558136,
+            "terminal_displacement_after_150_steps_mm": 0.055444710596930236
+          },
+          "Tail_Upper_02.001": {
+            "weighted_vertices": 783,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 180.76679110527039,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Upper_03.001": {
+            "weighted_vertices": 784,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 187.27582693099976,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_04.001": {
+            "weighted_vertices": 896,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 172.79905080795288,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_05.001": {
+            "weighted_vertices": 896,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 181.41475319862366,
+            "terminal_displacement_after_150_steps_mm": 0.14019617810845375
+          },
+          "Tail_Lower_06.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 205.6122124195099,
+            "terminal_displacement_after_150_steps_mm": 0.12454239185899496
+          },
+          "Tail_Lower_07.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 210.81306040287018,
+            "terminal_displacement_after_150_steps_mm": 0.06678627687506378
+          },
+          "Tail_Lower_08.001": {
+            "weighted_vertices": 790,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 291.16570949554443,
+            "terminal_displacement_after_150_steps_mm": 0.22810435621067882
+          },
+          "Hair_Ponytail_01": {
+            "weighted_vertices": 470,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 253.64160537719727,
+            "terminal_displacement_after_150_steps_mm": 0.04630613693734631
+          },
+          "Hair_Side_R_01": {
+            "weighted_vertices": 226,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 91,
+            "max_eye_overlap_fraction": 0.1006637168141593,
+            "max_hair_vertices_across_midline": 18,
+            "peak_weighted_vertex_motion_mm": 198.02413880825043,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Hair_Side_L_01": {
+            "weighted_vertices": 226,
+            "max_left_eye_overlap_px": 32,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.037383177570093455,
+            "max_hair_vertices_across_midline": 18,
+            "peak_weighted_vertex_motion_mm": 219.3073332309723,
+            "terminal_displacement_after_150_steps_mm": 0.13968406710773706
+          }
+        }
+      },
+      "after": {
+        "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+        "unity": "6000.3.23f1",
+        "play_mode": true,
+        "head_turn_photo_sha256": "fa5bddba72bce858c28784b549ab15b218c4db79bf84f2b636e5cf4de8f8273d",
+        "poses": {
+          "neutral-25deg": {
+            "left_eye_px": 647,
+            "right_eye_px": 908,
+            "nonzero_samples": []
+          },
+          "head-12-aa-065": {
+            "left_eye_px": 759,
+            "right_eye_px": 904,
+            "nonzero_samples": []
+          },
+          "root-000": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-006": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-012": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-018": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-024": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-036": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-090": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          },
+          "root-150": {
+            "left_eye_px": 856,
+            "right_eye_px": 856,
+            "nonzero_samples": []
+          }
+        },
+        "chains": {
+          "Tail_Upper_01.001": {
+            "weighted_vertices": 783,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 194.63975727558136,
+            "terminal_displacement_after_150_steps_mm": 0.055444710596930236
+          },
+          "Tail_Upper_02.001": {
+            "weighted_vertices": 783,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 180.76679110527039,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Upper_03.001": {
+            "weighted_vertices": 784,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 187.27582693099976,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_04.001": {
+            "weighted_vertices": 896,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 172.79905080795288,
+            "terminal_displacement_after_150_steps_mm": 0.0
+          },
+          "Tail_Lower_05.001": {
+            "weighted_vertices": 896,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 181.41475319862366,
+            "terminal_displacement_after_150_steps_mm": 0.14019617810845375
+          },
+          "Tail_Lower_06.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 205.6122124195099,
+            "terminal_displacement_after_150_steps_mm": 0.12454239185899496
+          },
+          "Tail_Lower_07.001": {
+            "weighted_vertices": 890,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 210.81306040287018,
+            "terminal_displacement_after_150_steps_mm": 0.06678627687506378
+          },
+          "Tail_Lower_08.001": {
+            "weighted_vertices": 790,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": null,
+            "peak_weighted_vertex_motion_mm": 291.16570949554443,
+            "terminal_displacement_after_150_steps_mm": 0.22810435621067882
+          },
+          "Hair_Ponytail_01": {
+            "weighted_vertices": 470,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 253.64160537719727,
+            "terminal_displacement_after_150_steps_mm": 0.04630613693734631
+          },
+          "Hair_Side_R_01": {
+            "weighted_vertices": 226,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 198.1906294822693,
+            "terminal_displacement_after_150_steps_mm": 0.11452957551227883
+          },
+          "Hair_Side_L_01": {
+            "weighted_vertices": 226,
+            "max_left_eye_overlap_px": 0,
+            "max_right_eye_overlap_px": 0,
+            "max_eye_overlap_fraction": 0.0,
+            "max_hair_vertices_across_midline": 0,
+            "peak_weighted_vertex_motion_mm": 173.97283017635345,
+            "terminal_displacement_after_150_steps_mm": 0.08714068826520815
+          }
+        }
+      }
+    }
+  }
+}

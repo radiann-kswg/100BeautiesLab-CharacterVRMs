@@ -45,6 +45,10 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 | `NumberTales/Corefolder-25` | `vrm_corefolder25.vrm` | `vrm_corefolder25.png` | 導入済み |
 | `NumberTales/Corefolder-22` | `VRCModel_CoreFloder-22.vrm` | — | 導入済み（サムネイル未整備） |
 | `NumberTales/Corefolder-93` | `VRCModel_CoreFloder-93.vrm` | — | 導入済み（サムネイル未整備） |
+| `NumberTales/Corefolder-6` | [Corefolder-6.vrm](Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-6/Corefolder-6.vrm) | — | ムイ |
+| `NumberTales/Corefolder-49` | [Corefolder-49.vrm](Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-49/Corefolder-49.vrm) | — | ヨチカ |
+| `NumberTales/Corefolder-57` | [Corefolder-57.vrm](Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-57/Corefolder-57.vrm) | — | イズナ |
+| `NumberTales/Corefolder-85` | [Corefolder-85.vrm](Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-85/Corefolder-85.vrm) | — | ハッコ |
 
 各キャラクターの公式設定は [100BeautiesLab_CreationsDB](https://github.com/radiann-kswg/100BeautiesLab_CreationsDB) のデータベース（Works_NumberTales）を参照してください。
 
@@ -73,6 +77,10 @@ Point-Eの色付き点群生成・学習重みの保存と再利用を検証済�
 
 - **Unity**: 6000.3.23f1（Unity 6）
 - **VRM**: [UniVRM](https://github.com/vrm-c/UniVRM) v0.131.1（UniGLTF / VRM 0.x / VRM 1.0）
+
+Blender 5.3 と VRM Add-on 4.10.5 で、番号を指定してコアフォルダの編集用素体を作り、規範6体と同条件の三面図を撮影できるよ。公式資料の読み込み、部位別の MToon 継承、ウェイトと表情の検査、#6・#49 の試験結果は制作手順にまとめたよ。[規範6体を使ったVRM派生制作の手順](100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/VRM-REUSE-WORKFLOW.md)
+
+ムイ（#6）、ヨチカ（#49）、イズナ（#57）、ハッコ（#85）のVRM、編集用Blenderファイル、原画との比較、Unity Play Modeの表情と揺れ物は、[4体の制作・検証記録](100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/production-review/README.md)から開けるよ。
 
 ### ディレクトリ構成（抜粋）
 
