@@ -16,14 +16,19 @@ def revise_tails(n,arm,collection):
     data=json.loads((folder/f'Tails-{n}.json').read_text())
     w,h=data['size']
     tex=bpy.data.images.load(str(folder/f'Tails-{n}.png'),check_existing=False);tex.pack()
-    mat=toon(f'{n} • fox-tail rear atlas','#FFFFFF',.0022)
+    # Re-imported reference MToon values. Fizz (#25) uses a fine world-space
+    # outline; Kumi (#93) separates warm fur masses by color alone.
+    mat=toon(f'{n} • fox-tail rear atlas','#FFFFFF',.0005 if n==85 else 0)
     m=mat.vrm_addon_extension.mtoon1
     m.pbr_metallic_roughness.base_color_texture.index.source=tex
     m.pbr_metallic_roughness.base_color_factor=(.765,.765,.765,1)
     t=m.extensions.vrmc_materials_mtoon
     t.shade_multiply_texture.index.source=tex
     t.shade_color_factor=(.80,.78,.74)
-    t.shading_shift_factor=.12
+    t.shading_shift_factor=1.
+    t.shading_toony_factor=1.
+    t.gi_equalization_factor=.861002743
+    t.outline_lighting_mix_factor=0.
     count=5 if n==57 else 3
     # Preserve the measured aspect of the rear atlas. The tall central plumes sit behind the head.
     span=1.215 if n==57 else 1.22

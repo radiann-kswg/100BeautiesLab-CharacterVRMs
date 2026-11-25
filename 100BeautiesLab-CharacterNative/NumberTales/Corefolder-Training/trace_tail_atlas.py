@@ -28,7 +28,9 @@ def contour_region(mask,ctr):
     np.maximum.at(edge,index,radius)
     valid=np.flatnonzero(edge)
     edge=np.interp(np.arange(bins),valid,edge[valid],period=bins)
-    edge=nd.median_filter(edge,3,mode='wrap')
+    # The original locates each lobe and its tips. Smooth small variations in
+    # the brush outline before constructing the broad curved VRM surfaces.
+    edge=nd.gaussian_filter1d(nd.median_filter(edge,3,mode='wrap'),1.8,mode='wrap')
     angles=(np.arange(bins)+.5)*2*np.pi/bins
     points=np.column_stack((cx+edge*np.cos(angles),cy+edge*np.sin(angles)))
     # Keep the actual pointed tips and indentations as well as enough points on long curves.
@@ -37,7 +39,7 @@ def contour_region(mask,ctr):
         chord=points[b]-points[a]; t=np.arange(a,b+1)
         normal=abs(chord[0]*(points[t,1]-points[a,1])-chord[1]*(points[t,0]-points[a,0]))/max(np.linalg.norm(chord),1)
         k=a+int(normal.argmax())
-        if normal.max()<=1.6 and np.linalg.norm(chord)<25:return
+        if normal.max()<=2.1 and np.linalg.norm(chord)<29:return
         if k<=a or k>=b:k=(a+b)//2
         if a<k<b:chosen.add(k);refine(a,k);refine(k,b)
     for a,b in zip(sorted(chosen)[:-1],sorted(chosen)[1:]):refine(a,b)
