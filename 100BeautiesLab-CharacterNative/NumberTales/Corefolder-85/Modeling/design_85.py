@@ -10,7 +10,7 @@ from mathutils import Vector
 
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parents[1]/'Corefolder-49/Modeling'))
-from model_49 import Sculpt,catmull,bind,linear,fit_eye_uv_and_pivots
+from model_49 import Sculpt,catmull,bind,linear,independent_iris_uv,restore_body_surface
 from refine_models import toon
 from face_articulation import finish_face
 
@@ -51,28 +51,24 @@ class Hakko(Sculpt):
         return m
 
     def body_and_face(self,body,face):
+        restore_body_surface(body)
         bpy.ops.object.select_all(action='DESELECT')
         body.select_set(True);bpy.context.view_layer.objects.active=body
         dec=body.modifiers.new('Recover common body quad rings','DECIMATE')
         dec.decimate_type='UNSUBDIV';dec.iterations=2
         bpy.ops.object.modifier_move_to_index(modifier=dec.name,index=0)
         bpy.ops.object.modifier_apply(modifier=dec.name)
+        from torso_profile import fit_common_torso
+        fit_common_torso(body)
         body.data.materials.clear();body.data.materials.append(self.bodymat)
         for layer in list(body.data.uv_layers):body.data.uv_layers.remove(layer)
         uv=body.data.uv_layers.new(name='85 spherical bib')
-        for v in body.data.vertices:
-            x,y,z=v.co
-            v.co.x *= 1.218+.046*math.exp(-((z-.14)/.15)**2)+.036*math.exp(-((z-.60)/.13)**2)
-            v.co.y=-.07+(y+.07)*(1.083+.043*math.exp(-((z-.15)/.19)**2))
-            profile=min(1,max(0,(z-.35)/.36))**1.35
-            around=min(1,max(0,(y+.25)/.44+abs(x)*1.9))
-            v.co.z+=profile*(.015+.113*around)
         for p in body.data.polygons:
             p.material_index=0;p.use_smooth=True
             vals=[]
             for idx in p.vertices:
                 x,y,z=body.data.vertices[idx].co
-                vals.append((.5+math.atan2(x/1.16,-(y+.07))/math.tau,min(1,z/.84)))
+                vals.append((.5+math.atan2(x,-(y+.07))/math.tau,min(1,z/.713)))
             wraps=max(q[0] for q in vals)-min(q[0] for q in vals)>.5
             for li,(u,v) in zip(p.loop_indices,vals):uv.data[li].uv=(u+1 if wraps and u<.5 else u,v)
 
@@ -81,79 +77,44 @@ class Hakko(Sculpt):
         for p in face.data.polygons:
             p.material_index=0
             p.use_smooth=True
-        rest=[v.co.copy() for v in face.data.shape_keys.key_blocks[0].data]
-        keys=face.data.shape_keys.key_blocks
-        def chin_sag(x,y,z):
-            return .010*math.exp(-(x/.079)**2-((z-.676)/.042)**2-((y+.314)/.085)**2)
-        for vertex in body.data.vertices:
-            vertex.co.z-=chin_sag(*vertex.co)
-        for key in keys:
-            for q,r in zip(key.data,rest):
-                x,y,z=r;ax=abs(x)
-                q.co.z-=chin_sag(x,y,z)
-                eye=math.exp(-((ax-.105)/.096)**6-((z-.805)/.083)**6)
-                q.co.x-=math.copysign(.002,x)*eye
-                # Restore the recognizable turquoise eyes below their straight
-                # upper lids while retaining the original blink displacement.
-                q.co.z+=eye*.19*(q.co.z-.774)
-        fit_eye_uv_and_pivots(face,self.arm,rest)
+        independent_iris_uv(face)
         # Use the final mouth and supporting skin to place the edge in all its
         # real poses. save_character detects the completed articulation pass.
         finish_face(85,face,self.arm)
         self.close_neck(face)
         self.chin_edge(face,body,self.swatch('Chin contour','#55453F',edge=0),.114,
-                      expressions=('a','i','u','e','o','Joy','Fun','Sorrow'))
+                      expressions=('a','i','u','e','o','Joy','Fun','Sorrow'),edge_lift=.013)
 
     def cranium(self):
-        n,rows=48,15
-        vs=[(0,-.037,1.163)];fs=[]
-        for i in range(1,rows+1):
-            for j in range(n):
-                a=math.tau*j/n; ang=min(a,math.tau-a)
-                hem=np.interp(ang,[0,.5,.83,1.08,1.39,1.65,2.07,math.pi],
-                               [.938,.925,.865,.785,.730,.703,.696,.686])
-                z0=.909
-                theta=math.acos(np.clip((hem-z0)/.254,-1,1))*i/rows
-                vs.append((.251*math.sin(theta)*math.sin(a),-.053-.263*math.sin(theta)*math.cos(a),
-                           z0+.254*math.cos(theta)))
-        vs.append((0,-.04,.74))
-        for j in range(n):
-            k=(j+1)%n;fs.append((0,1+j,1+k))
-            for i in range(rows-1):
-                p=1+i*n;fs.append((p+j,p+k,p+n+k,p+n+j))
-            fs.append((len(vs)-1,1+(rows-1)*n+k,1+(rows-1)*n+j))
-        ob=self.mesh('Hair rounded cranium',vs,fs,self.hair);bind(ob,self.arm)
-
-    def ears(self):
-        # Asymmetric, broad-based lobes continue the triangular crown seen in
-        # the official front-right view; their bases lie inside the hair mass.
-        for side,sgn in [('R',-1),('L',1)]:
-            rings,sides=17,24
-            if side=='R':
-                path=[(.175,-.045,.857),(.201,-.046,.962),(.209,-.044,1.059),(.185,-.036,1.165),(.137,-.022,1.263)]
-                widths=[.039,.093,.090,.052,0];depths=[.046,.139,.131,.080,0]
-            else:
-                path=[(.139,-.030,.895),(.158,-.030,.987),(.159,-.011,1.073),(.124,.010,1.164),(.088,.025,1.252)]
-                widths=[.053,.117,.102,.057,0];depths=[.051,.140,.130,.073,0]
-            vs=[];fs=[];uvs=[]
-            for i in range(rings):
-                t=i/(rings-1);p=catmull(path,t)
-                w=max(.0004,catmull([(a,0) for a in widths],t).x)
-                d=max(.0004,catmull([(a,0) for a in depths],t).x)
-                for j in range(sides):
-                    a=(j/sides-.5)*math.tau
-                    vs.append((sgn*(p.x+w*math.cos(a)),p.y+d*math.sin(a),p.z))
-                    uvs.append((j/sides,t))
-            for i in range(rings-1):
-                for j in range(sides):
-                    k=(j+1)%sides;u=i*sides;fs.append((u+j,u+k,u+sides+k,u+sides+j))
-            fs.extend((tuple(reversed(range(sides))),tuple((rings-1)*sides+j for j in range(sides))))
-            ob=self.mesh('Fox ear '+side,vs,fs,self.earmats[side]);bind(ob,self.arm)
-            uv=ob.data.uv_layers.new(name='Copper inner ear')
-            for p in ob.data.polygons:
-                wrap=0 in [v%sides for v in p.vertices] and sides-1 in [v%sides for v in p.vertices]
-                for li in p.loop_indices:
-                    u,v=uvs[ob.data.loops[li].vertex_index];uv.data[li].uv=(u+1 if wrap and u==0 else u,v)
+        # A continuous fringe grows from the rounded crown. The reference
+        # models carry the long bang on the forehead surface down to its hem.
+        hem=[(-math.pi,.686),(-2.25,.705),(-1.90,.677),(-1.61,.724),(-1.35,.727),(-1.15,.789),
+             (-1.00,.841),(-.83,.814),(-.67,.882),(-.47,.927),(-.30,.937),
+             (-.16,.918),(0,.861),(.135,.806),(.225,.767),(.30,.827),
+             (.44,.897),(.57,.924),(.73,.903),(.93,.841),(1.045,.812),
+             (1.12,.825),(1.35,.738),(1.61,.724),(1.90,.679),(2.25,.705),(math.pi,.686)]
+        angles=sorted({round(-math.pi+j*math.tau/54,5) for j in range(54)}
+                      | {round(a,5) for a,z in hem[:-1]})
+        aa,hh=zip(*hem)
+        def surface(angle,progress):
+            bottom=float(np.interp(angle,aa,hh))
+            theta=math.acos((bottom-.898)/.230)*progress
+            st=math.sin(theta)
+            nape=.032*math.exp(-((abs(angle)-1.88)/.27)**2)*progress**5
+            x=(.252*st+nape)*math.sin(angle)
+            z=.898+.230*math.cos(theta)
+            y=-.053-.263*st*math.cos(angle)
+            front=max(0,math.cos(angle))**2.4
+            # Keep the forward hem just over the forehead and continue it into
+            # the lateral hair; it never forms a hanging row of separate ovals.
+            spread=max(0,min(1,(1.075-z)/.22))
+            y-=front*(.047+.026*max(0,(.86-z)/.10))*spread
+            return Vector((x,y,z))
+        from crown_surface import make_crown
+        crown=self.swatch('Swept crown','#FFFFFF',image='85-crown.png')
+        ears=[(-1,(-.156,-.033,1.217),self.earmats['R']),
+              (1,(.113,.023,1.202),self.earmats['L'])]
+        make_crown(self,'Hair crown, ears and swept fringe',angles,16,surface,crown,self.under,ears)
 
     def hairstyle(self):
         def lock(name,p,w,d,axis=(1,0,0),spring=False,mat=None):
@@ -161,26 +122,21 @@ class Hakko(Sculpt):
             bind(ob,self.arm,'head')
             if spring:ob['spring_path']=json.dumps(p)
             return ob
-        # A single long central point breaks the brow line. Adjacent fringe
-        # panels sweep outwards, clearing the full near iris in the DB pose.
-        lock('Hair central tapered fringe',[(-.011,-.117,1.145),(-.020,-.214,1.075),(-.022,-.286,.996),(-.002,-.332,.914),(.020,-.355,.849),(.048,-.352,.767)],
-             [.024,.086,.090,.072,.043,0],[.016,.044,.048,.041,.028,0])
-        lock('Hair fringe R',[(-.047,-.127,1.142),(-.104,-.221,1.062),(-.145,-.276,.990),(-.171,-.300,.910),(-.192,-.296,.837)],
-             [.036,.076,.075,.053,0],[.015,.033,.039,.030,0],axis=(.88,-.27,0))
-        lock('Hair fringe L',[(.043,-.116,1.146),(.093,-.202,1.086),(.147,-.266,1.008),(.199,-.279,.921),(.209,-.268,.836)],
-             [.037,.081,.080,.047,0],[.018,.037,.043,.029,0],axis=(.85,.33,0))
         for side,s in [('R',-1),('L',1)]:
-            p=[(s*.173,-.199,1.005),(s*.207,-.228,.938),(s*.231,-.249,.870),(s*.226,-.270,.795),
-               (s*.205,-.294,.736),(s*.160,-.308,.696)]
-            lock('Hair cheek '+side,p,[.031,.056,.061,.054,.033,0],[.016,.033,.038,.035,.019,0],
-                 axis=(s*.80,.52,0),spring=True)
-            p=[(s*.206,.023,.956),(s*.245,.038,.895),(s*.250,.045,.823),(s*.240,.067,.757),(s*.273,.099,.720)]
-            lock('Hair nape '+side,p,[.029,.051,.054,.033,0],[.022,.032,.035,.021,0],axis=(s*.76,-.62,0),mat=self.under)
-        p=[(-.153,.092,1.049),(-.205,.151,1.088),(-.264,.149,1.071),(-.305,.116,1.007),
-           (-.313,.099,.936),(-.291,.102,.856),(-.255,.125,.802),(-.222,.153,.758)]
-        lock('Hair ponytail',p,[.033,.063,.075,.082,.075,.065,.039,0],[.028,.046,.056,.064,.057,.044,.025,0],
+            # Its skinning line remains lateral to the reference eyeballs.
+            p=[(s*.178,-.150,1.000),(s*.212,-.190,.949),(s*.240,-.213,.881),(s*.254,-.225,.803),
+               (s*.242,-.251,.748),(s*.208,-.273,.700)]
+            cheek=lock('Hair cheek '+side,p,[.023,.039,.043,.041,.028,0],[.019,.027,.035,.035,.024,0],
+                       axis=(s*.80,.52,0),spring=True)
+            cheek.data.materials.append(self.under)
+            for polygon in cheek.data.polygons:
+                if polygon.center.z<.875 and polygon.normal.x*s<-.42 and polygon.normal.y>-.58:
+                    polygon.material_index=1
+        p=[(-.141,.030,1.049),(-.193,.089,1.082),(-.249,.141,1.069),(-.295,.158,1.011),
+           (-.304,.132,.947),(-.292,.096,.888),(-.261,.070,.828),(-.222,.061,.762)]
+        lock('Hair ponytail',p,[.039,.072,.082,.085,.077,.064,.041,0],[.034,.059,.073,.076,.070,.057,.035,0],
              axis=(.76,-.38,0),spring=True)
-        q=[(-.260,.142,1.050),(-.311,.152,1.026),(-.340,.158,.985),(-.360,.172,.971),(-.384,.187,.983)]
+        q=[(-.251,.141,1.056),(-.298,.154,1.029),(-.334,.162,.991),(-.356,.171,.973),(-.379,.183,.983)]
         lock('Hair ponytail fork',q,[.027,.042,.035,.019,0],[.017,.031,.028,.014,0],
              axis=(.73,-.35,.2),spring=True)
 
@@ -194,8 +150,11 @@ class Hakko(Sculpt):
         bpy.context.view_layer.update()
         for s in (-1,1):
             path=[]
-            for x,z in [(0,.532),(.060,.548),(.125,.582),(.179,.633),(.205,.695),(.208,.750),(.182,.811)]:
+            for x,z in [(0,.532),(.060,.548),(.125,.582),(.170,.625),(.194,.663)]:
                 path.append((s*x,surface(s*x,z)-.004,z))
+            # After the clavicle, the string runs back under the nape. Sampling
+            # the protruding cheek at higher Z would bend it forward once more.
+            path.extend([(s*.202,-.205,.683),(s*.188,-.153,.694),(s*.158,-.110,.699)])
             ob=self.tube('Necklace '+str(s),path,[.0025]*7,[.0025]*7,(0,0,1),self.cord)
             bind(ob,self.arm,'chest')
         def drop(name,scale,offset,mat):
@@ -231,5 +190,5 @@ def revise(arm,collection):
             bpy.data.objects.remove(ob,do_unlink=True)
     h=Hakko(arm,collection,body,face)
     h.body_and_face(body,face)
-    h.cranium();h.ears();h.hairstyle();h.pendant(body,face)
+    h.cranium();h.hairstyle();h.pendant(body,face)
     return {ob.name:json.loads(ob['spring_path']) for ob in h.items if 'spring_path' in ob}
