@@ -2,6 +2,7 @@
 import argparse
 from pathlib import Path
 from eye_art import cheek_detail, prepare_eye_map
+from swept_hair import hair_map
 
 import numpy as np
 from PIL import Image, ImageDraw
@@ -57,6 +58,7 @@ def prepare(database, out):
     out.mkdir(exist_ok=True, parents=True)
     face_atlas(out)
     fur_map(out)
+    hair_map(6,out/"Mui-Bangs.png")
     band = Image.new("RGB",(256,128))
     paint = ImageDraw.Draw(band)
     for y in range(128):

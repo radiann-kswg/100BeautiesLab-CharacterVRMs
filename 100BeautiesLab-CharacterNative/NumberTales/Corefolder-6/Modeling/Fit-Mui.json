@@ -29,13 +29,13 @@
     "width_over_height": 1.1967,
     "screen_left_iris_y": 0.2688,
     "screen_right_iris_y": 0.2927,
-    "white_face_and_cheeks_width_over_height": 0.485,
-    "lower_cheek_y": 0.435,
+    "white_face_and_cheeks_width_over_height": 0.4917,
+    "lower_cheek_y": 0.43,
     "collar_lower_y_p99": 0.5,
     "sapphire_brooch_y": 0.5604,
-    "exposed_cream_ear_area_over_silhouette": 0.0045,
-    "exposed_pale_tail_tip_area_over_silhouette": 0.2156,
-    "tail_tips_y_centroid": 0.5874,
-    "silhouette_IoU_with_art": 0.8988
+    "exposed_cream_ear_area_over_silhouette": 0.0046,
+    "exposed_pale_tail_tip_area_over_silhouette": 0.2147,
+    "tail_tips_y_centroid": 0.5796,
+    "silhouette_IoU_with_art": 0.8886
   }
 }

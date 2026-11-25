@@ -1,5 +1,6 @@
 """Build Mui's editable corefolder and VRM0 from the verified #6 starter in Blender."""
 from argparse import ArgumentParser
+import json
 from math import atan2, cos, pi, sin
 from pathlib import Path
 import sys
@@ -9,12 +10,15 @@ import bpy
 import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
+from mathutils.kdtree import KDTree
+from mathutils.geometry import delaunay_2d_cdt
 
 
 HERE = Path(__file__).resolve().parent
 TRAINING = HERE.parents[1] / "Corefolder-Training"
 ROOT = HERE.parents[3]
 sys.path.insert(0, str(TRAINING))
+sys.path.insert(0, str(HERE))
 from corefolder_springs import add_collider_group, add_spring_chain, save_character
 from modeling_draft import bind, mesh_object
 from refine_models import toon
@@ -150,21 +154,50 @@ def prepare_body_and_face(body, face, arm, collection):
     face["source"] = "#4 reference face with two independently illustrated, reference-style irises"
 
 
-def volume(name, outline, centre, depth, material, coll, attach=None, samples=2,levels=9):
-    edge = sampled_ring(outline,samples)
-    c = Vector(centre)
-    rings = []
-    for n in range(levels):
-        lat = -pi/2+.002 + (pi-.004)*n/(levels-1)
-        r = cos(lat)
-        ring = []
-        for p in edge:
-            q = c+(p-c)*r+Vector((0,depth*sin(lat),0))
-            if attach is not None and lat<0:
-                q += (Vector(attach)-(c-Vector((0,depth,0)))) * (-sin(lat))**3
-            ring.append(q)
-        rings.append(ring)
-    return rings_mesh(name,rings,material,coll)
+def cheek_surface(name,outline,material,coll,thickness,front_limit=None):
+    """A closed fur patch with matched front/back triangles around its concave tips."""
+    border=np.array(sampled_ring(outline,2,tension=.70))
+    p=border[:,[0,2]]
+    points=p.tolist()
+    for z in np.arange(p[:,1].min()+.009,p[:,1].max(),.010):
+        for x in np.arange(p[:,0].min()+.008,p[:,0].max(),.011):
+            inside=False
+            for a,b in zip(p,np.roll(p,-1,axis=0)):
+                if (a[1]>z)!=(b[1]>z) and x<(b[0]-a[0])*(z-a[1])/(b[1]-a[1])+a[0]:
+                    inside=not inside
+            if inside:points.append([x,z])
+    edges=[(i,(i+1)%len(p)) for i in range(len(p))]
+    elements=delaunay_2d_cdt([Vector(q) for q in points],edges,[list(range(len(p)))],1,1e-8)
+    coords,_,triangles,_,_,_=elements
+    front=[];back=[];vertices=[]
+    edges=np.roll(p,-1,axis=0)-p
+    for q in coords:
+        delta=np.array(q)-p
+        along=np.clip(np.sum(delta*edges,axis=1)/np.sum(edges*edges,axis=1),0,1)
+        distance=np.linalg.norm(delta-along[:,None]*edges,axis=1).min()
+        # Smoothly interpolated boundary elevations retain the native cheek
+        # projection without pulling the two lips of a pointed tuft across one another.
+        weight=1/np.maximum(1e-11,np.sum(delta*delta,axis=1))**1.35
+        center=float(weight@border[:,1]/weight.sum())
+        if front_limit:center=front_limit(q.x,q.y,center)
+        depth=thickness*np.sqrt(np.clip(distance/.025,0,1))
+        front.append(len(vertices));vertices.append((q.x,center-depth,q.y))
+        if distance<1e-6:back.append(front[-1])
+        else:back.append(len(vertices));vertices.append((q.x,center+depth,q.y))
+    faces=[]
+    for a,b,c in triangles:
+        if all(front[i]==back[i] for i in (a,b,c)):
+            # Three perimeter points at a sharp corner can enclose one small
+            # triangle with no interior sample. Give its two faces a real bow.
+            tips=np.array([vertices[front[i]] for i in (a,b,c)])
+            x,y,z=tips.mean(axis=0)
+            relief=min(thickness*.32,float(np.linalg.norm(np.diff(tips[:,[0,2]],axis=0),axis=1).min())*.14)
+            f,bk=len(vertices),len(vertices)+1
+            vertices.extend(((x,y-relief,z),(x,y+relief,z)))
+            for h,k in ((a,b),(b,c),(c,a)):
+                faces.extend(((front[h],front[k],f),(back[k],back[h],bk)))
+        else:faces.extend([(front[a],front[b],front[c]),(back[c],back[b],back[a])])
+    return closed_mesh(name,vertices,faces,material,coll)
 
 
 def strand(name, controls, material, coll, *, radial_count=9, samples_per_span=3):
@@ -190,130 +223,227 @@ def strand(name, controls, material, coll, *, radial_count=9, samples_per_span=3
     return rings_mesh(name,rings,material,coll)
 
 
-def forelock(name,stations,cap_tree,face_tree,material,shade,coll,arm,*,layer=0,edge='right'):
-    """Rounded solid fringe lobe draped over the reference cranium with a tapered edge."""
-    controls=np.array(stations)
-    rows=[]
-    for i in range(len(controls)-1):
-        a,b,c,d=(controls[min(len(controls)-1,max(0,k))] for k in (i-1,i,i+1,i+2))
-        for t in (0,.5):
-            rows.append((2*t**3-3*t*t+1)*b+(t**3-2*t*t+t)*.32*(c-a)+(-2*t**3+3*t*t)*c+(t**3-t*t)*.32*(d-b))
-    rows.append(controls[-1])
-    sections=[]
-    across=(0,.045,.24,.50,.76,.955,1)
-    cols=len(across)
-    for i,(z,xl,xr) in enumerate(rows):
-        t=i/(len(rows)-1)
-        stations=[]
-        width=max(.004,xr-xl)
-        chart_z=z
-        for u in across:
-            # Stagger how each lobe emerges from the curved crown. A horizontal
-            # row at constant height gives the joined fringe a straight shelf.
-            z=chart_z+(.024*(u-.5)*(1 if edge=='left' else -1)+.010*np.sin(pi*u))*max(0,1-t/.55)
-            x=xl+width*u
-            rz=np.clip((z-.854)/.222,-.985,.985)
-            scale=max(.02,1-rz*rz)**.47
-            rx=.282*scale
-            y=-.072-.289*scale*max(.04,1-(x/rx)**2)**.5
-            support=[]
-            for tree in (cap_tree,face_tree):
-                hit=tree.ray_cast(Vector((x,-1,z)),Vector((0,1,0)),2)[0]
-                if hit is not None:support.append(hit.y)
-            if support:
-                root_y=min(support)
-                emergence=np.clip((t-.30)/.22,0,1)
-                y=root_y+emergence*(min(y,root_y)-root_y)
-            f=np.clip(t/.34,0,1)
-            emerge=f*f*(3-2*f)
-            crown=min(.012,width*.13)*np.sin(pi*u)**.7*emerge
-            loft=(.0025+layer+.0035*np.sin(pi*t))*emerge-.018*(1-emerge)
-            stations.append((x,y-loft-crown,z))
-        sections.append(stations)
-    front=sum(sections,[])
-    nv=len(front)
-    verts=front+[(x,y+.004,z) for x,y,z in front]
-    polys=[]
-    for i in range(len(rows)-1):
-        for j in range(cols-1):
-            a=i*cols+j
-            quad=(a,a+1,a+cols+1,a+cols)
-            polys.extend((quad,tuple(nv+q for q in reversed(quad))))
-    border=list(range(cols))+[i*cols+cols-1 for i in range(1,len(rows))]+list(range(nv-2,nv-cols-1,-1))+[i*cols for i in range(len(rows)-2,0,-1)]
-    for i,a in enumerate(border):
-        b=border[(i+1)%len(border)];polys.append((b,a,nv+a,nv+b))
-    obj=closed_mesh(name,verts,polys,material,coll)
-    obj.data.materials.append(shade)
-    for i in range(len(rows)-1):
-        if i/(len(rows)-1)<.45:continue
-        j=cols-2 if edge=='right' else 0
-        obj.data.polygons[2*(i*(cols-1)+j)].material_index=1
-    # The tonal material is confined to the narrow exposed side, like the
-    # thickness visible on the large central strand of reference #16.
-    for i,a in enumerate(border):
-        b=border[(i+1)%len(border)]
-        if min(a//cols,b//cols)/len(rows)>.28 and a%cols==b%cols==(cols-1 if edge=='right' else 0):
-            obj.data.polygons[len(polys)-len(border)+i].material_index=1
+def swept_scalp(number,arm,coll,material):
+    """One continuous crown, nape and forehead; each tapered tip has a folded underside."""
+    from swept_hair import PROFILES, VALLEYS, valley
+    anchors=np.array(PROFILES[number])
+    angles,hems,drifts=anchors.T
+    sampling=[]
+    for a,b in zip(angles[:-1],angles[1:]):
+        count=max(2 if .058<b-a<.22 else 1,int(np.ceil((b-a)/.125)))
+        sampling.extend(np.linspace(a,b,count,endpoint=False))
+    azimuth=np.asarray(sampling)
+    size=len(azimuth)
+    # Shape-preserving cubic interpolation rounds the extrema of each lock.
+    def sample(values):
+        delta=np.diff(values)/np.diff(angles)
+        slope=np.zeros_like(values)
+        for j in range(1,len(values)-1):
+            if delta[j]*delta[j-1]>0:slope[j]=2/(1/delta[j]+1/delta[j-1])
+        k=np.searchsorted(angles,azimuth,side='right')-1
+        h=angles[k+1]-angles[k]
+        f=(azimuth-angles[k])/h
+        return (2*f**3-3*f*f+1)*values[k]+(f**3-2*f*f+f)*h*slope[k]+(-2*f**3+3*f*f)*values[k+1]+(f**3-f*f)*h*slope[k+1]
+    hem=sample(hems)
+    # Spread the broad directional drift across neighbouring columns. Each
+    # height must preserve their order around the skull, even between fine tips.
+    kernel=np.exp(-((azimuth[:,None]-azimuth[None,:])/.24)**2)
+    drift=(kernel@sample(drifts))/kernel.sum(1)
+    mui=number==6
+    rz=.205 if mui else .202
+    cz=.860
+    rx=.288 if mui else .272
+    depth=.302 if mui else .299
+    cy=-.072
+    end=np.arccos(np.clip((hem-cz)/rz,-1,1))
+    core=coll.objects.get('Corefolder Cranial Base')
+    core_tree=BVHTree.FromObject(core,bpy.context.evaluated_depsgraph_get()) if core else None
+    rings=[]
+    fractions=np.array([.004,.16,.31,.45,.56,.68,.77,.85,.92,.97,1.])
+    for t in fractions:
+        # Keep the upper latitudes level across the dome. The differences in
+        # lock length develop in the lower third, outside the forehead.
+        split=.56
+        th=np.full_like(end,t/split*.95) if t<=split else .95+(end-.95)*(t-split)/(1-split)
+        shell=np.sin(th)
+        front=np.clip(np.cos(azimuth),0,1)
+        # Sweep the flow to the part at the crown, then release it at each
+        # drawn tip. A slight asymmetry also carries through the back of the bob.
+        elevation=np.cos(th)
+        a=azimuth+(.17 if mui else .15)*np.maximum(elevation,0)**1.25*(.18+.82*front)
+        scoop=np.zeros_like(a)
+        for tip,root,start in VALLEYS[number]:
+            d,strength=valley(azimuth,t,tip,root,start)
+            scoop+=strength*(.0025*np.exp(-(d/.049)**2)-.002*np.exp(-((d-.07)/.10)**2))
+        ripple=.0045*np.cos(5*a+th*.9)*np.maximum(-np.cos(a),0)*shell**2
+        radial=shell**.90*(1+(ripple-scoop)/rx)
+        z=cz+rz*elevation
+        shoulder=np.exp(-((np.abs(a)-1.22)/.38)**4)
+        sweep=np.clip((.854-z)/.14,0,1)
+        radial+=shoulder*sweep*np.maximum(0,(.960+.075*sweep)-radial)
+        xx=rx*radial*np.sin(a)+drift*(1-elevation)**2*.40
+        yy=cy-(depth+.009*front**2)*radial*np.cos(a)
+        zz=cz+rz*elevation
+        xx+=.016*np.maximum(elevation,0)**1.5
+        row=[]
+        for x,y,z in zip(xx,yy,zz):
+            # At the temple the canonically round skull extends further
+            # forward than the tapered side lock. Seat the full thickness
+            # outside that skin and blend the clearance into its neighbours.
+            if core_tree:
+                center=Vector((0,-.085,z))
+                ray=Vector((x,y,z))-center
+                radius=ray.length
+                ray.normalize()
+                hit,_,_,skin=core_tree.ray_cast(center,ray,.58)
+                if hit is not None:
+                    need=skin+.015-radius
+                    extra=.5*(need+np.sqrt(need*need+.002**2))
+                    x+=ray.x*extra;y+=ray.y*extra
+            row.append((x,y,z))
+        rings.append(row)
+    # A narrow return follows the outer surface all the way back up. A chord
+    # closing across the forehead would pass through the movable lids.
+    outside=list(rings)
+    for row in reversed(outside):
+        rings.append([(x*.985,cy+.985*(y-cy),z-.002*np.clip((z-.96)/.09,0,1)) for x,y,z in row])
+    name='Mui hair • continuous swept bob' if mui else 'Hair scalp and swept forelocks'
+    # A concave tip has a saddle-shaped quad. Set matching diagonals on
+    # front and return so neither tessellator can flip one side independently.
+    faces=[]
+    def reciprocal(index):
+        row,col=divmod(index,size)
+        return (len(rings)-1-row)*size+col
+    for i in range(len(outside)-1):
+        for j in range(size):
+            k=(j+1)%size
+            a,b,c,d=i*size+j,i*size+k,(i+1)*size+k,(i+1)*size+j
+            for tri in ((a,b,c),(a,c,d)):
+                faces.extend((tri,tuple(reciprocal(v) for v in reversed(tri))))
+    last=(len(outside)-1)*size
+    for j in range(size):
+        a,b=last+j,last+(j+1)%size
+        faces.append((a,b,reciprocal(b),reciprocal(a)))
+    faces.extend((tuple(range(size)),tuple(reciprocal(i) for i in reversed(range(size)))))
+    obj=closed_mesh(name,[p for row in rings for p in row],faces,material,coll)
+    uv=obj.data.uv_layers.new(name='Swept crown')
+    for poly in obj.data.polygons:
+        data=[]
+        for i in poly.loop_indices:
+            ring,col=divmod(obj.data.loops[i].vertex_index,size)
+            data.append(((azimuth[col]+pi)/(2*pi),fractions[min(ring,len(rings)-1-ring)]))
+        seam=max(u for u,_ in data)-min(u for u,_ in data)>.5
+        for i,(u,v) in zip(poly.loop_indices,data):
+            uv.data[i].uv=(u+1 if seam and u<.5 else u,v)
     bind(obj,arm)
+    for sign,side in ((1,'L'),(-1,'R')):
+        group=obj.vertex_groups.new(name='Moving temple '+side)
+        center=1.12 if mui else 1.27
+        nearest=int(np.argmin(abs(azimuth-sign*center)))
+        path=[rings[i][nearest] for i in (6,7,8,10)]
+        obj['temple path '+side]=json.dumps([list(p) for p in path])
+        for i,v in enumerate(obj.data.vertices):
+            ring,col=divmod(i,size)
+            t=fractions[min(ring,len(rings)-1-ring)]
+            span=np.clip((.40-abs(azimuth[col]-sign*center))/.19,0,1)
+            f=np.clip((t-.735)/.25,0,1)*span
+            if f>0:group.add([i],float(f*f*(3-2*f)),'REPLACE')
     return obj
 
 
-def head(arm, coll, hair, cream, pale, white):
-    # The bob wraps behind the cheek and forms a shallow scallop at the nape.
-    # Front hairline is defined in angle from the forward axis. Pairs of centre locks part over the eyes.
-    angles = [-pi,-2.8,-2.45,-2.16,-1.82,-1.53,-1.29,-1.00,-.78,-.60,-.46,-.31,
-              -.24,-.17,-.10,-.069,-.037,.03,.062,.105,.17,.23,.29,.36,.48,.55,.66,.80,
-              1.0,1.29,1.53,1.82,2.16,2.45,2.80,pi]
-    heights = [.671,.686,.681,.691,.715,.722,.744,.810,.868,.888,.900,.922,
-               .901,.875,.858,.911,.928,.880,.870,.914,.938,.909,.863,.846,.880,.912,.898,.855,
-               .801,.735,.722,.715,.691,.681,.686,.671]
-    rows = []
-    # Resolve each drawn hairline inflection exactly, without dense sampling on the rounded nape.
-    sections=sorted(set(np.round(np.r_[np.linspace(-pi,pi,29)[:-1],angles[:-1]],4)))
-    for i in range(10):
-        row = []
-        for a in sections:
-            bottom = np.interp(a,angles,heights)
-            bottom += .005*sin(3*a) + .007*max(0,-cos(a))**2*cos(9*a)
-            # A squared bob below the triangular ears with a flatter crown.
-            bottom += .022*max(0,cos(a))
-            opening=np.clip((.99-abs(a))/.25,0,1)
-            bottom=max(bottom,(.947+.010*cos(3*a))*opening+bottom*(1-opening))
-            delta=(bottom-.858)/.218
-            end = np.arccos(np.clip(np.sign(delta)*abs(delta)**(1/.79),-.999,.999))
-            th = .005+(end-.005)*i/9
-            shape = sin(th)
-            back = max(0,-cos(a))
-            ripple = .009*back*cos(7*a+th*.7)*sin(th)**3
-            sweep=.050*shape**3*np.exp(-(a/.78)**2)
-            x = (.303+ripple)*shape**.80*sin(a)+sweep
-            y = -.071-(.295+ripple)*shape**.86*cos(a)
-            y -= .006*np.exp(-(a/.8)**2)*shape**2*(.5+.5*cos(12*a+4*th))
-            z = .858+.218*np.sign(cos(th))*abs(cos(th))**.79
-            row.append((x,y,z))
-        rows.append(row)
-    hem=rows[-1]
-    for inset in (.06,.76):
-        rows.append([((1-inset)*x, -.074+(1-inset)*(y+.074), z+inset*(.80-z))
-                     for x,y,z in hem])
-    cap = rings_mesh("Mui hair • shaped bob and nape",rows,hair,coll)
-    bind(cap,arm)
+def temple_guide(cap,name,side,coll):
+    # The rig builder weights these samples along its standard spring
+    # chain. Their weights are blended onto the continuous scalp below.
+    mesh=bpy.data.meshes.new(name+' guide')
+    mesh.from_pydata([v.co for v in cap.data.vertices],[],[])
+    obj=bpy.data.objects.new(name,mesh)
+    coll.objects.link(obj)
+    obj['spring_path']=cap['temple path '+side]
+    return obj
+
+
+def skin_temples(cap,guides):
+    head=cap.vertex_groups['head']
+    for side,obj in guides:
+        mask=cap.vertex_groups['Moving temple '+side]
+        for v in cap.data.vertices:
+            blend=next((g.weight for g in v.groups if g.group==mask.index),0)
+            if not blend:continue
+            head_weight=1-blend
+            for weight in obj.data.vertices[v.index].groups:
+                bone=obj.vertex_groups[weight.group].name
+                if bone=='head':head_weight+=blend*weight.weight
+                else:
+                    group=cap.vertex_groups.get(bone) or cap.vertex_groups.new(name=bone)
+                    group.add([v.index],blend*weight.weight,'REPLACE')
+            head.add([v.index],head_weight,'REPLACE')
+        cap.vertex_groups.remove(mask)
+        bpy.data.objects.remove(obj,do_unlink=True)
+
+
+def join_hair_roots(arm,cap,parts):
+    """Join the exterior at the ear and temple and ease its spring weights into the scalp."""
+    def source(obj):
+        mesh=obj.data
+        mesh.calc_loop_triangles()
+        p=[v.co.copy() for v in mesh.vertices]
+        triangles=[t.vertices[:] for t in mesh.loop_triangles]
+        surface=BVHTree.FromPolygons(p,triangles,all_triangles=True)
+        nearest=KDTree(len(p))
+        for i,v in enumerate(p):nearest.insert(v,i)
+        nearest.balance()
+        weights=[{obj.vertex_groups[g.group].name:g.weight for g in v.groups
+                  if g.weight>1e-6 and obj.vertex_groups[g.group].name in arm.data.bones}
+                 for v in mesh.vertices]
+        return surface,nearest,weights
+    for obj in [cap,*parts]:
+        if obj.data.uv_layers.active:obj.data.uv_layers.active.name="Hair"
+    for part in parts:
+        outer,outer_kd,ow=source(cap)
+        lobe,lobe_kd,lw=source(part)
+        op=cap.modifiers.new("Weld "+part.name,"BOOLEAN")
+        op.operation='UNION'
+        op.solver='EXACT'
+        op.material_mode='TRANSFER'
+        op.object=part
+        cap.modifiers.move(len(cap.modifiers)-1,0)
+        bpy.context.view_layer.objects.active=cap
+        bpy.ops.object.modifier_apply(modifier=op.name)
+        if not len(cap.data.vertices):raise ValueError("Failed hair junction: "+part.name)
+        for group in list(cap.vertex_groups):cap.vertex_groups.remove(group)
+        groups={}
+        for v in cap.data.vertices:
+            pos=v.co
+            d0=outer.find_nearest(pos)[3]
+            d1=lobe.find_nearest(pos)[3]
+            if d0<=d1+.00002:
+                weights=ow[outer_kd.find(pos)[1]]
+            else:
+                # The fixed common seam and its adjacent 16-mm falloff keep a
+                # moving ear or strand from tearing away on a head turn.
+                factor=min(1.,d0/.016)
+                factor=factor*factor*(3-2*factor)
+                weights={k:w*factor for k,w in lw[lobe_kd.find(pos)[1]].items()}
+                weights['head']=weights.get('head',0)+1-factor
+            weights={k:w for k,w in sorted(weights.items(),key=lambda it:-it[1])[:4] if w>1e-7}
+            total=sum(weights.values())
+            if total<=1e-6:raise ValueError("No hair weight: "+part.name)
+            for k,w in weights.items():
+                if k not in groups:groups[k]=cap.vertex_groups.new(name=k)
+                groups[k].add([v.index],w/total,'REPLACE')
+        bpy.data.objects.remove(part,do_unlink=True)
+        cap.data.update()
     bpy.context.view_layer.update()
-    dep=bpy.context.evaluated_depsgraph_get()
-    cap_bvh=BVHTree.FromObject(cap,dep)
-    face_bvh=BVHTree.FromObject(bpy.data.objects['Face'],dep)
-    front=toon("Mui • rounded fringe", "#FF76A2",0)
-    rim=toon("Mui • fringe edge", "#E86694",0)
-    # Reference #16 uses a wide sweep and a small number of separate rounded tips.
-    # The two middle tips and the direction of the outer locks are specific to Mui.
-    locks=[('left outer',[(.990,-.229,-.086),(.947,-.248,-.073),(.903,-.252,-.099),(.859,-.243,-.146),(.809,-.217,-.174),(.776,-.214,-.205)],.001,'right'),
-           ('right outer',[(.987,.050,.231),(.947,.058,.242),(.908,.097,.253),(.858,.151,.245),(.807,.183,.226),(.785,.209,.218)],.002,'left'),
-           ('flared sweep',[(.983,-.161,.076),(.952,-.173,.072),(.923,-.169,.039),(.901,-.151,-.015),(.880,-.138,-.069),(.868,-.129,-.118)],.004,'right'),
-           ('inner left',[(.977,-.076,.045),(.933,-.090,.027),(.896,-.080,.005),(.863,-.062,-.008),(.837,-.041,-.019),(.819,-.016,-.010)],.007,'left'),
-           ('inner right',[(.981,-.004,.139),(.941,-.006,.127),(.900,.012,.098),(.865,.033,.077),(.838,.039,.054),(.819,.030,.035)],.010,'right')]
-    for label,profile,layer,edge in locks:
-        forelock('Mui fringe '+label,profile,cap_bvh,face_bvh,front,rim,coll,arm,layer=layer,edge=edge)
-    cheek_ink=toon("Mui • outer cheek line","#544553",0)
+
+
+def head(arm, coll, hair, cream, pale, white):
+    face=bpy.data.objects['Face']
+    cap_mat=texture("Mui • swept crown and forelocks",HERE/'Mui-Bangs.png',.0015)
+    cap=swept_scalp(6,arm,coll,cap_mat)
+    parts=[]
+    guides=[]
+    bpy.context.view_layer.update()
+    face_bvh=BVHTree.FromObject(face,bpy.context.evaluated_depsgraph_get())
     garment=BVHTree.FromObject(bpy.data.objects['Mui sky-blue collar'],bpy.context.evaluated_depsgraph_get())
     for s,side in ((1,"L"),(-1,"R")):
         # A rounded white cheek split into two pinched tufts, with integral thickness.
@@ -333,34 +463,16 @@ def head(arm, coll, hair, cream, pale, white):
             face_hit=face_bvh.ray_cast(Vector((x,-1,z)),Vector((0,1,0)),2)[0]
             new_y=y+.024
             if face_hit is not None:
-                new_y=(1-join)*(face_hit.y+.014)+join*new_y
+                new_y=(1-join)*(face_hit.y+.040)+join*new_y
             hit=garment.ray_cast(Vector((x,-1,z)),Vector((0,1,0)),2)[0]
             if hit is not None and abs(x)>.178:new_y=min(new_y,hit.y-.007)
             return (x,new_y-extra,z)
-        cheek = volume("Mui cheek tufts "+side,[cheek_point(x,y,z) for x,y,z in pts],
-                       cheek_point(.213,-.283,.738),.025,white,coll,samples=2,levels=6)
-        # Interior section rings also cross the collar's convex arc. Wrap them
-        # individually, retaining a small thickness between front and rear rows.
-        for v in cheek.data.vertices:
-            x,y,z=v.co
+        def garment_limit(x,z,y):
             hit=garment.ray_cast(Vector((x,-1,z)),Vector((0,1,0)),2)[0]
-            if hit is not None and abs(x)>.179:
-                v.co.y=min(y,hit.y-.009+.1*(y+.29))
-        cheek.data.update()
+            return min(y,hit.y-.010) if hit is not None and abs(x)>.179 else y
+        cheek=cheek_surface("Mui cheek tufts "+side,[cheek_point(x,y,z) for x,y,z in pts],
+                            white,coll,.018,garment_limit)
         bind(cheek,arm)
-        # A short stroke follows only the exposed feather edge. An inverted outline across
-        # the cheek root would intersect the deforming Face and leave dots in Unity.
-        edge_points=[(.303,-.260,.743,.0007),(.290,-.272,.719,.00165),(.271,-.280,.706,.00165),
-                     (.248,-.288,.703,.0007)]
-        bpy.context.view_layer.update()
-        cheek_tree=BVHTree.FromObject(cheek,bpy.context.evaluated_depsgraph_get())
-        contour=[]
-        for x,y,z,w in edge_points:
-            xx,yy,zz=cheek_point(x,y,z,.0025)
-            hit=cheek_tree.ray_cast(Vector((xx,-1,zz)),Vector((0,1,0)),2)[0]
-            if hit is not None:yy=hit.y-.0015
-            contour.append((xx,yy,zz,w,.0009))
-        bind(strand("Mui outer cheek stroke "+side,contour,cheek_ink,coll,radial_count=4,samples_per_span=1),arm)
         # The wide, near-horizontal ear rim is visible between the outer pink edge and the draped side lock.
         edge=[(.324,.120,1.077),(.318,.068,1.037),(.312,-.002,.993),(.304,-.085,.955),
               (.296,-.151,.896),(.278,-.185,.817),(.286,-.110,.847),(.299,.002,.864),
@@ -368,7 +480,7 @@ def head(arm, coll, hair, cream, pale, white):
         edge=sampled_ring([(s*(x+.022*np.clip((1.075-z)/.16,0,1)),y,z) for x,y,z in edge],2,tension=.62)
         center=Vector((s*.326,-.025,.949))
         rim=[]
-        for scale, dx in ((.04,-.135),(.72,-.092),(.93,-.041),(1,0),(.93,.003),(.69,.006),(.53,.009),(.49,.008),(.02,.005)):
+        for scale, dx in ((.04,-.167),(.53,-.106),(.85,-.048),(1,0),(.93,.003),(.69,.006),(.53,.009),(.49,.008),(.02,.005)):
             rim.append([center+(p-center)*scale+Vector((s*dx,0,0)) for p in edge])
         ear=rings_mesh("Mui fox ear "+side,rim,hair,coll)
         ear.data.materials.append(cream)
@@ -379,21 +491,13 @@ def head(arm, coll, hair, cream, pale, white):
             if 4<=ring_index<=5:p.material_index=1
             if 6<=ring_index<=7:p.material_index=2
         bind(ear,arm,"head_Ear"+side+"_001")
-        hood=[(.050,-.025,1.037),(.135,.001,1.046),(.233,.057,1.056),(.324,.120,1.077),
-              (.318,.078,1.030),(.301,.032,.965),(.284,-.054,.892),(.267,-.126,.834),
-              (.226,-.142,.832),(.164,-.130,.890),(.074,-.077,.966)]
-        cover=volume("Mui swept outer ear "+side,[(s*x,y+.033,z) for x,y,z in hood],
-                     (s*.209,.028,.971),.045,hair,coll,samples=1,levels=6)
-        bind(cover,arm,"head_Ear"+side+"_001")
-
-        def mirror(stations): return [(s*x,y,z,w,d) for x,y,z,w,d in stations]
-        # In the official front the side bangs form a single broad sweep with long rounded tips.
-        path=mirror([(.173,-.20,.973,.020,.012),(.201,-.216,.937,.035,.016),
-                     (.232,-.230,.897,.049,.026),(.252,-.209,.846,.045,.027),
-                     (.256,-.200,.806,.034,.022),(.272,-.204,.770,.002,.001)])
-        side_obj=strand("Mui temple sweep "+side,path,hair,coll)
-        add_spring_chain(arm,side_obj,"MuiHair"+side,[p[:3] for p in (path[1],path[2],path[3],path[-1])],
+        parts.append(ear)
+        guide=temple_guide(cap,"Mui temple "+side,side,coll)
+        add_spring_chain(arm,guide,"MuiHair"+side,json.loads(guide["spring_path"]),
                          parent="head",kind="hair",radius=.010)
+        guides.append((side,guide))
+    skin_temples(cap,guides)
+    join_hair_roots(arm,cap,parts)
 
 
 # Tail-tip boundaries in the official 520 x 448 rear TailsUnit swatch (image y, x).
@@ -459,15 +563,56 @@ def collar_point(torso,angle,t,offset=0):
     return axis+tangent*(radius+offset)
 
 
+def fit_outfit_skin(body,objects):
+    """Attach the clothing to the same skin as the piece of shoulder it covers."""
+    mesh=body.data
+    mesh.calc_loop_triangles()
+    points=[body.matrix_world@v.co for v in mesh.vertices]
+    triangles=[tri.vertices[:] for tri in mesh.loop_triangles]
+    tree=BVHTree.FromPolygons(points,triangles,all_triangles=True)
+    weights=[{body.vertex_groups[g.group].name:g.weight for g in v.groups if g.weight>1e-6}
+             for v in mesh.vertices]
+    def surface_weights(position):
+        point,_,index,_=tree.find_nearest(position)
+        ia,ib,ic=triangles[index]
+        a,b,c=points[ia],points[ib],points[ic]
+        normal=(b-a).cross(c-a)
+        if normal.length_squared<1e-16:return weights[ia]
+        wb=(point-a).cross(c-a).dot(normal)/normal.length_squared
+        wc=(b-a).cross(point-a).dot(normal)/normal.length_squared
+        weighted={}
+        for vi,ratio in ((ia,1-wb-wc),(ib,wb),(ic,wc)):
+            for key,value in weights[vi].items():
+                weighted[key]=weighted.get(key,0)+max(0,ratio)*value
+        return dict(sorted(weighted.items(),key=lambda row:-row[1])[:4])
+    for obj in objects:
+        if obj.type!='MESH':continue
+        obj['corefolder_layer']='Outfit'
+        rigid='six-sided floral brooch' in obj.name
+        anchor=max((obj.matrix_world@v.co for v in obj.data.vertices),key=lambda p:p.z) if rigid else None
+        fixed=surface_weights(anchor) if rigid else None
+        for grp in list(obj.vertex_groups):obj.vertex_groups.remove(grp)
+        groups={}
+        for v in obj.data.vertices:
+            values=fixed if rigid else surface_weights(obj.matrix_world@v.co)
+            total=sum(values.values())
+            for key,weight in values.items():
+                if weight<=1e-7:continue
+                if key not in groups:groups[key]=obj.vertex_groups.new(name=key)
+                groups[key].add([v.index],weight/total,'REPLACE')
+
+
 def collar_and_brooch(arm,coll,database):
+    existing=set(coll.objects)
     torso=BVHTree.FromObject(bpy.data.objects["Body"],bpy.context.evaluated_depsgraph_get())
     def surface(a,t,off=0):return collar_point(torso,a,t,off)
     blue=toon("Mui collar • sky blue","#6AA6D7",.0017)
     ink=toon("Mui • seam and dark bezel","#242433",0)
     deep=toon("Mui brooch • sapphire edge","#185EBD",.0008)
     rings=[]
-    for t,off in ((0,-.008),(0,.001),(.06,.004),(.27,.003),(.60,.002),(.94,.002),
-                  (1,0),(1,-.009),(.94,-.013),(.48,-.012),(.04,-.010)):
+    for t,off in ((0,-.005),(0,.001),(.06,.004),(.24,.003),(.43,.003),(.63,.002),
+                  (.81,.002),(.94,.002),(1,0),(1,-.003),(.92,-.004),(.77,-.004),
+                  (.61,-.005),(.45,-.005),(.29,-.005),(.14,-.005),(.04,-.005)):
         rings.append([surface(2*pi*j/42,t,off) for j in range(42)])
     # A hollow mantle, with an open neck and a stitched thick rim.
     n=len(rings[0])
@@ -509,7 +654,7 @@ def collar_and_brooch(arm,coll,database):
         hit,_,_,_=torso.ray_cast(axis,Vector((0,1,0)),2)
         y=hit.y if hit is not None else -.462
         return (axis.x,y-.028+depth,height)
-    rings=[[gem_point(x,z,size,d) for x,z in xy] for size,d in ((.88,.023),(1,.014),(1,0),(.935,-.006))]
+    rings=[[gem_point(x,z,size,d) for x,z in xy] for size,d in ((.88,.018),(1,.014),(1,0),(.935,-.006))]
     verts=sum(rings,[])+[gem_point(0,0,1,-.012)]
     faces=[tuple(reversed(range(6)))]
     for i in range(3):
@@ -532,6 +677,7 @@ def collar_and_brooch(arm,coll,database):
     top=Vector(gem_point(0,1,1,-.007))
     link=[(*p0.lerp(top,t),.004,.003) for t in (0,.3,.7,1)]
     bind(strand("Mui brooch fastening",link,deep,coll),arm,"chest")
+    fit_outfit_skin(bpy.data.objects['Body'],set(coll.objects)-existing)
 
 
 def main():
@@ -550,8 +696,11 @@ def main():
     from canonical_face import fit_reference_face
     fit_reference_face(face,arm)
     prepare_body_and_face(body,face,arm,coll)
+    from torso_profile import add_cranial_base
+    add_cranial_base(arm,face,6,coll)
     hair=toon("Mui • raspberry hair", "#FF76A2",.0021)
     white=toon("Mui • white cheek fur","#FFFFFF",0)
+    white.vrm_addon_extension.mtoon1.extensions.vrmc_materials_mtoon.shade_color_factor=(.96,.95,.96)
     cream=toon("Mui • ivory ear fur","#FFFDF2",0)
     pale=toon("Mui • pink inner ear","#FFCEED",0)
     chest=add_collider_group(arm,"Mui rump","hips",[((0,.05,.34),.23)])
