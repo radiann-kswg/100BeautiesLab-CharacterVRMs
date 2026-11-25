@@ -290,6 +290,38 @@ def inspect_editable_scene(ungrouped):
     groups = sorted(g.comment for g in ext.secondary_animation.bone_groups)
     keys = {o.name: len(o.data.shape_keys.key_blocks) for o in bpy.context.scene.objects
             if o.type == "MESH" and o.data.shape_keys}
+    from face_articulation import LOWER, ORAL, UPPER
+    face, = [o for o in selected if o.get("corefolder_mouth_revision")]
+    face_keys = face.data.shape_keys.key_blocks
+    human = {h.bone: h.node.bone_name for h in ext.humanoid.human_bones}
+    head = arm.pose.bones[human["head"]]
+    face_from_arm = face.matrix_world.inverted() @ arm.matrix_world
+    mouth = {}
+    poses = {"Neutral": {}, "Aa25": {"a": .25}, "Aa50": {"a": .5}, "Aa100": {"a": 1},
+             "Aa50Joy50": {"a": .5, "Joy": .5}, "Ih50Sorrow50": {"i": .5, "Sorrow": .5}}
+    for label, values in poses.items():
+        for key in list(face_keys)[1:]:
+            key.value = values.get(key.name, 0.)
+        rest = coordinates(face)
+        gaps = rest[list(UPPER[1:-1]), 2] - rest[list(LOWER[1:-1]), 2]
+        rec = {"center_gap_mm": float(gaps[3] * 1000), "minimum_rim_gap_mm": float(gaps.min() * 1000),
+               "corner_width_mm": float(abs(rest[UPPER[0], 0] - rest[UPPER[-1], 0]) * 1000)}
+        for slot, angle in (("head", 12), ("neck", 8)):
+            parent = arm.pose.bones[human[slot]]
+            basis = parent.matrix_basis.copy()
+            head_before = face_from_arm @ head.matrix
+            try:
+                parent.matrix_basis = basis @ Matrix.Rotation(np.deg2rad(angle), 4, "Y")
+                actual = coordinates(face)[ORAL]
+                delta = np.array(face_from_arm @ head.matrix @ head_before.inverted())
+                rigid = rest[ORAL] @ delta[:3, :3].T + delta[:3, 3]
+                rec[f"{slot}_{angle}_deg_rigid_residual_mm"] = float(np.linalg.norm(actual - rigid, axis=1).max() * 1000)
+            finally:
+                parent.matrix_basis = basis
+                bpy.context.view_layer.update()
+        mouth[label] = rec
+    for key in list(face_keys)[1:]:
+        key.value = 0
     checks = []
     for group in ext.secondary_animation.bone_groups:
         name = group.bones[0].bone_name
@@ -312,7 +344,7 @@ def inspect_editable_scene(ungrouped):
             checks.append(dict(group=group.comment, mesh=obj.name, max_local_delta=moved,
                                max_rest_residual=residual, nonmanifold_edges=nonmanifold))
     return dict(blender=bpy.app.version_string, packed_images=images, reference_images=sorted(refs),
-                springs=groups, shape_keys=keys, root_rotation_0_2_rad=checks)
+                springs=groups, shape_keys=keys, root_rotation_0_2_rad=checks, mouth_poses=mouth)
 
 
 def inspect_blend(path, blender, grouped, images, expected_groups, errors):
@@ -332,6 +364,14 @@ def inspect_blend(path, blender, grouped, images, expected_groups, errors):
         errors.append("Editable blend is missing packed material or reference images")
     if not report["reference_images"] or report["springs"] != sorted(expected_groups) or not report["shape_keys"]:
         errors.append("Editable blend contents differ from VRM or lack reference images")
+    poses = report["mouth_poses"]
+    if not (poses["Neutral"]["center_gap_mm"] < 1 and
+            poses["Neutral"]["center_gap_mm"] < poses["Aa25"]["center_gap_mm"] <
+            poses["Aa50"]["center_gap_mm"] < poses["Aa100"]["center_gap_mm"]):
+        errors.append("Closure or progressive phoneme opening failed")
+    if any(p["minimum_rim_gap_mm"] < -.01 or p["head_12_deg_rigid_residual_mm"] > .001 or
+           p["neck_8_deg_rigid_residual_mm"] > .001 for p in poses.values()):
+        errors.append("Fitted oral surfaces intersect or fail to follow the head in one or more poses")
     checks = report["root_rotation_0_2_rad"]
     if set(g["group"] for g in checks) != set(expected_groups):
         errors.append("Some spring roots do not address editable mesh vertices")
@@ -391,6 +431,7 @@ def audit(path, starter, record, validator, blender, unity_root):
 
 
 if __name__ == "__main__" and "--inspect-blend" in sys.argv:
+    sys.path.insert(0, str(HERE))
     print("EDITABLE_JSON " + json.dumps(inspect_editable_scene(sys.argv[-1]), ensure_ascii=True))
 elif __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
