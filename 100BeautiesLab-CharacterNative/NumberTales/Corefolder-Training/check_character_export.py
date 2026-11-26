@@ -255,8 +255,15 @@ def textures(glb, errors):
         with Image.open(io.BytesIO(data)) as image:
             image.load()
             bbox = image.convert("RGB").getextrema()
+            if any(key == "_MainTex" for _, key in uses.get(i, [])):
+                if image.format != "PNG" or image.mode != "RGBA" or image.size != (1024, 1024):
+                    errors.append(f"Main color atlas differs from the reference RGBA PNG format: {item['name']}")
             images.append({"name": item["name"], "bytes": len(data), "sha256": sha(data), "mime": item["mimeType"],
-                           "size": list(image.size), "rgb_channel_ranges": bbox, "mtoon_bindings": uses.get(i, [])})
+                           "mode": image.mode, "size": list(image.size), "rgb_channel_ranges": bbox,
+                           "mtoon_bindings": uses.get(i, [])})
+    color_pages = [i for i, bindings in uses.items() if any(key == "_MainTex" for _, key in bindings)]
+    if len(color_pages) not in (1, 2):
+        errors.append(f"Expected one or two reference-size color atlases, found {len(color_pages)}")
     if not images or not uses:
         errors.append("Missing embedded material textures")
     return images

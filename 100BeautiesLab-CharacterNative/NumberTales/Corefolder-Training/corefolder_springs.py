@@ -260,10 +260,13 @@ def save_character(arm, meshes, blend_path, vrm_path, *, title, version="1.0", c
     ext.vrm0.meta.title, ext.vrm0.meta.version = title, str(version)
     if bpy.context.mode != "OBJECT":
         bpy.ops.object.mode_set(mode="OBJECT")
+    atlas_pages = ()
     if character_number is not None:
         from face_articulation import finish_face
         face, = [o for o in meshes if o.name == "Face"]
         finish_face(character_number, face, arm)
+        from texture_atlas import pack_character_atlas
+        atlas_pages = pack_character_atlas(character_number, meshes, face)
     _select(arm, meshes)
     bpy.context.scene["corefolder_stage"] = "Individual character with expressions and secondary animation"
     bpy.context.scene["corefolder_export_meshes"] = json.dumps([o.name for o in meshes], ensure_ascii=False)
@@ -311,4 +314,8 @@ def save_character(arm, meshes, blend_path, vrm_path, *, title, version="1.0", c
             else:
                 blend_path.unlink()
             raise
+        for page in atlas_pages:
+            staged_page = Path(blend_stage) / page.name
+            staged_page.write_bytes(page.packed_file.data)
+            staged_page.replace(blend_path.parent / page.name)
     return {"sha256": digest, "roots": exported, "blend": str(blend_path), "vrm": str(vrm_path)}
