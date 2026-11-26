@@ -51,7 +51,7 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 ### AI 生成パイプラインからの参照（2026-08-29 新設）
 
 `vrm_corefolder<番号>.png`（各 `Corefolder-<番号>/` 直下のサムネイル）は、
-[100BeautiesLab_GeneratorsAI](https://github.com/radiann-kswg/100BeautiesLab_GeneratorsAI) の画像生成パイプラインが
+`100BeautiesLab_GeneratorsAI`（非公開）の画像生成パイプラインが
 **「3D 原典モデルの作風アンカー」として最優先参照に注入**します（環境変数 `NT_VRM_STYLE_REFS_DIR` に
 `Assets/100BeautiesLab-CharacterVRM/NumberTales/` を指定。ファイル名 glob で解決）。
 
