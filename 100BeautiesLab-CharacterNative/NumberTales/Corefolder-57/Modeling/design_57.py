@@ -116,8 +116,10 @@ def build_head(arm,coll,hair,white):
 def make_band(arm,coll,torso,ink,gold):
     existing=set(coll.objects)
     def point(u,v,offset=.006):
-        a=-1.36+.69*u
-        z=.469+.135*v-.118*(u-.5)
+        a=-1.40+.76*u
+        # Ease the upper piping across the rounded shoulder. A constant
+        # slope at this height drives the outer corner onto the torso pole.
+        z=.508+.113*v-(.115-.047*v)*(u-.5)
         axis=Vector((0,-.065,z))
         direction=Vector((sin(a),-cos(a),0))
         p,n,_,_=torso.ray_cast(axis,direction,1)

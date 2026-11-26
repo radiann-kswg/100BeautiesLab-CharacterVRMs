@@ -424,11 +424,15 @@ class Sculpt:
         return [(ring(outer,0),self.blue),(ring(inner,.010),self.blue),(ring(tuft,.014),self.cream)],plane(.04,.946,.016),self.pale
 
     def locks(self):
+        head=add_collider_group(self.arm,'49 cheeks','head',[
+            ((0,-.065,.87),.180), ((-.094,-.242,.817),.140), ((.094,-.242,.817),.140)])
         def lock(name, path, widths, depths, *, axis=(1,0,0), swinging=False, mat=None):
             ob=self.tube('Hair | '+name,path,widths,depths,axis,mat or self.hair)
             if swinging:
-                add_spring_chain(self.arm,ob,'Hair49_'+name.replace(' ','_'),path,
-                                 parent='head', kind='hair', radius=.007)
+                # The upper third belongs to the scalp. Only the hanging
+                # cheek and hooked tip swing when the head changes direction.
+                add_spring_chain(self.arm,ob,'Hair49_'+name.replace(' ','_'),path[2:],
+                                 parent='head', kind='hair', radius=.012, colliders=[head])
             else:
                 bind(ob,self.arm)
             return ob
@@ -436,8 +440,8 @@ class Sculpt:
             def mirror(points):
                 return [(sign*x,y,z) for x,y,z in points]
             # The terminal hook points outward along the cheek in the official artwork.
-            cheek=lock('cheek '+side,mirror([(.173,-.210,.966),(.209,-.231,.917),(.248,-.243,.857),(.263,-.257,.807),(.252,-.262,.760),(.260,-.256,.728),(.290,-.231,.736)]),
-                       [.017,.034,.043,.038,.030,.018,0],[.013,.023,.029,.025,.018,.011,0],axis=(sign*.78,.51,0),swinging=True)
+            cheek=lock('cheek '+side,mirror([(.173,-.210,.966),(.216,-.231,.917),(.262,-.243,.857),(.273,-.257,.807),(.260,-.262,.760),(.272,-.257,.728),(.310,-.237,.743)]),
+                       [.017,.032,.039,.036,.030,.018,0],[.013,.023,.029,.025,.018,.011,0],axis=(sign*.78,.51,0),swinging=True)
             cheek.data.materials.append(self.strand)
             for polygon in cheek.data.polygons:
                 if polygon.center.z<.87 and polygon.normal.x*sign<-.42 and polygon.normal.y>-.58:

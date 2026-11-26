@@ -550,7 +550,8 @@ def collar_point(torso,angle,t,offset=0):
     slit=max(0,1-abs((angle+pi)%(2*pi)-pi)/.16)
     low=.572+.044*side+.026*back+.012*slit
     high=.669+.019*side+.012*back
-    z=low+(high-low)*t
+    # Raise the front hem toward the brooch; keep the nape and shoulders seated.
+    z=low+(high-low)*t+.016*max(0.,cos(angle))**2*(1-.65*t)
     rx=.317-.119*t
     ry=.311-.111*t
     axis=Vector((0,-.061,z))
@@ -649,7 +650,7 @@ def collar_and_brooch(arm,coll,database):
     xy=[(0,1),(.866,.50),(.866,-.50),(0,-1),(-.866,-.50),(-.866,.50)]
     pixel=[(837,597),(899,649),(895,742),(828,787),(758,733),(767,637)]
     def gem_point(x,z,scale,depth):
-        height=.511+z*.079*scale
+        height=.533+z*.079*scale
         axis=Vector((x*.076*scale,-1,height))
         hit,_,_,_=torso.ray_cast(axis,Vector((0,1,0)),2)
         y=hit.y if hit is not None else -.462

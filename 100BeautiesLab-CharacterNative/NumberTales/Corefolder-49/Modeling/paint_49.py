@@ -51,6 +51,10 @@ def reference_cheeks(face, fur, margin):
     # Write RGB only; the face atlas's native alpha silhouette remains intact.
     a=np.array(face)
     a[:h,:w,:3]=np.rint(layer).clip(0,255).astype('uint8')
+    # The starter's separate forehead/fringe overlay uses this UV island.
+    # Our removable hair supplies that detail. Let the cheek show through
+    # the donor overlay in every pose, including when the hair is hidden.
+    a[236:360,190:291,3]=0
     return Image.fromarray(a,'RGBA')
 
 

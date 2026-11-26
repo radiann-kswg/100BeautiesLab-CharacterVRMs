@@ -159,7 +159,7 @@ class Hakko(Sculpt):
             angle=math.tau*i/count
             theta=min(angle,math.tau-angle)
             z=np.interp(theta,[0,.16,.34,.54,.74,.98,1.24,1.57,2.12,2.65,math.pi],
-                              [.530,.548,.583,.625,.652,.670,.683,.690,.695,.698,.699])
+                              [.506,.527,.565,.614,.647,.669,.683,.690,.695,.698,.699])
             radial=Vector((math.sin(angle),-math.cos(angle),0))
             outside=Vector((0,-.046,z))+radial
             hits=[]
@@ -226,11 +226,11 @@ class Hakko(Sculpt):
                 groups[name].add(list(range(i*sides,(i+1)*sides)),w/total,'REPLACE')
         chain.parent=self.arm;chain.modifiers.new('Armature','ARMATURE').object=self.arm
         def drop(name,scale,offset,mat):
-            zs=[.414,.427,.451,.480,.500,.524]
-            ws=[.0007,.022,.035,.031,.018,.0005]
+            zs=[.390,.401,.423,.454,.477,.500]
+            ws=[.0007,.025,.038,.031,.017,.0005]
             n,rows=20,17;vs=[];fs=[]
             for i in range(rows):
-                t=i/(rows-1);z=.468+(np.interp(t,np.linspace(0,1,len(zs)),zs)-.468)*scale
+                t=i/(rows-1);z=.444+(np.interp(t,np.linspace(0,1,len(zs)),zs)-.444)*scale
                 w=scale*max(.0004,catmull([(v,0) for v in ws],t).x)
                 for j in range(n):
                     a=math.tau*j/n;x=w*math.cos(a)
@@ -242,11 +242,11 @@ class Hakko(Sculpt):
             ob=self.mesh(name,vs,fs,mat);bind(ob,self.arm,'chest')
         drop('Teardrop pendant',1,.015,self.rim)
         drop('Pendant inset cyan',.82,.022,self.stone)
-        p=[(-.010,surface(0,.495)-.031,.495),(-.015,surface(0,.482)-.033,.482),(-.016,surface(0,.469)-.035,.469)]
+        p=[(-.010,surface(0,.471)-.031,.471),(-.015,surface(0,.458)-.033,.458),(-.016,surface(0,.445)-.035,.445)]
         ob=self.tube('Pendant inset highlight',p,[0,.0028,0],[0,.0018,0],(1,0,0),self.gloss);bind(ob,self.arm,'chest')
         # A closed dark metal eyelet physically connects both necklace halves.
-        y=surface(0,.53)-.008
-        path=[(.006*math.sin(math.tau*i/8),y,.529+.0065*math.cos(math.tau*i/8)) for i in range(9)]
+        y=surface(0,.506)-.008
+        path=[(.006*math.sin(math.tau*i/8),y,.505+.0065*math.cos(math.tau*i/8)) for i in range(9)]
         ob=self.tube('Pendant bail',path,[.0021]*5,[.0021]*5,(0,1,0),self.rim);bind(ob,self.arm,'chest')
         for ob in self.items:
             if ob.name.startswith(('Necklace','Teardrop pendant','Pendant ')):

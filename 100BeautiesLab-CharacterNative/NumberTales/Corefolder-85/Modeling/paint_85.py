@@ -29,7 +29,7 @@ def paint():
     # The reference coats leave a chestnut hem below the oval. The white
     # continues onto the shoulder sides, where a narrow stripe reads flat.
     heights=[0,.055,.075,.14,.25,.40,.52,.675,.80,.865,.92,.97,1]
-    half_angles=[0,0,.16,.32,.47,.53,.57,.635,.55,.53,.66,.91,.98]
+    half_angles=[0,0,.35,.57,.65,.66,.66,.65,.66,.72,.82,.91,.98]
     border=np.sqrt(np.interp(v,heights,np.square(half_angles)))
     longitude=abs(2*np.pi*(x/(size-1)-.5))
     base[(longitude<border+.018)&(border>0)]=edge
