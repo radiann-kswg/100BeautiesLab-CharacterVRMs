@@ -37,6 +37,16 @@ $image = 'D:/VisualStudio Code Userfile/100BeautiesLab_CreationsDB/data/Works_Nu
 
 保存先は `Corefolder-<番号>/TripoGenerated/studio/<日付>/Corefolder-<番号>-<ID>.glb`。日付を省くとPCの当日を使う。既にブラウザで取得したGLBは `studio save <ID> <GLBのパス> [--date YYYY-MM-DD]` で取り込めるよ。どちらもGLBのコンテナとメッシュを検査し、SHA-256を表示する。同じ保存先には追記も上書きもしない。送信後に表示が途切れた場合はStudioのアセット一覧で受付を確認し、既に生成されたIDから `export` で再開できる。
 
+### 規範VRMの撮影画像を添えてラフを作る
+
+Studioの専用プロファイルでログインしてから、公式絵、規範VRMのレンダー、公式の尾資料をこの順で渡すよ。ハッコの試行は Nano Banana、1:1、1枚の見本から正面・左右・背面を作り、H3.5で形状のみを出力した。CLIでは見本と各方向を目視してから次に進める。Studioの画像生成モデルは画面で確認してね。
+
+```powershell
+$trial = '100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Training/StudioReference-20261126'
+$art = 'D:/VisualStudio Code Userfile/100BeautiesLab_CreationsDB/data/Works_NumberTales/Images/DB_Primary'
+& $studioPython Tools/Tripo/tripo.py -c 85 studio reference "$art/corefolder/85/emstk_corefolderNTS-85-1.png" "$trial/reference-93-front.png" "$art/attr/tailsUnit/attr_tailsUnitNTS-85.png" --prompt-file "$trial/prompt.txt" --max-credits 30
+```
+
 ## API 経路のセットアップ（Windows / PowerShell）
 
 ```powershell
