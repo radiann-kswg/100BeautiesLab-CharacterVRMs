@@ -67,6 +67,8 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 
 ## ローカル3D追加学習
 
+新しい子を作るときは、[公式設定画と規範VRMからの制作手順](100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/PRODUCTION-WORKFLOW.md)から始めてね。共通素体を起こすコマンド、Tripoに渡す資料の選び方、個別造形とUnity検証の順番をまとめているよ。
+
 既存VRM6体と創作DBのコアフォルダ画像を使った追加学習の試験基盤は、
 [Corefolder-Training](100BeautiesLab-CharacterNative/NumberTales/Corefolder-Training/README.md) を参照してください。
 Point-Eの色付き点群生成・学習重みの保存と再利用を検証済みです。完成VRMの自動生成は未対応です。
