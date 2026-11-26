@@ -5,6 +5,8 @@ tripo.py — 100BeautiesLab-CharacterVRMs 用の Tripo AI 薄いラッパー
 `Tools/Tripo/scripts/tripo_cli.py` (Tripo 3D Studio の CLI 複製) を、
 キャラクター単位のフォルダを正本として呼び出す。
 
+  python Tools/Tripo/tripo.py studio --help
+  python Tools/Tripo/tripo.py -c 49 studio generate IMAGE --max-credits 30
   python Tools/Tripo/tripo.py doctor
   python Tools/Tripo/tripo.py balance
   python Tools/Tripo/tripo.py --list
@@ -107,6 +109,14 @@ def main() -> None:
             gen = NATIVE_ROOT / s / c / GENERATED_DIRNAME
             mark = " (TripoGenerated あり)" if gen.is_dir() else ""
             print(f"{s}/{c}{mark}")
+        return
+
+    if args.cli[:1] == ["studio"]:
+        from scripts.studio import main as studio_main
+        char_dir = resolve_character(args.character, args.series) if args.character else None
+        if char_dir and char_dir.resolve().parent.parent != NATIVE_ROOT.resolve():
+            die("制作フォルダ配下のキャラクターを指定してください")
+        studio_main(args.cli[1:], char_dir)
         return
 
     if not CLI.is_file():
