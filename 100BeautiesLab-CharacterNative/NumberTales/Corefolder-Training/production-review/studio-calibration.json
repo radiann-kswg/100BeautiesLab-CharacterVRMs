@@ -1,0 +1,446 @@
+{
+  "6": {
+    "previous": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+    "sha256": "0ad2a25e1d5b64b78b31b2f8e5727623fc670cc0ab884ad9bc5b5ba33b191f95",
+    "tripo": "Corefolder-6-4d7ed6c2-0cae-4287-9176-ed7fc259769f.glb",
+    "tripo_sha256": "8b0477ec08c6878a3262263a66faed48e4c44ee8752bdf34d40e82a80afd4e76",
+    "studio_mesh": {
+      "skins": 0,
+      "triangles": 1974689,
+      "degenerate": {
+        "tripo_node_e094c7be-9120-4adf-8cda-b061508ff0e7": 6
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 0,
+      "max_influences": 0
+    },
+    "vrm_mesh": {
+      "skins": 5,
+      "triangles": 14568,
+      "degenerate": {
+        "Face": 0,
+        "Body": 0,
+        "Hair": 0,
+        "Tail": 0,
+        "Outfit": 0
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "max_influences": 4
+    },
+    "core": {
+      "sha256": "0ad2a25e1d5b64b78b31b2f8e5727623fc670cc0ab884ad9bc5b5ba33b191f95",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "Mui collar • sky blue",
+        "Mui • seam and dark bezel",
+        "Mui • official collar 6",
+        "Mui brooch • sapphire edge",
+        "Mui • six-petal official brooch"
+      ]
+    },
+    "play_mode": true,
+    "humanoid_bones": 53,
+    "spring_groups": 8,
+    "poses": 10,
+    "eye_overlap_pixels": 0,
+    "angle": 9,
+    "front_art": {
+      "referenceWidthToHeight": 1.163,
+      "before": {
+        "silhouetteIoU": 0.8348,
+        "widthToHeight": 1.125,
+        "occupancyDeltaByHorizontalEighth": [
+          0.077,
+          0.191,
+          -0.038,
+          -0.045,
+          -0.081,
+          -0.082,
+          -0.051,
+          0.079
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.8348,
+        "widthToHeight": 1.125,
+        "occupancyDeltaByHorizontalEighth": [
+          0.076,
+          0.191,
+          -0.038,
+          -0.045,
+          -0.081,
+          -0.082,
+          -0.051,
+          0.079
+        ]
+      }
+    },
+    "tail_art": {
+      "referenceWidthToHeight": 1.168,
+      "before": {
+        "silhouetteIoU": 0.8158,
+        "widthToHeight": 1.156,
+        "occupancyDeltaByHorizontalEighth": [
+          0.054,
+          -0.099,
+          -0.187,
+          -0.022,
+          -0.076,
+          -0.004,
+          -0.068,
+          0.01
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.8158,
+        "widthToHeight": 1.156,
+        "occupancyDeltaByHorizontalEighth": [
+          0.054,
+          -0.099,
+          -0.187,
+          -0.022,
+          -0.076,
+          -0.004,
+          -0.068,
+          0.01
+        ]
+      }
+    }
+  },
+  "49": {
+    "previous": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+    "sha256": "be4b93582a7ce3299c5f708038349549f7b234b07015a7abfe7245ee57ccf89d",
+    "tripo": "Corefolder-49-e20cf34b-d67d-41f1-b11a-97c4dfe76324.glb",
+    "tripo_sha256": "622d0a2eaee797562471a968a36638a8277f93d77d18f723a2b860bd92f41cce",
+    "studio_mesh": {
+      "skins": 0,
+      "triangles": 1952471,
+      "degenerate": {
+        "tripo_node_1e33f1a0-065e-48c7-9b15-e3fd5a1a54fe": 2
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 0,
+      "max_influences": 0
+    },
+    "vrm_mesh": {
+      "skins": 5,
+      "triangles": 15933,
+      "degenerate": {
+        "Face": 0,
+        "Body": 0,
+        "Hair": 0,
+        "Tail": 0,
+        "Outfit": 0
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "max_influences": 4
+    },
+    "core": {
+      "sha256": "be4b93582a7ce3299c5f708038349549f7b234b07015a7abfe7245ee57ccf89d",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "49 Chest number"
+      ]
+    },
+    "play_mode": true,
+    "humanoid_bones": 53,
+    "spring_groups": 11,
+    "poses": 10,
+    "eye_overlap_pixels": 0,
+    "angle": -18,
+    "front_art": {
+      "referenceWidthToHeight": 1.244,
+      "before": {
+        "silhouetteIoU": 0.7858,
+        "widthToHeight": 1.212,
+        "occupancyDeltaByHorizontalEighth": [
+          0.002,
+          0.034,
+          0.073,
+          -0.149,
+          -0.094,
+          -0.234,
+          -0.071,
+          0.004
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.7855,
+        "widthToHeight": 1.212,
+        "occupancyDeltaByHorizontalEighth": [
+          0.002,
+          0.034,
+          0.075,
+          -0.149,
+          -0.094,
+          -0.234,
+          -0.071,
+          0.004
+        ]
+      }
+    },
+    "tail_art": {
+      "referenceWidthToHeight": 1.102,
+      "before": {
+        "silhouetteIoU": 0.8125,
+        "widthToHeight": 1.158,
+        "occupancyDeltaByHorizontalEighth": [
+          -0.012,
+          -0.027,
+          -0.067,
+          0.038,
+          -0.13,
+          -0.12,
+          -0.047,
+          -0.033
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.8125,
+        "widthToHeight": 1.158,
+        "occupancyDeltaByHorizontalEighth": [
+          -0.012,
+          -0.027,
+          -0.067,
+          0.038,
+          -0.13,
+          -0.12,
+          -0.047,
+          -0.033
+        ]
+      }
+    }
+  },
+  "57": {
+    "previous": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+    "sha256": "6610caa696828280915aeea8c626ad3d12cb71c82f23a432d663608a8ffeb95a",
+    "tripo": "Corefolder-57-bb1ecbbf-ef92-4b70-81e7-f8316054ba54.glb",
+    "tripo_sha256": "3154135fa0f7483cbc5eca0a42ded61731081fb03a9c1bf19854f200b66504b1",
+    "studio_mesh": {
+      "skins": 0,
+      "triangles": 1935746,
+      "degenerate": {
+        "tripo_node_8cfa17b7-f1a0-4228-83aa-20db13a41241": 1
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 0,
+      "max_influences": 0
+    },
+    "vrm_mesh": {
+      "skins": 5,
+      "triangles": 24260,
+      "degenerate": {
+        "Face": 0,
+        "Body": 0,
+        "Hair": 0,
+        "Tail": 0,
+        "Outfit": 0
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "max_influences": 4
+    },
+    "core": {
+      "sha256": "6610caa696828280915aeea8c626ad3d12cb71c82f23a432d663608a8ffeb95a",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "Fivens • DB number 57 and piping",
+        "Fivens • dark warm outlines"
+      ]
+    },
+    "play_mode": true,
+    "humanoid_bones": 53,
+    "spring_groups": 10,
+    "poses": 10,
+    "eye_overlap_pixels": 0,
+    "angle": 9,
+    "front_art": {
+      "referenceWidthToHeight": 1.025,
+      "before": {
+        "silhouetteIoU": 0.7632,
+        "widthToHeight": 0.966,
+        "occupancyDeltaByHorizontalEighth": [
+          0.059,
+          0.256,
+          0.247,
+          0.092,
+          -0.06,
+          -0.214,
+          -0.111,
+          0.088
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.7632,
+        "widthToHeight": 0.966,
+        "occupancyDeltaByHorizontalEighth": [
+          0.059,
+          0.256,
+          0.247,
+          0.092,
+          -0.06,
+          -0.214,
+          -0.111,
+          0.088
+        ]
+      }
+    },
+    "tail_art": {
+      "referenceWidthToHeight": 1.066,
+      "before": {
+        "silhouetteIoU": 0.9336,
+        "widthToHeight": 1.09,
+        "occupancyDeltaByHorizontalEighth": [
+          0.009,
+          -0.011,
+          -0.004,
+          -0.018,
+          -0.057,
+          -0.032,
+          -0.0,
+          -0.035
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.9336,
+        "widthToHeight": 1.09,
+        "occupancyDeltaByHorizontalEighth": [
+          0.009,
+          -0.011,
+          -0.004,
+          -0.018,
+          -0.057,
+          -0.032,
+          -0.0,
+          -0.035
+        ]
+      }
+    }
+  },
+  "85": {
+    "previous": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+    "sha256": "17cd76e46e18b574376d3998d7838ff3ab86276319c94367c0358211098e99b8",
+    "tripo": "Corefolder-85-edf5de47-92f8-41ea-ae48-229e7c833c1a.glb",
+    "tripo_sha256": "4a721fdacdec99eb4edf71c7bbfde72986b3306e44550597301b8c80ea89d75b",
+    "studio_mesh": {
+      "skins": 0,
+      "triangles": 1871076,
+      "degenerate": {
+        "tripo_node_99dfc388-dc2e-4e94-a39d-69ae357a812b": 1
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 0,
+      "max_influences": 0
+    },
+    "vrm_mesh": {
+      "skins": 5,
+      "triangles": 27780,
+      "degenerate": {
+        "Face": 0,
+        "Body": 0,
+        "Hair": 0,
+        "Tail": 0,
+        "Outfit": 0
+      },
+      "invalid_joints": 0,
+      "unweighted": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "max_influences": 4
+    },
+    "core": {
+      "sha256": "17cd76e46e18b574376d3998d7838ff3ab86276319c94367c0358211098e99b8",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "85 Silver necklace",
+        "85 Petrol pendant rim",
+        "85 Cyan pendant",
+        "85 Pendant light"
+      ]
+    },
+    "play_mode": true,
+    "humanoid_bones": 53,
+    "spring_groups": 11,
+    "poses": 10,
+    "eye_overlap_pixels": 0,
+    "angle": 18,
+    "front_art": {
+      "referenceWidthToHeight": 1.091,
+      "before": {
+        "silhouetteIoU": 0.7982,
+        "widthToHeight": 0.961,
+        "occupancyDeltaByHorizontalEighth": [
+          0.12,
+          0.193,
+          0.02,
+          -0.054,
+          -0.044,
+          -0.101,
+          -0.174,
+          0.018
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.7984,
+        "widthToHeight": 0.961,
+        "occupancyDeltaByHorizontalEighth": [
+          0.12,
+          0.192,
+          0.02,
+          -0.054,
+          -0.044,
+          -0.102,
+          -0.174,
+          0.018
+        ]
+      }
+    },
+    "tail_art": {
+      "referenceWidthToHeight": 1.049,
+      "before": {
+        "silhouetteIoU": 0.9062,
+        "widthToHeight": 1.076,
+        "occupancyDeltaByHorizontalEighth": [
+          0.008,
+          0.009,
+          -0.002,
+          0.006,
+          -0.011,
+          0.044,
+          0.188,
+          -0.026
+        ]
+      },
+      "after": {
+        "silhouetteIoU": 0.9062,
+        "widthToHeight": 1.076,
+        "occupancyDeltaByHorizontalEighth": [
+          0.008,
+          0.009,
+          -0.002,
+          0.006,
+          -0.011,
+          0.044,
+          0.188,
+          -0.026
+        ]
+      }
+    }
+  }
+}
