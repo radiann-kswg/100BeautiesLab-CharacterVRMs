@@ -37,6 +37,7 @@
 - **ブランチ運用は `AGENTS.md` §10 を参照し、作業種別に対応するブランチを使う。**
 - 本リポジトリは Unity プロジェクト。`Library/` `Temp/` `Logs/` `obj/` `UserSettings/` 等の生成物は編集・コミット対象にしない（詳細は `AGENTS.md` §9）。
 - 大きな変更（多数ファイル生成・構成変更など）を行う前に、まず計画を提示して User に確認する。
+- **Tripo AI によるベースメッシュ生成は `AGENTS.md` §12 に従う**: 入口は `python Tools/Tripo/tripo.py -c <キャラ> ...` のみ、成果物は `100BeautiesLab-CharacterNative/<作品>/Corefolder-<N>/TripoGenerated/`、生成系コマンドは User の承認後に実行、`.env`（API キー）は読まない・出力しない・コミットしない。
 
 ---
 

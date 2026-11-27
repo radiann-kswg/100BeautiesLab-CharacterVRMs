@@ -51,7 +51,7 @@ For usage permissions and derivative-work rules, see the canonical guideline fil
 ### AI 生成パイプラインからの参照（2026-08-29 新設）
 
 `vrm_corefolder<番号>.png`（各 `Corefolder-<番号>/` 直下のサムネイル）は、
-[100BeautiesLab_GeneratorsAI](https://github.com/radiann-kswg/100BeautiesLab_GeneratorsAI) の画像生成パイプラインが
+`100BeautiesLab_GeneratorsAI`（非公開）の画像生成パイプラインが
 **「3D 原典モデルの作風アンカー」として最優先参照に注入**します（環境変数 `NT_VRM_STYLE_REFS_DIR` に
 `Assets/100BeautiesLab-CharacterVRM/NumberTales/` を指定。ファイル名 glob で解決）。
 
@@ -84,6 +84,21 @@ Assets/
 ├── Scenes/                        # シーン
 └── Settings/                      # レンダリング設定等
 ```
+
+### Tripo AI によるベースメッシュ生成（2026-09-09 新設）
+
+イラスト・三面図からのベースメッシュ生成に [Tripo AI](https://studio.tripo3d.ai) を利用します。
+入口は `Tools/Tripo/tripo.py`、成果物は `100BeautiesLab-CharacterNative/<作品>/Corefolder-<番号>/TripoGenerated/` に保存されます
+（詳細: [Tools/Tripo/README.md](./Tools/Tripo/README.md)、運用ルール: [AGENTS.md](./AGENTS.md) §12）。
+
+```powershell
+python -m pip install -r Tools/Tripo/requirements.txt
+Copy-Item .env.example .env        # TRIPO_API_KEY を記入（.env は git 管理外）
+python Tools/Tripo/tripo.py doctor
+python Tools/Tripo/tripo.py -c 16 image2model CoreFolder-16.png --preset draft
+```
+
+Tripo の出力は Blender で仕上げる前の叩き台であり、`Assets/` へ直接投入しません。
 
 ### 開発メモ
 
