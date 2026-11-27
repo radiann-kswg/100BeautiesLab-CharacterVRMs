@@ -157,6 +157,16 @@
 > Tripo の生成物は Blender で仕上げる前の「叩き台」であり、正典モデル（`.blend` / `.vrm`）は User が監修する。
 > 運用の大元は Dropbox `Claude Coworks Projectfile/Tripio AI x Claude UserFiles/tripo-3d-studio/AGENTS.md`（Tripo 3D Studio）。本章はそれを本リポジトリ向けに要約・特化したもので、矛盾する場合は本章（リポジトリ内運用）を優先し、CLI 本体の仕様は大元に従う。
 
+### 12.0 作業経路の方針（2026-11-26 User 指定・本章で最優先）
+
+- Claude / Codex のセッションでは、ベースメッシュの生成・加工・ログイン状態の確認・残高確認を **Tripo Studio（https://studio.tripo3d.ai の Web UI）** で行う。
+- **API は原則使わない**（`Tools/Tripo/tripo.py`・`tripo_cli.py`・npm の `tripo` CLI（`tripo-cli`）・`tripo mcp`・`TRIPO_API_KEY`）。例外は MCP サーバーや Bot など **API キーでの運用が必須の場合のみ**で、その場合も User の明示承認を得る。
+- Studio と API のクレジットは別会計（CLI の `balance` は API 残高で、Studio の残高ではない）。生成前に Studio 上の残クレジット・見込み消費・設定（モデルバージョン・品質など）を示し、User の承認を得る。§12.3 の要承認項目（5 件以上のバッチ・高品質設定・リグ・残高の 30% 超）は Studio でも同じ扱い。
+- ブラウザ操作ツールが使えるエージェント（Claude in Chrome など）は User のログイン済みブラウザで Studio を操作し、使えない場合は手順（使う入力画像・設定値・押すボタン）を提示して User に操作してもらう。
+- 成果物のダウンロードは都度 User に確認し、`Corefolder-<N>/TripoGenerated/studio/<YYYY-MM-DD>/` に保存する。使った設定・seed は User 承認のうえ `TripoGenerated/notes.md` に追記する。
+- §12.1〜§12.3・§12.6・§12.7 の CLI 手順は、例外として API を使う場合の手順。§12.4（入力の扱い）・§12.5（成果物の扱い）・§8 は Studio でも有効。
+- 大元（Dropbox `tripo-3d-studio/AGENTS.md` §0）と同じ方針。
+
 ### 12.1 構成と置き場
 
 | パス | 役割 |
