@@ -1,16 +1,17 @@
 # AGENTS.md — 100BeautiesLab-CharacterVRMs（エージェント共通・正典）
 
-> **このファイルは本リポジトリにおけるロールプレイ仕様の「正典（source of truth）」です。**
-> Claude（Cowork / Claude Code）・GitHub Copilot・その他 AGENTS.md 規約に従うエージェントは、
-> 本リポジトリでの応答にあたり、まずこのファイルの「扇一春」ロールプレイ仕様を読み込み・順守してください。
+> **このファイルは本リポジトリの「正典（SSOT）」です。** ロールプレイ仕様（§0〜§8）・リポジトリ運用（§9〜§12）・
+> エージェント分担（§13）のフル記述はここだけに置きます。
+> Claude（Cowork / Claude Code）・OpenAI Codex（GPT）・GitHub Copilot ほか AGENTS.md 規約に従うエージェントは、
+> 作業前に本ファイルを読み込み・順守してください。Codex は本ファイルを自動で読み込むので、続けて [`CODEX.md`](./CODEX.md) を読むこと。
 >
-> 各ツール向けの入口ファイル（`CLAUDE.md` / `.github/copilot-instructions.md` /
-> `.github/instructions/roleplay.instructions.md`）は、重複を避けるため**本ファイルを正典として参照**し、
-> それぞれのツールが確実に読み込める最小限の「声カード」だけを保持します。
+> 各ツール向けの入口ファイル（`CLAUDE.md` / `CODEX.md` / `.github/copilot-instructions.md` /
+> `.github/instructions/roleplay.instructions.md`）は**本ファイルを正典として参照**し、
+> ツール固有の事項と最小限の「声カード」だけを保持します（§11）。ルールの追加・変更は必ず本ファイルへ入れること。
 >
 > ロールプレイ仕様の大元の正典: `100BeautiesLab_CreationsDB` リポジトリの `AGENTS.md`
 > 創作原本（User 手動管理）: `100BeautiesLab_CreationsDB/.github/_roleplay-datas/roleplay-prompt.md`
-> 本ファイルは同仕様を本リポジトリ用に複製したもの。大元と矛盾する場合は大元を優先し、本ファイルを追従更新する。
+> 本ファイルの §0〜§8 は同仕様を本リポジトリ用に複製したもの。大元と矛盾する場合は大元を優先し、本ファイルを追従更新する。
 
 ---
 
@@ -119,33 +120,47 @@
 - 素体を着せ替えの基準にする。ペンダント・襟・髪は装着物側の形・位置で合わせ、胴体と顔の基本形を維持する。装飾を外した正面・側面・背面でも、胴の輪郭や顔の地色に不自然な段差・線が現れないか確認する。
 - 画像学習では、6体の実VRMを撮影した三面図を作風・質感の規範として扱い、生成三面図は対象デザイン資料として役割を区別する。未承認の生成結果を規範6体の代わりに扱わない。
 - 点群の追加学習、画像の作風学習、実VRMの造形・材質調整の達成状況を別々に報告する。生成画像や粗い点群を完成VRMと評価しない。
+- モデルの評価・画像解析・メッシュ編集は §13 の分担に従って GPT（Codex）が行い、検証用モデル（ラフ）は Tripo（§12）で作る。
 
 ---
 
 ## 10. ブランチ運用（必読）
 
-> `NinthDeveloppersCreation/AGENTS.md` 2章と対をなす運用ルール（2026-08-02 User 指定）。
+> `NinthDeveloppersCreation/AGENTS.md` 2章と対をなす運用ルール（2026-08-02 User 指定。2026-09-09・2026-11-27 改訂）。
 
-| ブランチ | 役割 | AIエージェントの扱い |
-| --- | --- | --- |
-| `develop` | **Unity 操作用 Cowork プロジェクト「Unity周り」での作業用ブランチ** | CodexのVRM学習・制作以外のUnity MCP・Unityエディタ作業を行う |
-| `codex-training` | **CodexによるVRMモデル学習・制作の作業用ブランチ** | 学習データ整備・追加訓練・キャラクター制作基盤の構築を行う。Blender MCP・OSS版Unity MCP・Unityエディタ操作もこのブランチで行う（2026-09-09 User指定） |
-| `master` | **本 Cowork プロジェクト（創作 DB 側）での作業用ブランチ・安定版** | **Unity MCP 経由でのバイブコーディングを行わない**。ドキュメント・設定ファイル等の非 Unity 作業はここで行う |
+| ブランチ | 役割 | 収録するもの | AIエージェントの扱い |
+| --- | --- | --- | --- |
+| `master` | 安定版。創作 DB 側 Cowork プロジェクトでの作業用 | **基準VRM（§9.1 の規範6体）と完成VRMのみ** | **Unity MCP 経由でのバイブコーディングを行わない**。ドキュメント・設定ファイル等の非 Unity 作業はここで行う |
+| `develop` | Unity 操作用 Cowork プロジェクト「Unity周り」での作業用 | **基準VRMと完成VRMのみ** | VRM の学習・制作以外の Unity MCP・Unity エディタ作業を行う |
+| `codex-training` | **Codex（GPT）による VRM モデル学習・制作の作業用** | 学習データ・Tripo のラフ・編集用 `.blend`・比較画像・制作途中の VRM と記録 | 学習データ整備・追加訓練・制作基盤の構築と、§13 の GPT 担当作業を行う。Blender MCP・OSS 版 Unity MCP・Unity エディタ操作もこのブランチで行う（2026-09-09 User 指定） |
+| `claude-training` | **Claude による VRM モデル学習・制作の作業用**（Claude プロジェクト「VRMモデル作成」） | 同上 | 計画・進行管理・記録・Tripo 操作・Unity での取り込み確認など §13 の Claude 担当作業を行う。GPT 担当作業は §13.2 の方法で Codex に委ねる（2026-11-27 User 指定） |
 
-- 作業開始前に `git branch --show-current` で現在ブランチを確認し、作業の種類（CodexのVRM学習・制作 = `codex-training` ／ その他のUnity周り = `develop` ／ 創作DB側の非Unity作業 = `master`）と一致していることを確認する。
-- `codex-training` から他ブランチへのマージ、および `develop` → `master` へのマージは **User が実施**する。エージェントはマージ・push を代行しない（push は User の明示指示があった場合のみ、そのセッションの作業ブランチに対して行う）。
+- 作業開始前に `git branch --show-current` で現在ブランチを確認し、作業の種類と一致していることを確認する（Codex の VRM 学習・制作 = `codex-training` ／ Claude の VRM 学習・制作 = `claude-training` ／ その他の Unity 周り = `develop` ／ 創作 DB 側の非 Unity 作業 = `master`）。
+- **`develop`・`master` には基準VRMと完成VRM（User が完成と判断したもの）だけを入れる。** Tripo の生成物、学習データ、比較画像、制作途中の `.blend` / `.vrm`、検証用シーンは `*-training` ブランチに留める。
+- ブランチ間の取り込み（`*-training` → `develop` への完成VRMの選別、`codex-training` ⇔ `claude-training` の相互取り込み、`develop` → `master`）は **User が実施**する。エージェントはマージ・push を代行しない（push は User の明示指示があった場合のみ、そのセッションの作業ブランチに対して行う）。
+- 本ファイル・入口ファイル（§11）・`.agents/skills/` は全ブランチで揃っている必要がある。これらを変更したエージェントは、他ブランチへの反映が必要なことを User に伝える（反映は User が行う）。
 - セッションの種類と異なるブランチにいる状態を検出した場合は作業を中断し、User に報告して指示を仰ぐこと。
+- どの作業コピー（チェックアウト）でどのブランチを使うかは、各作業コピーの `CLAUDE.local.md` など git 管理外のローカル設定を優先する。
 
 ---
 
-## 11. 入口ファイルとの関係（重複削減の方針）
+## 11. 入口ファイルとの関係（SSOT・重複削減の方針）
 
-| ファイル                                        | 役割                                                                    |
-| ----------------------------------------------- | ----------------------------------------------------------------------- |
-| **`AGENTS.md`（本ファイル）**                   | 本リポジトリにおけるロールプレイ仕様の正典。フル記述はここだけ。       |
-| `CLAUDE.md`                                     | Claude（Cowork/Claude Code）入口。`@AGENTS.md` 参照＋圧縮版の声カード。 |
-| `.github/copilot-instructions.md`               | Copilot 入口。ロールプレイはバナー＋本ファイル参照。                   |
-| `.github/instructions/roleplay.instructions.md` | Copilot 自動ロード用。正典参照＋圧縮版の声カード。                     |
+| ファイル | 役割 |
+| --- | --- |
+| **`AGENTS.md`（本ファイル）** | 正典。ロールプレイ仕様・運用ルール・エージェント分担のフル記述はここだけ。Codex・Copilot はネイティブに読み込む |
+| `SOUL.md` | 人格設定プロンプト（「扇一春」）。§0〜§8 と同じ内容を人格プロンプトの形でまとめたもの。大元は `100BeautiesLab_CreationsDB` |
+| `CLAUDE.md` | Claude（Cowork / Claude Code）入口。`@AGENTS.md` 参照＋声カード＋Claude 固有の事項（GPT への委ね方・実行環境の差） |
+| `CODEX.md` | OpenAI Codex（GPT）入口。Codex 固有の事項（セッション開始手順・依頼書の受け取り・Windows 実機の注意） |
+| `.github/copilot-instructions.md` | Copilot 入口。ロールプレイはバナー＋本ファイル参照 |
+| `.github/instructions/roleplay.instructions.md` | Copilot 自動ロード用。正典参照＋圧縮版の声カード |
+| `.agents/skills/<skill>/` | **エージェントスキルの正本**。Codex はここを読む。編集はここだけで行う |
+| `.claude/skills/<skill>/` | Claude 用の**生成ミラー**。直接編集せず、`scripts/sync-agent-skills.ps1 -Apply` で正本から反映する |
+| `.agents/handoffs/` | Claude から GPT（Codex）への依頼書と、その所見の置き場（§13.2）。雛形は `TEMPLATE.md` |
+
+- 入口ファイルには共通仕様を書き足さない。入口ファイルと本ファイルが矛盾していたら本ファイルを正とし、入口ファイルを直す。
+- スキル本文はツール中立に書く（同じファイルが Codex と Claude の両方に配られるため）。`.agents/skills/` を編集したら `powershell -ExecutionPolicy Bypass -File scripts\sync-agent-skills.ps1 -Apply` でミラーへ反映し、正本とミラーを同じコミットに入れる。`-Check`（既定）は差分があると終了コード 1 を返す。
+- PowerShell スクリプト（`.ps1`）は UTF-8（BOM 付き）で保存する。
 
 > 大元の正典（`100BeautiesLab_CreationsDB/AGENTS.md`）側で仕様が更新された場合は、本ファイルへ差分を追従させる。
 
@@ -157,12 +172,15 @@
 > Tripo の生成物は Blender で仕上げる前の「叩き台」であり、正典モデル（`.blend` / `.vrm`）は User が監修する。
 > 運用の大元は Dropbox `Claude Coworks Projectfile/Tripio AI x Claude UserFiles/tripo-3d-studio/AGENTS.md`（Tripo 3D Studio）。本章はそれを本リポジトリ向けに要約・特化したもので、矛盾する場合は本章（リポジトリ内運用）を優先し、CLI 本体の仕様は大元に従う。
 
+> 本リポジトリでは、**VRM 制作の検証用モデル（ラフ）の作成を Tripo で行う**（§13）。ラフで奥行きや配置を確かめ、造形・評価は GPT（Codex）が行う。
+
 ### 12.0 作業経路の方針（2026-11-26 User 指定・本章で最優先）
 
 - Claude / Codex のセッションでは、ベースメッシュの生成・加工・ログイン状態の確認・残高確認を **Tripo Studio（https://studio.tripo3d.ai の Web UI）** で行う。
-- **API は原則使わない**（`Tools/Tripo/tripo.py`・`tripo_cli.py`・npm の `tripo` CLI（`tripo-cli`）・`tripo mcp`・`TRIPO_API_KEY`）。例外は MCP サーバーや Bot など **API キーでの運用が必須の場合のみ**で、その場合も User の明示承認を得る。
+- **API は原則使わない**（`Tools/Tripo/tripo.py` の `studio` 以外のサブコマンド・`tripo_cli.py`・npm の `tripo` CLI（`tripo-cli`）・`tripo mcp`・`TRIPO_API_KEY`）。例外は MCP サーバーや Bot など **API キーでの運用が必須の場合のみ**で、その場合も User の明示承認を得る。
 - Studio と API のクレジットは別会計（CLI の `balance` は API 残高で、Studio の残高ではない）。生成前に Studio 上の残クレジット・見込み消費・設定（モデルバージョン・品質など）を示し、User の承認を得る。§12.3 の要承認項目（5 件以上のバッチ・高品質設定・リグ・残高の 30% 超）は Studio でも同じ扱い。
 - ブラウザ操作ツールが使えるエージェント（Claude in Chrome など）は User のログイン済みブラウザで Studio を操作し、使えない場合は手順（使う入力画像・設定値・押すボタン）を提示して User に操作してもらう。
+- Studio の操作には、`Tools/Tripo/tripo.py studio ...`（専用 Chrome プロファイルで Studio を操作し、GLB を検査して保存する CLI。手順は `Tools/Tripo/README.md`）か、User のログイン済みブラウザ（Claude in Chrome など）を使う。操作は Claude・Codex のどちらが行ってもよく、どちらの場合も本節の承認ルールに従う（§13）。
 - 成果物のダウンロードは都度 User に確認し、`Corefolder-<N>/TripoGenerated/studio/<YYYY-MM-DD>/` に保存する。使った設定・seed は User 承認のうえ `TripoGenerated/notes.md` に追記する。
 - §12.1〜§12.3・§12.6・§12.7 の CLI 手順は、例外として API を使う場合の手順。§12.4（入力の扱い）・§12.5（成果物の扱い）・§8 は Studio でも有効。
 - 大元（Dropbox `tripo-3d-studio/AGENTS.md` §0）と同じ方針。
@@ -213,7 +231,7 @@ python Tools/Tripo/tripo.py -c 16 multiview2model --front Training/front.png --l
 ### 12.5 成果物の扱い
 
 - `TripoGenerated/` 配下と `jobs.jsonl` は **削除・上書き・手動移動をしない**（追記のみ）。整理が必要な時は User に提案して承認を得る。
-- Tripo の出力（glb / fbx 等）を **`Assets/` へ直接投入しない**。Unity へ入れるのは Blender で整えた VRM であり、その作業は §10 のとおり「Unity周り」セッション（`develop`）で行う。
+- Tripo の出力（glb / fbx 等）を **`Assets/` へ直接投入しない**。Unity へ入れるのは Blender で整えた VRM。制作途中の VRM の取り込み・検証は `*-training` ブランチで行い、`develop` へは完成VRMだけを User が取り込む（§10）。
 - 採用したモデルの `task_id`・seed・プリセットと却下理由は、User 承認のうえ当該キャラクターの `TripoGenerated/notes.md` に追記する（後続作業の再現性のため）。
 - `*.glb` / `*.gltf` は Git LFS 管理（`.gitattributes`）。大容量になる場合は、コミット対象を絞る提案を User に行う。
 
@@ -229,3 +247,49 @@ python Tools/Tripo/tripo.py -c 16 multiview2model --front Training/front.png --l
 - 生成はローカル PC 上（Claude Code / デスクトップ環境の Python）で行う前提。Cowork のサンドボックスから実行する場合は Egress 許可リストに `*.tripo3d.ai` と `s3.us-west-2.amazonaws.com` が必要で、未許可なら `doctor` が `host_not_allowed` を示す。
 - `import`（既存 3D モデル取り込み）はローカルファイルの STS アップロードが必要なため、Dropbox コネクタ経由では実行できない。
 - ロールプレイ（§0・§7）は Tripo 作業中も維持する。コマンド・パス・`task.json` の内容はそのまま、説明文だけ一春の口調にする。
+
+---
+
+## 13. エージェント分担（Claude / GPT / Tripo）（2026-11-27 User 指定）
+
+> VRM モデルの学習・制作で、だれが何を担当するかの正典。Claude・Codex のどちらのセッションでもこの表に従う。
+
+### 13.1 担当表
+
+| 作業 | 担当 | 内容の例 |
+| --- | --- | --- |
+| **モデルの評価** | **GPT（Codex）** | 公式絵・規範6体・前の版との比較、合否と改善点の所見、Unity の撮影や Play Mode の結果の読み取り（スキル `corefolder-visual-review`） |
+| **画像解析** | **GPT（Codex）** | 原画・レンダー・尾アトラス・三面図の観察（配色・輪郭・房数・顔パーツの位置など）、Tripo のラフを部位ごとに採るか決めるための所見 |
+| **メッシュ編集** | **GPT（Codex）** | Blender（Blender MCP・`--background` のスクリプト）でのスカルプト・リトポ・UV・ウェイト・シェイプキー・Spring Bone の設定・VRM の書き出し |
+| **検証用モデルの作成** | **Tripo**（操作は Claude・Codex のどちらでも可） | 公式絵・規範レンダーからのラフ生成（§12）。生成物は叩き台で、完成モデルとして扱わない |
+| 計画・進行管理・記録 | Claude（Codex のセッションでは Codex） | 作業計画、依頼書の作成、GPT の所見の整理、制作記録・README・`TripoGenerated/notes.md` の更新 |
+| Unity エディタ操作 | Claude・Codex のどちらでも可 | VRM の取り込み、比較シーンの撮影、Play Mode・Console の確認。結果の評価は GPT が行う |
+
+- **Claude は評価・画像解析・メッシュ編集を自分で行わない。** 画像を自分で見て合否や改善点を決めたり、Blender でメッシュを編集したりせず、§13.2 の方法で GPT に委ねる。既存の検査スクリプト（`check_*.py` など）を実行して数値を集めるのはよいが、その数値に基づく合否と改善方針は GPT の所見を根拠にする。
+- GPT の所見は**候補**として扱う。完成かどうかの判断と、創作上の決定（形・色・付属品の解釈）は User が行う（§8・§9.1）。
+- 所見や評価を記録するときは、どのエージェントが出したものか（分かればモデル名も）を書く。
+- GPT に渡す画像は、百花繚乱研究所の一次創作素材と、そこから作ったレンダーに限る。`100BeautiesLab_CreationsDB` の画像は、同リポジトリの AI 利用ポリシー（`pkg/ai-image-policy.mjs`）で AI 利用が許可されたものだけを使い、オプトアウト・判定不明の画像は送らない。
+
+### 13.2 Claude から GPT（Codex）へ委ねる方法
+
+1. **依頼書を作る。** `.agents/handoffs/TEMPLATE.md` を複製して `.agents/handoffs/<YYYYMMDD>-<番号>-<内容>.md` に保存し、作業フォルダ（絶対パス）・ブランチ・対象ファイル・確認観点・期待する成果物・承認済みの範囲を書く。
+2. **Codex CLI が使える環境（Windows の Claude Code など）では `codex exec` で直接委ねる。** 評価・画像解析は読み取り専用で実行し、返ってきた所見を依頼書の「GPT 所見」節へ転記する。依頼文を先に、画像を後に書く。
+
+   ```powershell
+   codex exec --sandbox read-only -C "<リポジトリの絶対パス>" -o ".cache/handoff-<名前>.txt" "<依頼書の要約と確認観点。観察できた所見だけを日本語で返す>" -i <画像1> -i <画像2>
+   ```
+
+   メッシュ編集などファイルを書き換える依頼は、User の承認を得てから `--sandbox workspace-write` で実行し、変更されたファイルを `git status` で確かめて報告する。引数は Codex CLI の版で変わることがあるので、`codex exec --help` で確認する。
+3. **Codex CLI が使えない環境（Cowork のサンドボックスなど）では、依頼書を保存して User に Codex での実行を頼む。** Codex のセッションで「`.agents/handoffs/<ファイル名>` の依頼を実行して」と伝えてもらう。
+4. 受け取った所見と成果物を Claude が整理し、制作記録に反映する。所見を転記するときは内容を書き換えない（要約するときは原文の場所を示す）。
+
+### 13.3 Codex（GPT）が依頼書を受けたとき
+
+- 依頼書に書かれた作業フォルダ・ブランチで作業する（`claude-training` の作業コピーのこともある）。開始時に `git branch --show-current` で一致を確かめ、違えば作業せず User に伝える。
+- 依頼書の範囲（対象・承認済みの操作）を超えない。課金を伴う操作（Tripo の生成など）は、実行前に残高と見込み額を示して User の承認を得る（§12）。
+- 所見・変更したファイル・確認できなかった点を、依頼書の「GPT 所見」「変更したファイル」節へ追記する。コミット・push はしない（User が行う）。
+
+### 13.4 Codex（GPT）が自分のセッションで作業するとき
+
+- §13.1 の GPT 担当作業はそのまま自分で行い、計画・記録も Codex が行う。ブランチは `codex-training`（§10）。
+- Claude の作業ブランチ（`claude-training`）にある成果を使う・直すときは、依頼書があればそれに従い、なければ User に確認してから行う。

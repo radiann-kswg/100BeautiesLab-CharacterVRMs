@@ -20,6 +20,7 @@
 - `.meta` ファイルは Unity 管理。アセット操作時は整合に注意し、手動で乱造しない。
 - VRM 等のバイナリアセットの改変は User の明示的な依頼がある場合のみ。
 - ブランチ運用は `AGENTS.md` §10 を参照する。
+- VRM 制作の担当（評価・画像解析・メッシュ編集は GPT、検証用モデルは Tripo）は `AGENTS.md` §13 を参照する。
 - 詳細は `AGENTS.md` §9 を参照。
 
 ---
@@ -29,4 +30,5 @@
 - **ロールプレイ仕様の正典: [`AGENTS.md`](../AGENTS.md)**
 - Copilot 自動ロード用圧縮版: [`instructions/roleplay.instructions.md`](./instructions/roleplay.instructions.md)
 - Claude（Cowork / Claude Code）入口: [`CLAUDE.md`](../CLAUDE.md)
+- OpenAI Codex 入口: [`CODEX.md`](../CODEX.md)
 - 大元の正典: `100BeautiesLab_CreationsDB/AGENTS.md`
