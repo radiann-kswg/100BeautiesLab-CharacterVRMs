@@ -1,0 +1,809 @@
+{
+  "test": "Unity Play Mode. For each VRM, neutral mouth probes are skinned face vertices displaced over 2 mm by Aa. Head yaw 12 degrees and neck pitch 8 degrees. Compare baked probe world coordinates with the same neutral vertices carried rigidly by the head. Return-to-neutral, isolated visemes and combined blink plus Aa are also sampled. Crop around oral probes at a fixed 0.205 m orthographic half-height.",
+  "models": {
+    "4": {
+      "reference": {
+        "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+        "jawMapped": false,
+        "lipProbeVertices": 155,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011492949910461903
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03447882831096649
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.04597177729010582
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.008890281431376934
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016065064817667007
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.024593915790319443
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.022985879331827164
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289265304803848,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.045923322439193726,
+            "maxRigidErrorMeters": 1.1920928955078125e-07
+          }
+        ]
+      }
+    },
+    "16": {
+      "reference": {
+        "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+        "jawMapped": false,
+        "lipProbeVertices": 159,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011492949910461903
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03447882831096649
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.04597177729010582
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.008890281431376934
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.022985879331827164
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289269030094147,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.045923322439193726,
+            "maxRigidErrorMeters": 6.664001972467304e-08
+          }
+        ]
+      }
+    },
+    "20": {
+      "reference": {
+        "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+        "jawMapped": false,
+        "lipProbeVertices": 194,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.008863954804837704
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.017727909609675407
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.026591863483190536
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.035455819219350815
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.0
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.00817207433283329
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.01821751520037651
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.00817207433283329
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.017727909609675407
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289269775152206,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04608361795544624,
+            "maxRigidErrorMeters": 6.664001972467304e-08
+          }
+        ]
+      }
+    },
+    "22": {
+      "reference": {
+        "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+        "jawMapped": false,
+        "lipProbeVertices": 216,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.009348798543214798
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.018697571009397507
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.028046345338225365
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.03739514201879501
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.009665833786129951
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.017300914973020554
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.010248156264424324
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.015086894854903221
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.018697571009397507
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06322891265153885,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.047322358936071396,
+            "maxRigidErrorMeters": 6.664001972467304e-08
+          }
+        ]
+      }
+    },
+    "25": {
+      "reference": {
+        "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+        "jawMapped": false,
+        "lipProbeVertices": 188,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.009348818100988865
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.018697571009397507
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.028046324849128723
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.03739514201879501
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.00920416135340929
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016065064817667007
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.010248188860714436
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.01399423461407423
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.018697571009397507
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289266794919968,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04611121490597725,
+            "maxRigidErrorMeters": 6.664001972467304e-08
+          }
+        ]
+      }
+    },
+    "93": {
+      "reference": {
+        "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+        "jawMapped": false,
+        "lipProbeVertices": 214,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.009348818100988865
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.018697571009397507
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.028046324849128723
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.03739514201879501
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.00920416135340929
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.017300941050052643
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.010248156264424324
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.01399423461407423
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.018697571009397507
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06433872878551483,
+            "maxRigidErrorMeters": 6.006850128414953e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.05181487277150154,
+            "maxRigidErrorMeters": 1.1920928955078125e-07
+          }
+        ]
+      }
+    },
+    "6": {
+      "before": {
+        "sha256": "1b4167331d78c6ba6db78eee02c15b2a2b0b6a54d402c617c35beb2d0c8deefe",
+        "jawMapped": false,
+        "lipProbeVertices": 153,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011492949910461903
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03447882831096649
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.04597177729010582
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.008890281431376934
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016065064817667007
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.024593915790319443
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.022985879331827164
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289263814687729,
+            "maxRigidErrorMeters": 0.02672882191836834
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.047775305807590485,
+            "maxRigidErrorMeters": 0.020948484539985657
+          }
+        ]
+      },
+      "after": {
+        "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+        "jawMapped": false,
+        "lipProbeVertices": 157,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011492949910461903
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03447882831096649
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.04597177729010582
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.008890281431376934
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.022985879331827164
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289266049861908,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04592330753803253,
+            "maxRigidErrorMeters": 1.2287812012345967e-07
+          }
+        ]
+      }
+    },
+    "49": {
+      "before": {
+        "sha256": "8a1f401abf3fda751e1f8d609eb82a7b07e8c7040a9c688b0dfa7088637d84fb",
+        "jawMapped": false,
+        "lipProbeVertices": 153,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011461637914180756
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.022923318669199944
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03438493609428406
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.04584657400846481
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.008844340220093727
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016031676903367043
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.022923318669199944
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.024519318714737892
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.022923318669199944
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06173541769385338,
+            "maxRigidErrorMeters": 0.025485733523964882
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.044684648513793945,
+            "maxRigidErrorMeters": 0.018603544682264328
+          }
+        ]
+      },
+      "after": {
+        "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+        "jawMapped": false,
+        "lipProbeVertices": 141,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.009348753839731216
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.018697571009397507
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.028046390041708946
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.03739514201879501
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.011320426128804684
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016065124422311783
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.011368327774107456
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.013994216918945312
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.018697571009397507
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06292658299207687,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04592330753803253,
+            "maxRigidErrorMeters": 1.2287812012345967e-07
+          }
+        ]
+      }
+    },
+    "57": {
+      "before": {
+        "sha256": "86aec9d867815826fa7af30663cb6537062a5de259f56d0e369ef1c87807fa6f",
+        "jawMapped": false,
+        "lipProbeVertices": 153,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011492949910461903
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03447882831096649
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.04597177729010582
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.008890281431376934
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016065064817667007
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.022985879331827164
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.024593915790319443
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.022985879331827164
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289263814687729,
+            "maxRigidErrorMeters": 0.02672882191836834
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.047161929309368134,
+            "maxRigidErrorMeters": 0.02040470577776432
+          }
+        ]
+      },
+      "after": {
+        "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+        "jawMapped": false,
+        "lipProbeVertices": 165,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.009348818100988865
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.018697571009397507
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.028046324849128723
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.03739514201879501
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.01521630771458149
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.017300941050052643
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.015294439159333706
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.01399423461407423
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.018697571009397507
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06289266049861908,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04592330753803253,
+            "maxRigidErrorMeters": 1.2287812012345967e-07
+          }
+        ]
+      }
+    },
+    "85": {
+      "before": {
+        "sha256": "c9e4e371c216b6a9720591ee32a0592669e7bad7618198ea8ae0203b25c57507",
+        "jawMapped": false,
+        "lipProbeVertices": 153,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.011682186275720596
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.02336435206234455
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.03504658117890358
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.046728767454624176
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.00916551984846592
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.016267629340291023
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.02336435206234455
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.025044266134500504
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.02336435206234455
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06403807550668716,
+            "maxRigidErrorMeters": 0.026730502024292946
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04547537490725517,
+            "maxRigidErrorMeters": 0.019638899713754654
+          }
+        ]
+      },
+      "after": {
+        "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+        "jawMapped": false,
+        "lipProbeVertices": 214,
+        "neutralReturnMeters": 0.0,
+        "expressions": [
+          {
+            "pose": "aa-025",
+            "maxDeltaMeters": 0.009666400030255318
+          },
+          {
+            "pose": "aa-050",
+            "maxDeltaMeters": 0.019332800060510635
+          },
+          {
+            "pose": "aa-075",
+            "maxDeltaMeters": 0.028999200090765953
+          },
+          {
+            "pose": "aa-100",
+            "maxDeltaMeters": 0.03866560012102127
+          },
+          {
+            "pose": "ih-050",
+            "maxDeltaMeters": 0.012997164390981197
+          },
+          {
+            "pose": "ou-050",
+            "maxDeltaMeters": 0.018198026344180107
+          },
+          {
+            "pose": "ee-050",
+            "maxDeltaMeters": 0.013043314218521118
+          },
+          {
+            "pose": "oh-050",
+            "maxDeltaMeters": 0.015069601126015186
+          },
+          {
+            "pose": "blink-aa",
+            "maxDeltaMeters": 0.019332800060510635
+          }
+        ],
+        "joints": [
+          {
+            "bone": "Head",
+            "maxLipTravelMeters": 0.06292658299207687,
+            "maxRigidErrorMeters": 3.0719530030864917e-08
+          },
+          {
+            "bone": "Neck",
+            "maxLipTravelMeters": 0.04592330753803253,
+            "maxRigidErrorMeters": 1.2287812012345967e-07
+          }
+        ]
+      }
+    }
+  }
+}

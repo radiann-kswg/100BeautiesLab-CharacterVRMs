@@ -1,0 +1,4834 @@
+{
+  "official_db": "data/Works_NumberTales/DataBases/db_Primary.json",
+  "official_db_sha256": "84c102962439a0e06994c48a800844c04512733e555889093837109ca860d11d",
+  "canonical_geometry": [
+    {
+      "number": 4,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "mesh_count": 4,
+      "material_count": 1,
+      "triangles": 8104,
+      "triangles_by_node": {
+        "Body": 3994,
+        "Face": 1502,
+        "Hair": 1072,
+        "Tail": 1536
+      },
+      "materials": {
+        "CoreFolder004": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      }
+    },
+    {
+      "number": 16,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-16/vrm_corefolder16.vrm",
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "mesh_count": 4,
+      "material_count": 1,
+      "triangles": 9459,
+      "triangles_by_node": {
+        "Body.002": 2488,
+        "Face.001": 1424,
+        "Tail.001": 2487,
+        "Hair.001": 3060
+      },
+      "materials": {
+        "CoreFolder016.001": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.40487802,
+          "_ShadeToony": 1,
+          "_IndirectLightIntensity": 0.138997257,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.2
+        }
+      }
+    },
+    {
+      "number": 20,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-20/vrm_corefolder20.vrm",
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "mesh_count": 3,
+      "material_count": 1,
+      "triangles": 7064,
+      "triangles_by_node": {
+        "Body.003": 2988,
+        "Face.002": 3308,
+        "tail.001": 768
+      },
+      "materials": {
+        "CoreFolder020.001": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1,
+          "_IndirectLightIntensity": 0.138997257,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.2
+        }
+      }
+    },
+    {
+      "number": 22,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-22/VRCModel_CoreFloder-22.vrm",
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "mesh_count": 4,
+      "material_count": 2,
+      "triangles": 12697,
+      "triangles_by_node": {
+        "Body.005": 3800,
+        "Face.001": 3107,
+        "Body.006": 46,
+        "Tail.005": 5744
+      },
+      "materials": {
+        "CoreFolder022.001": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.050000002374872565
+        },
+        "CoreFolder022-2.001": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.09999997913837433,
+          "_ShadeToony": 0.7777777299468911,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      }
+    },
+    {
+      "number": 25,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-25/vrm_corefolder25.vrm",
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "mesh_count": 3,
+      "material_count": 1,
+      "triangles": 9679,
+      "triangles_by_node": {
+        "Body.002": 4080,
+        "Face.002": 3317,
+        "Tail.001": 2282
+      },
+      "materials": {
+        "CoreFolder025.001": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1,
+          "_IndirectLightIntensity": 0.138997257,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.05
+        }
+      }
+    },
+    {
+      "number": 93,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-93/VRCModel_CoreFloder-93.vrm",
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "mesh_count": 3,
+      "material_count": 1,
+      "triangles": 9205,
+      "triangles_by_node": {
+        "Body": 2152,
+        "Face": 3269,
+        "Tail": 3784
+      },
+      "materials": {
+        "CoreFolder093": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      }
+    }
+  ],
+  "characters": [
+    {
+      "number": 6,
+      "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-6/Modeling/Corefolder-6.vrm",
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "bytes": 1337892,
+      "source_vrm_sha256": "df67d71177d37456614f46651e20c1de4a1ed2f30dbd25ac41b7c1a8d40ebe2d",
+      "source_blend": "Corefolder-6-Starter.blend",
+      "source_blend_sha256": "098ff6d3ece32abbd373b9ea21f717145b2185d114a9853c742bc39993508360",
+      "generator": "saturday06_blender_vrm_exporter_experimental_4.10.5",
+      "vrm_version": "0.0",
+      "metadata": {
+        "allowedUserName": "ExplicitlyLicensedPerson",
+        "author": "RadianN_kswg",
+        "commercialUssageName": "Disallow",
+        "contactInformation": "www.numbertales-radiann.net",
+        "licenseName": "CC_BY_NC",
+        "otherLicenseUrl": "undefined",
+        "otherPermissionUrl": "https://github.com/radiann-kswg/100BeautiesLab_CreationsDB/blob/develop/guideline.md",
+        "reference": "undefined",
+        "sexualUssageName": "Disallow",
+        "title": "NumberTales #6 — 6(ムイ) / 6(Sics)",
+        "version": "1.0",
+        "violentUssageName": "Disallow"
+      },
+      "humanoid_slots": 53,
+      "geometry": {
+        "mesh_count": 5,
+        "material_count": 16,
+        "triangles": 14568,
+        "triangles_by_node": {
+          "Face": 1502,
+          "Body": 2934,
+          "Hair": 5766,
+          "Tail": 2304,
+          "Outfit": 2062
+        }
+      },
+      "display_layers": {
+        "materials_by_renderer": {
+          "Face": [
+            "Mui • drawn left and right irises",
+            "Mui • expression atlas"
+          ],
+          "Body": [
+            "Corefolder Cranial Base #6",
+            "Mui • raspberry and white belly"
+          ],
+          "Hair": [
+            "Mui • ivory ear fur",
+            "Mui • pink inner ear",
+            "Mui • raspberry hair",
+            "Mui • swept crown and forelocks",
+            "Mui • white cheek fur"
+          ],
+          "Tail": [
+            "Mui tail • curved pale pink tips"
+          ],
+          "Outfit": [
+            "Mui brooch • sapphire edge",
+            "Mui collar • sky blue",
+            "Mui • official collar 6",
+            "Mui • seam and dark bezel",
+            "Mui • six-petal official brooch"
+          ]
+        },
+        "cranial_skin_nodes": [
+          "Body"
+        ]
+      },
+      "skins": 5,
+      "skinning": {
+        "skinned_primitive_vertices": 28629,
+        "max_weight_sum_error": 1.1920928955078125e-07,
+        "max_influences": 4,
+        "unskinned_mesh_nodes": []
+      },
+      "materials": {
+        "Mui • expression atlas": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • inner lip line": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • drawn left and right irises": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • raspberry and white belly": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.17999999690800905
+        },
+        "Corefolder Cranial Base #6": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • swept crown and forelocks": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.1500000013038516
+        },
+        "Mui • raspberry hair": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.2099999925121665
+        },
+        "Mui • ivory ear fur": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • pink inner ear": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • white cheek fur": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui tail • curved pale pink tips": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.20000000949949026
+        },
+        "Mui collar • sky blue": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.17000000225380063
+        },
+        "Mui • seam and dark bezel": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui • official collar 6": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Mui brooch • sapphire edge": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "Mui • six-petal official brooch": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      },
+      "textures": [
+        {
+          "name": "Corefolder-6 expression atlas",
+          "bytes": 71219,
+          "sha256": "88d297180ee40dede3b13c671e92a6919888d232a382880ccde64221a21e9eb5",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui • expression atlas",
+              "_MainTex"
+            ],
+            [
+              "Mui • expression atlas",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Mui-Eyes.png",
+          "bytes": 47318,
+          "sha256": "63d152fbdab6b2ea2a14b915ffcc99163f382a3f477280f9036640d55f4a9989",
+          "mime": "image/png",
+          "size": [
+            512,
+            256
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui • drawn left and right irises",
+              "_MainTex"
+            ],
+            [
+              "Mui • drawn left and right irises",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Mui-Fur.png",
+          "bytes": 8804,
+          "sha256": "80166b1a04ea2f5730520667d2b8f469c4e7f2ec6c2aa24f44c107de06d92914",
+          "mime": "image/png",
+          "size": [
+            1024,
+            512
+          ],
+          "rgb_channel_ranges": [
+            [
+              255,
+              255
+            ],
+            [
+              118,
+              255
+            ],
+            [
+              162,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui • raspberry and white belly",
+              "_MainTex"
+            ],
+            [
+              "Mui • raspberry and white belly",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Mui-Bangs.png",
+          "bytes": 19944,
+          "sha256": "7c326454f9082f5c224f3a870434e69b3d45747cde6077896e0430684b4999cd",
+          "mime": "image/png",
+          "size": [
+            1024,
+            512
+          ],
+          "rgb_channel_ranges": [
+            [
+              222,
+              255
+            ],
+            [
+              90,
+              118
+            ],
+            [
+              135,
+              162
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui • swept crown and forelocks",
+              "_MainTex"
+            ],
+            [
+              "Mui • swept crown and forelocks",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Mui-TailBand.png",
+          "bytes": 432,
+          "sha256": "2b54500981f73f5d7547d692e92c9c53c64ff652ca9f27ca78d83e2748e37bd8",
+          "mime": "image/png",
+          "size": [
+            256,
+            128
+          ],
+          "rgb_channel_ranges": [
+            [
+              228,
+              255
+            ],
+            [
+              89,
+              206
+            ],
+            [
+              140,
+              237
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui tail • curved pale pink tips",
+              "_MainTex"
+            ],
+            [
+              "Mui tail • curved pale pink tips",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "attr_numberMarkNTS-6.png",
+          "bytes": 994,
+          "sha256": "a5867f46984d4e6e2081034b3393fcaa4745f7fa0e716f037c87c380074702df",
+          "mime": "image/png",
+          "size": [
+            45,
+            71
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui • official collar 6",
+              "_MainTex"
+            ],
+            [
+              "Mui • official collar 6",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Mui-Brooch.png",
+          "bytes": 13569,
+          "sha256": "ccd08ec8c2d403e0690c966fc4f965c03632ae1cb8715860c0d2c39616479a66",
+          "mime": "image/png",
+          "size": [
+            156,
+            201
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Mui • six-petal official brooch",
+              "_MainTex"
+            ],
+            [
+              "Mui • six-petal official brooch",
+              "_ShadeTexture"
+            ]
+          ]
+        }
+      ],
+      "bound_expressions": {
+        "a": [
+          {
+            "mesh": "Cube.007",
+            "target": 0,
+            "weight": 100.0,
+            "moving_primitive_vertices": 372,
+            "max_local_delta": 0.0459718
+          }
+        ],
+        "i": [
+          {
+            "mesh": "Cube.007",
+            "target": 1,
+            "weight": 100.0,
+            "moving_primitive_vertices": 298,
+            "max_local_delta": 0.0177806
+          }
+        ],
+        "u": [
+          {
+            "mesh": "Cube.007",
+            "target": 2,
+            "weight": 100.0,
+            "moving_primitive_vertices": 362,
+            "max_local_delta": 0.0459718
+          }
+        ],
+        "e": [
+          {
+            "mesh": "Cube.007",
+            "target": 3,
+            "weight": 100.0,
+            "moving_primitive_vertices": 372,
+            "max_local_delta": 0.0459718
+          }
+        ],
+        "o": [
+          {
+            "mesh": "Cube.007",
+            "target": 4,
+            "weight": 100.0,
+            "moving_primitive_vertices": 390,
+            "max_local_delta": 0.0459718
+          }
+        ],
+        "blink": [
+          {
+            "mesh": "Cube.007",
+            "target": 5,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1144,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "joy": [
+          {
+            "mesh": "Cube.007",
+            "target": 8,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1126,
+            "max_local_delta": 0.0633421
+          }
+        ],
+        "angry": [
+          {
+            "mesh": "Cube.007",
+            "target": 12,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1168,
+            "max_local_delta": 0.0521887
+          }
+        ],
+        "sorrow": [
+          {
+            "mesh": "Cube.007",
+            "target": 13,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1200,
+            "max_local_delta": 0.1003114
+          }
+        ],
+        "fun": [
+          {
+            "mesh": "Cube.007",
+            "target": 11,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1022,
+            "max_local_delta": 0.0138511
+          }
+        ],
+        "blink_l": [
+          {
+            "mesh": "Cube.007",
+            "target": 6,
+            "weight": 100.0,
+            "moving_primitive_vertices": 564,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "blink_r": [
+          {
+            "mesh": "Cube.007",
+            "target": 7,
+            "weight": 100.0,
+            "moving_primitive_vertices": 564,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "Surprise": [
+          {
+            "mesh": "Cube.007",
+            "target": 14,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1450,
+            "max_local_delta": 0.0702141
+          }
+        ]
+      },
+      "secondary_animation": {
+        "official_tail_units": [
+          {
+            "TailShapeType": "#TailShapeType_Fox",
+            "Count": 6,
+            "TailsUnit_PNGName": "attr_tailsUnitNTS-6",
+            "Note_JP": null,
+            "Note_EN": null
+          }
+        ],
+        "tail_roots_attached_to_hips": 6,
+        "named_roots_by_official_branch_layer": {},
+        "hair_roots_attached_to_head": 2,
+        "groups": [
+          {
+            "name": "MuiHairL",
+            "parent": "head",
+            "nodes": [
+              "MuiHairL_01",
+              "MuiHairL_02",
+              "MuiHairL_03",
+              "MuiHairL_end"
+            ],
+            "weighted_vertex_counts": [
+              385,
+              300,
+              120,
+              90
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.009999999776482582,
+            "collider_groups": []
+          },
+          {
+            "name": "MuiHairR",
+            "parent": "head",
+            "nodes": [
+              "MuiHairR_01",
+              "MuiHairR_02",
+              "MuiHairR_03",
+              "MuiHairR_end"
+            ],
+            "weighted_vertex_counts": [
+              370,
+              360,
+              215,
+              120
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.009999999776482582,
+            "collider_groups": []
+          },
+          {
+            "name": "MuiTailUpperL",
+            "parent": "hips",
+            "nodes": [
+              "MuiTailUpperL_01",
+              "MuiTailUpperL_02",
+              "MuiTailUpperL_03",
+              "MuiTailUpperL_04",
+              "MuiTailUpperL_end"
+            ],
+            "weighted_vertex_counts": [
+              72,
+              96,
+              112,
+              72,
+              9
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "MuiTailMiddleL",
+            "parent": "hips",
+            "nodes": [
+              "MuiTailMiddleL_01",
+              "MuiTailMiddleL_02",
+              "MuiTailMiddleL_03",
+              "MuiTailMiddleL_04",
+              "MuiTailMiddleL_end"
+            ],
+            "weighted_vertex_counts": [
+              72,
+              96,
+              112,
+              72,
+              9
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "MuiTailLowerL",
+            "parent": "hips",
+            "nodes": [
+              "MuiTailLowerL_01",
+              "MuiTailLowerL_02",
+              "MuiTailLowerL_03",
+              "MuiTailLowerL_04",
+              "MuiTailLowerL_end"
+            ],
+            "weighted_vertex_counts": [
+              72,
+              96,
+              96,
+              72,
+              25
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "MuiTailUpperR",
+            "parent": "hips",
+            "nodes": [
+              "MuiTailUpperR_01",
+              "MuiTailUpperR_02",
+              "MuiTailUpperR_03",
+              "MuiTailUpperR_04",
+              "MuiTailUpperR_end"
+            ],
+            "weighted_vertex_counts": [
+              72,
+              96,
+              112,
+              72,
+              9
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "MuiTailMiddleR",
+            "parent": "hips",
+            "nodes": [
+              "MuiTailMiddleR_01",
+              "MuiTailMiddleR_02",
+              "MuiTailMiddleR_03",
+              "MuiTailMiddleR_04",
+              "MuiTailMiddleR_end"
+            ],
+            "weighted_vertex_counts": [
+              72,
+              96,
+              112,
+              72,
+              9
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "MuiTailLowerR",
+            "parent": "hips",
+            "nodes": [
+              "MuiTailLowerR_01",
+              "MuiTailLowerR_02",
+              "MuiTailLowerR_03",
+              "MuiTailLowerR_04",
+              "MuiTailLowerR_end"
+            ],
+            "weighted_vertex_counts": [
+              72,
+              96,
+              96,
+              72,
+              25
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          }
+        ],
+        "colliders": [
+          {
+            "node": "hips",
+            "spheres": [
+              {
+                "offset": {
+                  "x": -0.0,
+                  "y": 0.33006277680397034,
+                  "z": -0.1097431555390358
+                },
+                "radius": 0.23000000417232513
+              }
+            ]
+          }
+        ]
+      },
+      "khronos_gltf_validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 1,
+        "infos": 27,
+        "hints": 55,
+        "diagnostic_counts": {
+          "INVALID_EXTENSION_NAME_FORMAT": 1,
+          "UNSUPPORTED_EXTENSION": 1,
+          "BUFFER_VIEW_TARGET_MISSING": 55,
+          "UNUSED_OBJECT": 24,
+          "IMAGE_NPOT_DIMENSIONS": 2
+        },
+        "error_and_warning_messages": [
+          {
+            "code": "INVALID_EXTENSION_NAME_FORMAT",
+            "message": "Extension name has invalid format.",
+            "severity": 1,
+            "pointer": "/extensionsUsed/1"
+          }
+        ]
+      },
+      "editable_blend": {
+        "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-6/Modeling/Corefolder-6.blend",
+        "sha256": "232d838598fe828c0e14b1184a5dea5311601ba31b534bf10cb895ad742d91bb",
+        "mesh_group_comparison": {
+          "triangles_compared_one_to_one": 14568,
+          "max_absolute_attribute_delta": 1.1920928955078125e-07,
+          "material_definitions_and_embedded_textures_match": true,
+          "skin_joints_compared": 96,
+          "max_inverse_bind_matrix_delta": 0.0,
+          "max_non_normal_attribute_delta": 0.0,
+          "max_vertex_normal_angle_degrees": 9.659493546606904e-06,
+          "vertex_normal_tolerance_degrees": 0.01,
+          "absolute_tolerance": 2e-05,
+          "ungrouped_meshes": 18,
+          "exported_meshes": 5,
+          "ungrouped_primitives": 24,
+          "exported_primitives": 15
+        },
+        "blender": "5.3.0",
+        "packed_images": {
+          "attr_numberMarkNTS-6.png": 994,
+          "attr_tailsUnitNTS-6.png": 87353,
+          "Corefolder-6 expression atlas": 71219,
+          "emstk_corefolderNTS-6-1.png": 67160,
+          "emstk_corefolderNTS-6-2.png": 77575,
+          "emstk_corefolderNTS-6-3.png": 77892,
+          "Mui-Bangs.png": 19944,
+          "Mui-Brooch.png": 13569,
+          "Mui-Eyes.png": 47318,
+          "Mui-Fur.png": 8804,
+          "Mui-TailBand.png": 432
+        },
+        "reference_images": [
+          "attr_tailsUnitNTS-6.png",
+          "emstk_corefolderNTS-6-1.png",
+          "emstk_corefolderNTS-6-2.png",
+          "emstk_corefolderNTS-6-3.png"
+        ],
+        "springs": [
+          "MuiHairL",
+          "MuiHairR",
+          "MuiTailLowerL",
+          "MuiTailLowerR",
+          "MuiTailMiddleL",
+          "MuiTailMiddleR",
+          "MuiTailUpperL",
+          "MuiTailUpperR"
+        ],
+        "shape_keys": {
+          "Face": 16
+        },
+        "root_rotation_0_2_rad": [
+          {
+            "group": "MuiHairL",
+            "mesh": "Mui hair • continuous swept bob",
+            "max_local_delta": 0.028032585978507996,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiHairR",
+            "mesh": "Mui hair • continuous swept bob",
+            "max_local_delta": 0.027657508850097656,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiTailUpperL",
+            "mesh": "Mui tail Upper L",
+            "max_local_delta": 0.15405933558940887,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiTailMiddleL",
+            "mesh": "Mui tail Middle L",
+            "max_local_delta": 0.12693259119987488,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiTailLowerL",
+            "mesh": "Mui tail Lower L",
+            "max_local_delta": 0.132354736328125,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiTailUpperR",
+            "mesh": "Mui tail Upper R",
+            "max_local_delta": 0.14951378107070923,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiTailMiddleR",
+            "mesh": "Mui tail Middle R",
+            "max_local_delta": 0.13912910223007202,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "MuiTailLowerR",
+            "mesh": "Mui tail Lower R",
+            "max_local_delta": 0.12249255180358887,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          }
+        ],
+        "mouth_poses": {
+          "Neutral": {
+            "center_gap_mm": 0.41997432708740234,
+            "minimum_rim_gap_mm": 0.07748603820800781,
+            "corner_width_mm": 52.23282241821289,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa25": {
+            "center_gap_mm": 10.215520858764648,
+            "minimum_rim_gap_mm": 2.598702907562256,
+            "corner_width_mm": 53.51600646972656,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50": {
+            "center_gap_mm": 20.011066436767578,
+            "minimum_rim_gap_mm": 5.119919776916504,
+            "corner_width_mm": 54.799190521240234,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa100": {
+            "center_gap_mm": 39.6021614074707,
+            "minimum_rim_gap_mm": 10.162353515625,
+            "corner_width_mm": 57.36555862426758,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50Joy50": {
+            "center_gap_mm": 20.011066436767578,
+            "minimum_rim_gap_mm": 5.119919776916504,
+            "corner_width_mm": 54.799190521240234,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Ih50Sorrow50": {
+            "center_gap_mm": 2.1538734436035156,
+            "minimum_rim_gap_mm": 0.13363361358642578,
+            "corner_width_mm": 60.12999725341797,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          }
+        },
+        "canonical_face_geometry": {
+          "vrm": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+          "reference_sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+          "points_per_pose": 726,
+          "excluded_oral_and_fan_points": 200,
+          "maximum_position_difference_mm": {
+            "Basis": 2.9802322387695312e-05,
+            "a": 2.9802322387695312e-05,
+            "i": 2.9802322387695312e-05,
+            "u": 2.9802322387695312e-05,
+            "e": 2.9802322387695312e-05,
+            "o": 2.9802322387695312e-05,
+            "EyeClose": 2.9802322387695312e-05,
+            "EyeClose_L": 2.9802322387695312e-05,
+            "EyeClose_R": 2.9802322387695312e-05,
+            "Joy": 2.9802322387695312e-05,
+            "Joy_Right": 2.9802322387695312e-05,
+            "Joy_Left": 2.9802322387695312e-05,
+            "Fun": 2.9802322387695312e-05,
+            "Angry": 2.9802322387695312e-05,
+            "Sorrow": 2.9802322387695312e-05,
+            "Terrible": 2.9802322387695312e-05
+          }
+        }
+      },
+      "unity_asset": {
+        "file": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-6/Corefolder-6.vrm",
+        "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161"
+      },
+      "errors": []
+    },
+    {
+      "number": 49,
+      "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-49/Modeling/Corefolder-49.vrm",
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "bytes": 1251072,
+      "source_vrm_sha256": "918e81e42fec0b1592767f9695d78fce52434b327a9d39afca666322cbc7cae0",
+      "source_blend": "Corefolder-49-Starter.blend",
+      "source_blend_sha256": "74280fefd29108c10b480d01fa5de7a15115daddb419650b92611da368073766",
+      "generator": "saturday06_blender_vrm_exporter_experimental_4.10.5",
+      "vrm_version": "0.0",
+      "metadata": {
+        "allowedUserName": "ExplicitlyLicensedPerson",
+        "author": "RadianN_kswg",
+        "commercialUssageName": "Disallow",
+        "contactInformation": "www.numbertales-radiann.net",
+        "licenseName": "CC_BY_NC",
+        "otherLicenseUrl": "undefined",
+        "otherPermissionUrl": "https://github.com/radiann-kswg/100BeautiesLab_CreationsDB/blob/develop/guideline.md",
+        "reference": "undefined",
+        "sexualUssageName": "Disallow",
+        "title": "Corefolder-49 Yochika",
+        "version": "1.0",
+        "violentUssageName": "Disallow"
+      },
+      "humanoid_slots": 53,
+      "geometry": {
+        "mesh_count": 5,
+        "material_count": 13,
+        "triangles": 15933,
+        "triangles_by_node": {
+          "Face": 1502,
+          "Body": 2934,
+          "Hair": 4245,
+          "Tail": 7224,
+          "Outfit": 28
+        }
+      },
+      "display_layers": {
+        "materials_by_renderer": {
+          "Face": [
+            "49 Yochika face"
+          ],
+          "Body": [
+            "49 White bib and chest mark",
+            "Corefolder Cranial Base #49"
+          ],
+          "Hair": [
+            "49 Crown crease",
+            "49 Ear lining",
+            "49 Hair underlayers",
+            "49 Inner ear blue",
+            "49 Sky fur",
+            "49 Sky hair",
+            "49 Swept crown"
+          ],
+          "Tail": [
+            "49 Blue tipped plume",
+            "49 Rear plume atlas"
+          ],
+          "Outfit": [
+            "49 Chest number"
+          ]
+        },
+        "cranial_skin_nodes": [
+          "Body"
+        ]
+      },
+      "skins": 5,
+      "skinning": {
+        "skinned_primitive_vertices": 27776,
+        "max_weight_sum_error": 1.1920928955078125e-07,
+        "max_influences": 4,
+        "unskinned_mesh_nodes": []
+      },
+      "materials": {
+        "49 Yochika face": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.09999997913837433,
+          "_ShadeToony": 0.7777777299468911,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "49 White bib and chest mark": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.06500000017695129
+        },
+        "Corefolder Cranial Base #49": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "49 Swept crown": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.06500000017695129
+        },
+        "49 Hair underlayers": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.11500000255182385
+        },
+        "49 Sky fur": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.06500000017695129
+        },
+        "49 Ear lining": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "49 Inner ear blue": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "49 Sky hair": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.11500000255182385
+        },
+        "49 Crown crease": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "49 Rear plume atlas": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "49 Blue tipped plume": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.11500000255182385
+        },
+        "49 Chest number": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.09999997913837433,
+          "_ShadeToony": 0.7777777299468911,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      },
+      "textures": [
+        {
+          "name": "Corefolder-49 expression atlas",
+          "bytes": 85649,
+          "sha256": "aee4fe642fdae26892df3e975f8f781144a24c2d26fc3c04804f0d078b9dfc9d",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "49 Yochika face",
+              "_MainTex"
+            ],
+            [
+              "49 Yochika face",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "49-body.png",
+          "bytes": 7030,
+          "sha256": "25a9c92f93d0fb4e5a541b7face0e81af77cb099df6b9759192a2f81a0157f13",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              86,
+              255
+            ],
+            [
+              151,
+              255
+            ],
+            [
+              201,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "49 White bib and chest mark",
+              "_MainTex"
+            ],
+            [
+              "49 White bib and chest mark",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "49-crown.png",
+          "bytes": 19032,
+          "sha256": "e234dc231bd43eed9a2ce75f2c9175cff37b4405893eeb5d8c43630b99d92cf2",
+          "mime": "image/png",
+          "size": [
+            768,
+            768
+          ],
+          "rgb_channel_ranges": [
+            [
+              72,
+              106
+            ],
+            [
+              124,
+              166
+            ],
+            [
+              166,
+              215
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "49 Swept crown",
+              "_MainTex"
+            ],
+            [
+              "49 Swept crown",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Tails-49.png",
+          "bytes": 26924,
+          "sha256": "baeae70954c8013f5202129fa36af2aaeca49c299febc6f5675d0d15efd9aef5",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              106,
+              155
+            ],
+            [
+              166,
+              193
+            ],
+            [
+              215,
+              230
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "49 Rear plume atlas",
+              "_MainTex"
+            ],
+            [
+              "49 Rear plume atlas",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "49-tail.png",
+          "bytes": 3835,
+          "sha256": "ae8972a5e71a62995c43d982c868deb3c09e45568b5b6353e0bdd2436c401189",
+          "mime": "image/png",
+          "size": [
+            256,
+            512
+          ],
+          "rgb_channel_ranges": [
+            [
+              101,
+              160
+            ],
+            [
+              163,
+              196
+            ],
+            [
+              213,
+              232
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "49 Blue tipped plume",
+              "_MainTex"
+            ],
+            [
+              "49 Blue tipped plume",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "49-chest-number.png",
+          "bytes": 13315,
+          "sha256": "bb490e8bf9a4456fa4da0132a98496e6309a0335ef905131c7203f3d151686fb",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "49 Chest number",
+              "_MainTex"
+            ],
+            [
+              "49 Chest number",
+              "_ShadeTexture"
+            ]
+          ]
+        }
+      ],
+      "bound_expressions": {
+        "a": [
+          {
+            "mesh": "Cube.007",
+            "target": 0,
+            "weight": 100.0,
+            "moving_primitive_vertices": 151,
+            "max_local_delta": 0.0373951
+          }
+        ],
+        "i": [
+          {
+            "mesh": "Cube.007",
+            "target": 1,
+            "weight": 100.0,
+            "moving_primitive_vertices": 140,
+            "max_local_delta": 0.0226409
+          }
+        ],
+        "u": [
+          {
+            "mesh": "Cube.007",
+            "target": 2,
+            "weight": 100.0,
+            "moving_primitive_vertices": 115,
+            "max_local_delta": 0.0321302
+          }
+        ],
+        "e": [
+          {
+            "mesh": "Cube.007",
+            "target": 3,
+            "weight": 100.0,
+            "moving_primitive_vertices": 156,
+            "max_local_delta": 0.0227367
+          }
+        ],
+        "o": [
+          {
+            "mesh": "Cube.007",
+            "target": 4,
+            "weight": 100.0,
+            "moving_primitive_vertices": 200,
+            "max_local_delta": 0.0279885
+          }
+        ],
+        "blink": [
+          {
+            "mesh": "Cube.007",
+            "target": 5,
+            "weight": 100.0,
+            "moving_primitive_vertices": 548,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "joy": [
+          {
+            "mesh": "Cube.007",
+            "target": 8,
+            "weight": 100.0,
+            "moving_primitive_vertices": 571,
+            "max_local_delta": 0.0633421
+          }
+        ],
+        "angry": [
+          {
+            "mesh": "Cube.007",
+            "target": 12,
+            "weight": 100.0,
+            "moving_primitive_vertices": 555,
+            "max_local_delta": 0.0521887
+          }
+        ],
+        "sorrow": [
+          {
+            "mesh": "Cube.007",
+            "target": 13,
+            "weight": 100.0,
+            "moving_primitive_vertices": 419,
+            "max_local_delta": 0.1003114
+          }
+        ],
+        "fun": [
+          {
+            "mesh": "Cube.007",
+            "target": 11,
+            "weight": 100.0,
+            "moving_primitive_vertices": 485,
+            "max_local_delta": 0.0138511
+          }
+        ],
+        "blink_l": [
+          {
+            "mesh": "Cube.007",
+            "target": 6,
+            "weight": 100.0,
+            "moving_primitive_vertices": 270,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "blink_r": [
+          {
+            "mesh": "Cube.007",
+            "target": 7,
+            "weight": 100.0,
+            "moving_primitive_vertices": 274,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "Surprise": [
+          {
+            "mesh": "Cube.007",
+            "target": 14,
+            "weight": 100.0,
+            "moving_primitive_vertices": 628,
+            "max_local_delta": 0.0702141
+          }
+        ]
+      },
+      "secondary_animation": {
+        "official_tail_units": [
+          {
+            "TailShapeType": "#TailShapeType_FoxBranched",
+            "Count": 9,
+            "Branches": [
+              {
+                "Laterality": "#Lat_Upper",
+                "TailCount": 4,
+                "ClusterCount": 2
+              },
+              {
+                "Laterality": "#Lat_Lower",
+                "TailCount": 5,
+                "ClusterCount": 1
+              }
+            ],
+            "TailsUnit_PNGName": "attr_tailsUnitNTS-49",
+            "Note_JP": null,
+            "Note_EN": null
+          }
+        ],
+        "tail_roots_attached_to_hips": 9,
+        "named_roots_by_official_branch_layer": {
+          "#Lat_Upper": 4,
+          "#Lat_Lower": 5
+        },
+        "hair_roots_attached_to_head": 2,
+        "groups": [
+          {
+            "name": "Hair49_cheek_R",
+            "parent": "head",
+            "nodes": [
+              "Hair49_cheek_R_01",
+              "Hair49_cheek_R_02",
+              "Hair49_cheek_R_03",
+              "Hair49_cheek_R_04",
+              "Hair49_cheek_R_05",
+              "Hair49_cheek_R_06",
+              "Hair49_cheek_R_end"
+            ],
+            "weighted_vertex_counts": [
+              196,
+              224,
+              224,
+              210,
+              210,
+              210,
+              126
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.007000000216066837,
+            "collider_groups": []
+          },
+          {
+            "name": "Hair49_cheek_L",
+            "parent": "head",
+            "nodes": [
+              "Hair49_cheek_L_01",
+              "Hair49_cheek_L_02",
+              "Hair49_cheek_L_03",
+              "Hair49_cheek_L_04",
+              "Hair49_cheek_L_05",
+              "Hair49_cheek_L_06",
+              "Hair49_cheek_L_end"
+            ],
+            "weighted_vertex_counts": [
+              196,
+              224,
+              224,
+              210,
+              210,
+              210,
+              126
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.007000000216066837,
+            "collider_groups": []
+          },
+          {
+            "name": "Tail49_upper_inner_R",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_upper_inner_R_01",
+              "Tail49_upper_inner_R_02",
+              "Tail49_upper_inner_R_03",
+              "Tail49_upper_inner_R_04",
+              "Tail49_upper_inner_R_end"
+            ],
+            "weighted_vertex_counts": [
+              402,
+              578,
+              504,
+              240,
+              22
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_upper_inner_L",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_upper_inner_L_01",
+              "Tail49_upper_inner_L_02",
+              "Tail49_upper_inner_L_03",
+              "Tail49_upper_inner_L_04",
+              "Tail49_upper_inner_L_end"
+            ],
+            "weighted_vertex_counts": [
+              416,
+              572,
+              482,
+              242,
+              30
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_upper_outer_R",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_upper_outer_R_01",
+              "Tail49_upper_outer_R_02",
+              "Tail49_upper_outer_R_03",
+              "Tail49_upper_outer_R_04",
+              "Tail49_upper_outer_R_end"
+            ],
+            "weighted_vertex_counts": [
+              320,
+              472,
+              532,
+              372,
+              72
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_upper_outer_L",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_upper_outer_L_01",
+              "Tail49_upper_outer_L_02",
+              "Tail49_upper_outer_L_03",
+              "Tail49_upper_outer_L_04",
+              "Tail49_upper_outer_L_end"
+            ],
+            "weighted_vertex_counts": [
+              322,
+              478,
+              522,
+              362,
+              80
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_low_outside_R",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_low_outside_R_01",
+              "Tail49_low_outside_R_02",
+              "Tail49_low_outside_R_03",
+              "Tail49_low_outside_R_04",
+              "Tail49_low_outside_R_end"
+            ],
+            "weighted_vertex_counts": [
+              136,
+              188,
+              212,
+              154,
+              38
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_low_outside_L",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_low_outside_L_01",
+              "Tail49_low_outside_L_02",
+              "Tail49_low_outside_L_03",
+              "Tail49_low_outside_L_04",
+              "Tail49_low_outside_L_end"
+            ],
+            "weighted_vertex_counts": [
+              136,
+              192,
+              214,
+              154,
+              36
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_low_middle",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_low_middle_01",
+              "Tail49_low_middle_02",
+              "Tail49_low_middle_03",
+              "Tail49_low_middle_04",
+              "Tail49_low_middle_end"
+            ],
+            "weighted_vertex_counts": [
+              152,
+              196,
+              186,
+              144,
+              48
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.013000000268220901,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_low_wrap_R",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_low_wrap_R_01",
+              "Tail49_low_wrap_R_02",
+              "Tail49_low_wrap_R_03",
+              "Tail49_low_wrap_R_04",
+              "Tail49_low_wrap_R_05",
+              "Tail49_low_wrap_R_06",
+              "Tail49_low_wrap_R_07",
+              "Tail49_low_wrap_R_08",
+              "Tail49_low_wrap_R_end"
+            ],
+            "weighted_vertex_counts": [
+              224,
+              300,
+              300,
+              300,
+              300,
+              300,
+              300,
+              228,
+              122
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.014999999664723873,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail49_low_wrap_L",
+            "parent": "hips",
+            "nodes": [
+              "Tail49_low_wrap_L_01",
+              "Tail49_low_wrap_L_02",
+              "Tail49_low_wrap_L_03",
+              "Tail49_low_wrap_L_04",
+              "Tail49_low_wrap_L_05",
+              "Tail49_low_wrap_L_06",
+              "Tail49_low_wrap_L_07",
+              "Tail49_low_wrap_L_08",
+              "Tail49_low_wrap_L_end"
+            ],
+            "weighted_vertex_counts": [
+              246,
+              300,
+              300,
+              300,
+              300,
+              300,
+              300,
+              244,
+              122
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.014999999664723873,
+            "collider_groups": [
+              0
+            ]
+          }
+        ],
+        "colliders": [
+          {
+            "node": "hips",
+            "spheres": [
+              {
+                "offset": {
+                  "x": -0.0,
+                  "y": 0.3450627624988556,
+                  "z": -0.05974315479397774
+                },
+                "radius": 0.26499998569488525
+              }
+            ]
+          }
+        ]
+      },
+      "khronos_gltf_validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 1,
+        "infos": 24,
+        "hints": 53,
+        "diagnostic_counts": {
+          "INVALID_EXTENSION_NAME_FORMAT": 1,
+          "UNSUPPORTED_EXTENSION": 1,
+          "BUFFER_VIEW_TARGET_MISSING": 53,
+          "UNUSED_OBJECT": 22,
+          "IMAGE_NPOT_DIMENSIONS": 1
+        },
+        "error_and_warning_messages": [
+          {
+            "code": "INVALID_EXTENSION_NAME_FORMAT",
+            "message": "Extension name has invalid format.",
+            "severity": 1,
+            "pointer": "/extensionsUsed/1"
+          }
+        ]
+      },
+      "editable_blend": {
+        "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-49/Modeling/Corefolder-49.blend",
+        "sha256": "e52f67c0f6798a20c387211eb1eae5e2bdc0076cdd406081015a857fe1da750e",
+        "mesh_group_comparison": {
+          "triangles_compared_one_to_one": 15933,
+          "max_absolute_attribute_delta": 4.72385436296463e-05,
+          "material_definitions_and_embedded_textures_match": true,
+          "skin_joints_compared": 125,
+          "max_inverse_bind_matrix_delta": 0.0,
+          "max_non_normal_attribute_delta": 0.0,
+          "max_vertex_normal_angle_degrees": 0.0027073662462842067,
+          "vertex_normal_tolerance_degrees": 0.01,
+          "absolute_tolerance": 2e-05,
+          "ungrouped_meshes": 17,
+          "exported_meshes": 5,
+          "ungrouped_primitives": 24,
+          "exported_primitives": 13
+        },
+        "blender": "5.3.0",
+        "packed_images": {
+          "49-body.png": 7030,
+          "49-chest-number.png": 13315,
+          "49-crown.png": 19032,
+          "49-neck.png": 947,
+          "49-tail.png": 3835,
+          "attr_tailsUnitNTS-49.png": 112182,
+          "Corefolder-49 expression atlas": 85649,
+          "emstk_corefolderNTS-49-1.png": 72260,
+          "emstk_corefolderNTS-49-2.png": 76771,
+          "Tails-49.png": 26924
+        },
+        "reference_images": [
+          "attr_tailsUnitNTS-49.png",
+          "emstk_corefolderNTS-49-1.png",
+          "emstk_corefolderNTS-49-2.png"
+        ],
+        "springs": [
+          "Hair49_cheek_L",
+          "Hair49_cheek_R",
+          "Tail49_low_middle",
+          "Tail49_low_outside_L",
+          "Tail49_low_outside_R",
+          "Tail49_low_wrap_L",
+          "Tail49_low_wrap_R",
+          "Tail49_upper_inner_L",
+          "Tail49_upper_inner_R",
+          "Tail49_upper_outer_L",
+          "Tail49_upper_outer_R"
+        ],
+        "shape_keys": {
+          "Face": 16
+        },
+        "root_rotation_0_2_rad": [
+          {
+            "group": "Hair49_cheek_R",
+            "mesh": "Hair | cheek R",
+            "max_local_delta": 0.05116443336009979,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair49_cheek_L",
+            "mesh": "Hair | cheek L",
+            "max_local_delta": 0.05116443336009979,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_upper_inner_R",
+            "mesh": "Tail | upper inner R",
+            "max_local_delta": 0.11673922091722488,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_upper_inner_L",
+            "mesh": "Tail | upper inner L",
+            "max_local_delta": 0.11575166881084442,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_upper_outer_R",
+            "mesh": "Tail | upper outer R",
+            "max_local_delta": 0.10339867323637009,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_upper_outer_L",
+            "mesh": "Tail | upper outer L",
+            "max_local_delta": 0.10270559042692184,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_low_outside_R",
+            "mesh": "Tail | low outside R",
+            "max_local_delta": 0.11207471042871475,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_low_outside_L",
+            "mesh": "Tail | low outside L",
+            "max_local_delta": 0.11266317963600159,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_low_middle",
+            "mesh": "Tail | low middle",
+            "max_local_delta": 0.10304714739322662,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_low_wrap_R",
+            "mesh": "Tail | low wrap R",
+            "max_local_delta": 0.13088805973529816,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail49_low_wrap_L",
+            "mesh": "Tail | low wrap L",
+            "max_local_delta": 0.11003269255161285,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          }
+        ],
+        "mouth_poses": {
+          "Neutral": {
+            "center_gap_mm": 0.41997432708740234,
+            "minimum_rim_gap_mm": 0.08851289749145508,
+            "corner_width_mm": 21.15605354309082,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa25": {
+            "center_gap_mm": 8.883237838745117,
+            "minimum_rim_gap_mm": 1.8718838691711426,
+            "corner_width_mm": 29.551937103271484,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50": {
+            "center_gap_mm": 17.346500396728516,
+            "minimum_rim_gap_mm": 3.6553144454956055,
+            "corner_width_mm": 37.947818756103516,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa100": {
+            "center_gap_mm": 34.27302932739258,
+            "minimum_rim_gap_mm": 7.222115993499756,
+            "corner_width_mm": 54.73958206176758,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50Joy50": {
+            "center_gap_mm": 17.346500396728516,
+            "minimum_rim_gap_mm": 3.6553144454956055,
+            "corner_width_mm": 44.29463195800781,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Ih50Sorrow50": {
+            "center_gap_mm": 9.33980941772461,
+            "minimum_rim_gap_mm": 1.9681453704833984,
+            "corner_width_mm": 64.44361877441406,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          }
+        },
+        "canonical_face_geometry": {
+          "vrm": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+          "reference_sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+          "points_per_pose": 726,
+          "excluded_oral_and_fan_points": 200,
+          "maximum_position_difference_mm": {
+            "Basis": 2.9802322387695312e-05,
+            "a": 2.9802322387695312e-05,
+            "i": 2.9802322387695312e-05,
+            "u": 2.9802322387695312e-05,
+            "e": 2.9802322387695312e-05,
+            "o": 2.9802322387695312e-05,
+            "EyeClose": 2.9802322387695312e-05,
+            "EyeClose_L": 2.9802322387695312e-05,
+            "EyeClose_R": 2.9802322387695312e-05,
+            "Joy": 2.9802322387695312e-05,
+            "Joy_Right": 2.9802322387695312e-05,
+            "Joy_Left": 2.9802322387695312e-05,
+            "Fun": 2.9802322387695312e-05,
+            "Angry": 2.9802322387695312e-05,
+            "Sorrow": 2.9802322387695312e-05,
+            "Terrible": 2.9802322387695312e-05
+          }
+        }
+      },
+      "unity_asset": {
+        "file": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-49/Corefolder-49.vrm",
+        "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1"
+      },
+      "errors": []
+    },
+    {
+      "number": 57,
+      "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Modeling/Corefolder-57.vrm",
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "bytes": 1614236,
+      "source_vrm_sha256": "fb896aff7ede7b171a17af50c2aca6a7ba35caa51217fc1a8dc6b43349e8e756",
+      "source_blend": "Corefolder-57-Refined.blend",
+      "source_blend_sha256": "383354d39f814a47508b0e0885b487eebdcff9c19a7f492963b075bba4a126db",
+      "generator": "saturday06_blender_vrm_exporter_experimental_4.10.5",
+      "vrm_version": "0.0",
+      "metadata": {
+        "allowedUserName": "ExplicitlyLicensedPerson",
+        "author": "RadianN_kswg",
+        "commercialUssageName": "Disallow",
+        "contactInformation": "www.numbertales-radiann.net",
+        "licenseName": "CC_BY_NC",
+        "otherLicenseUrl": "undefined",
+        "otherPermissionUrl": "https://github.com/radiann-kswg/100BeautiesLab_CreationsDB/blob/develop/guideline.md",
+        "reference": "undefined",
+        "sexualUssageName": "Disallow",
+        "title": "Corefolder-57",
+        "version": "1.0",
+        "violentUssageName": "Disallow"
+      },
+      "humanoid_slots": 53,
+      "geometry": {
+        "mesh_count": 5,
+        "material_count": 12,
+        "triangles": 24260,
+        "triangles_by_node": {
+          "Face": 1502,
+          "Body": 2934,
+          "Hair": 6600,
+          "Tail": 12728,
+          "Outfit": 496
+        }
+      },
+      "display_layers": {
+        "materials_by_renderer": {
+          "Face": [
+            "Fivens • drawn left and right irises",
+            "Fivens • expression atlas"
+          ],
+          "Body": [
+            "Corefolder Cranial Base #57",
+            "Fivens • warm yellow and white fur"
+          ],
+          "Hair": [
+            "Fivens • fur and inward ear bowl",
+            "Fivens • golden fox hair",
+            "Fivens • swept forelocks",
+            "Fivens • white cheek"
+          ],
+          "Tail": [
+            "57 • fox-tail rear atlas"
+          ],
+          "Outfit": [
+            "Fivens • DB number 57 and piping",
+            "Fivens • dark warm outlines"
+          ]
+        },
+        "cranial_skin_nodes": [
+          "Body"
+        ]
+      },
+      "skins": 5,
+      "skinning": {
+        "skinned_primitive_vertices": 27266,
+        "max_weight_sum_error": 1.1920928955078125e-07,
+        "max_influences": 4,
+        "unskinned_mesh_nodes": []
+      },
+      "materials": {
+        "Fivens • expression atlas": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Fivens • mouth cavity": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Fivens • drawn left and right irises": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Fivens • warm yellow and white fur": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.20000000949949026
+        },
+        "Corefolder Cranial Base #57": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Fivens • swept forelocks": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.15999999595806003
+        },
+        "Fivens • fur and inward ear bowl": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.17999999690800905
+        },
+        "Fivens • golden fox hair": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.2400000113993883
+        },
+        "Fivens • white cheek": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "57 • fox-tail rear atlas": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "Fivens • DB number 57 and piping": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": 0.4000000059604645,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899999856948853,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.1500000013038516
+        },
+        "Fivens • dark warm outlines": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      },
+      "textures": [
+        {
+          "name": "Corefolder-57 expression atlas",
+          "bytes": 67703,
+          "sha256": "65e6d11827fc5138a1683051853fe622e5464b6738a467cc87726228f7afca82",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Fivens • expression atlas",
+              "_MainTex"
+            ],
+            [
+              "Fivens • expression atlas",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Fivens-Eyes.png",
+          "bytes": 42509,
+          "sha256": "c6e62c211feff4560cd097c52ed6ba2ce630544c0cd702dce4f1053efa951259",
+          "mime": "image/png",
+          "size": [
+            512,
+            256
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Fivens • drawn left and right irises",
+              "_MainTex"
+            ],
+            [
+              "Fivens • drawn left and right irises",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Fivens-Fur.png",
+          "bytes": 7324,
+          "sha256": "ccb019b048c4d57aefdce82fdfa331610466016bc4001a2478ab504d0d05f027",
+          "mime": "image/png",
+          "size": [
+            768,
+            384
+          ],
+          "rgb_channel_ranges": [
+            [
+              242,
+              255
+            ],
+            [
+              224,
+              255
+            ],
+            [
+              98,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Fivens • warm yellow and white fur",
+              "_MainTex"
+            ],
+            [
+              "Fivens • warm yellow and white fur",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Fivens-Fringe.png",
+          "bytes": 23215,
+          "sha256": "c13afee19228585151dae506a3cccc6a222bbac08d6e2756ef1a1e42aeba5e94",
+          "mime": "image/png",
+          "size": [
+            1024,
+            512
+          ],
+          "rgb_channel_ranges": [
+            [
+              218,
+              255
+            ],
+            [
+              198,
+              238
+            ],
+            [
+              71,
+              98
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Fivens • swept forelocks",
+              "_MainTex"
+            ],
+            [
+              "Fivens • swept forelocks",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Fivens-Ear.png",
+          "bytes": 4746,
+          "sha256": "5c788e20b07713f7844a8ba7de5427ff4387a45a85f1fb1914b5e0e28eaa6b9f",
+          "mime": "image/png",
+          "size": [
+            512,
+            256
+          ],
+          "rgb_channel_ranges": [
+            [
+              239,
+              255
+            ],
+            [
+              238,
+              253
+            ],
+            [
+              98,
+              242
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Fivens • fur and inward ear bowl",
+              "_MainTex"
+            ],
+            [
+              "Fivens • fur and inward ear bowl",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Tails-57.png",
+          "bytes": 23216,
+          "sha256": "de73d50f0006ba2993c11b96377e67d397d4e9ee02cfc7efd0d6dca8117169f1",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              246,
+              255
+            ],
+            [
+              235,
+              255
+            ],
+            [
+              87,
+              196
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "57 • fox-tail rear atlas",
+              "_MainTex"
+            ],
+            [
+              "57 • fox-tail rear atlas",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Fivens-Armband.png",
+          "bytes": 7768,
+          "sha256": "e35a1358faccedcaad79ac340e4b6a6d519a109e92a149cf52683daaaa824744",
+          "mime": "image/png",
+          "size": [
+            480,
+            256
+          ],
+          "rgb_channel_ranges": [
+            [
+              164,
+              255
+            ],
+            [
+              186,
+              255
+            ],
+            [
+              64,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "Fivens • DB number 57 and piping",
+              "_MainTex"
+            ],
+            [
+              "Fivens • DB number 57 and piping",
+              "_ShadeTexture"
+            ]
+          ]
+        }
+      ],
+      "bound_expressions": {
+        "a": [
+          {
+            "mesh": "Cube.007",
+            "target": 0,
+            "weight": 100.0,
+            "moving_primitive_vertices": 352,
+            "max_local_delta": 0.0373951
+          }
+        ],
+        "i": [
+          {
+            "mesh": "Cube.007",
+            "target": 1,
+            "weight": 100.0,
+            "moving_primitive_vertices": 280,
+            "max_local_delta": 0.0304326
+          }
+        ],
+        "u": [
+          {
+            "mesh": "Cube.007",
+            "target": 2,
+            "weight": 100.0,
+            "moving_primitive_vertices": 248,
+            "max_local_delta": 0.0346019
+          }
+        ],
+        "e": [
+          {
+            "mesh": "Cube.007",
+            "target": 3,
+            "weight": 100.0,
+            "moving_primitive_vertices": 312,
+            "max_local_delta": 0.0305889
+          }
+        ],
+        "o": [
+          {
+            "mesh": "Cube.007",
+            "target": 4,
+            "weight": 100.0,
+            "moving_primitive_vertices": 408,
+            "max_local_delta": 0.0279885
+          }
+        ],
+        "blink": [
+          {
+            "mesh": "Cube.007",
+            "target": 5,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1096,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "joy": [
+          {
+            "mesh": "Cube.007",
+            "target": 8,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1078,
+            "max_local_delta": 0.0633421
+          }
+        ],
+        "angry": [
+          {
+            "mesh": "Cube.007",
+            "target": 12,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1340,
+            "max_local_delta": 0.0521887
+          }
+        ],
+        "sorrow": [
+          {
+            "mesh": "Cube.007",
+            "target": 13,
+            "weight": 100.0,
+            "moving_primitive_vertices": 748,
+            "max_local_delta": 0.1003114
+          }
+        ],
+        "fun": [
+          {
+            "mesh": "Cube.007",
+            "target": 11,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1012,
+            "max_local_delta": 0.0138511
+          }
+        ],
+        "blink_l": [
+          {
+            "mesh": "Cube.007",
+            "target": 6,
+            "weight": 100.0,
+            "moving_primitive_vertices": 540,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "blink_r": [
+          {
+            "mesh": "Cube.007",
+            "target": 7,
+            "weight": 100.0,
+            "moving_primitive_vertices": 548,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "Surprise": [
+          {
+            "mesh": "Cube.007",
+            "target": 14,
+            "weight": 100.0,
+            "moving_primitive_vertices": 1264,
+            "max_local_delta": 0.0702141
+          }
+        ]
+      },
+      "secondary_animation": {
+        "official_tail_units": [
+          {
+            "TailShapeType": "#TailShapeType_FoxBranched",
+            "Count": 7,
+            "Branches": [
+              {
+                "Laterality": "#Lat_Upper",
+                "TailCount": 5,
+                "ClusterCount": 2
+              },
+              {
+                "Laterality": "#Lat_Lower",
+                "TailCount": 2,
+                "ClusterCount": 1
+              }
+            ],
+            "TailsUnit_PNGName": "attr_tailsUnitNTS-57",
+            "Note_JP": null,
+            "Note_EN": null
+          }
+        ],
+        "tail_roots_attached_to_hips": 7,
+        "named_roots_by_official_branch_layer": {
+          "#Lat_Upper": 5,
+          "#Lat_Lower": 2
+        },
+        "hair_roots_attached_to_head": 3,
+        "groups": [
+          {
+            "name": "Tail_Upper_01",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_01.001",
+              "Tail_Upper_01.002",
+              "Tail_Upper_01.003",
+              "Tail_Upper_01.004",
+              "Tail_Upper_01_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              361,
+              428,
+              410,
+              209
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Upper_02",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_02.001",
+              "Tail_Upper_02.002",
+              "Tail_Upper_02.003",
+              "Tail_Upper_02.004",
+              "Tail_Upper_02_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              359,
+              442,
+              397,
+              195
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Upper_03",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_03.001",
+              "Tail_Upper_03.002",
+              "Tail_Upper_03.003",
+              "Tail_Upper_03.004",
+              "Tail_Upper_03_end"
+            ],
+            "weighted_vertex_counts": [
+              315,
+              358,
+              455,
+              418,
+              172
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Upper_04",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_04.001",
+              "Tail_Upper_04.002",
+              "Tail_Upper_04.003",
+              "Tail_Upper_04.004",
+              "Tail_Upper_04_end"
+            ],
+            "weighted_vertex_counts": [
+              315,
+              357,
+              460,
+              425,
+              167
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Upper_05",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_05.001",
+              "Tail_Upper_05.002",
+              "Tail_Upper_05.003",
+              "Tail_Upper_05.004",
+              "Tail_Upper_05_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              376,
+              423,
+              386,
+              214
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_06",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_06.001",
+              "Tail_Lower_06.002",
+              "Tail_Lower_06.003",
+              "Tail_Lower_06.004",
+              "Tail_Lower_06_end"
+            ],
+            "weighted_vertex_counts": [
+              308,
+              344,
+              442,
+              337,
+              84
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_07",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_07.001",
+              "Tail_Lower_07.002",
+              "Tail_Lower_07.003",
+              "Tail_Lower_07.004",
+              "Tail_Lower_07_end"
+            ],
+            "weighted_vertex_counts": [
+              308,
+              345,
+              442,
+              336,
+              84
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Hair_Ponytail",
+            "parent": "head",
+            "nodes": [
+              "Hair_Ponytail_01",
+              "Hair_Ponytail_02",
+              "Hair_Ponytail_03",
+              "Hair_Ponytail_04",
+              "Hair_Ponytail_end"
+            ],
+            "weighted_vertex_counts": [
+              224,
+              576,
+              612,
+              420,
+              224
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.012000000104308128,
+            "collider_groups": [
+              1
+            ]
+          },
+          {
+            "name": "Hair_Side_R",
+            "parent": "head",
+            "nodes": [
+              "Hair_Side_R_01",
+              "Hair_Side_R_02",
+              "Hair_Side_R_03",
+              "Hair_Side_R_end"
+            ],
+            "weighted_vertex_counts": [
+              212,
+              220,
+              96,
+              32
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.012000000104308128,
+            "collider_groups": [
+              1
+            ]
+          },
+          {
+            "name": "Hair_Side_L",
+            "parent": "head",
+            "nodes": [
+              "Hair_Side_L_01",
+              "Hair_Side_L_02",
+              "Hair_Side_L_03",
+              "Hair_Side_L_end"
+            ],
+            "weighted_vertex_counts": [
+              200,
+              192,
+              108,
+              48
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.012000000104308128,
+            "collider_groups": [
+              1
+            ]
+          }
+        ],
+        "colliders": [
+          {
+            "node": "hips",
+            "spheres": [
+              {
+                "offset": {
+                  "x": -0.0,
+                  "y": 0.33006277680397034,
+                  "z": -0.06974315643310547
+                },
+                "radius": 0.2150000035762787
+              }
+            ]
+          },
+          {
+            "node": "head",
+            "spheres": [
+              {
+                "offset": {
+                  "x": -4.4061931880889915e-09,
+                  "y": 0.1324058175086975,
+                  "z": 0.005256883800029755
+                },
+                "radius": 0.18000000715255737
+              },
+              {
+                "offset": {
+                  "x": 0.07999999076128006,
+                  "y": 0.0794057846069336,
+                  "z": 0.16825687885284424
+                },
+                "radius": 0.12999999523162842
+              },
+              {
+                "offset": {
+                  "x": -0.08000000566244125,
+                  "y": 0.0794057846069336,
+                  "z": 0.16825687885284424
+                },
+                "radius": 0.12999999523162842
+              }
+            ]
+          }
+        ]
+      },
+      "khronos_gltf_validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 1,
+        "infos": 23,
+        "hints": 51,
+        "diagnostic_counts": {
+          "INVALID_EXTENSION_NAME_FORMAT": 1,
+          "UNSUPPORTED_EXTENSION": 1,
+          "BUFFER_VIEW_TARGET_MISSING": 51,
+          "UNUSED_OBJECT": 20,
+          "IMAGE_NPOT_DIMENSIONS": 2
+        },
+        "error_and_warning_messages": [
+          {
+            "code": "INVALID_EXTENSION_NAME_FORMAT",
+            "message": "Extension name has invalid format.",
+            "severity": 1,
+            "pointer": "/extensionsUsed/1"
+          }
+        ]
+      },
+      "editable_blend": {
+        "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Modeling/Corefolder-57.blend",
+        "sha256": "16f5bd9cb06d4bc30fcf7d9c297effe4089bea82952764ded9c0c0be26164cbf",
+        "mesh_group_comparison": {
+          "triangles_compared_one_to_one": 24260,
+          "max_absolute_attribute_delta": 0.0,
+          "material_definitions_and_embedded_textures_match": true,
+          "skin_joints_compared": 106,
+          "max_inverse_bind_matrix_delta": 0.0,
+          "max_non_normal_attribute_delta": 0.0,
+          "max_vertex_normal_angle_degrees": 0.0,
+          "vertex_normal_tolerance_degrees": 0.01,
+          "absolute_tolerance": 2e-05,
+          "ungrouped_meshes": 19,
+          "exported_meshes": 5,
+          "ungrouped_primitives": 22,
+          "exported_primitives": 11
+        },
+        "blender": "5.3.0",
+        "packed_images": {
+          "attr_numberMarkNTS-57.png": 3693,
+          "chr-dsgn_catalogNTS-57.png": 871589,
+          "cnsp_imgNTS-57.png": 58873,
+          "CoreFolder-20.png": 115434,
+          "CoreFolder-4.png": 95857,
+          "Corefolder-57 expression atlas": 67703,
+          "emstk_corefolderNTS-57-1.png": 94164,
+          "emstk_corefolderNTS-57-2.png": 93230,
+          "Fivens-Armband.png": 7768,
+          "Fivens-Ear.png": 4746,
+          "Fivens-Eyes.png": 42509,
+          "Fivens-Fringe.png": 23215,
+          "Fivens-Fur.png": 7324,
+          "Tails-57.png": 23216,
+          "ThreeView-CoreFolder-57.png": 1157522
+        },
+        "reference_images": [
+          "ThreeView-CoreFolder-57.png"
+        ],
+        "springs": [
+          "Hair_Ponytail",
+          "Hair_Side_L",
+          "Hair_Side_R",
+          "Tail_Lower_06",
+          "Tail_Lower_07",
+          "Tail_Upper_01",
+          "Tail_Upper_02",
+          "Tail_Upper_03",
+          "Tail_Upper_04",
+          "Tail_Upper_05"
+        ],
+        "shape_keys": {
+          "Face": 16
+        },
+        "root_rotation_0_2_rad": [
+          {
+            "group": "Tail_Upper_01",
+            "mesh": "Tail_Upper_01",
+            "max_local_delta": 0.14605677127838135,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Upper_02",
+            "mesh": "Tail_Upper_02",
+            "max_local_delta": 0.14568264782428741,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Upper_03",
+            "mesh": "Tail_Upper_03",
+            "max_local_delta": 0.1281013935804367,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Upper_04",
+            "mesh": "Tail_Upper_04",
+            "max_local_delta": 0.12772369384765625,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Upper_05",
+            "mesh": "Tail_Upper_05",
+            "max_local_delta": 0.1023714542388916,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_06",
+            "mesh": "Tail_Lower_06",
+            "max_local_delta": 0.08416528254747391,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_07",
+            "mesh": "Tail_Lower_07",
+            "max_local_delta": 0.08405707031488419,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Ponytail",
+            "mesh": "Hair scalp and swept forelocks",
+            "max_local_delta": 0.08430472761392593,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Side_R",
+            "mesh": "Hair scalp and swept forelocks",
+            "max_local_delta": 0.02776067703962326,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Side_L",
+            "mesh": "Hair scalp and swept forelocks",
+            "max_local_delta": 0.02900584600865841,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          }
+        ],
+        "mouth_poses": {
+          "Neutral": {
+            "center_gap_mm": 0.41997432708740234,
+            "minimum_rim_gap_mm": 0.08851289749145508,
+            "corner_width_mm": 38.354122161865234,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa25": {
+            "center_gap_mm": 10.890424728393555,
+            "minimum_rim_gap_mm": 2.29489803314209,
+            "corner_width_mm": 47.47614669799805,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50": {
+            "center_gap_mm": 21.360755920410156,
+            "minimum_rim_gap_mm": 4.501223564147949,
+            "corner_width_mm": 56.59817123413086,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa100": {
+            "center_gap_mm": 42.30165481567383,
+            "minimum_rim_gap_mm": 8.913934707641602,
+            "corner_width_mm": 74.84222412109375,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50Joy50": {
+            "center_gap_mm": 21.360755920410156,
+            "minimum_rim_gap_mm": 4.501223564147949,
+            "corner_width_mm": 56.59817123413086,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Ih50Sorrow50": {
+            "center_gap_mm": 9.007394790649414,
+            "minimum_rim_gap_mm": 1.8981099128723145,
+            "corner_width_mm": 77.16683959960938,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          }
+        },
+        "canonical_face_geometry": {
+          "vrm": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+          "reference_sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+          "points_per_pose": 726,
+          "excluded_oral_and_fan_points": 200,
+          "maximum_position_difference_mm": {
+            "Basis": 2.9802322387695312e-05,
+            "a": 2.9802322387695312e-05,
+            "i": 2.9802322387695312e-05,
+            "u": 2.9802322387695312e-05,
+            "e": 2.9802322387695312e-05,
+            "o": 2.9802322387695312e-05,
+            "EyeClose": 2.9802322387695312e-05,
+            "EyeClose_L": 2.9802322387695312e-05,
+            "EyeClose_R": 2.9802322387695312e-05,
+            "Joy": 2.9802322387695312e-05,
+            "Joy_Right": 2.9802322387695312e-05,
+            "Joy_Left": 2.9802322387695312e-05,
+            "Fun": 2.9802322387695312e-05,
+            "Angry": 2.9802322387695312e-05,
+            "Sorrow": 2.9802322387695312e-05,
+            "Terrible": 2.9802322387695312e-05
+          }
+        }
+      },
+      "unity_asset": {
+        "file": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-57/Corefolder-57.vrm",
+        "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c"
+      },
+      "errors": []
+    },
+    {
+      "number": 85,
+      "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Modeling/Corefolder-85.vrm",
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "bytes": 1720736,
+      "source_vrm_sha256": "ed1b8747bb78b96543600e19df4c1a70f354938c314f55964cc6f26fcf6d19ba",
+      "source_blend": "Corefolder-85-Refined.blend",
+      "source_blend_sha256": "43ef38ab9ba1443cad8098511457ddcba568ce3c0315ec452415e4f431a0669b",
+      "generator": "saturday06_blender_vrm_exporter_experimental_4.10.5",
+      "vrm_version": "0.0",
+      "metadata": {
+        "allowedUserName": "ExplicitlyLicensedPerson",
+        "author": "RadianN_kswg",
+        "commercialUssageName": "Disallow",
+        "contactInformation": "www.numbertales-radiann.net",
+        "licenseName": "CC_BY_NC",
+        "otherLicenseUrl": "undefined",
+        "otherPermissionUrl": "https://github.com/radiann-kswg/100BeautiesLab_CreationsDB/blob/develop/guideline.md",
+        "reference": "undefined",
+        "sexualUssageName": "Disallow",
+        "title": "Corefolder-85",
+        "version": "1.0",
+        "violentUssageName": "Disallow"
+      },
+      "humanoid_slots": 53,
+      "geometry": {
+        "mesh_count": 5,
+        "material_count": 13,
+        "triangles": 27780,
+        "triangles_by_node": {
+          "Face": 1502,
+          "Body": 2934,
+          "Hair": 5840,
+          "Tail": 14176,
+          "Outfit": 3328
+        }
+      },
+      "display_layers": {
+        "materials_by_renderer": {
+          "Face": [
+            "85 Expression atlas"
+          ],
+          "Body": [
+            "85 White bib and brown flank",
+            "Corefolder Cranial Base #85"
+          ],
+          "Hair": [
+            "85 Chestnut strands",
+            "85 Chestnut undercoat",
+            "85 Fur ear L",
+            "85 Fur ear R",
+            "85 Swept crown"
+          ],
+          "Tail": [
+            "85 • fox-tail rear atlas"
+          ],
+          "Outfit": [
+            "85 Cyan pendant",
+            "85 Pendant light",
+            "85 Petrol pendant rim",
+            "85 Silver necklace"
+          ]
+        },
+        "cranial_skin_nodes": [
+          "Body"
+        ]
+      },
+      "skins": 5,
+      "skinning": {
+        "skinned_primitive_vertices": 34562,
+        "max_weight_sum_error": 1.1920928955078125e-07,
+        "max_influences": 4,
+        "unskinned_mesh_nodes": []
+      },
+      "materials": {
+        "85 Expression atlas": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "85 White bib and brown flank": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "Corefolder Cranial Base #85": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -0.05000000074505806,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.10000002384185791,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "85 Swept crown": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "85 Chestnut undercoat": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "85 Fur ear R": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "85 Fur ear L": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "85 Chestnut strands": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.07999999797903001
+        },
+        "85 • fox-tail rear atlas": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13899725675582886,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.050000002374872565
+        },
+        "85 Silver necklace": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.03999999898951501
+        },
+        "85 Petrol pendant rim": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 1,
+          "_OutlineWidth": 0.06000000284984708
+        },
+        "85 Cyan pendant": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        },
+        "85 Pendant light": {
+          "shader": "VRM/MToon",
+          "_ShadeShift": -1,
+          "_ShadeToony": 1.0,
+          "_IndirectLightIntensity": 0.13999998569488525,
+          "_OutlineWidthMode": 0,
+          "_OutlineWidth": 0.0
+        }
+      },
+      "textures": [
+        {
+          "name": "Corefolder-85 expression atlas",
+          "bytes": 79618,
+          "sha256": "8e21c0a1918202da98de647e9e75c0fdee3bdd6c00d2bfc3c0a77a25f483d49f",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 Expression atlas",
+              "_MainTex"
+            ],
+            [
+              "85 Expression atlas",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "85-body.png",
+          "bytes": 7204,
+          "sha256": "636132be2af0a200eba3f56bc37b18cc9de1d727ad637d572410bd36122206bb",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              155,
+              255
+            ],
+            [
+              100,
+              255
+            ],
+            [
+              66,
+              253
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 White bib and brown flank",
+              "_MainTex"
+            ],
+            [
+              "85 White bib and brown flank",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "85-crown.png",
+          "bytes": 13292,
+          "sha256": "9d361d35770620012f187f1a4b14a91626342c02df72cf0c910810d43349c73c",
+          "mime": "image/png",
+          "size": [
+            768,
+            768
+          ],
+          "rgb_channel_ranges": [
+            [
+              136,
+              174
+            ],
+            [
+              83,
+              117
+            ],
+            [
+              51,
+              75
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 Swept crown",
+              "_MainTex"
+            ],
+            [
+              "85 Swept crown",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "85-ear-R.png",
+          "bytes": 14718,
+          "sha256": "2c40a4112d987c0525f0abb22e2f45e5614fb4025f580d3c97a2ad5f157306d4",
+          "mime": "image/png",
+          "size": [
+            512,
+            512
+          ],
+          "rgb_channel_ranges": [
+            [
+              82,
+              255
+            ],
+            [
+              51,
+              255
+            ],
+            [
+              29,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 Fur ear R",
+              "_MainTex"
+            ],
+            [
+              "85 Fur ear R",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "85-ear-L.png",
+          "bytes": 14724,
+          "sha256": "de2f29521ce027f93a88c0e482b64f34cbcaafaf9a26cc498ab7e8addc985e1e",
+          "mime": "image/png",
+          "size": [
+            512,
+            512
+          ],
+          "rgb_channel_ranges": [
+            [
+              82,
+              255
+            ],
+            [
+              51,
+              255
+            ],
+            [
+              29,
+              255
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 Fur ear L",
+              "_MainTex"
+            ],
+            [
+              "85 Fur ear L",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "85-hair.png",
+          "bytes": 3486,
+          "sha256": "f32cbce488e40a2160d50582802cca5b5cfea0b0d021a11319a6d4afd5f84b3c",
+          "mime": "image/png",
+          "size": [
+            256,
+            256
+          ],
+          "rgb_channel_ranges": [
+            [
+              119,
+              176
+            ],
+            [
+              78,
+              119
+            ],
+            [
+              53,
+              76
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 Chestnut strands",
+              "_MainTex"
+            ],
+            [
+              "85 Chestnut strands",
+              "_ShadeTexture"
+            ]
+          ]
+        },
+        {
+          "name": "Tails-85.png",
+          "bytes": 26013,
+          "sha256": "7c94c7ad08207387784ca35497ba9c84e6642ef4259286980473cd4fd267d816",
+          "mime": "image/png",
+          "size": [
+            1024,
+            1024
+          ],
+          "rgb_channel_ranges": [
+            [
+              190,
+              245
+            ],
+            [
+              128,
+              161
+            ],
+            [
+              68,
+              87
+            ]
+          ],
+          "mtoon_bindings": [
+            [
+              "85 • fox-tail rear atlas",
+              "_MainTex"
+            ],
+            [
+              "85 • fox-tail rear atlas",
+              "_ShadeTexture"
+            ]
+          ]
+        }
+      ],
+      "bound_expressions": {
+        "a": [
+          {
+            "mesh": "Cube.007",
+            "target": 0,
+            "weight": 100.0,
+            "moving_primitive_vertices": 224,
+            "max_local_delta": 0.0386656
+          }
+        ],
+        "i": [
+          {
+            "mesh": "Cube.007",
+            "target": 1,
+            "weight": 100.0,
+            "moving_primitive_vertices": 224,
+            "max_local_delta": 0.0259943
+          }
+        ],
+        "u": [
+          {
+            "mesh": "Cube.007",
+            "target": 2,
+            "weight": 100.0,
+            "moving_primitive_vertices": 216,
+            "max_local_delta": 0.0363961
+          }
+        ],
+        "e": [
+          {
+            "mesh": "Cube.007",
+            "target": 3,
+            "weight": 100.0,
+            "moving_primitive_vertices": 222,
+            "max_local_delta": 0.0260866
+          }
+        ],
+        "o": [
+          {
+            "mesh": "Cube.007",
+            "target": 4,
+            "weight": 100.0,
+            "moving_primitive_vertices": 240,
+            "max_local_delta": 0.0301392
+          }
+        ],
+        "blink": [
+          {
+            "mesh": "Cube.007",
+            "target": 5,
+            "weight": 100.0,
+            "moving_primitive_vertices": 548,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "joy": [
+          {
+            "mesh": "Cube.007",
+            "target": 8,
+            "weight": 100.0,
+            "moving_primitive_vertices": 571,
+            "max_local_delta": 0.0633421
+          }
+        ],
+        "angry": [
+          {
+            "mesh": "Cube.007",
+            "target": 12,
+            "weight": 100.0,
+            "moving_primitive_vertices": 670,
+            "max_local_delta": 0.0521887
+          }
+        ],
+        "sorrow": [
+          {
+            "mesh": "Cube.007",
+            "target": 13,
+            "weight": 100.0,
+            "moving_primitive_vertices": 374,
+            "max_local_delta": 0.1003114
+          }
+        ],
+        "fun": [
+          {
+            "mesh": "Cube.007",
+            "target": 11,
+            "weight": 100.0,
+            "moving_primitive_vertices": 506,
+            "max_local_delta": 0.0138511
+          }
+        ],
+        "blink_l": [
+          {
+            "mesh": "Cube.007",
+            "target": 6,
+            "weight": 100.0,
+            "moving_primitive_vertices": 270,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "blink_r": [
+          {
+            "mesh": "Cube.007",
+            "target": 7,
+            "weight": 100.0,
+            "moving_primitive_vertices": 274,
+            "max_local_delta": 0.0879326
+          }
+        ],
+        "Surprise": [
+          {
+            "mesh": "Cube.007",
+            "target": 14,
+            "weight": 100.0,
+            "moving_primitive_vertices": 632,
+            "max_local_delta": 0.0702141
+          }
+        ]
+      },
+      "secondary_animation": {
+        "official_tail_units": [
+          {
+            "TailShapeType": "#TailShapeType_FoxBranched",
+            "Count": 8,
+            "Branches": [
+              {
+                "Laterality": "#Lat_Upper",
+                "TailCount": 3,
+                "ClusterCount": 1
+              },
+              {
+                "Laterality": "#Lat_Lower",
+                "TailCount": 5,
+                "ClusterCount": 2
+              }
+            ],
+            "TailsUnit_PNGName": "attr_tailsUnitNTS-85",
+            "Note_JP": null,
+            "Note_EN": null
+          }
+        ],
+        "tail_roots_attached_to_hips": 8,
+        "named_roots_by_official_branch_layer": {
+          "#Lat_Upper": 3,
+          "#Lat_Lower": 5
+        },
+        "hair_roots_attached_to_head": 3,
+        "groups": [
+          {
+            "name": "Tail_Upper_01",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_01.001",
+              "Tail_Upper_01.002",
+              "Tail_Upper_01.003",
+              "Tail_Upper_01.004",
+              "Tail_Upper_01_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              352,
+              466,
+              337,
+              63
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Upper_02",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_02.001",
+              "Tail_Upper_02.002",
+              "Tail_Upper_02.003",
+              "Tail_Upper_02.004",
+              "Tail_Upper_02_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              343,
+              476,
+              346,
+              53
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Upper_03",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Upper_03.001",
+              "Tail_Upper_03.002",
+              "Tail_Upper_03.003",
+              "Tail_Upper_03.004",
+              "Tail_Upper_03_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              344,
+              478,
+              345,
+              51
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_04",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_04.001",
+              "Tail_Lower_04.002",
+              "Tail_Lower_04.003",
+              "Tail_Lower_04.004",
+              "Tail_Lower_04_end"
+            ],
+            "weighted_vertex_counts": [
+              314,
+              379,
+              465,
+              418,
+              163
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_05",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_05.001",
+              "Tail_Lower_05.002",
+              "Tail_Lower_05.003",
+              "Tail_Lower_05.004",
+              "Tail_Lower_05_end"
+            ],
+            "weighted_vertex_counts": [
+              314,
+              386,
+              476,
+              364,
+              152
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_06",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_06.001",
+              "Tail_Lower_06.002",
+              "Tail_Lower_06.003",
+              "Tail_Lower_06.004",
+              "Tail_Lower_06_end"
+            ],
+            "weighted_vertex_counts": [
+              297,
+              354,
+              466,
+              421,
+              179
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_07",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_07.001",
+              "Tail_Lower_07.002",
+              "Tail_Lower_07.003",
+              "Tail_Lower_07.004",
+              "Tail_Lower_07_end"
+            ],
+            "weighted_vertex_counts": [
+              294,
+              353,
+              470,
+              440,
+              178
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Tail_Lower_08",
+            "parent": "hips",
+            "nodes": [
+              "Tail_Lower_08.001",
+              "Tail_Lower_08.002",
+              "Tail_Lower_08.003",
+              "Tail_Lower_08.004",
+              "Tail_Lower_08_end"
+            ],
+            "weighted_vertex_counts": [
+              305,
+              323,
+              394,
+              325,
+              135
+            ],
+            "mesh_nodes": [
+              "Tail"
+            ],
+            "stiffness": 0.800000011920929,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.017999999225139618,
+            "collider_groups": [
+              0
+            ]
+          },
+          {
+            "name": "Hair_Ponytail",
+            "parent": "head",
+            "nodes": [
+              "Hair_Ponytail_01",
+              "Hair_Ponytail_02",
+              "Hair_Ponytail_03",
+              "Hair_Ponytail_04",
+              "Hair_Ponytail_05",
+              "Hair_Ponytail_06",
+              "Hair_Ponytail_07",
+              "Hair_Ponytail_end"
+            ],
+            "weighted_vertex_counts": [
+              245,
+              535,
+              1290,
+              1280,
+              580,
+              315,
+              225,
+              155
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.4000000059604645,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.012000000104308128,
+            "collider_groups": [
+              1
+            ]
+          },
+          {
+            "name": "Hair_Side_R",
+            "parent": "head",
+            "nodes": [
+              "Hair_Side_R_01",
+              "Hair_Side_R_02",
+              "Hair_Side_R_03",
+              "Hair_Side_R_04",
+              "Hair_Side_R_05",
+              "Hair_Side_R_end"
+            ],
+            "weighted_vertex_counts": [
+              385,
+              455,
+              390,
+              455,
+              370,
+              155
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.75,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.012000000104308128,
+            "collider_groups": [
+              1
+            ]
+          },
+          {
+            "name": "Hair_Side_L",
+            "parent": "head",
+            "nodes": [
+              "Hair_Side_L_01",
+              "Hair_Side_L_02",
+              "Hair_Side_L_03",
+              "Hair_Side_L_04",
+              "Hair_Side_L_05",
+              "Hair_Side_L_end"
+            ],
+            "weighted_vertex_counts": [
+              360,
+              455,
+              390,
+              455,
+              350,
+              155
+            ],
+            "mesh_nodes": [
+              "Hair"
+            ],
+            "stiffness": 0.9599999785423279,
+            "drag_force": 0.75,
+            "gravity": {
+              "direction": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+              },
+              "power": 0.0
+            },
+            "hit_radius": 0.012000000104308128,
+            "collider_groups": [
+              1
+            ]
+          }
+        ],
+        "colliders": [
+          {
+            "node": "hips",
+            "spheres": [
+              {
+                "offset": {
+                  "x": -0.0,
+                  "y": 0.33006277680397034,
+                  "z": -0.06974315643310547
+                },
+                "radius": 0.2150000035762787
+              }
+            ]
+          },
+          {
+            "node": "head",
+            "spheres": [
+              {
+                "offset": {
+                  "x": -4.4061931880889915e-09,
+                  "y": 0.1324058175086975,
+                  "z": 0.005256883800029755
+                },
+                "radius": 0.18000000715255737
+              },
+              {
+                "offset": {
+                  "x": 0.07999999076128006,
+                  "y": 0.0794057846069336,
+                  "z": 0.16825687885284424
+                },
+                "radius": 0.12999999523162842
+              },
+              {
+                "offset": {
+                  "x": -0.08000000566244125,
+                  "y": 0.0794057846069336,
+                  "z": 0.16825687885284424
+                },
+                "radius": 0.12999999523162842
+              }
+            ]
+          }
+        ]
+      },
+      "khronos_gltf_validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 1,
+        "infos": 19,
+        "hints": 52,
+        "diagnostic_counts": {
+          "INVALID_EXTENSION_NAME_FORMAT": 1,
+          "UNSUPPORTED_EXTENSION": 1,
+          "BUFFER_VIEW_TARGET_MISSING": 52,
+          "UNUSED_OBJECT": 17,
+          "IMAGE_NPOT_DIMENSIONS": 1
+        },
+        "error_and_warning_messages": [
+          {
+            "code": "INVALID_EXTENSION_NAME_FORMAT",
+            "message": "Extension name has invalid format.",
+            "severity": 1,
+            "pointer": "/extensionsUsed/1"
+          }
+        ]
+      },
+      "editable_blend": {
+        "file": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Modeling/Corefolder-85.blend",
+        "sha256": "ab30a4a9b35084fff66bdbbcc78712ea2bb2ea16bd5c0824d50c34621c4491f9",
+        "mesh_group_comparison": {
+          "triangles_compared_one_to_one": 27780,
+          "max_absolute_attribute_delta": 0.0,
+          "material_definitions_and_embedded_textures_match": true,
+          "skin_joints_compared": 118,
+          "max_inverse_bind_matrix_delta": 0.0,
+          "max_non_normal_attribute_delta": 0.0,
+          "max_vertex_normal_angle_degrees": 0.0,
+          "vertex_normal_tolerance_degrees": 0.01,
+          "absolute_tolerance": 2e-05,
+          "ungrouped_meshes": 21,
+          "exported_meshes": 5,
+          "ungrouped_primitives": 26,
+          "exported_primitives": 13
+        },
+        "blender": "5.3.0",
+        "packed_images": {
+          "85-body.png": 7204,
+          "85-crown.png": 13292,
+          "85-ear-L.png": 14724,
+          "85-ear-R.png": 14718,
+          "85-hair.png": 3486,
+          "85-neck.png": 2034,
+          "chr-dsgn_catalogNTS-85.png": 930146,
+          "cnsp_imgNTS-85.png": 51297,
+          "CoreFolder-4.png": 95857,
+          "Corefolder-85 expression atlas": 79618,
+          "emstk_corefolderNTS-85-1.png": 79101,
+          "emstk_corefolderNTS-85-2.png": 80320,
+          "Tails-85.png": 26013,
+          "ThreeView-CoreFolder-85.png": 1479619
+        },
+        "reference_images": [
+          "ThreeView-CoreFolder-85.png"
+        ],
+        "springs": [
+          "Hair_Ponytail",
+          "Hair_Side_L",
+          "Hair_Side_R",
+          "Tail_Lower_04",
+          "Tail_Lower_05",
+          "Tail_Lower_06",
+          "Tail_Lower_07",
+          "Tail_Lower_08",
+          "Tail_Upper_01",
+          "Tail_Upper_02",
+          "Tail_Upper_03"
+        ],
+        "shape_keys": {
+          "Face": 16
+        },
+        "root_rotation_0_2_rad": [
+          {
+            "group": "Tail_Upper_01",
+            "mesh": "Tail_Upper_01",
+            "max_local_delta": 0.15035292506217957,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Upper_02",
+            "mesh": "Tail_Upper_02",
+            "max_local_delta": 0.13749705255031586,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Upper_03",
+            "mesh": "Tail_Upper_03",
+            "max_local_delta": 0.13730543851852417,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_04",
+            "mesh": "Tail_Lower_04",
+            "max_local_delta": 0.11967874318361282,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_05",
+            "mesh": "Tail_Lower_05",
+            "max_local_delta": 0.12072634696960449,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_06",
+            "mesh": "Tail_Lower_06",
+            "max_local_delta": 0.08487328141927719,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_07",
+            "mesh": "Tail_Lower_07",
+            "max_local_delta": 0.08477526158094406,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Tail_Lower_08",
+            "mesh": "Tail_Lower_08",
+            "max_local_delta": 0.08970194309949875,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Ponytail",
+            "mesh": "Hair ponytail",
+            "max_local_delta": 0.0575118288397789,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Ponytail",
+            "mesh": "Hair ponytail fork",
+            "max_local_delta": 0.054408781230449677,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Side_R",
+            "mesh": "Hair cheek R",
+            "max_local_delta": 0.05866160988807678,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          },
+          {
+            "group": "Hair_Side_L",
+            "mesh": "Hair cheek L",
+            "max_local_delta": 0.05866160988807678,
+            "max_rest_residual": 0.0,
+            "nonmanifold_edges": 0
+          }
+        ],
+        "mouth_poses": {
+          "Neutral": {
+            "center_gap_mm": 0.41997432708740234,
+            "minimum_rim_gap_mm": 0.08851289749145508,
+            "corner_width_mm": 32.672027587890625,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa25": {
+            "center_gap_mm": 10.890364646911621,
+            "minimum_rim_gap_mm": 2.29489803314209,
+            "corner_width_mm": 40.44264221191406,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50": {
+            "center_gap_mm": 21.36087417602539,
+            "minimum_rim_gap_mm": 4.501223564147949,
+            "corner_width_mm": 48.2132568359375,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa100": {
+            "center_gap_mm": 42.30165481567383,
+            "minimum_rim_gap_mm": 8.913934707641602,
+            "corner_width_mm": 63.75448226928711,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Aa50Joy50": {
+            "center_gap_mm": 21.36087417602539,
+            "minimum_rim_gap_mm": 4.501223564147949,
+            "corner_width_mm": 50.82701873779297,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          },
+          "Ih50Sorrow50": {
+            "center_gap_mm": 9.00733470916748,
+            "minimum_rim_gap_mm": 1.8981695175170898,
+            "corner_width_mm": 65.73471069335938,
+            "head_12_deg_rigid_residual_mm": 1.5359764802269638e-05,
+            "neck_8_deg_rigid_residual_mm": 1.666000571276527e-05
+          }
+        },
+        "canonical_face_geometry": {
+          "vrm": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+          "reference_sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+          "points_per_pose": 726,
+          "excluded_oral_and_fan_points": 200,
+          "maximum_position_difference_mm": {
+            "Basis": 2.9802322387695312e-05,
+            "a": 2.9802322387695312e-05,
+            "i": 2.9802322387695312e-05,
+            "u": 2.9802322387695312e-05,
+            "e": 2.9802322387695312e-05,
+            "o": 2.9802322387695312e-05,
+            "EyeClose": 2.9802322387695312e-05,
+            "EyeClose_L": 2.9802322387695312e-05,
+            "EyeClose_R": 2.9802322387695312e-05,
+            "Joy": 2.9802322387695312e-05,
+            "Joy_Right": 2.9802322387695312e-05,
+            "Joy_Left": 2.9802322387695312e-05,
+            "Fun": 2.9802322387695312e-05,
+            "Angry": 2.9802322387695312e-05,
+            "Sorrow": 2.9802322387695312e-05,
+            "Terrible": 2.9802322387695312e-05
+          }
+        }
+      },
+      "unity_asset": {
+        "file": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-85/Corefolder-85.vrm",
+        "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde"
+      },
+      "errors": []
+    }
+  ]
+}

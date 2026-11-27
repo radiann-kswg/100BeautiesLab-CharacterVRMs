@@ -1,0 +1,22 @@
+{
+  "status": "generated_drafts",
+  "tool": "built-in image_gen",
+  "prompts": {
+    "6": "Create a precise three-view modeling reference sheet of the user's existing character 6 (ムイ / Sics), CORE FOLDER form ONLY. Use attached image 1 as authoritative character appearance, image 2 as authoritative six-tail arrangement, image 3 only for the rear hair shape and hexagonal pendant design (ignore its humanoid entirely). Flat clean hand-drawn anime linework matching the references, white background, landscape, three equal panels labeled FRONT, LEFT SIDE, BACK. Orthographic straight-on front, exact left profile facing left, exact back, aligned at same head, body and bottom heights and same scale. Entire character and all tails visible with margins. Body is one round pink cushion sphere with large white front oval; only head and tails protrude, no arms, hands, legs, feet, humanoid torso, dress or added garments. Preserve pink #FF76A2 hair and body, white face with cheek fluff, triangular fox ears with pale pink #FFCEED inner accent, short hair with small low back tuft as shown, gentle small smile and lavender/blue eyes. Preserve wide blue #6AA6D7 collar and central blue #185EBD hexagonal pendant with six petal motif. Dark numeral 6 on character's LEFT collar, viewer right in front, near pendant; no numeral on back. Exactly SIX unbranched bulbous fox tails with pale pink tips, matching the attached tail-only diagram rather than inventing arrangements; tails attached at posterior sphere, not extra limbs. Back view should clearly show six tails and their attachment layout. Preserve source proportions and asymmetries. Do not import the humanoid outfit. No new ornaments, no extra patterns, no measurements, no invented design, no perspective three-quarter view. Small footer 'AI DRAFT - REVIEW REQUIRED'. This is a reference-based technical extrapolation of existing design, not new character design.",
+    "49": "Create a precise three-view modeling reference sheet for existing character 49 (ヨチカ / Fornins), CORE FOLDER form ONLY. References: official emstk_corefolderNTS-49-1.png for silhouette, face, color and number placement; attr_tailsUnitNTS-49.png as authoritative tail topology; cnsp_imgNTS-49.png only for matching existing hair structure, ignore humanoid. Flat clean anime linework, white landscape background, three equal panels FRONT, LEFT SIDE, BACK. Exact orthographic front, left profile facing left, rear, identical scale and aligned top and bottom. Round cushion sphere body #6AA6D7 with white front oval, head atop and tails at back; no arms, hands, feet, legs, humanoid torso, clothing or pendant. Blue fox ears with white and #9BC1E6 inner ear, matching blue medium hair and forelock, white face, dark blue eyes #405AB9 with purple narrow pupil, slightly reserved boyish expression. Dark 49 on the character's left chest white sphere area, viewer right in front; no mark on back. Preserve official corefolder image colors rather than importing humanoid indigo description. Exactly 9 fox tail tips, pale blue #9BC1E6 tips and #6AA6D7 bases. Follow tail-only reference exactly: four upper terminal tips arranged in two branched clusters plus five lower single tails, nine tips total. Do not multiply TailCount by ClusterCount, do not depict thirteen tails. Rear view exposes the reference's branching layout; avoid inventing extra appendages or changing attachments between views. Whole silhouette visible with margins. No new accessories or clothing, no measurements, no perspective three-quarter views. Small footer 'AI DRAFT - REVIEW REQUIRED'. Reference-based technical extrapolation only, subject to creator review."
+  },
+  "note": "Built-in image_gen reference-conditioned generation. Creator review pending; not official ground truth or training data. Point-E checkpoint was not used.",
+  "outputs": [
+    {
+      "id": 6,
+      "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-6/Training/ThreeView-CoreFolder-6-AIDraft-v1.png",
+      "sha256": "F7B25DF701FD6C72655604D041A7FF9176FDF6034CC640F4E773B679E1E47E80"
+    },
+    {
+      "id": 49,
+      "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-49/Training/ThreeView-CoreFolder-49-AIDraft-v1.png",
+      "sha256": "F443D970811FAFD2106C8DD452F0B3E0F341E4800EE8E46F4D4DF0AF544FB099"
+    }
+  ],
+  "revision_6": "Back panel ear patches recolored to main pink to match official back-head reference; other elements preserved."
+}

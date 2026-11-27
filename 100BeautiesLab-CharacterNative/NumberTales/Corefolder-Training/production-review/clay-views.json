@@ -1,0 +1,602 @@
+{
+  "camera_span_m": 1.76,
+  "tile_px": 448,
+  "views": [
+    "Front",
+    "Side",
+    "Back"
+  ],
+  "renderer": "Workbench studio.sl, single grey",
+  "surface": "Neutral evaluated skinned meshes and evaluated base modifiers; vertex normals retained. Material textures, opacity and MToon inverted-hull outlines are omitted.",
+  "groups": [
+    "whole rendered mesh",
+    "Body and Outfit nodes excluding the head-weighted cranial patch",
+    "tail-named mesh nodes"
+  ],
+  "cavity": "world + screen, distance 0.071m, 32 samples",
+  "models": {
+    "Base": {
+      "sha256": "8ef5ca6dca24bd0b50ab0d5b7ebb14be775c49967d4f203155ab2550575e675c",
+      "bounds_m": [
+        [
+          -0.4307102560997009,
+          -0.512283980846405,
+          -0.0010400637984275818
+        ],
+        [
+          0.4307102560997009,
+          0.7971515655517578,
+          1.151090383529663
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        0.1424337923526764,
+        0.5750251412391663
+      ],
+      "meshes": {
+        "tail": [
+          "whole",
+          "tail"
+        ],
+        "body": [
+          "whole",
+          "body"
+        ],
+        "head": [
+          "whole"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/Basis/Corefolder/VRCModel_CoreFloder-Base.blend",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 220,
+          "half_silhouette_height_m": 0.8642857142857142,
+          "world_z_0_36_px": 220,
+          "world_z_0_36_m": 0.8642857142857142
+        },
+        "depth": {
+          "half_silhouette_height_px": 224,
+          "half_silhouette_height_m": 0.88,
+          "world_z_0_36_px": 224,
+          "world_z_0_36_m": 0.88
+        }
+      }
+    },
+    "4": {
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "bounds_m": [
+        [
+          -0.5080017447471619,
+          -0.5092601180076599,
+          -0.06514514982700348
+        ],
+        [
+          0.4923425316810608,
+          0.5716617107391357,
+          1.032649040222168
+        ]
+      ],
+      "camera_center_m": [
+        -0.007829606533050537,
+        0.031200796365737915,
+        0.48375195264816284
+      ],
+      "meshes": {
+        "Body": [
+          "whole",
+          "body"
+        ],
+        "Face": [
+          "whole"
+        ],
+        "Hair": [
+          "whole"
+        ],
+        "Tail": [
+          "whole",
+          "tail"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "16": {
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "bounds_m": [
+        [
+          -0.6394571661949158,
+          -0.5110360980033875,
+          -0.0010334070539101958
+        ],
+        [
+          0.4813203513622284,
+          0.8385169506072998,
+          1.1110643148422241
+        ]
+      ],
+      "camera_center_m": [
+        -0.07906840741634369,
+        0.16374042630195618,
+        0.5550154447555542
+      ],
+      "meshes": {
+        "Body.002": [
+          "whole",
+          "body"
+        ],
+        "Face.001": [
+          "whole"
+        ],
+        "Tail.001": [
+          "whole",
+          "tail"
+        ],
+        "Hair.001": [
+          "whole"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-16/vrm_corefolder16.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 222,
+          "world_z_0_36_m": 0.8721428571428572
+        }
+      }
+    },
+    "20": {
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "bounds_m": [
+        [
+          -0.6292440891265869,
+          -0.5093887448310852,
+          0.0009597660391591489
+        ],
+        [
+          0.6292428374290466,
+          0.8777474761009216,
+          1.1042284965515137
+        ]
+      ],
+      "camera_center_m": [
+        -6.258487701416016e-07,
+        0.1841793656349182,
+        0.5525941252708435
+      ],
+      "meshes": {
+        "Body.003": [
+          "whole",
+          "body"
+        ],
+        "Face.002": [
+          "whole"
+        ],
+        "tail.001": [
+          "whole",
+          "tail"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-20/vrm_corefolder20.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "22": {
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "bounds_m": [
+        [
+          -0.7206184267997742,
+          -0.6283746957778931,
+          -0.003496396355330944
+        ],
+        [
+          0.7258970737457275,
+          0.8284662365913391,
+          1.1071295738220215
+        ]
+      ],
+      "camera_center_m": [
+        0.0026393234729766846,
+        0.10004577040672302,
+        0.5518165826797485
+      ],
+      "meshes": {
+        "Body.005": [
+          "whole",
+          "body"
+        ],
+        "Face.001": [
+          "whole"
+        ],
+        "Body.006": [
+          "whole",
+          "body"
+        ],
+        "Tail.005": [
+          "whole",
+          "tail"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-22/VRCModel_CoreFloder-22.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 214,
+          "half_silhouette_height_m": 0.8407142857142856,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "25": {
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "bounds_m": [
+        [
+          -0.4269709587097168,
+          -0.5092601776123047,
+          -0.0010334283579140902
+        ],
+        [
+          0.4269709587097168,
+          0.7666751742362976,
+          1.1731116771697998
+        ]
+      ],
+      "camera_center_m": [
+        0.0,
+        0.12870749831199646,
+        0.586039125919342
+      ],
+      "meshes": {
+        "Body.002": [
+          "whole",
+          "body"
+        ],
+        "Face.002": [
+          "whole"
+        ],
+        "Tail.001": [
+          "whole",
+          "tail"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-25/vrm_corefolder25.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "bounds_m": [
+        [
+          -0.6243733763694763,
+          -0.5092601776123047,
+          -0.003276754869148135
+        ],
+        [
+          0.6243735551834106,
+          0.7264417409896851,
+          1.1115857362747192
+        ]
+      ],
+      "camera_center_m": [
+        8.940696716308594e-08,
+        0.10859078168869019,
+        0.5541545152664185
+      ],
+      "meshes": {
+        "Body": [
+          "whole",
+          "body"
+        ],
+        "Face": [
+          "whole"
+        ],
+        "Tail": [
+          "whole",
+          "tail"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-93/VRCModel_CoreFloder-93.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 222,
+          "half_silhouette_height_m": 0.8721428571428572,
+          "world_z_0_36_px": 222,
+          "world_z_0_36_m": 0.8721428571428572
+        }
+      }
+    },
+    "6": {
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "bounds_m": [
+        [
+          -0.6060000658035278,
+          -0.5366328358650208,
+          0.0009599999757483602
+        ],
+        [
+          0.6060000061988831,
+          0.8018609881401062,
+          1.0769999027252197
+        ]
+      ],
+      "camera_center_m": [
+        -2.9802322387695312e-08,
+        0.13261407613754272,
+        0.5389799475669861
+      ],
+      "meshes": {
+        "Face": [
+          "whole"
+        ],
+        "Body": [
+          "whole",
+          "body excluding cranial patch"
+        ],
+        "Hair": [
+          "whole"
+        ],
+        "Tail": [
+          "whole",
+          "tail"
+        ],
+        "Outfit": [
+          "whole",
+          "body"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-6/Modeling/Corefolder-6.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 222,
+          "half_silhouette_height_m": 0.8721428571428572,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "49": {
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "bounds_m": [
+        [
+          -0.6126391887664795,
+          -0.6169303059577942,
+          -0.020457681268453598
+        ],
+        [
+          0.6055566072463989,
+          0.7080156803131104,
+          1.0908706188201904
+        ]
+      ],
+      "camera_center_m": [
+        -0.003541290760040283,
+        0.04554268717765808,
+        0.5352064967155457
+      ],
+      "meshes": {
+        "Face": [
+          "whole"
+        ],
+        "Body": [
+          "whole",
+          "body excluding cranial patch"
+        ],
+        "Hair": [
+          "whole"
+        ],
+        "Tail": [
+          "whole",
+          "tail"
+        ],
+        "Outfit": [
+          "whole",
+          "body"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-49/Modeling/Corefolder-49.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 222,
+          "half_silhouette_height_m": 0.8721428571428572,
+          "world_z_0_36_px": 222,
+          "world_z_0_36_m": 0.8721428571428572
+        }
+      }
+    },
+    "57": {
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "bounds_m": [
+        [
+          -0.5938575267791748,
+          -0.5092599987983704,
+          0.0009599999757483602
+        ],
+        [
+          0.5921422243118286,
+          0.720596969127655,
+          1.2119998931884766
+        ]
+      ],
+      "camera_center_m": [
+        -0.0008576512336730957,
+        0.10566848516464233,
+        0.6064799427986145
+      ],
+      "meshes": {
+        "Face": [
+          "whole"
+        ],
+        "Body": [
+          "whole",
+          "body excluding cranial patch"
+        ],
+        "Hair": [
+          "whole"
+        ],
+        "Tail": [
+          "whole",
+          "tail"
+        ],
+        "Outfit": [
+          "whole",
+          "body"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Modeling/Corefolder-57.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    },
+    "85": {
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "bounds_m": [
+        [
+          -0.5986759662628174,
+          -0.5320641398429871,
+          0.0009599999757483602
+        ],
+        [
+          0.5951969623565674,
+          0.6349865198135376,
+          1.2170000076293945
+        ]
+      ],
+      "camera_center_m": [
+        -0.001739501953125,
+        0.05146118998527527,
+        0.6089800000190735
+      ],
+      "meshes": {
+        "Face": [
+          "whole"
+        ],
+        "Body": [
+          "whole",
+          "body excluding cranial patch"
+        ],
+        "Hair": [
+          "whole"
+        ],
+        "Tail": [
+          "whole",
+          "tail"
+        ],
+        "Outfit": [
+          "whole",
+          "body"
+        ]
+      },
+      "blender": "5.3.0",
+      "source": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Modeling/Corefolder-85.vrm",
+      "body_silhouette": {
+        "width": {
+          "half_silhouette_height_px": 218,
+          "half_silhouette_height_m": 0.8564285714285714,
+          "world_z_0_36_px": 218,
+          "world_z_0_36_m": 0.8564285714285714
+        },
+        "depth": {
+          "half_silhouette_height_px": 223,
+          "half_silhouette_height_m": 0.8760714285714286,
+          "world_z_0_36_px": 223,
+          "world_z_0_36_m": 0.8760714285714286
+        }
+      }
+    }
+  },
+  "body_width_method": {
+    "metres_per_pixel": 0.003928571428571429,
+    "image_threshold_8bit": 5,
+    "area": "Largest connected torso silhouette; clothing joined in projection is included.",
+    "levels": "At half height of each isolated silhouette and at the shared character-space height z=0.36m."
+  }
+}

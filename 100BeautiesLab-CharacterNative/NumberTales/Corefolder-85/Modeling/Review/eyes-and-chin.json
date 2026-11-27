@@ -1,0 +1,69 @@
+{
+  "Official 1": {
+    "screen_left": {
+      "x": 280,
+      "y": 175,
+      "w": 21,
+      "h": 24,
+      "cx": 289.27,
+      "cy": 186.26,
+      "area": 404
+    },
+    "screen_right": {
+      "x": 379,
+      "y": 170,
+      "w": 17,
+      "h": 22,
+      "cx": 386.67,
+      "cy": 180.68,
+      "area": 278
+    },
+    "center_distance_px": 97.4,
+    "image_height_px": 500
+  },
+  "Official 2": {
+    "screen_left": {
+      "x": 282,
+      "y": 179,
+      "w": 21,
+      "h": 22,
+      "cx": 291.23,
+      "cy": 189.15,
+      "area": 364
+    },
+    "screen_right": {
+      "x": 379,
+      "y": 174,
+      "w": 17,
+      "h": 20,
+      "cx": 386.24,
+      "cy": 183.34,
+      "area": 236
+    },
+    "center_distance_px": 95.01,
+    "image_height_px": 500
+  },
+  "VRM +27 deg": {
+    "screen_left": {
+      "x": 272,
+      "y": 153,
+      "w": 29,
+      "h": 33,
+      "cx": 285.84,
+      "cy": 169.58,
+      "area": 708
+    },
+    "screen_right": {
+      "x": 354,
+      "y": 154,
+      "w": 18,
+      "h": 32,
+      "cx": 362.25,
+      "cy": 169.52,
+      "area": 451
+    },
+    "center_distance_px": 76.41,
+    "image_height_px": 500
+  },
+  "source_vrm_sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde"
+}

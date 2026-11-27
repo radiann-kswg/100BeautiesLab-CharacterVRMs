@@ -1,0 +1,23 @@
+{
+  "id": 85,
+  "blend": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\Tripo\\Iterations\\Corefolder-85-TripoFit-structure-v2.blend",
+  "native_source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\Corefolder-85-Refined.blend",
+  "native_sha256": "43ef38ab9ba1443cad8098511457ddcba568ce3c0315ec452415e4f431a0669b",
+  "tripo_source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\100BeautiesLab-CharacterNative\\NumberTales\\Corefolder-85\\TripoGenerated\\20260910\\082312_image_to_model_a1155703\\a1155703-ffc7-4ee3-a4a6-1abc253633fe_base.glb",
+  "tripo_sha256": "12697d9a604538012f8969552801e16ba554edd7a9f0a7ced9b8886af07c5240",
+  "task_id": "a1155703-ffc7-4ee3-a4a6-1abc253633fe",
+  "head_polygons_before_decimate": 565659,
+  "head_polygons": 45873,
+  "source_components_after_cut": 6,
+  "tail_count": 8,
+  "active_polygons": 68703,
+  "bones": 82,
+  "pending": [
+    "head material and UV painting",
+    "expression topology and facial texture",
+    "head/body junction under motion",
+    "tail contact review",
+    "spring bones",
+    "VRM export validation"
+  ]
+}

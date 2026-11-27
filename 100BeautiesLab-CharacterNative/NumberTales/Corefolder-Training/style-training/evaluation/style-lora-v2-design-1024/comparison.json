@@ -1,0 +1,67 @@
+{
+  "purpose": "qualitative matched-seed diagnostic, not official character designs or VRM output",
+  "elapsed_seconds": 30.24370050430298,
+  "lora_sha256": "8624f90af4f5452c745319e9208ad653f731b9a694db282c94867251ab5d20a1",
+  "samples": [
+    {
+      "id": 57,
+      "stage": "base",
+      "mode": "design",
+      "input_sha256": "21e80de2bf678216751d79e475e22b3fa2cbc12065c0fc682776a74bf92f9e06",
+      "strength": 0.3,
+      "prompt": "nt_vrmstyle, three view model sheet, front side back, round chibi fox spirit, golden yellow ponytail and fur, amber anime eyes, white belly, seven tails, shoulder armband, MToon flat cel shading",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0,
+      "image": "evaluation/style-lora-v2-design-1024/57-base.png",
+      "sha256": "b3e2bd8f8286185f0d0222366bf5ef97b1969d8a3639a06e8905a7f183194092"
+    },
+    {
+      "id": 85,
+      "stage": "base",
+      "mode": "design",
+      "input_sha256": "7d9dbc0554999eecb39fe41833e0337606ef1a5e1983700b50aba37fecaf46b2",
+      "strength": 0.3,
+      "prompt": "nt_vrmstyle, three view model sheet, front side back, round chibi fox spirit, brown ponytail and fur, cyan anime eyes, white belly, eight tails, cyan teardrop pendant, MToon flat cel shading",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0,
+      "image": "evaluation/style-lora-v2-design-1024/85-base.png",
+      "sha256": "01b43114b3dc8874e7f8b819e7fad56f36182cdcf00ec0c589acab369f7cc993"
+    },
+    {
+      "id": 57,
+      "stage": "lora",
+      "mode": "design",
+      "input_sha256": "21e80de2bf678216751d79e475e22b3fa2cbc12065c0fc682776a74bf92f9e06",
+      "strength": 0.3,
+      "prompt": "nt_vrmstyle, three view model sheet, front side back, round chibi fox spirit, golden yellow ponytail and fur, amber anime eyes, white belly, seven tails, shoulder armband, MToon flat cel shading",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0.8,
+      "image": "evaluation/style-lora-v2-design-1024/57-lora.png",
+      "sha256": "8da1aeb8e186b30604d20b32463201fade9f5b6e79d9e7062213e586dde0663d"
+    },
+    {
+      "id": 85,
+      "stage": "lora",
+      "mode": "design",
+      "input_sha256": "7d9dbc0554999eecb39fe41833e0337606ef1a5e1983700b50aba37fecaf46b2",
+      "strength": 0.3,
+      "prompt": "nt_vrmstyle, three view model sheet, front side back, round chibi fox spirit, brown ponytail and fur, cyan anime eyes, white belly, eight tails, cyan teardrop pendant, MToon flat cel shading",
+      "seed": 2026,
+      "steps": 30,
+      "resolution": 1024,
+      "guidance_scale": 5.5,
+      "lora_scale": 0.8,
+      "image": "evaluation/style-lora-v2-design-1024/85-lora.png",
+      "sha256": "f36cdfce1c91558e7ed894b64a10b79db77aea8a3d9018a9f9a6a1b25c840d61"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 85,
+  "tail_count": 8,
+  "weighted_meshes": 15,
+  "weights_normalized": true,
+  "deformation_max_displacement": {
+    "Tail_Upper_01": 0.06589231192606804,
+    "Tail_Upper_02": 0.060968524064515,
+    "Tail_Upper_03": 0.060968524064515,
+    "Tail_Lower_04": 0.0635705595863059,
+    "Tail_Lower_05": 0.0635705595863059,
+    "Tail_Lower_06": 0.06487605664814335,
+    "Tail_Lower_07": 0.06487605664814335,
+    "Tail_Lower_08": 0.04006721529723334,
+    "Tripo head - static expression pending": 0.05612150876865391,
+    "Body": 0.07689841656529615
+  },
+  "closure": {
+    "Tail_Upper_01": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Upper_02": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Upper_03": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Lower_04": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Lower_05": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Lower_06": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Lower_07": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tail_Lower_08": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0
+    },
+    "Tripo head - static expression pending": {
+      "boundary_edges": 80,
+      "nonmanifold_edges": 160
+    }
+  },
+  "face_expression_bindings": 0,
+  "source_hashes_unchanged": true,
+  "blend_sha256": "171e63fc5ff34b2a20d7df123b4aac875cdeba0490c09808a1c5256cf3c68a62"
+}

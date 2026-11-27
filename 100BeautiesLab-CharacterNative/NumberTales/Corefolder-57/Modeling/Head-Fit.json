@@ -1,0 +1,118 @@
+{
+  "studio_yaw_degrees": [
+    0,
+    27,
+    72,
+    145
+  ],
+  "computed_yaw_degrees": [
+    0,
+    -30,
+    30,
+    -90,
+    90,
+    180
+  ],
+  "method": "Neutral reimport. Independent welded head-region islands, min extent 3 mm, max extent >=55 mm. Exclude eye-weighted components, tails, small decals, exact contacts and grazing angles <5.7 degrees. For true triangle crossings, sample every 3 mm or less. Visible if the first two-sided scene ray is within 1 mm. Materials and alpha clipping are ignored. Internal seams are retained separately. Non-neighbour triangle crossings inside each selected island are reported separately and in the total. Shared-vertex neighbours, very small facial components and alpha visibility are outside this measure.",
+  "units": "millimetres of projected intersection line",
+  "models": {
+    "previous": {
+      "sha256": "2ad72938fec5c43a839bf2d22a793f7d7992bf78e664969577be3607348ab18f",
+      "visible_mm": [
+        1501.67,
+        1397.44,
+        1353.03,
+        809.74,
+        746.92,
+        0.0
+      ],
+      "self_visible_mm": [
+        244.73,
+        238.49,
+        238.7,
+        23.55,
+        34.66,
+        0.0
+      ],
+      "total_visible_mm": [
+        1746.4,
+        1635.93,
+        1591.73,
+        833.29,
+        781.59,
+        0.0
+      ]
+    },
+    "revised": {
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "visible_mm": [
+        261.14,
+        259.8,
+        178.74,
+        173.04,
+        73.04,
+        0.0
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        261.14,
+        259.8,
+        178.74,
+        173.04,
+        73.04,
+        0.0
+      ]
+    },
+    "reference_93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "visible_mm": [
+        633.97,
+        569.72,
+        573.18,
+        442.26,
+        451.04,
+        418.67
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        633.97,
+        569.72,
+        573.18,
+        442.26,
+        451.04,
+        418.67
+      ]
+    }
+  },
+  "separate_clothing_radial_clearance": {
+    "57 right shoulder armband": {
+      "extent_z_m": [
+        0.41019999980926514,
+        0.6685000061988831
+      ],
+      "vertices_plus_triangle_centres": 310,
+      "radial_clearance_mm_min_p05_median_p95_max": [
+        4.76,
+        5.78,
+        6.8,
+        9.68,
+        14.85
+      ],
+      "inside_count": 0
+    }
+  }
+}

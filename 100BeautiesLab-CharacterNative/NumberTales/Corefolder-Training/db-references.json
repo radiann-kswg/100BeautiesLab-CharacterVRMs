@@ -1,0 +1,3566 @@
+{
+  "4": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "f8f2fe2ac838b71d80d85a8c9dd7f5ae5d56e3bfe81dbcba7a43da50eccadaa9",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 4,
+      "Name_JP": "4(モチ)",
+      "Name_EN": "4(Forna)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#00B7D9",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Shoulder",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#67BDBD",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Shoulder",
+            "#BodyPart_Chest",
+            "#BodyPart_Leg"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#8DE8ED",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Shoulder",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#0097C9",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Shoulder",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#7AD9ED",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Shoulder",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_Fox",
+          "Count": 4,
+          "TailsUnit_PNGName": "attr_tailsUnitNTS-4",
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Shoulder"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "ケープの開口部付近のフロントショルダー部分",
+              "value_EN": "the front shoulder area near the cape opening"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "白",
+              "value_EN": "white"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「4」",
+              "value_EN": "Arabic numeral '4'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-4",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Shoulder"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "ケープの開口部付近のフロントショルダー部分",
+              "value_EN": "the front shoulder area near the cape opening"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "白",
+              "value_EN": "white"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「4」",
+              "value_EN": "Arabic numeral '4'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-4",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox",
+              "about_JP": "垂れ耳",
+              "about_EN": "drooping ears"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Eye"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "シアンブルーの目",
+              "value_EN": "cyan blue eyes"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "控えめな柔らかな微笑み",
+              "value_EN": "soft understated smile"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Shoulder",
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ティールのケープ",
+              "value_EN": "teal cape"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "青い長い髪",
+              "value_EN": "long blue hair"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "小さな耳横のヘアアクセサリー",
+              "value_EN": "small ear-side hair accessory"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "重ね着ティールのコート",
+              "value_EN": "layered teal coat"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "スカート",
+              "value_EN": "skirt"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox (drooping ears)",
+          "cyan blue eyes",
+          "teal cape",
+          "long blue hair, small ear-side hair accessory"
+        ],
+        "silhouette_features": [
+          "fox 4 tails",
+          "average stature (about 157cm)",
+          "Fox (drooping ears)",
+          "cyan blue eyes"
+        ],
+        "immutable_traits": null,
+        "expression_tendency": [
+          "soft understated smile"
+        ],
+        "age_appearance": "teenager",
+        "palette_priority": {
+          "primary": "#00B7D9",
+          "secondary": "#0097C9",
+          "accent": "#67BDBD"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img4.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img4.png",
+          "catalog": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalog4.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "teal cape",
+            "long blue hair, small ear-side hair accessory"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox (drooping ears)",
+              "cyan blue eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "fox 4 tails",
+            "average stature (about 157cm)",
+            "teenager",
+            "Fox (drooping ears)",
+            "cyan blue eyes",
+            "soft understated smile",
+            "teal cape",
+            "long blue hair, small ear-side hair accessory",
+            "the front shoulder area near the cape opening, white, Arabic numeral '4'"
+          ],
+          "negative_visuals": [
+            "layered teal coat",
+            "skirt"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox (drooping ears); cyan blue eyes, with the number '4' marking (the front shoulder area near the cape opening, white, Arabic numeral '4').",
+          "prompt_export": "corefolder form, fox 4 tails, average stature (about 157cm), teenager, Fox (drooping ears), cyan blue eyes, soft understated smile, teal cape, long blue hair, small ear-side hair accessory, the front shoulder area near the cape opening, white, Arabic numeral '4'",
+          "negative_prompt_export": "layered teal coat, skirt",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img4.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/4/emstk_corefolder4-1.png"
+          }
+        },
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "teal cape",
+            "long blue hair, small ear-side hair accessory",
+            "layered teal coat",
+            "skirt"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox (drooping ears)",
+              "cyan blue eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "fox 4 tails",
+            "average stature (about 157cm)",
+            "teenager",
+            "Fox (drooping ears)",
+            "cyan blue eyes",
+            "soft understated smile",
+            "teal cape",
+            "long blue hair, small ear-side hair accessory",
+            "the front shoulder area near the cape opening, white, Arabic numeral '4'",
+            "layered teal coat",
+            "skirt"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, fox 4 tails, average stature (about 157cm), teenager, Fox (drooping ears), cyan blue eyes, soft understated smile, teal cape, long blue hair, small ear-side hair accessory, the front shoulder area near the cape opening, white, Arabic numeral '4', layered teal coat, skirt",
+          "negative_prompt_export": "",
+          "reference_images": null
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:68ef0f4358661e8cac242014bd6c2b415d10873d05d2fc75e63feeafccfa9eed",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox (drooping ears)",
+            "cyan blue eyes",
+            "teal cape",
+            "long blue hair, small ear-side hair accessory"
+          ],
+          "common.silhouette_features": [
+            "fox 4 tails",
+            "average stature (about 157cm)",
+            "Fox (drooping ears)",
+            "cyan blue eyes"
+          ],
+          "common.expression_tendency": [
+            "soft understated smile"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "fox 4 tails",
+            "average stature (about 157cm)",
+            "teenager",
+            "Fox (drooping ears)",
+            "cyan blue eyes",
+            "soft understated smile",
+            "teal cape",
+            "long blue hair, small ear-side hair accessory",
+            "the front shoulder area near the cape opening, white, Arabic numeral '4'"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "fox 4 tails",
+            "average stature (about 157cm)",
+            "teenager",
+            "Fox (drooping ears)",
+            "cyan blue eyes",
+            "soft understated smile",
+            "teal cape",
+            "long blue hair, small ear-side hair accessory",
+            "the front shoulder area near the cape opening, white, Arabic numeral '4'",
+            "layered teal coat",
+            "skirt"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-4/emstk_corefolderNTS-4-1.png",
+      "db-assets/Corefolder-4/emstk_corefolderNTS-4-2.png",
+      "db-assets/Corefolder-4/emstk_corefolderNTS-4-3.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-4/emstk_corefolderNTS-4-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/4/emstk_corefolderNTS-4-1.png",
+        "sha256": "12597851b0326eea42dbab271215bc92156adbefea30b4af09bc86f1cf7e1db2"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-4/emstk_corefolderNTS-4-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/4/emstk_corefolderNTS-4-2.png",
+        "sha256": "f38f343ee322c7275f47323c19b3fd17f49849dac26022f3b2aadf483601390e"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-4/emstk_corefolderNTS-4-3.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/4/emstk_corefolderNTS-4-3.png",
+        "sha256": "c46015fd80fe575e14124b97015db469d8dbb9c69f0b44858dba5e94fa38a917"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-4/cnsp_imgNTS-4.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-4.png",
+        "sha256": "0b645f40b165ad928ee53bfd527fd2b8d2bf794c90f27929867b5b4edc59bdfa"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-4/chr-dsgn_catalogNTS-4.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalogNTS-4.png",
+        "sha256": "aee5ee479871e448b546d2f70a98edd253ab5c3906d19e6d393b6c3a55336ff1"
+      }
+    ]
+  },
+  "16": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "233ccef4a896ca1fd9baeb837cacf77f8bdb5117527b41f90465cdad1dad7bec",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 16,
+      "Name_JP": "16(ソロク)",
+      "Name_EN": "16(Sixteely)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#F26383",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_FaceMaking"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#6A88C2",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Head"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#FF7297",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Hair"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#E25970",
+          "ColorName_JP": "メインアクセントカラー（アクセサリー）",
+          "ColorName_EN": "Main Accent Color (Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_FaceMaking"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#A4A2C3",
+          "ColorName_JP": "サブアクセントカラー",
+          "ColorName_EN": "Sub Accent Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#F4FAE8",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Neck",
+            "#BodyPart_Shoulder",
+            "#BodyPart_FaceMaking"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#F9BBC1",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_FoxBranched",
+          "Count": 6,
+          "Branches": [
+            {
+              "Laterality": "#Lat_Upper",
+              "TailCount": 1,
+              "ClusterCount": 2
+            },
+            {
+              "Laterality": "#Lat_Lower",
+              "TailCount": 5,
+              "ClusterCount": 1
+            }
+          ],
+          "TailsUnit_PNGName": "attr_tailsUnitNTS-16",
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Head"
+          ],
+          "Laterality": "#Lat_Right",
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "帽子のつば周辺で向かって右側",
+              "value_EN": "around the brim of the hat, on the right side"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "dark"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「16」",
+              "value_EN": "Arabic numeral '16'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-16",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear",
+            "#BodyPart_Head"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox",
+              "about_JP": "帽子を被っているときは隠れている",
+              "about_EN": "hidden when wearing the hat"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "マゼンタの非常に長いポニーテール",
+              "value_EN": "very long magenta ponytail"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ウェーブヘア",
+              "value_EN": "wavy hair"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Head"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "青いキャップ",
+              "value_EN": "blue cap"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_FaceMaking"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "赤い眉染め",
+              "value_EN": "red dyed eyebrows"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Shoulder",
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "白いケープ",
+              "value_EN": "white cape"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "Costume": null,
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Emblem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ハートと鍵のモチーフ",
+              "value_EN": "heart and key motif"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ハートと鍵がモチーフの紋章が入れられたピンクのカジュアルウェア",
+              "value_EN": "pink casual wear with heart and key emblem"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_BodyType",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "豊かな女性シルエット",
+              "value_EN": "voluminous feminine silhouette"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox (hidden when wearing the hat)",
+          "very long magenta ponytail, wavy hair",
+          "blue cap",
+          "red dyed eyebrows"
+        ],
+        "silhouette_features": [
+          "branching fox 6 tails",
+          "short stature (about 147cm)",
+          "Fox (hidden when wearing the hat)",
+          "very long magenta ponytail, wavy hair",
+          "red dyed eyebrows"
+        ],
+        "immutable_traits": [
+          "number '16' marking: around the brim of the hat, on the right side, dark, Arabic numeral '16'"
+        ],
+        "expression_tendency": null,
+        "age_appearance": "young adult (18)",
+        "palette_priority": {
+          "primary": "#F26383",
+          "secondary": "#6A88C2",
+          "accent": "#A4A2C3"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img16.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img16.png",
+          "catalog": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalog16.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "blue cap",
+            "white cape",
+            "pink casual wear with heart and key emblem"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox (hidden when wearing the hat)",
+              "very long magenta ponytail, wavy hair",
+              "red dyed eyebrows",
+              "voluminous feminine silhouette"
+            ],
+            "attached_items": [
+              "heart and key motif"
+            ]
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "branching fox 6 tails",
+            "short stature (about 147cm)",
+            "young adult (18)",
+            "around the brim of the hat, on the right side, dark, Arabic numeral '16'",
+            "Fox (hidden when wearing the hat)",
+            "very long magenta ponytail, wavy hair",
+            "blue cap",
+            "red dyed eyebrows",
+            "white cape",
+            "heart and key motif",
+            "pink casual wear with heart and key emblem",
+            "voluminous feminine silhouette"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, branching fox 6 tails, short stature (about 147cm), young adult (18), around the brim of the hat, on the right side, dark, Arabic numeral '16', Fox (hidden when wearing the hat), very long magenta ponytail, wavy hair, blue cap, red dyed eyebrows, white cape, heart and key motif, pink casual wear with heart and key emblem, voluminous feminine silhouette",
+          "negative_prompt_export": "",
+          "reference_images": null
+        },
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "blue cap"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox (hidden when wearing the hat)",
+              "very long magenta ponytail, wavy hair",
+              "red dyed eyebrows"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "branching fox 6 tails",
+            "short stature (about 147cm)",
+            "young adult (18)",
+            "around the brim of the hat, on the right side, dark, Arabic numeral '16'",
+            "Fox (hidden when wearing the hat)",
+            "very long magenta ponytail, wavy hair",
+            "blue cap",
+            "red dyed eyebrows"
+          ],
+          "negative_visuals": [
+            "white cape",
+            "heart and key motif",
+            "pink casual wear with heart and key emblem"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox (hidden when wearing the hat); very long magenta ponytail, wavy hair; red dyed eyebrows, with the number '16' marking (around the brim of the hat, on the right side, dark, Arabic numeral '16').",
+          "prompt_export": "corefolder form, branching fox 6 tails, short stature (about 147cm), young adult (18), around the brim of the hat, on the right side, dark, Arabic numeral '16', Fox (hidden when wearing the hat), very long magenta ponytail, wavy hair, blue cap, red dyed eyebrows",
+          "negative_prompt_export": "white cape, heart and key motif, pink casual wear with heart and key emblem",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img16.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/16/emstk_corefolder16-1.png",
+            "corefolder_arts": [
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/2024/art_img16-corefolderA.png",
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/2024/art_img16-corefolderB.png"
+            ]
+          }
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:f6c547fb4ea1b0516bc4564df8df6ce69e5a5d6c1477ad7ae54a8072625d6109",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox (hidden when wearing the hat)",
+            "very long magenta ponytail, wavy hair",
+            "blue cap",
+            "red dyed eyebrows"
+          ],
+          "common.silhouette_features": [
+            "branching fox 6 tails",
+            "short stature (about 147cm)",
+            "Fox (hidden when wearing the hat)",
+            "very long magenta ponytail, wavy hair",
+            "red dyed eyebrows"
+          ],
+          "common.immutable_traits": [
+            "number '16' marking: around the brim of the hat, on the right side, dark, Arabic numeral '16'"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "branching fox 6 tails",
+            "short stature (about 147cm)",
+            "young adult (18)",
+            "around the brim of the hat, on the right side, dark, Arabic numeral '16'",
+            "Fox (hidden when wearing the hat)",
+            "very long magenta ponytail, wavy hair",
+            "blue cap",
+            "red dyed eyebrows",
+            "white cape",
+            "heart and key motif",
+            "pink casual wear with heart and key emblem",
+            "voluminous feminine silhouette"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "branching fox 6 tails",
+            "short stature (about 147cm)",
+            "young adult (18)",
+            "around the brim of the hat, on the right side, dark, Arabic numeral '16'",
+            "Fox (hidden when wearing the hat)",
+            "very long magenta ponytail, wavy hair",
+            "blue cap",
+            "red dyed eyebrows"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-16/emstk_corefolderNTS-16-1.png",
+      "db-assets/Corefolder-16/emstk_corefolderNTS-16-2.png",
+      "db-assets/Corefolder-16/emstk_corefolderNTS-16-3.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-16/emstk_corefolderNTS-16-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/16/emstk_corefolderNTS-16-1.png",
+        "sha256": "e6f0e7235713fc126e88db403ba38668cd978d7fbcea23e0a650e5e912fcc967"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-16/emstk_corefolderNTS-16-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/16/emstk_corefolderNTS-16-2.png",
+        "sha256": "10c42c63a9bdceb4d4f71484fbe6a4f658d671b220b61c37a50d83ed6da51c80"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-16/emstk_corefolderNTS-16-3.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/16/emstk_corefolderNTS-16-3.png",
+        "sha256": "27daa0fa12714556abe34c6d756fbbc07caab7ef167cfc8a1b792390e8a70abc"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-16/cnsp_imgNTS-16.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-16.png",
+        "sha256": "f3a8a655316060a19cd517b47511d8b68f2800858c121de2fad80380f5bc68d6"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-16/chr-dsgn_catalogNTS-16.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalogNTS-16.png",
+        "sha256": "ceb45028143d3b6df3d188fd9df7d45a6bfb3e14cb3151c1f5f9886092e9d88c"
+      }
+    ]
+  },
+  "20": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "dad57124d47db0dfd6a803bd8d0bd986db3b1411ff9562d3654bb8f3cd961a5b",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 20,
+      "Name_JP": "20(ハツカ)",
+      "Name_EN": "20(Twentia)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#E9EBE5",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_Hair",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#CBCECD",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Hair"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#EAE5D6",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Hair",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#FFDCAE",
+          "ColorName_JP": "メインアクセントカラー",
+          "ColorName_EN": "Main Accent Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#AEB4B4",
+          "ColorName_JP": "サブアクセントカラー（アクセサリー）",
+          "ColorName_EN": "Sub Accent Color (Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_Hair"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#FFA457",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#B3B9B9",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": [
+            "#BodyPart_Hair"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#FFC4A3",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_Fox",
+          "Count": 2,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "チョーカーの留め具部分",
+              "value_EN": "the buckle part of the choker"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "dark"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「20」",
+              "value_EN": "Arabic numeral '20'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-20",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Waist"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "腰のベルトの留め具部分",
+              "value_EN": "the buckle part of the belt on the waist"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "dark"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「20」",
+              "value_EN": "Arabic numeral '20'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-20",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "番号付きのチョーカー",
+              "value_EN": "choker with a number"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "銀白色の長い髪",
+              "value_EN": "silver white long hair"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ハート形をモチーフにした髪型",
+              "value_EN": "heart-shaped hair motif"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "穏やかな微笑み/心配そうな表情",
+              "value_EN": "serene gentle smile/worried expression"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "大きな胸",
+              "value_EN": "large breasts"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "長い白いオープンコート",
+              "value_EN": "long white open coat"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "オレンジ色のインナーウェア",
+              "value_EN": "orange inner wear"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "番号付きのベルト",
+              "value_EN": "belt with a number"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "カジュアルなプライベート服装",
+              "value_EN": "casual private outfit"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox",
+          "silver white long hair, heart-shaped hair motif"
+        ],
+        "silhouette_features": [
+          "fox 2 tails",
+          "average stature (about 152cm)",
+          "Fox",
+          "silver white long hair, heart-shaped hair motif"
+        ],
+        "immutable_traits": null,
+        "expression_tendency": [
+          "serene gentle smile/worried expression"
+        ],
+        "age_appearance": "teenager",
+        "palette_priority": {
+          "primary": "#FFA457",
+          "secondary": "#AEB4B4",
+          "accent": "#FFC4A3"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img20.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img20.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "choker with a number"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox",
+              "silver white long hair, heart-shaped hair motif"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "fox 2 tails",
+            "average stature (about 152cm)",
+            "teenager",
+            "Fox",
+            "silver white long hair, heart-shaped hair motif",
+            "serene gentle smile/worried expression",
+            "the buckle part of the choker, dark, Arabic numeral '20'",
+            "choker with a number"
+          ],
+          "negative_visuals": [
+            "long white open coat",
+            "casual private outfit"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox; silver white long hair, heart-shaped hair motif, with the number '20' marking (the buckle part of the choker, dark, Arabic numeral '20').",
+          "prompt_export": "corefolder form, fox 2 tails, average stature (about 152cm), teenager, Fox, silver white long hair, heart-shaped hair motif, serene gentle smile/worried expression, the buckle part of the choker, dark, Arabic numeral '20', choker with a number",
+          "negative_prompt_export": "long white open coat, casual private outfit",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img20.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/20/emstk_corefolder20-1.png",
+            "corefolder_arts": [
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/sphericateDay/art_sphericateDay202112.png"
+            ]
+          }
+        },
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "long white open coat",
+            "casual private outfit"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox",
+              "silver white long hair, heart-shaped hair motif",
+              "large breasts",
+              "orange inner wear",
+              "belt with a number"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "fox 2 tails",
+            "average stature (about 152cm)",
+            "teenager",
+            "Fox",
+            "silver white long hair, heart-shaped hair motif",
+            "serene gentle smile/worried expression",
+            "the buckle part of the belt on the waist, dark, Arabic numeral '20'",
+            "large breasts",
+            "long white open coat",
+            "orange inner wear",
+            "belt with a number",
+            "casual private outfit"
+          ],
+          "negative_visuals": [
+            "choker with a number"
+          ],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, fox 2 tails, average stature (about 152cm), teenager, Fox, silver white long hair, heart-shaped hair motif, serene gentle smile/worried expression, the buckle part of the belt on the waist, dark, Arabic numeral '20', large breasts, long white open coat, orange inner wear, belt with a number, casual private outfit",
+          "negative_prompt_export": "choker with a number",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img20.png",
+            "humanoid": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/humanoids/2023/art_img20-humanoid.png"
+          }
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:dfc6d1efa659db019ba0865cb399c376f3592affb78987d2ae1a54d60f5261a0",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox",
+            "silver white long hair, heart-shaped hair motif"
+          ],
+          "common.silhouette_features": [
+            "fox 2 tails",
+            "average stature (about 152cm)",
+            "Fox",
+            "silver white long hair, heart-shaped hair motif"
+          ],
+          "common.expression_tendency": [
+            "serene gentle smile/worried expression"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "fox 2 tails",
+            "average stature (about 152cm)",
+            "teenager",
+            "Fox",
+            "silver white long hair, heart-shaped hair motif",
+            "serene gentle smile/worried expression",
+            "the buckle part of the choker, dark, Arabic numeral '20'",
+            "choker with a number"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "fox 2 tails",
+            "average stature (about 152cm)",
+            "teenager",
+            "Fox",
+            "silver white long hair, heart-shaped hair motif",
+            "serene gentle smile/worried expression",
+            "the buckle part of the belt on the waist, dark, Arabic numeral '20'",
+            "large breasts",
+            "long white open coat",
+            "orange inner wear",
+            "belt with a number",
+            "casual private outfit"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-20/emstk_corefolderNTS-20-1.png",
+      "db-assets/Corefolder-20/emstk_corefolderNTS-20-2.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-20/emstk_corefolderNTS-20-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/20/emstk_corefolderNTS-20-1.png",
+        "sha256": "639964ef312851b90ac0d7c4ab38e7f3acdcad4894cc16180dd892587b4a3259"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-20/emstk_corefolderNTS-20-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/20/emstk_corefolderNTS-20-2.png",
+        "sha256": "f23b0252835eac7d7ab64dd28991a1a9d9e9b5e5bab8793f343b469704210b67"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-20/cnsp_imgNTS-20.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-20.png",
+        "sha256": "86c9c357f279f2b5043c0c6029d0d79c88b6f1018579854d2e9c776e5f14358e"
+      }
+    ]
+  },
+  "22": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "3f251d8019fac3d50375fe488a49304aa6d14c2d1b64adabfed8cc13276d327c",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 22,
+      "Name_JP": "22(フジ)",
+      "Name_EN": "22(Twin-twina)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#FFC879",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#FFB42B",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#FFD07D",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#ABB1B1",
+          "ColorName_JP": "メインアクセントカラー（アクセサリー）",
+          "ColorName_EN": "Main Accent Color (Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_Neck",
+            "#BodyPart_Chest",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#CACDCB",
+          "ColorName_JP": "サブアクセントカラー（アクセサリー）",
+          "ColorName_EN": "Sub Accent Color (Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_Chest",
+            "#BodyPart_Neck",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#FFF4E3",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#FFCD86",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Foot"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_Scorpion",
+          "Count": 2,
+          "Segment": 11,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": "#Lat_Left",
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "球体の前面左胸の白色部分",
+              "value_EN": "the white area on the front left chest of the sphere"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "グレー",
+              "value_EN": "gray"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「22」",
+              "value_EN": "Arabic numeral '22'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-22",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "トップスの胸中央にジッパーを跨ぐ形でやや大きく",
+              "value_EN": "somewhat large, straddling the zipper at the center of the chest of the top"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "グレー",
+              "value_EN": "gray"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「22」(ジッパーを跨いで左右に1桁ずつ)",
+              "value_EN": "Arabic numeral '22' (one digit on each side of the zipper)"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-22",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "淡い金色の髪",
+              "value_EN": "pale golden hair"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "イヤリング",
+              "value_EN": "earrings"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "サソリ型の分節尾2本（腕のように自在に動く）",
+              "value_EN": "two scorpion-type segmented tails (freely movable like arms)"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Eye"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "特殊な橙色の瞳孔で濃い黄色の目",
+              "value_EN": "eyes with special orange pupils and dark yellow irises"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "夢見るような柔らかな微笑み",
+              "value_EN": "gentle dreamy soft smile"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "十字があしらわれたグレーの丸いブローチと黄褐色のチョーカー",
+              "value_EN": "gray round brooch with a cross and ochre choker"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Emblem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "十字があしらわれたグレーの丸いブローチ",
+              "value_EN": "gray round brooch with a cross"
+            }
+          ],
+          "img_PNGName": "attr_emblemNTS-22-brooch",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Neck",
+            "#BodyPart_Back"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Halo",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "自分の頭を地球に見立て月と太陽を模したホログラム",
+              "value_EN": "holograms resembling the moon and sun on a head modeled as Earth"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "金黄色の重ね着ドレス",
+              "value_EN": "golden yellow layered dress"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_BodyType",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "大きな胸",
+              "value_EN": "large breasts"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Waist"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "腰のリボンサッシュ",
+              "value_EN": "ribbon sash at waist"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Foot"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "灰色のアクセントカラーをした橙色のファッションブーツ",
+              "value_EN": "fashion boots in orange with gray accent color"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox",
+          "pale golden hair",
+          "earrings",
+          "two scorpion-type segmented tails (freely movable like arms)",
+          "eyes with special orange pupils and dark yellow irises",
+          "gray round brooch with a cross and ochre choker",
+          "gray round brooch with a cross",
+          "holograms resembling the moon and sun on a head modeled as Earth"
+        ],
+        "silhouette_features": [
+          "scorpion 2 tails",
+          "average stature (about 153cm)",
+          "Fox",
+          "pale golden hair",
+          "two scorpion-type segmented tails (freely movable like arms)",
+          "eyes with special orange pupils and dark yellow irises"
+        ],
+        "immutable_traits": null,
+        "expression_tendency": [
+          "gentle dreamy soft smile"
+        ],
+        "age_appearance": "teenager",
+        "palette_priority": {
+          "primary": "#FFC879",
+          "secondary": "#ABB1B1",
+          "accent": "#FFD07D"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img22.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img22.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "earrings",
+            "gray round brooch with a cross and ochre choker"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox",
+              "pale golden hair",
+              "two scorpion-type segmented tails (freely movable like arms)",
+              "eyes with special orange pupils and dark yellow irises",
+              "holograms resembling the moon and sun on a head modeled as Earth"
+            ],
+            "attached_items": [
+              "gray round brooch with a cross"
+            ]
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "scorpion 2 tails",
+            "average stature (about 153cm)",
+            "teenager",
+            "Fox",
+            "pale golden hair",
+            "earrings",
+            "two scorpion-type segmented tails (freely movable like arms)",
+            "eyes with special orange pupils and dark yellow irises",
+            "gentle dreamy soft smile",
+            "gray round brooch with a cross and ochre choker",
+            "gray round brooch with a cross",
+            "holograms resembling the moon and sun on a head modeled as Earth",
+            "the white area on the front left chest of the sphere, gray, Arabic numeral '22'"
+          ],
+          "negative_visuals": [
+            "golden yellow layered dress",
+            "ribbon sash at waist",
+            "fashion boots in orange with gray accent color"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox; pale golden hair; two scorpion-type segmented tails (freely movable like arms); eyes with special orange pupils and dark yellow irises; holograms resembling the moon and sun on a head modeled as Earth, with the number '22' marking (the white area on the front left chest of the sphere, gray, Arabic numeral '22'); gray round brooch with a cross.",
+          "prompt_export": "corefolder form, scorpion 2 tails, average stature (about 153cm), teenager, Fox, pale golden hair, earrings, two scorpion-type segmented tails (freely movable like arms), eyes with special orange pupils and dark yellow irises, gentle dreamy soft smile, gray round brooch with a cross and ochre choker, gray round brooch with a cross, holograms resembling the moon and sun on a head modeled as Earth, the white area on the front left chest of the sphere, gray, Arabic numeral '22'",
+          "negative_prompt_export": "golden yellow layered dress, ribbon sash at waist, fashion boots in orange with gray accent color",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img22.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/22/emstk_corefolder22-1.png",
+            "corefolder_arts": [
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/autumnMoon/art_autumnMoon2023.png",
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/autumnMoon/art_autumnMoon2024.png"
+            ]
+          }
+        },
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "earrings",
+            "gray round brooch with a cross and ochre choker",
+            "golden yellow layered dress",
+            "ribbon sash at waist",
+            "fashion boots in orange with gray accent color"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox",
+              "pale golden hair",
+              "two scorpion-type segmented tails (freely movable like arms)",
+              "eyes with special orange pupils and dark yellow irises",
+              "holograms resembling the moon and sun on a head modeled as Earth",
+              "large breasts"
+            ],
+            "attached_items": [
+              "gray round brooch with a cross"
+            ]
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "scorpion 2 tails",
+            "average stature (about 153cm)",
+            "teenager",
+            "Fox",
+            "pale golden hair",
+            "earrings",
+            "two scorpion-type segmented tails (freely movable like arms)",
+            "eyes with special orange pupils and dark yellow irises",
+            "gentle dreamy soft smile",
+            "gray round brooch with a cross and ochre choker",
+            "gray round brooch with a cross",
+            "holograms resembling the moon and sun on a head modeled as Earth",
+            "somewhat large, straddling the zipper at the center of the chest of the top, gray, Arabic numeral '22' (one digit on each side of the zipper)",
+            "golden yellow layered dress",
+            "large breasts",
+            "ribbon sash at waist",
+            "fashion boots in orange with gray accent color"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, scorpion 2 tails, average stature (about 153cm), teenager, Fox, pale golden hair, earrings, two scorpion-type segmented tails (freely movable like arms), eyes with special orange pupils and dark yellow irises, gentle dreamy soft smile, gray round brooch with a cross and ochre choker, gray round brooch with a cross, holograms resembling the moon and sun on a head modeled as Earth, somewhat large, straddling the zipper at the center of the chest of the top, gray, Arabic numeral '22' (one digit on each side of the zipper), golden yellow layered dress, large breasts, ribbon sash at waist, fashion boots in orange with gray accent color",
+          "negative_prompt_export": "",
+          "reference_images": null
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:17c853beb71a7f6c3db7dc6b05359b0bbcf7e00706782dea3cbb650d4d0806b0",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox",
+            "pale golden hair",
+            "earrings",
+            "two scorpion-type segmented tails (freely movable like arms)",
+            "eyes with special orange pupils and dark yellow irises",
+            "gray round brooch with a cross and ochre choker",
+            "gray round brooch with a cross",
+            "holograms resembling the moon and sun on a head modeled as Earth"
+          ],
+          "common.silhouette_features": [
+            "scorpion 2 tails",
+            "average stature (about 153cm)",
+            "Fox",
+            "pale golden hair",
+            "two scorpion-type segmented tails (freely movable like arms)",
+            "eyes with special orange pupils and dark yellow irises"
+          ],
+          "common.expression_tendency": [
+            "gentle dreamy soft smile"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "scorpion 2 tails",
+            "average stature (about 153cm)",
+            "teenager",
+            "Fox",
+            "pale golden hair",
+            "earrings",
+            "two scorpion-type segmented tails (freely movable like arms)",
+            "eyes with special orange pupils and dark yellow irises",
+            "gentle dreamy soft smile",
+            "gray round brooch with a cross and ochre choker",
+            "gray round brooch with a cross",
+            "holograms resembling the moon and sun on a head modeled as Earth",
+            "the white area on the front left chest of the sphere, gray, Arabic numeral '22'"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "scorpion 2 tails",
+            "average stature (about 153cm)",
+            "teenager",
+            "Fox",
+            "pale golden hair",
+            "earrings",
+            "two scorpion-type segmented tails (freely movable like arms)",
+            "eyes with special orange pupils and dark yellow irises",
+            "gentle dreamy soft smile",
+            "gray round brooch with a cross and ochre choker",
+            "gray round brooch with a cross",
+            "holograms resembling the moon and sun on a head modeled as Earth",
+            "somewhat large, straddling the zipper at the center of the chest of the top, gray, Arabic numeral '22' (one digit on each side of the zipper)",
+            "golden yellow layered dress",
+            "large breasts",
+            "ribbon sash at waist",
+            "fashion boots in orange with gray accent color"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-22/emstk_corefolderNTS-22-1.png",
+      "db-assets/Corefolder-22/emstk_corefolderNTS-22-2.png",
+      "db-assets/Corefolder-22/emstk_corefolderNTS-22-3.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-22/emstk_corefolderNTS-22-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/22/emstk_corefolderNTS-22-1.png",
+        "sha256": "5402801e07cf70d437624cc5a24818d0b52d15f4dfeaa9f4701dc4723415fe7f"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-22/emstk_corefolderNTS-22-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/22/emstk_corefolderNTS-22-2.png",
+        "sha256": "636dfab6753f13c9e6cdddb685fe98b77de05d7debf2db7e4d35eafe0ed2f576"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-22/emstk_corefolderNTS-22-3.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/22/emstk_corefolderNTS-22-3.png",
+        "sha256": "f4f94c923f266a476770ae0cb0f8610b8a5b41e21a0101e18280c76239ef2508"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-22/cnsp_imgNTS-22.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-22.png",
+        "sha256": "be5b192ea11fed1c76777b33ec7ca88d43a39ed9d31b08dcbf5498deb1d2e8a7"
+      }
+    ]
+  },
+  "25": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "1a77016cc0bf0af88eadc634ec0fa67dd35d322db1c7dca62ec5e15ca0166dc2",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 25,
+      "Name_JP": "25(フィズ)",
+      "Name_EN": "25(Quartels)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#A2AFB8",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": [
+            "#BodyPart_Chest",
+            "#BodyPart_Hair"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#7EAEAB",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#D3DBDC",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#175D7E",
+          "ColorName_JP": "メインアクセントカラー（瞳, アクセサリー）",
+          "ColorName_EN": "Main Accent Color (Eye Color, Accessory Color)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Neck",
+            "#BodyPart_Hand",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#628786",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#688B8A",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": [
+            "#BodyPart_Eye",
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_FoxBranched",
+          "Count": 5,
+          "Branches": [
+            {
+              "Laterality": "#Lat_Upper",
+              "TailCount": 2,
+              "ClusterCount": 2
+            },
+            {
+              "Laterality": "#Lat_Lower",
+              "TailCount": 3,
+              "ClusterCount": 1
+            }
+          ],
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": "#Lat_Left",
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "球体の左胸のグレー色体毛部分(スカーフとチャームアクセサリーで隠れることがある)",
+              "value_EN": "the gray fur area on the left chest of the sphere (may be hidden by scarf and charm accessories)"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "dark color"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「25」",
+              "value_EN": "Arabic numeral '25'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-25",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "ベースウェアの胸全体に大きく（アウターウェアで一部がやや隠れている）",
+              "value_EN": "The entire chest area of the base wear, prominently (partially obscured by outerwear)"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "深緑",
+              "value_EN": "dark green"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「25」",
+              "value_EN": "Arabic numeral '25'"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-25",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "スチールブルーのショートヘア",
+              "value_EN": "steel blue short hair"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "ライトグレーのアクセントカラーが入った前髪",
+              "value_EN": "light gray accent color in the bangs"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Eye"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "紺色のまつげでティールの目",
+              "value_EN": "navy eyelashes with teal eyes"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": null,
+          "Laterality": null,
+          "DesignElement": "#Element_Expression",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "自信に満ちた表情/友好的な笑顔",
+              "value_EN": "confident expression/friendly smile"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "濃いティールのボディスーツ",
+              "value_EN": "dark teal bodysuit"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "大きな胸",
+              "value_EN": "large breasts"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest",
+            "#BodyPart_Waist",
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "カジュアルなプライベート服装",
+              "value_EN": "casual private outfit"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Hand"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "濃い青の手袋",
+              "value_EN": "dark blue gloves"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Neck"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "5つの紺色の葉っぱ型ジュエルをリングでまとめたチャームが付けられている深緑色のスカーフ",
+              "value_EN": "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox",
+          "steel blue short hair, light gray accent color in the bangs",
+          "navy eyelashes with teal eyes",
+          "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring"
+        ],
+        "silhouette_features": [
+          "branching fox 5 tails",
+          "average stature (about 156cm)",
+          "Fox",
+          "steel blue short hair, light gray accent color in the bangs",
+          "navy eyelashes with teal eyes"
+        ],
+        "immutable_traits": null,
+        "expression_tendency": [
+          "confident expression/friendly smile"
+        ],
+        "age_appearance": "teenager",
+        "palette_priority": {
+          "primary": "#A2AFB8",
+          "secondary": "#175D7E",
+          "accent": "#7EAEAB"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img25.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img25.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox",
+              "steel blue short hair, light gray accent color in the bangs",
+              "navy eyelashes with teal eyes"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "branching fox 5 tails",
+            "average stature (about 156cm)",
+            "teenager",
+            "Fox",
+            "steel blue short hair, light gray accent color in the bangs",
+            "navy eyelashes with teal eyes",
+            "confident expression/friendly smile",
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring",
+            "the gray fur area on the left chest of the sphere (may be hidden by scarf and charm accessories), dark color, Arabic numeral '25'"
+          ],
+          "negative_visuals": [
+            "dark teal bodysuit",
+            "casual private outfit",
+            "dark blue gloves"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox; steel blue short hair, light gray accent color in the bangs; navy eyelashes with teal eyes, with the number '25' marking (the gray fur area on the left chest of the sphere (may be hidden by scarf and charm accessories), dark color, Arabic numeral '25').",
+          "prompt_export": "corefolder form, branching fox 5 tails, average stature (about 156cm), teenager, Fox, steel blue short hair, light gray accent color in the bangs, navy eyelashes with teal eyes, confident expression/friendly smile, deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring, the gray fur area on the left chest of the sphere (may be hidden by scarf and charm accessories), dark color, Arabic numeral '25'",
+          "negative_prompt_export": "dark teal bodysuit, casual private outfit, dark blue gloves",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img25.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/25/emstk_corefolder25-1.png",
+            "corefolder_arts": [
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/2023/art_img25-corefolder.png"
+            ]
+          }
+        },
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring",
+            "dark teal bodysuit",
+            "casual private outfit",
+            "dark blue gloves"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox",
+              "steel blue short hair, light gray accent color in the bangs",
+              "navy eyelashes with teal eyes",
+              "large breasts"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "branching fox 5 tails",
+            "average stature (about 156cm)",
+            "teenager",
+            "Fox",
+            "steel blue short hair, light gray accent color in the bangs",
+            "navy eyelashes with teal eyes",
+            "confident expression/friendly smile",
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring",
+            "The entire chest area of the base wear, prominently (partially obscured by outerwear), dark green, Arabic numeral '25'",
+            "dark teal bodysuit",
+            "large breasts",
+            "casual private outfit",
+            "dark blue gloves"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, branching fox 5 tails, average stature (about 156cm), teenager, Fox, steel blue short hair, light gray accent color in the bangs, navy eyelashes with teal eyes, confident expression/friendly smile, deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring, The entire chest area of the base wear, prominently (partially obscured by outerwear), dark green, Arabic numeral '25', dark teal bodysuit, large breasts, casual private outfit, dark blue gloves",
+          "negative_prompt_export": "",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img25.png",
+            "humanoid": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/humanoids/2024/art_img25-humanoidValentineA.png"
+          }
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:9c1e1d767a013ce69633c723db1928b93d0120d5f80359cd85ea451254ab5f62",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox",
+            "steel blue short hair, light gray accent color in the bangs",
+            "navy eyelashes with teal eyes",
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring"
+          ],
+          "common.silhouette_features": [
+            "branching fox 5 tails",
+            "average stature (about 156cm)",
+            "Fox",
+            "steel blue short hair, light gray accent color in the bangs",
+            "navy eyelashes with teal eyes"
+          ],
+          "common.expression_tendency": [
+            "confident expression/friendly smile"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "branching fox 5 tails",
+            "average stature (about 156cm)",
+            "teenager",
+            "Fox",
+            "steel blue short hair, light gray accent color in the bangs",
+            "navy eyelashes with teal eyes",
+            "confident expression/friendly smile",
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring",
+            "the gray fur area on the left chest of the sphere (may be hidden by scarf and charm accessories), dark color, Arabic numeral '25'"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "branching fox 5 tails",
+            "average stature (about 156cm)",
+            "teenager",
+            "Fox",
+            "steel blue short hair, light gray accent color in the bangs",
+            "navy eyelashes with teal eyes",
+            "confident expression/friendly smile",
+            "deep green scarf with a charm made of five navy leaf-shaped jewels held together by a ring",
+            "The entire chest area of the base wear, prominently (partially obscured by outerwear), dark green, Arabic numeral '25'",
+            "dark teal bodysuit",
+            "large breasts",
+            "casual private outfit",
+            "dark blue gloves"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-25/emstk_corefolderNTS-25-1.png",
+      "db-assets/Corefolder-25/emstk_corefolderNTS-25-2.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-25/emstk_corefolderNTS-25-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/25/emstk_corefolderNTS-25-1.png",
+        "sha256": "a83db8bc73ec0c01de256cff7051ece756bb0ff2f56b4328c96e1266372b40e3"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-25/emstk_corefolderNTS-25-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/25/emstk_corefolderNTS-25-2.png",
+        "sha256": "e2997ff9ad428e8ee926f548fd6f67b579da55960dbb45894ce238eb59aa4cec"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-25/cnsp_imgNTS-25.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-25.png",
+        "sha256": "25ac474d25d8c050e06f30c0f30c8401dcabe7ac91a950129f9f456982637293"
+      }
+    ]
+  },
+  "93": {
+    "db_commit": "74cfc5852af476780d331acefc3cee56fb268804",
+    "db_source": "data/Works_NumberTales/DataBases/db_Primary.json",
+    "record_sha256": "9ad91fe45f61ad1efe7d2b6734ef2cf5b83518687142f96e6f1d71b6b63b5d77",
+    "manifest_sha256": "f946f38ffd584e2fcb32011f9159c5896ac60e7ac9510d4f2344b33b5f91b042",
+    "ai_training": {
+      "allowed": true,
+      "reason": "AI_Optout / DB_Hidden / Works_Hidden are not set for this DB. This DB is opted in for AI training/generation use."
+    },
+    "settings": {
+      "Num": 93,
+      "Name_JP": "93(クミ)",
+      "Name_EN": "93(Nintris)",
+      "Progress": "released",
+      "ColorPalette": [
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#FFD07D",
+          "ColorName_JP": "主色",
+          "ColorName_EN": "Primary Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Primary",
+          "Hex": "#9A6A4E",
+          "ColorName_JP": "主色(衣装)",
+          "ColorName_EN": "Primary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Chest"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Secondary",
+          "Hex": "#FFF5E1",
+          "ColorName_JP": "副色",
+          "ColorName_EN": "Secondary Color",
+          "AppliesTo": [
+            "#BodyPart_Hair",
+            "#BodyPart_Foot",
+            "#BodyPart_Head"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Accent",
+          "Hex": "#F7FFD3",
+          "ColorName_JP": "メインアクセントカラー",
+          "ColorName_EN": "Main Accent Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#C1A072",
+          "ColorName_JP": "副色（衣装）",
+          "ColorName_EN": "Secondary Color (Costume)",
+          "AppliesTo": [
+            "#BodyPart_Waist"
+          ],
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#FFD486",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Role": "#ColorRole_Sub",
+          "Hex": "#FFD995",
+          "ColorName_JP": "補助色",
+          "ColorName_EN": "Auxiliary Color",
+          "AppliesTo": null,
+          "Formation": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "TailsUnit": [
+        {
+          "TailShapeType": "#TailShapeType_FoxBranched",
+          "Count": 9,
+          "Branches": [
+            {
+              "Laterality": "#Lat_Upper",
+              "TailCount": 6,
+              "ClusterCount": 1
+            },
+            {
+              "Laterality": "#Lat_Lower",
+              "TailCount": 3,
+              "ClusterCount": 2
+            }
+          ],
+          "TailsUnit_PNGName": "attr_tailsUnitNTS-93",
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ],
+      "AppearanceDetail": [
+        {
+          "Formation": "corefolder",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "球体の前面胸中央にやや大きく",
+              "value_EN": "Slightly large, centered on the front of the sphere at chest level"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "Dark color"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「93」（スタイライズされたモチーフ）",
+              "value_EN": "Arabic numeral '93' (stylized motif)"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-93",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Waist"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_NumberMark",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Position",
+              "value_JP": "腰に掛けてインナーから見える範囲のサポーター全体で大きく",
+              "value_EN": "Prominently across the entire supporter visible from the inner side of the waist"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Color",
+              "value_JP": "暗色",
+              "value_EN": "Dark color"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Notation",
+              "value_JP": "アラビア数字の「93」（スタイライズされたモチーフ）",
+              "value_EN": "Arabic numeral '93' (stylized motif)"
+            }
+          ],
+          "img_PNGName": "attr_numberMarkNTS-93",
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Ear"
+          ],
+          "Laterality": "#Lat_Both",
+          "DesignElement": "#Element_Ear",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Ear",
+              "vdict_EarShapeType": "#EarShapeType_Fox"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Hair"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "白いヘアバンド付きの黄色いショートヘア",
+              "value_EN": "short yellow hair with white headband"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Eye"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "黄色い目",
+              "value_EN": "yellow eyes"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Chest"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "茶色の短いベスト",
+              "value_EN": "brown short vest"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Waist"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "腰の番号デザイン付きベルトサポーター",
+              "value_EN": "belt supporter with number design at the waist"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Leg"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "黄色いフルスカート",
+              "value_EN": "yellow full skirt"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": "humanoid",
+          "BodyPart": [
+            "#BodyPart_Foot"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_CostumeItem",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "クリーム白い膝上ソックス",
+              "value_EN": "cream-white knee-high socks"
+            },
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "茶色のレースアップシューズ",
+              "value_EN": "brown lace-up shoes"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        },
+        {
+          "Formation": null,
+          "BodyPart": [
+            "#BodyPart_Head"
+          ],
+          "Laterality": null,
+          "DesignElement": "#Element_Motif",
+          "Attrs": [
+            {
+              "AttrLabel": "#DesignAttr_Overview",
+              "value_JP": "白い鉢巻",
+              "value_EN": "white long headband"
+            }
+          ],
+          "img_PNGName": null,
+          "Note_JP": null,
+          "Note_EN": null
+        }
+      ]
+    },
+    "ai_hints": {
+      "common": {
+        "identity_tags": [
+          "Fox",
+          "short yellow hair with white headband",
+          "yellow eyes",
+          "white long headband"
+        ],
+        "silhouette_features": [
+          "branching fox 9 tails",
+          "short stature (about 144cm)",
+          "Fox",
+          "yellow eyes",
+          "white long headband"
+        ],
+        "immutable_traits": null,
+        "expression_tendency": null,
+        "age_appearance": "early teenager",
+        "palette_priority": {
+          "primary": "#FFD07D",
+          "secondary": "#FFF5E1",
+          "accent": "#9A6A4E"
+        },
+        "natural_language_description": null,
+        "reference_images": {
+          "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img93.png",
+          "concept": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img93.png",
+          "catalog": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalog93.png"
+        }
+      },
+      "work_common": {
+        "reference_images": {
+          "corefolder_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsCoreFolder.png"
+          ],
+          "humanoid_reference": [
+            "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/Ref_Glossary/concept-figure/cnsp-fg_NTsHumanoid.png"
+          ]
+        }
+      },
+      "forms": {
+        "corefolder": {
+          "form_tags": [
+            "corefolder form"
+          ],
+          "outfit_features": [
+            "short yellow hair with white headband"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "spherical core body with the head as the only protruding part on top",
+              "Fox",
+              "yellow eyes",
+              "white long headband"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "ai_tags": [
+            "corefolder form",
+            "branching fox 9 tails",
+            "short stature (about 144cm)",
+            "early teenager",
+            "Fox",
+            "short yellow hair with white headband",
+            "yellow eyes",
+            "white long headband",
+            "Slightly large, centered on the front of the sphere at chest level, Dark color, Arabic numeral '93' (stylized motif)"
+          ],
+          "negative_visuals": [
+            "brown short vest",
+            "yellow full skirt",
+            "cream-white knee-high socks, brown lace-up shoes"
+          ],
+          "natural_language_description": "Corefolder form: a spherical cushion-like body in Fox; yellow eyes; white long headband, with the number '93' marking (Slightly large, centered on the front of the sphere at chest level, Dark color, Arabic numeral '93' (stylized motif)).",
+          "prompt_export": "corefolder form, branching fox 9 tails, short stature (about 144cm), early teenager, Fox, short yellow hair with white headband, yellow eyes, white long headband, Slightly large, centered on the front of the sphere at chest level, Dark color, Arabic numeral '93' (stylized motif)",
+          "negative_prompt_export": "brown short vest, yellow full skirt, cream-white knee-high socks, brown lace-up shoes",
+          "reference_images": {
+            "main": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/concept/cnsp_img93.png",
+            "corefolder": "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/corefolder/93/emstk_corefolder93-1.png",
+            "corefolder_arts": [
+              "https://database.numbertales-radiann.net/data/Works_NumberTales/Images/DB_Primary/arts/corefolders/sphericateDay/art_sphericateDay202201.png"
+            ]
+          }
+        },
+        "humanoid": {
+          "form_tags": [
+            "humanoid form"
+          ],
+          "outfit_features": [
+            "short yellow hair with white headband",
+            "brown short vest",
+            "yellow full skirt",
+            "cream-white knee-high socks, brown lace-up shoes"
+          ],
+          "silhouette_notes": {
+            "body_description": [
+              "Fox",
+              "yellow eyes",
+              "white long headband",
+              "belt supporter with number design at the waist"
+            ],
+            "attached_items": []
+          },
+          "immutable_constraints": null,
+          "negative_keywords": null,
+          "ai_tags": [
+            "humanoid form",
+            "branching fox 9 tails",
+            "short stature (about 144cm)",
+            "early teenager",
+            "Fox",
+            "short yellow hair with white headband",
+            "yellow eyes",
+            "white long headband",
+            "Prominently across the entire supporter visible from the inner side of the waist, Dark color, Arabic numeral '93' (stylized motif)",
+            "brown short vest",
+            "belt supporter with number design at the waist",
+            "yellow full skirt",
+            "cream-white knee-high socks, brown lace-up shoes"
+          ],
+          "negative_visuals": [],
+          "natural_language_description": null,
+          "prompt_export": "humanoid form, branching fox 9 tails, short stature (about 144cm), early teenager, Fox, short yellow hair with white headband, yellow eyes, white long headband, Prominently across the entire supporter visible from the inner side of the waist, Dark color, Arabic numeral '93' (stylized motif), brown short vest, belt supporter with number design at the waist, yellow full skirt, cream-white knee-high socks, brown lace-up shoes",
+          "negative_prompt_export": "",
+          "reference_images": null
+        }
+      },
+      "alt_modes": null,
+      "concept_contains_forms": [
+        "corefolder",
+        "humanoid"
+      ],
+      "_meta": {
+        "structuralSourceHash": "sha256:6a7c1307617a61babe7ba66810842b2587855032f11c54460235e36eb24cbd0b",
+        "structuralEntries": {
+          "common.identity_tags": [
+            "Fox",
+            "short yellow hair with white headband",
+            "yellow eyes",
+            "white long headband"
+          ],
+          "common.silhouette_features": [
+            "branching fox 9 tails",
+            "short stature (about 144cm)",
+            "Fox",
+            "yellow eyes",
+            "white long headband"
+          ],
+          "forms.corefolder.form_tags": [
+            "corefolder form"
+          ],
+          "forms.corefolder.ai_tags": [
+            "corefolder form",
+            "branching fox 9 tails",
+            "short stature (about 144cm)",
+            "early teenager",
+            "Fox",
+            "short yellow hair with white headband",
+            "yellow eyes",
+            "white long headband",
+            "Slightly large, centered on the front of the sphere at chest level, Dark color, Arabic numeral '93' (stylized motif)"
+          ],
+          "forms.corefolder.immutable_constraints": [
+            "do not render arms or hands",
+            "do not render legs or feet",
+            "do not dress in humanoid casual / fashion outfit"
+          ],
+          "forms.corefolder.negative_keywords": [
+            "feet",
+            "legs",
+            "shoes",
+            "high heels",
+            "arms",
+            "hands",
+            "hoodie",
+            "blazer",
+            "fashion outfit",
+            "bound by rope"
+          ],
+          "forms.humanoid.form_tags": [
+            "humanoid form"
+          ],
+          "forms.humanoid.ai_tags": [
+            "humanoid form",
+            "branching fox 9 tails",
+            "short stature (about 144cm)",
+            "early teenager",
+            "Fox",
+            "short yellow hair with white headband",
+            "yellow eyes",
+            "white long headband",
+            "Prominently across the entire supporter visible from the inner side of the waist, Dark color, Arabic numeral '93' (stylized motif)",
+            "brown short vest",
+            "belt supporter with number design at the waist",
+            "yellow full skirt",
+            "cream-white knee-high socks, brown lace-up shoes"
+          ]
+        },
+        "lastStructuralResync": "2026-08-11"
+      }
+    },
+    "settings_use": "Reference and evaluation constraints; not language-model weight training",
+    "training_images": [
+      "db-assets/Corefolder-93/emstk_corefolderNTS-93-1.png",
+      "db-assets/Corefolder-93/emstk_corefolderNTS-93-2.png"
+    ],
+    "files": [
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-93/emstk_corefolderNTS-93-1.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/93/emstk_corefolderNTS-93-1.png",
+        "sha256": "be798e01e0eefdc644462a539b559f78de2f6b39e9eec59c8ac7600af6e95e2d"
+      },
+      {
+        "role": "train",
+        "file": "db-assets/Corefolder-93/emstk_corefolderNTS-93-2.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/corefolder/93/emstk_corefolderNTS-93-2.png",
+        "sha256": "73686708e5ca329365c3473a1f39f95c5df37f1eba91b92d119792961c82412e"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-93/cnsp_imgNTS-93.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/concept/cnsp_imgNTS-93.png",
+        "sha256": "320ab10d9b84d9cea364c3365950369b570fbd023597c4181cfe5957d51fe854"
+      },
+      {
+        "role": "reference",
+        "file": "db-assets/Corefolder-93/chr-dsgn_catalogNTS-93.png",
+        "source": "data/Works_NumberTales/Images/DB_Primary/catalog/chr-dsgn_catalogNTS-93.png",
+        "sha256": "e945d1509e1959c3d775bd26bb4ce2b5ab945acc639bfd2891dc2953e7b47291"
+      }
+    ]
+  }
+}

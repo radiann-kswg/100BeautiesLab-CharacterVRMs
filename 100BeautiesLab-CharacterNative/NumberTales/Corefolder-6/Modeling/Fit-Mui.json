@@ -1,0 +1,41 @@
+{
+  "Official corefolder art 1": {
+    "width_over_height": 1.1633,
+    "screen_left_iris_y": 0.2357,
+    "screen_right_iris_y": 0.2622,
+    "white_face_and_cheeks_width_over_height": 0.445,
+    "lower_cheek_y": 0.4117,
+    "collar_lower_y_p99": 0.4617,
+    "sapphire_brooch_y": 0.503,
+    "exposed_cream_ear_area_over_silhouette": 0.0065,
+    "exposed_pale_tail_tip_area_over_silhouette": 0.0935,
+    "tail_tips_y_centroid": 0.5951,
+    "silhouette_IoU_with_art": 1.0
+  },
+  "Previous VRM": {
+    "width_over_height": 1.275,
+    "screen_left_iris_y": 0.2932,
+    "screen_right_iris_y": 0.3162,
+    "white_face_and_cheeks_width_over_height": 0.5133,
+    "lower_cheek_y": 0.43,
+    "collar_lower_y_p99": 0.55,
+    "sapphire_brooch_y": 0.6096,
+    "exposed_cream_ear_area_over_silhouette": 0.0108,
+    "exposed_pale_tail_tip_area_over_silhouette": 0.1207,
+    "tail_tips_y_centroid": 0.5298,
+    "silhouette_IoU_with_art": 0.8713
+  },
+  "Revised VRM": {
+    "width_over_height": 1.1967,
+    "screen_left_iris_y": 0.2688,
+    "screen_right_iris_y": 0.2927,
+    "white_face_and_cheeks_width_over_height": 0.4917,
+    "lower_cheek_y": 0.43,
+    "collar_lower_y_p99": 0.5,
+    "sapphire_brooch_y": 0.5604,
+    "exposed_cream_ear_area_over_silhouette": 0.0046,
+    "exposed_pale_tail_tip_area_over_silhouette": 0.2147,
+    "tail_tips_y_centroid": 0.5796,
+    "silhouette_IoU_with_art": 0.8886
+  }
+}

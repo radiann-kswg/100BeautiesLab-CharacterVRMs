@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 06d1109da4b302e4fa695fe426aa0bf4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -509005784963925442
+    second: vrm_corefolder4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,7 +150,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: vrm_corefolder4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1901
+        height: 1901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a3b967fe5afe8f0800000000000000
+      internalID: -509005784963925442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -161,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vrm_corefolder4_0: -509005784963925442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,57 @@
+{
+  "reference_vrms": {
+    "4": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+    "25": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+    "93": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588"
+  },
+  "method": "Actual #4 naked body island (2,152 triangles). #4 facial rim, successive transverse sections of #4/#25/#93 scalp at their shared neutral pose. A symmetric quadratic fit smooths individual sockets on the upper dome while preserving the face boundary. Character ears, fringe, clothing and pendants are authored independently.",
+  "body_reference_points": 1078,
+  "face_boundary_vertices": 34,
+  "measurement": "Bidirectional nearest-vertex distances after rest-pose skinning. The face seam uses the maximum distance from the reference boundary to the facial mesh. The independent Outfit renderer has no base vertices or materials.",
+  "models": {
+    "6": {
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "Mui collar • sky blue",
+        "Mui • seam and dark bezel",
+        "Mui • official collar 6",
+        "Mui brooch • sapphire edge",
+        "Mui • six-petal official brooch"
+      ]
+    },
+    "49": {
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "49 Chest number"
+      ]
+    },
+    "57": {
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "Fivens • DB number 57 and piping",
+        "Fivens • dark warm outlines"
+      ]
+    },
+    "85": {
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "body_to_reference_mm": 3.5e-05,
+      "scalp_to_reference_profile_mm": 0.000735,
+      "facial_seam_gap_mm": 0.000732,
+      "outfit_materials": [
+        "85 Silver necklace",
+        "85 Petrol pendant rim",
+        "85 Cyan pendant",
+        "85 Pendant light"
+      ]
+    }
+  }
+}

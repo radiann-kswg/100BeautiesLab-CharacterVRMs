@@ -1,0 +1,32 @@
+[
+  {
+    "id": 57,
+    "avatarValid": true,
+    "humanoid": true,
+    "expressionChecks": [
+      {
+        "key": "a",
+        "maxVertexDelta": 0.0459717773
+      },
+      {
+        "key": "EyeClose",
+        "maxVertexDelta": 0.08793257
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "avatarValid": true,
+    "humanoid": true,
+    "expressionChecks": [
+      {
+        "key": "a",
+        "maxVertexDelta": 0.0459717773
+      },
+      {
+        "key": "EyeClose",
+        "maxVertexDelta": 0.08793257
+      }
+    ]
+  }
+]

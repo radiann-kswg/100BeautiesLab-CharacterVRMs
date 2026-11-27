@@ -1,0 +1,120 @@
+[
+  {
+    "id": 57,
+    "tail_count": 7,
+    "rig_bones": 79,
+    "humanoid_bones": 53,
+    "mesh_objects": 32,
+    "weights_normalized": true,
+    "tail_pose_checks": [
+      {
+        "tail": "Tail_Upper_01",
+        "max_delta": 0.06523132339919331
+      },
+      {
+        "tail": "Tail_Upper_02",
+        "max_delta": 0.06523132339919331
+      },
+      {
+        "tail": "Tail_Upper_03",
+        "max_delta": 0.06740102104412506
+      },
+      {
+        "tail": "Tail_Upper_04",
+        "max_delta": 0.06740102104412506
+      },
+      {
+        "tail": "Tail_Upper_05",
+        "max_delta": 0.06530178397597651
+      },
+      {
+        "tail": "Tail_Lower_06",
+        "max_delta": 0.05567210825078544
+      },
+      {
+        "tail": "Tail_Lower_07",
+        "max_delta": 0.05567210825078544
+      }
+    ],
+    "expression_checks": [
+      {
+        "key": "a",
+        "max_delta": 0.045971778138018095
+      },
+      {
+        "key": "EyeClose",
+        "max_delta": 0.06686135292281786
+      },
+      {
+        "key": "Joy",
+        "max_delta": 0.04816300268166646
+      }
+    ],
+    "draft_and_common_base_unchanged": true,
+    "db_sources_unchanged": true,
+    "all_materials_mtoon": true,
+    "tail_meshes_closed": true,
+    "vrm_sha256": "fb896aff7ede7b171a17af50c2aca6a7ba35caa51217fc1a8dc6b43349e8e756"
+  },
+  {
+    "id": 85,
+    "tail_count": 8,
+    "rig_bones": 82,
+    "humanoid_bones": 53,
+    "mesh_objects": 32,
+    "weights_normalized": true,
+    "tail_pose_checks": [
+      {
+        "tail": "Tail_Upper_01",
+        "max_delta": 0.06694668705031824
+      },
+      {
+        "tail": "Tail_Upper_02",
+        "max_delta": 0.06172177999920222
+      },
+      {
+        "tail": "Tail_Upper_03",
+        "max_delta": 0.06172177999920222
+      },
+      {
+        "tail": "Tail_Lower_04",
+        "max_delta": 0.06481259273748156
+      },
+      {
+        "tail": "Tail_Lower_05",
+        "max_delta": 0.06481259273748156
+      },
+      {
+        "tail": "Tail_Lower_06",
+        "max_delta": 0.06515106429223924
+      },
+      {
+        "tail": "Tail_Lower_07",
+        "max_delta": 0.06515106429223924
+      },
+      {
+        "tail": "Tail_Lower_08",
+        "max_delta": 0.040178654288613114
+      }
+    ],
+    "expression_checks": [
+      {
+        "key": "a",
+        "max_delta": 0.045971778138018095
+      },
+      {
+        "key": "EyeClose",
+        "max_delta": 0.04843723857916316
+      },
+      {
+        "key": "Joy",
+        "max_delta": 0.03489059740112644
+      }
+    ],
+    "draft_and_common_base_unchanged": true,
+    "db_sources_unchanged": true,
+    "all_materials_mtoon": true,
+    "tail_meshes_closed": true,
+    "vrm_sha256": "ed1b8747bb78b96543600e19df4c1a70f354938c314f55964cc6f26fcf6d19ba"
+  }
+]

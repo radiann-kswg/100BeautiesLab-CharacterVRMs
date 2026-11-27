@@ -1,0 +1,74 @@
+[
+  {
+    "id": 57,
+    "view": "front",
+    "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Training/Refined-front.png",
+    "orthographicSize": 0.857232153,
+    "center": [
+      -1.39999986,
+      0.675451636,
+      0.2546141
+    ],
+    "resolution": 1024
+  },
+  {
+    "id": 57,
+    "view": "side",
+    "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Training/Refined-side.png",
+    "orthographicSize": 0.857232153,
+    "center": [
+      -1.39999986,
+      0.675451636,
+      0.2546141
+    ],
+    "resolution": 1024
+  },
+  {
+    "id": 57,
+    "view": "back",
+    "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-57/Training/Refined-back.png",
+    "orthographicSize": 0.857232153,
+    "center": [
+      -1.39999986,
+      0.675451636,
+      0.2546141
+    ],
+    "resolution": 1024
+  },
+  {
+    "id": 85,
+    "view": "front",
+    "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Training/Refined-front.png",
+    "orthographicSize": 0.8264322,
+    "center": [
+      1.4000001,
+      0.6735663,
+      0.227114141
+    ],
+    "resolution": 1024
+  },
+  {
+    "id": 85,
+    "view": "side",
+    "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Training/Refined-side.png",
+    "orthographicSize": 0.8264322,
+    "center": [
+      1.4000001,
+      0.6735663,
+      0.227114141
+    ],
+    "resolution": 1024
+  },
+  {
+    "id": 85,
+    "view": "back",
+    "path": "100BeautiesLab-CharacterNative/NumberTales/Corefolder-85/Training/Refined-back.png",
+    "orthographicSize": 0.8264322,
+    "center": [
+      1.4000001,
+      0.6735663,
+      0.227114141
+    ],
+    "resolution": 1024
+  }
+]

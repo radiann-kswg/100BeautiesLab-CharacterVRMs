@@ -1,0 +1,26 @@
+{
+  "Official pose 1": {
+    "width_over_height": 1.1633,
+    "silhouette_IoU_with_art": 1.0
+  },
+  "Previous neutral VRM": {
+    "width_over_height": 1.22,
+    "silhouette_IoU_with_art": 0.867
+  },
+  "Revised neutral VRM": {
+    "width_over_height": 1.1183,
+    "silhouette_IoU_with_art": 0.8118
+  },
+  "Official TailsUnit": {
+    "width_over_height": 1.1683,
+    "silhouette_IoU_with_art": 1.0
+  },
+  "Previous neutral tails": {
+    "width_over_height": 1.425,
+    "silhouette_IoU_with_art": 0.8045
+  },
+  "Revised neutral tails": {
+    "width_over_height": 1.155,
+    "silhouette_IoU_with_art": 0.81
+  }
+}

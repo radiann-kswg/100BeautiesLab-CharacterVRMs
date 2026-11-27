@@ -1,0 +1,31 @@
+{
+  "source": "D:\\Unity UserFile\\Codex Cowork Projects\\100BeautiesLab-CharacterVRMs\\Assets\\100BeautiesLab-CharacterVRM\\NumberTales\\Corefolder-93\\VRCModel_CoreFloder-93.vrm",
+  "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+  "bounds": [
+    [
+      -0.6243734359741211,
+      -0.5092602372169495,
+      -0.003276754869148135
+    ],
+    [
+      0.6243735551834106,
+      0.7264418005943298,
+      1.1115857362747192
+    ]
+  ],
+  "mesh_objects": 3,
+  "vertices": 5572,
+  "polygons": 9205,
+  "armatures": 1,
+  "shape_keys": {
+    "Body.004": 0,
+    "Face.005": 16,
+    "Tail.003": 0
+  },
+  "uv_layers": {
+    "Body.004": 1,
+    "Face.005": 1,
+    "Tail.003": 1
+  },
+  "render": "Normalized size, orthographic, Blender workbench studio clay; not a material/MToon evaluation"
+}

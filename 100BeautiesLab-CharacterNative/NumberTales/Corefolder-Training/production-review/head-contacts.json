@@ -1,0 +1,1894 @@
+{
+  "yaw_degrees": [
+    0,
+    -30,
+    30,
+    -90,
+    90,
+    180
+  ],
+  "units": "millimetres of projected intersection line",
+  "method": "Neutral reimport. Independent welded head-region islands, min extent 3 mm, max extent >=55 mm. Exclude eye-weighted components, tails, small decals, exact contacts and grazing angles <5.7 degrees. For true triangle crossings, sample every 3 mm or less. Visible if the first two-sided scene ray is within 1 mm. Materials and alpha clipping are ignored. Internal seams are retained separately. Non-neighbour triangle crossings inside each selected island are reported separately and in the total. Shared-vertex neighbours, very small facial components and alpha visibility are outside this measure.",
+  "models": {
+    "4": {
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "islands": 10,
+      "pairs": [
+        {
+          "parts": [
+            "Hair/7",
+            "Hair/8"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder004",
+            "CoreFolder004"
+          ],
+          "line_mm": 290.0,
+          "projected_visible_mm": [
+            103.99,
+            191.37,
+            2.3,
+            274.41,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/7",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder004",
+            "CoreFolder004"
+          ],
+          "line_mm": 290.0,
+          "projected_visible_mm": [
+            103.99,
+            2.3,
+            191.37,
+            0.0,
+            274.41,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/0",
+            "Face/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder004",
+            "CoreFolder004"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            14.66,
+            8.17,
+            6.89,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/0",
+            "Face/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder004",
+            "CoreFolder004"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            8.17,
+            14.66,
+            0.0,
+            6.89,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/0",
+            "Face/1"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder004",
+            "CoreFolder004"
+          ],
+          "line_mm": 182.39,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        234.17,
+        216.5,
+        216.5,
+        281.3,
+        281.3,
+        0.0
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        234.17,
+        216.5,
+        216.5,
+        281.3,
+        281.3,
+        0.0
+      ]
+    },
+    "16": {
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "islands": 9,
+      "pairs": [
+        {
+          "parts": [
+            "Hair.001/5",
+            "Hair.001/8"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 667.81,
+          "projected_visible_mm": [
+            71.55,
+            0.0,
+            236.81,
+            0.0,
+            325.18,
+            240.48
+          ]
+        },
+        {
+          "parts": [
+            "Hair.001/5",
+            "Hair.001/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 667.76,
+          "projected_visible_mm": [
+            71.55,
+            236.79,
+            0.0,
+            325.09,
+            0.0,
+            24.68
+          ]
+        },
+        {
+          "parts": [
+            "Hair.001/5",
+            "Hair.001/7"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 610.43,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            29.93,
+            243.32,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/0",
+            "Hair.001/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 28.65,
+          "projected_visible_mm": [
+            20.2,
+            9.99,
+            9.99,
+            9.64,
+            9.64,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/1",
+            "Hair.001/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 93.73,
+          "projected_visible_mm": [
+            6.14,
+            6.22,
+            4.75,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/3",
+            "Hair.001/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 93.73,
+          "projected_visible_mm": [
+            6.14,
+            4.75,
+            6.22,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/0",
+            "Face.001/1"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 12.5,
+          "projected_visible_mm": [
+            3.73,
+            3.91,
+            4.13,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/0",
+            "Face.001/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 12.5,
+          "projected_visible_mm": [
+            3.73,
+            4.13,
+            3.91,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/0",
+            "Hair.001/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 8.13,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/0",
+            "Hair.001/8"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder016.001",
+            "CoreFolder016.001"
+          ],
+          "line_mm": 8.13,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        183.04,
+        265.78,
+        265.8,
+        364.66,
+        578.14,
+        265.16
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        183.04,
+        265.78,
+        265.8,
+        364.66,
+        578.14,
+        265.16
+      ]
+    },
+    "20": {
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "islands": 7,
+      "pairs": [
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/1"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder020.001",
+            "CoreFolder020.001"
+          ],
+          "line_mm": 869.7,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            56.29,
+            56.29,
+            265.66
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/1",
+            "Face.002/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder020.001",
+            "CoreFolder020.001"
+          ],
+          "line_mm": 357.24,
+          "projected_visible_mm": [
+            75.74,
+            200.0,
+            0.0,
+            204.88,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/1",
+            "Face.002/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder020.001",
+            "CoreFolder020.001"
+          ],
+          "line_mm": 357.24,
+          "projected_visible_mm": [
+            75.74,
+            0.0,
+            200.0,
+            0.0,
+            204.88,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        151.49,
+        200.0,
+        200.0,
+        261.17,
+        261.17,
+        265.66
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        151.49,
+        200.0,
+        200.0,
+        261.17,
+        261.17,
+        265.66
+      ]
+    },
+    "22": {
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "islands": 6,
+      "pairs": [
+        {
+          "parts": [
+            "Face.001/1",
+            "Face.001/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder022.001",
+            "CoreFolder022.001"
+          ],
+          "line_mm": 354.88,
+          "projected_visible_mm": [
+            0.0,
+            6.79,
+            0.0,
+            149.65,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/1",
+            "Face.001/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder022.001",
+            "CoreFolder022.001"
+          ],
+          "line_mm": 354.88,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            6.79,
+            0.0,
+            149.65,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/1",
+            "Face.001/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder022.001",
+            "CoreFolder022.001"
+          ],
+          "line_mm": 51.8,
+          "projected_visible_mm": [
+            45.93,
+            51.08,
+            29.22,
+            22.06,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.001/1",
+            "Face.001/4"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder022.001",
+            "CoreFolder022.001"
+          ],
+          "line_mm": 51.8,
+          "projected_visible_mm": [
+            45.93,
+            29.22,
+            51.08,
+            0.0,
+            22.06,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        91.85,
+        87.09,
+        87.09,
+        171.72,
+        171.72,
+        0.0
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        91.85,
+        87.09,
+        87.09,
+        171.72,
+        171.72,
+        0.0
+      ]
+    },
+    "25": {
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "islands": 8,
+      "pairs": [
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/1"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder025.001",
+            "CoreFolder025.001"
+          ],
+          "line_mm": 356.71,
+          "projected_visible_mm": [
+            66.6,
+            143.28,
+            0.0,
+            61.86,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/7"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder025.001",
+            "CoreFolder025.001"
+          ],
+          "line_mm": 356.71,
+          "projected_visible_mm": [
+            66.6,
+            0.0,
+            143.28,
+            0.0,
+            61.86,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/4"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder025.001",
+            "CoreFolder025.001"
+          ],
+          "line_mm": 367.72,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            130.04,
+            126.21,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder025.001",
+            "CoreFolder025.001"
+          ],
+          "line_mm": 58.05,
+          "projected_visible_mm": [
+            52.38,
+            57.74,
+            33.74,
+            25.29,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder025.001",
+            "CoreFolder025.001"
+          ],
+          "line_mm": 58.05,
+          "projected_visible_mm": [
+            48.76,
+            29.34,
+            57.74,
+            0.0,
+            25.29,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face.002/0",
+            "Face.002/0"
+          ],
+          "same_island": true,
+          "first_materials": [
+            "CoreFolder025.001",
+            "CoreFolder025.001"
+          ],
+          "line_mm": 200.31,
+          "projected_visible_mm": [
+            0.0,
+            41.11,
+            41.11,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        234.33,
+        230.35,
+        234.76,
+        217.19,
+        213.35,
+        0.0
+      ],
+      "self_visible_mm": [
+        0.0,
+        41.11,
+        41.11,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        234.33,
+        271.46,
+        275.86,
+        217.19,
+        213.35,
+        0.0
+      ]
+    },
+    "93": {
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "islands": 6,
+      "pairs": [
+        {
+          "parts": [
+            "Face/0",
+            "Face/1"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder093",
+            "CoreFolder093"
+          ],
+          "line_mm": 2502.49,
+          "projected_visible_mm": [
+            416.39,
+            399.03,
+            402.48,
+            277.55,
+            286.33,
+            418.67
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder093",
+            "CoreFolder093"
+          ],
+          "line_mm": 214.22,
+          "projected_visible_mm": [
+            72.16,
+            106.27,
+            0.0,
+            144.57,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder093",
+            "CoreFolder093"
+          ],
+          "line_mm": 214.22,
+          "projected_visible_mm": [
+            72.16,
+            0.0,
+            106.27,
+            0.0,
+            144.57,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder093",
+            "CoreFolder093"
+          ],
+          "line_mm": 40.78,
+          "projected_visible_mm": [
+            36.63,
+            40.68,
+            23.75,
+            20.14,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/4"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "CoreFolder093",
+            "CoreFolder093"
+          ],
+          "line_mm": 40.78,
+          "projected_visible_mm": [
+            36.63,
+            23.75,
+            40.68,
+            0.0,
+            20.14,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        633.97,
+        569.72,
+        573.18,
+        442.26,
+        451.04,
+        418.67
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        633.97,
+        569.72,
+        573.18,
+        442.26,
+        451.04,
+        418.67
+      ]
+    },
+    "6": {
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "islands": 11,
+      "pairs": [
+        {
+          "parts": [
+            "Face/1",
+            "Hair/10"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 275.49,
+          "projected_visible_mm": [
+            50.76,
+            45.54,
+            40.86,
+            0.0,
+            68.9,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 272.82,
+          "projected_visible_mm": [
+            43.49,
+            38.09,
+            43.34,
+            52.26,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/10"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 42.51,
+          "projected_visible_mm": [
+            40.15,
+            38.12,
+            42.11,
+            0.0,
+            31.02,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 41.21,
+          "projected_visible_mm": [
+            38.97,
+            40.84,
+            37.13,
+            31.69,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/8",
+            "Hair/10"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • swept crown and forelocks",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 54.15,
+          "projected_visible_mm": [
+            13.56,
+            8.45,
+            16.54,
+            0.0,
+            16.1,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • expression atlas"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            14.66,
+            8.17,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • expression atlas"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            8.17,
+            14.66,
+            0.0,
+            6.89,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/8",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • swept crown and forelocks",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 29.68,
+          "projected_visible_mm": [
+            10.11,
+            11.9,
+            5.95,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Body/0",
+            "Hair/8"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Corefolder Cranial Base #6",
+            "Mui • swept crown and forelocks"
+          ],
+          "line_mm": 794.1,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Body/0",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Corefolder Cranial Base #6",
+            "Mui • white cheek fur"
+          ],
+          "line_mm": 13.04,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Mui • expression atlas",
+            "Mui • expression atlas"
+          ],
+          "line_mm": 182.39,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        223.23,
+        205.76,
+        208.76,
+        83.95,
+        122.91,
+        0.0
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        223.23,
+        205.76,
+        208.76,
+        83.95,
+        122.91,
+        0.0
+      ]
+    },
+    "49": {
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "islands": 10,
+      "pairs": [
+        {
+          "parts": [
+            "Hair/6",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Swept crown",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 220.62,
+          "projected_visible_mm": [
+            121.61,
+            108.01,
+            113.88,
+            0.0,
+            88.93,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Yochika face"
+          ],
+          "line_mm": 182.39,
+          "projected_visible_mm": [
+            109.94,
+            65.34,
+            71.37,
+            43.23,
+            40.87,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/6",
+            "Hair/7"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Swept crown",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 173.16,
+          "projected_visible_mm": [
+            74.42,
+            98.68,
+            58.89,
+            89.52,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 209.37,
+          "projected_visible_mm": [
+            39.65,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/7"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 38.75,
+          "projected_visible_mm": [
+            37.01,
+            0.0,
+            36.99,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Hair/7"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 209.5,
+          "projected_visible_mm": [
+            34.64,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 37.49,
+          "projected_visible_mm": [
+            14.68,
+            28.19,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/7",
+            "Hair/7"
+          ],
+          "same_island": true,
+          "first_materials": [
+            "49 Hair underlayers",
+            "49 Hair underlayers"
+          ],
+          "line_mm": 62.86,
+          "projected_visible_mm": [
+            15.87,
+            4.65,
+            0.0,
+            6.32,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Yochika face"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            14.66,
+            8.17,
+            6.89,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Yochika face"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            8.17,
+            14.66,
+            0.0,
+            6.89,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Swept crown"
+          ],
+          "line_mm": 46.08,
+          "projected_visible_mm": [
+            13.28,
+            13.02,
+            13.27,
+            13.17,
+            5.17,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Hair/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "49 Yochika face",
+            "49 Swept crown"
+          ],
+          "line_mm": 8.66,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        471.43,
+        336.06,
+        317.22,
+        152.81,
+        141.86,
+        0.0
+      ],
+      "self_visible_mm": [
+        15.87,
+        4.65,
+        0.0,
+        6.32,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        487.3,
+        340.71,
+        317.22,
+        159.13,
+        141.86,
+        0.0
+      ]
+    },
+    "57": {
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "islands": 7,
+      "pairs": [
+        {
+          "parts": [
+            "Face/1",
+            "Hair/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Fivens • expression atlas",
+            "Fivens • swept forelocks"
+          ],
+          "line_mm": 540.44,
+          "projected_visible_mm": [
+            116.53,
+            153.17,
+            27.8,
+            131.66,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Fivens • expression atlas",
+            "Fivens • swept forelocks"
+          ],
+          "line_mm": 366.77,
+          "projected_visible_mm": [
+            118.42,
+            98.47,
+            128.11,
+            41.38,
+            66.16,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Fivens • expression atlas",
+            "Fivens • expression atlas"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            8.17,
+            14.66,
+            0.0,
+            6.89,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Fivens • expression atlas",
+            "Fivens • expression atlas"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            0.0,
+            8.17,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Body/0",
+            "Hair/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Corefolder Cranial Base #57",
+            "Fivens • swept forelocks"
+          ],
+          "line_mm": 1098.86,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Fivens • expression atlas",
+            "Fivens • expression atlas"
+          ],
+          "line_mm": 182.39,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/3",
+            "Hair/6"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Fivens • expression atlas",
+            "Fivens • swept forelocks"
+          ],
+          "line_mm": 8.07,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        261.14,
+        259.8,
+        178.74,
+        173.04,
+        73.04,
+        0.0
+      ],
+      "self_visible_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "total_visible_mm": [
+        261.14,
+        259.8,
+        178.74,
+        173.04,
+        73.04,
+        0.0
+      ]
+    },
+    "85": {
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "islands": 11,
+      "pairs": [
+        {
+          "parts": [
+            "Hair/9",
+            "Hair/10"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Swept crown",
+            "85 Chestnut undercoat"
+          ],
+          "line_mm": 425.59,
+          "projected_visible_mm": [
+            172.41,
+            32.74,
+            193.37,
+            0.0,
+            233.07,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/8",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Chestnut undercoat",
+            "85 Swept crown"
+          ],
+          "line_mm": 436.45,
+          "projected_visible_mm": [
+            183.71,
+            202.66,
+            63.99,
+            217.94,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/6",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Chestnut strands",
+            "85 Swept crown"
+          ],
+          "line_mm": 321.87,
+          "projected_visible_mm": [
+            0.0,
+            56.58,
+            0.0,
+            121.23,
+            0.0,
+            100.85
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Hair/10"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Expression atlas",
+            "85 Chestnut undercoat"
+          ],
+          "line_mm": 272.93,
+          "projected_visible_mm": [
+            64.51,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Hair/8"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Expression atlas",
+            "85 Chestnut undercoat"
+          ],
+          "line_mm": 272.98,
+          "projected_visible_mm": [
+            32.17,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/6",
+            "Hair/6"
+          ],
+          "same_island": true,
+          "first_materials": [
+            "85 Chestnut strands",
+            "85 Chestnut strands"
+          ],
+          "line_mm": 37.36,
+          "projected_visible_mm": [
+            24.82,
+            20.97,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/9",
+            "Hair/9"
+          ],
+          "same_island": true,
+          "first_materials": [
+            "85 Swept crown",
+            "85 Swept crown"
+          ],
+          "line_mm": 25.95,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            9.43,
+            24.64,
+            24.64,
+            23.94
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/2"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Expression atlas",
+            "85 Expression atlas"
+          ],
+          "line_mm": 182.39,
+          "projected_visible_mm": [
+            23.96,
+            0.0,
+            19.37,
+            0.0,
+            1.62,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Body/0",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Corefolder Cranial Base #85",
+            "85 Swept crown"
+          ],
+          "line_mm": 132.48,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            16.66,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/2",
+            "Hair/9"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Expression atlas",
+            "85 Swept crown"
+          ],
+          "line_mm": 21.79,
+          "projected_visible_mm": [
+            15.54,
+            15.34,
+            15.93,
+            0.0,
+            4.34,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/3"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Expression atlas",
+            "85 Expression atlas"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            14.66,
+            8.17,
+            6.89,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Face/1",
+            "Face/5"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Expression atlas",
+            "85 Expression atlas"
+          ],
+          "line_mm": 14.7,
+          "projected_visible_mm": [
+            13.1,
+            8.17,
+            14.66,
+            0.0,
+            6.89,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/6",
+            "Hair/7"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "85 Chestnut strands",
+            "85 Chestnut strands"
+          ],
+          "line_mm": 15.65,
+          "projected_visible_mm": [
+            0.0,
+            7.61,
+            0.0,
+            13.1,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Body/0",
+            "Hair/8"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Corefolder Cranial Base #85",
+            "85 Chestnut undercoat"
+          ],
+          "line_mm": 98.51,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Body/0",
+            "Hair/10"
+          ],
+          "same_island": false,
+          "first_materials": [
+            "Corefolder Cranial Base #85",
+            "85 Chestnut undercoat"
+          ],
+          "line_mm": 99.45,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "parts": [
+            "Hair/7",
+            "Hair/7"
+          ],
+          "same_island": true,
+          "first_materials": [
+            "85 Chestnut strands",
+            "85 Chestnut strands"
+          ],
+          "line_mm": 126.0,
+          "projected_visible_mm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "visible_mm": [
+        518.49,
+        337.75,
+        315.48,
+        359.15,
+        262.58,
+        100.85
+      ],
+      "self_visible_mm": [
+        24.82,
+        20.97,
+        9.43,
+        24.64,
+        24.64,
+        23.94
+      ],
+      "total_visible_mm": [
+        543.31,
+        358.71,
+        324.91,
+        383.79,
+        287.21,
+        124.79
+      ]
+    }
+  }
+}

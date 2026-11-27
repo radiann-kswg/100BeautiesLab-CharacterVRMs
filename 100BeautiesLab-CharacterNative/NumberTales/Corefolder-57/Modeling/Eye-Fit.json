@@ -1,0 +1,23 @@
+{
+  "vrm_sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+  "camera": "Reimported VRM, frontal orthographic 0.70 m, 720 x 720, neutral pose.",
+  "source_order": "screen left, screen right",
+  "eyes": [
+    {
+      "upper_right_glint_xy_cell_fraction": [
+        0.678,
+        0.221
+      ],
+      "official_image": "catalog/chr-dsgn_catalogNTS-57.png",
+      "rendered_gaze_displacement_px": 2.407
+    },
+    {
+      "upper_right_glint_xy_cell_fraction": [
+        0.717,
+        0.249
+      ],
+      "official_image": "corefolder/57/emstk_corefolderNTS-57-1.png",
+      "rendered_gaze_displacement_px": 2.216
+    }
+  ]
+}

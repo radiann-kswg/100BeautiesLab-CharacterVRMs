@@ -1,0 +1,92 @@
+[
+  {
+    "number": 4,
+    "name": "4(モチ)",
+    "referenceVRM": {
+      "id": 4,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-4/vrm_corefolder4.vrm",
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "role": "canonical VRM style reference"
+    },
+    "illustration": "Images/DB_Primary/corefolder/4/emstk_corefolderNTS-4-1.png",
+    "illustrationSHA256": "56695bd6be9b57d719c0f61f34ef4cdf996e1b9e636d70c1e879d748e8500c51",
+    "matchedYaw": 0,
+    "orthoHalfHeightM": 0.8799999952316284,
+    "shader": "VRM10/Universal Render Pipeline/MToon10"
+  },
+  {
+    "number": 16,
+    "name": "16(ソロク)",
+    "referenceVRM": {
+      "id": 16,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-16/vrm_corefolder16.vrm",
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "role": "canonical VRM style reference"
+    },
+    "illustration": "Images/DB_Primary/corefolder/16/emstk_corefolderNTS-16-2.png",
+    "illustrationSHA256": "aa4cfe0af4444d6469aaa78029d7896ca4744f488a2484d1ee87dccd9bf29454",
+    "matchedYaw": 18,
+    "orthoHalfHeightM": 0.8799999952316284,
+    "shader": "VRM10/Universal Render Pipeline/MToon10"
+  },
+  {
+    "number": 20,
+    "name": "20(ハツカ)",
+    "referenceVRM": {
+      "id": 20,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-20/vrm_corefolder20.vrm",
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "role": "canonical VRM style reference"
+    },
+    "illustration": "Images/DB_Primary/corefolder/20/emstk_corefolderNTS-20-2.png",
+    "illustrationSHA256": "997d8f0b2f3d25b9b5c313c20229cf7d5ed7c2e4aa9884ffd39b879de25053ef",
+    "matchedYaw": 0,
+    "orthoHalfHeightM": 0.8799999952316284,
+    "shader": "VRM10/Universal Render Pipeline/MToon10"
+  },
+  {
+    "number": 22,
+    "name": "22(フジ)",
+    "referenceVRM": {
+      "id": 22,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-22/VRCModel_CoreFloder-22.vrm",
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "role": "canonical VRM style reference"
+    },
+    "illustration": "Images/DB_Primary/corefolder/22/emstk_corefolderNTS-22-1.png",
+    "illustrationSHA256": "69a03f3443282c951a8fe3dbbb2c6509e8981e1fa516b4c405fac7d9eda58534",
+    "matchedYaw": 9,
+    "orthoHalfHeightM": 0.8799999952316284,
+    "shader": "VRM10/Universal Render Pipeline/MToon10"
+  },
+  {
+    "number": 25,
+    "name": "25(フィズ)",
+    "referenceVRM": {
+      "id": 25,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-25/vrm_corefolder25.vrm",
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "role": "canonical VRM style reference"
+    },
+    "illustration": "Images/DB_Primary/corefolder/25/emstk_corefolderNTS-25-1.png",
+    "illustrationSHA256": "b225e9ec072c43f6a2c5b97662c1e72dfde2be2247fc7329391ba3b3bfec66f3",
+    "matchedYaw": 9,
+    "orthoHalfHeightM": 0.8799999952316284,
+    "shader": "VRM10/Universal Render Pipeline/MToon10"
+  },
+  {
+    "number": 93,
+    "name": "93(クミ)",
+    "referenceVRM": {
+      "id": 93,
+      "source": "Assets/100BeautiesLab-CharacterVRM/NumberTales/Corefolder-93/VRCModel_CoreFloder-93.vrm",
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "role": "canonical VRM style reference"
+    },
+    "illustration": "Images/DB_Primary/corefolder/93/emstk_corefolderNTS-93-1.png",
+    "illustrationSHA256": "1c67b3b4757ce50f91221f3d81a8e718888aa9c2c3e70b5399cb79ec4b5f2490",
+    "matchedYaw": 27,
+    "orthoHalfHeightM": 0.8799999952316284,
+    "shader": "VRM10/Universal Render Pipeline/MToon10"
+  }
+]

@@ -1,0 +1,934 @@
+{
+  "unity": "6000.3.23f1",
+  "univrm": "0.131.1",
+  "render": "PC_RPAsset, URP MToon10, linear; 900 x 900 orthographic; half-height 0.88 m for all ten subjects; key intensity 1, flat ambient 0.6, background 0.75, camera-relative key rotation (25,-25,0). Front +Z, side +X, back -Z at 4 m from bounds center.",
+  "motion": "Unity Play Mode: instantiate the imported VRM prefab, settle 120 steps, drive the root for 24 steps on X/Z, rest until step 150. FastSpringBone uses fixed 1/60 s steps. Per-chain tip displacement relative to chain anchor. Skin displacement on baked weighted mesh vertices. The movie camera follows root translation.",
+  "expressions": "Each bound expression alone at weight 1 vs neutral; displacement on baked facial vertices. Every rendered sample uses a fresh static mesh bake.",
+  "artReview": "Scale each silhouette proportionally to the same longest dimension and center the bounding box; compare subject occupancy (independent of ink and color) and width/height. Artwork is a posed 2D interpretation. A local match is not whole-character validation. Blue = reference-only, orange = candidate-only.",
+  "artworks": [
+    {
+      "id": 6,
+      "sha256Before": "9b44e096f20a8612e6fc95ba8333565e7e64dc0597bb55e0d8a6a17ad5df8891",
+      "unityYawDegrees": 9,
+      "artwork": {
+        "official": "corefolder/6/emstk_corefolderNTS-6-1.png",
+        "sha256": "07f4b051fb63e5ef9179a861cf615265bc1bdd5740ef6277da3c415b4914104e",
+        "referenceWidthToHeight": 1.163,
+        "before": {
+          "silhouetteIoU": 0.866,
+          "widthToHeight": 1.225,
+          "occupancyDeltaByHorizontalEighth": [
+            -0.029,
+            -0.036,
+            0.111,
+            -0.087,
+            -0.004,
+            -0.065,
+            -0.111,
+            -0.055
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.8348,
+          "widthToHeight": 1.125,
+          "occupancyDeltaByHorizontalEighth": [
+            0.077,
+            0.191,
+            -0.038,
+            -0.045,
+            -0.081,
+            -0.082,
+            -0.051,
+            0.079
+          ]
+        }
+      },
+      "tail-atlas": {
+        "official": "attr/tailsUnit/attr_tailsUnitNTS-6.png",
+        "sha256": "37fab90138007d3323fd1e0c1c7c7c7c51894b5c7fbe8b6855f88e54d52fa113",
+        "referenceWidthToHeight": 1.168,
+        "before": {
+          "silhouetteIoU": 0.8023,
+          "widthToHeight": 1.425,
+          "occupancyDeltaByHorizontalEighth": [
+            -0.013,
+            -0.348,
+            -0.014,
+            -0.03,
+            -0.007,
+            -0.001,
+            -0.369,
+            -0.065
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.8158,
+          "widthToHeight": 1.156,
+          "occupancyDeltaByHorizontalEighth": [
+            0.054,
+            -0.099,
+            -0.187,
+            -0.022,
+            -0.076,
+            -0.004,
+            -0.068,
+            0.01
+          ]
+        }
+      }
+    },
+    {
+      "id": 49,
+      "sha256Before": "9e145998306ea23476d186f13600a05de999ffda6e075f2f45bf07f970d3dae0",
+      "unityYawDegrees": -18,
+      "artwork": {
+        "official": "corefolder/49/emstk_corefolderNTS-49-1.png",
+        "sha256": "3723928b2fa37a68cf9ba74350912113243976b057bb2cfb749cbd578e069d5f",
+        "referenceWidthToHeight": 1.244,
+        "before": {
+          "silhouetteIoU": 0.822,
+          "widthToHeight": 1.139,
+          "occupancyDeltaByHorizontalEighth": [
+            0.078,
+            0.049,
+            0.063,
+            -0.089,
+            -0.004,
+            -0.075,
+            0.156,
+            0.144
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.7858,
+          "widthToHeight": 1.212,
+          "occupancyDeltaByHorizontalEighth": [
+            0.002,
+            0.034,
+            0.073,
+            -0.149,
+            -0.094,
+            -0.234,
+            -0.071,
+            0.004
+          ]
+        }
+      },
+      "tail-atlas": {
+        "official": "attr/tailsUnit/attr_tailsUnitNTS-49.png",
+        "sha256": "b89d3b46ef458a1267c772f3769bfbe01aebcd192bb7dba5b524440a177adfb4",
+        "referenceWidthToHeight": 1.102,
+        "before": {
+          "silhouetteIoU": 0.6339,
+          "widthToHeight": 1.359,
+          "occupancyDeltaByHorizontalEighth": [
+            -0.024,
+            -0.344,
+            -0.209,
+            0.006,
+            -0.002,
+            -0.044,
+            -0.373,
+            -0.068
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.8125,
+          "widthToHeight": 1.158,
+          "occupancyDeltaByHorizontalEighth": [
+            -0.012,
+            -0.027,
+            -0.067,
+            0.038,
+            -0.13,
+            -0.12,
+            -0.047,
+            -0.033
+          ]
+        }
+      }
+    },
+    {
+      "id": 57,
+      "sha256Before": "fb896aff7ede7b171a17af50c2aca6a7ba35caa51217fc1a8dc6b43349e8e756",
+      "unityYawDegrees": 27,
+      "artwork": {
+        "official": "corefolder/57/emstk_corefolderNTS-57-2.png",
+        "sha256": "4199b43bed33770fbad15c2ae9b8d1f5ae0b442810484e617996bf6f6aa194da",
+        "referenceWidthToHeight": 1.021,
+        "before": {
+          "silhouetteIoU": 0.8179,
+          "widthToHeight": 1.033,
+          "occupancyDeltaByHorizontalEighth": [
+            -0.018,
+            -0.026,
+            0.021,
+            -0.057,
+            0.001,
+            -0.009,
+            -0.02,
+            -0.042
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.7963,
+          "widthToHeight": 0.926,
+          "occupancyDeltaByHorizontalEighth": [
+            0.078,
+            0.211,
+            0.045,
+            -0.043,
+            -0.094,
+            -0.068,
+            -0.062,
+            0.011
+          ]
+        }
+      },
+      "tail-atlas": {
+        "official": "attr/tailsUnit/attr_tailsUnitNTS-57.png",
+        "sha256": "02e8debdf438a3d70c4e8c87827a43357edda8ca5700881c74b9e244ff5b773c",
+        "referenceWidthToHeight": 1.066,
+        "before": {
+          "silhouetteIoU": 0.934,
+          "widthToHeight": 1.081,
+          "occupancyDeltaByHorizontalEighth": [
+            0.011,
+            -0.009,
+            -0.007,
+            0.004,
+            0.025,
+            0.023,
+            -0.041,
+            -0.046
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.9336,
+          "widthToHeight": 1.09,
+          "occupancyDeltaByHorizontalEighth": [
+            0.009,
+            -0.011,
+            -0.004,
+            -0.018,
+            -0.057,
+            -0.032,
+            -0.0,
+            -0.035
+          ]
+        }
+      }
+    },
+    {
+      "id": 85,
+      "sha256Before": "ed1b8747bb78b96543600e19df4c1a70f354938c314f55964cc6f26fcf6d19ba",
+      "unityYawDegrees": 18,
+      "artwork": {
+        "official": "corefolder/85/emstk_corefolderNTS-85-1.png",
+        "sha256": "14420febac7cd2c968e9b7d2f5fc0536963b7bead5c66af53af96c23dcc86e68",
+        "referenceWidthToHeight": 1.091,
+        "before": {
+          "silhouetteIoU": 0.8076,
+          "widthToHeight": 0.94,
+          "occupancyDeltaByHorizontalEighth": [
+            0.051,
+            0.051,
+            0.05,
+            -0.154,
+            -0.08,
+            -0.027,
+            -0.148,
+            0.026
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.7982,
+          "widthToHeight": 0.961,
+          "occupancyDeltaByHorizontalEighth": [
+            0.12,
+            0.193,
+            0.02,
+            -0.054,
+            -0.044,
+            -0.101,
+            -0.174,
+            0.018
+          ]
+        }
+      },
+      "tail-atlas": {
+        "official": "attr/tailsUnit/attr_tailsUnitNTS-85.png",
+        "sha256": "8dd5559feeabb3ae3832f826ee2f82dab26f6fb560dc11a2f356d4f82f71bd55",
+        "referenceWidthToHeight": 1.049,
+        "before": {
+          "silhouetteIoU": 0.9303,
+          "widthToHeight": 1.053,
+          "occupancyDeltaByHorizontalEighth": [
+            0.001,
+            0.041,
+            0.065,
+            0.02,
+            0.017,
+            0.008,
+            0.0,
+            -0.019
+          ]
+        },
+        "after": {
+          "silhouetteIoU": 0.9062,
+          "widthToHeight": 1.076,
+          "occupancyDeltaByHorizontalEighth": [
+            0.008,
+            0.009,
+            -0.002,
+            0.006,
+            -0.011,
+            0.044,
+            0.188,
+            -0.026
+          ]
+        }
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "number": 6,
+      "sha256": "2f4f9a0d244ca272c4bcc85fb7b83b7a393a1de324112c99c2391c9334a7e161",
+      "unity": "6000.3.23f1",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "colorSpace": "Linear",
+      "renderPipeline": "PC_RPAsset",
+      "meshes": 5,
+      "humanoidBones": 53,
+      "colliderGroups": 1,
+      "playMode": true,
+      "validHumanoid": true,
+      "orthographicSize": 0.8799999952316284,
+      "expressions": [
+        {
+          "expression": "happy",
+          "maxVertexMeters": 0.06334210187196732
+        },
+        {
+          "expression": "angry",
+          "maxVertexMeters": 0.05218866840004921
+        },
+        {
+          "expression": "sad",
+          "maxVertexMeters": 0.10031137615442276
+        },
+        {
+          "expression": "relaxed",
+          "maxVertexMeters": 0.013851066119968891
+        },
+        {
+          "expression": "aa",
+          "maxVertexMeters": 0.04597177729010582
+        },
+        {
+          "expression": "ih",
+          "maxVertexMeters": 0.017780562862753868
+        },
+        {
+          "expression": "ou",
+          "maxVertexMeters": 0.04597177729010582
+        },
+        {
+          "expression": "ee",
+          "maxVertexMeters": 0.04597177729010582
+        },
+        {
+          "expression": "oh",
+          "maxVertexMeters": 0.04597177729010582
+        },
+        {
+          "expression": "blink",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkLeft",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkRight",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "Surprise",
+          "maxVertexMeters": 0.07021412253379822
+        }
+      ],
+      "springs": [
+        {
+          "chain": "MuiHairL_01",
+          "joints": 5,
+          "weightedVertices": 78,
+          "peakTipMeters": 0.18980810046195984,
+          "peakSkinMeters": 0.13322213292121887,
+          "finalTipMeters": 4.973712202627212e-05
+        },
+        {
+          "chain": "MuiHairR_01",
+          "joints": 5,
+          "weightedVertices": 92,
+          "peakTipMeters": 0.19663052260875702,
+          "peakSkinMeters": 0.12254120409488678,
+          "finalTipMeters": 6.557023880304769e-05
+        },
+        {
+          "chain": "MuiTailUpperL_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.13843734562397003,
+          "peakSkinMeters": 0.20542095601558685,
+          "finalTipMeters": 0.0002402712416369468
+        },
+        {
+          "chain": "MuiTailMiddleL_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.1765943318605423,
+          "peakSkinMeters": 0.1804002821445465,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "MuiTailLowerL_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.2102976143360138,
+          "peakSkinMeters": 0.1826220154762268,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "MuiTailUpperR_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.15182437002658844,
+          "peakSkinMeters": 0.2041778713464737,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "MuiTailMiddleR_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.13163389265537262,
+          "peakSkinMeters": 0.2045460343360901,
+          "finalTipMeters": 0.00015429478662554175
+        },
+        {
+          "chain": "MuiTailLowerR_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.1781153380870819,
+          "peakSkinMeters": 0.2072135955095291,
+          "finalTipMeters": 0.0
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "sha256": "6ba38b3d005d13bfea125eb4fd07f6ca66e72ef78b50a3bbb72dea1b477edff1",
+      "unity": "6000.3.23f1",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "colorSpace": "Linear",
+      "renderPipeline": "PC_RPAsset",
+      "meshes": 5,
+      "humanoidBones": 53,
+      "colliderGroups": 1,
+      "playMode": true,
+      "validHumanoid": true,
+      "orthographicSize": 0.8799999952316284,
+      "expressions": [
+        {
+          "expression": "happy",
+          "maxVertexMeters": 0.06334210187196732
+        },
+        {
+          "expression": "angry",
+          "maxVertexMeters": 0.05218866840004921
+        },
+        {
+          "expression": "sad",
+          "maxVertexMeters": 0.10031137615442276
+        },
+        {
+          "expression": "relaxed",
+          "maxVertexMeters": 0.013851066119968891
+        },
+        {
+          "expression": "aa",
+          "maxVertexMeters": 0.03739514201879501
+        },
+        {
+          "expression": "ih",
+          "maxVertexMeters": 0.022640854120254517
+        },
+        {
+          "expression": "ou",
+          "maxVertexMeters": 0.03213018923997879
+        },
+        {
+          "expression": "ee",
+          "maxVertexMeters": 0.02273666113615036
+        },
+        {
+          "expression": "oh",
+          "maxVertexMeters": 0.027988452464342117
+        },
+        {
+          "expression": "blink",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkLeft",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkRight",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "Surprise",
+          "maxVertexMeters": 0.07021412253379822
+        }
+      ],
+      "springs": [
+        {
+          "chain": "Hair49_cheek_R_01",
+          "joints": 8,
+          "weightedVertices": 104,
+          "peakTipMeters": 0.20383571088314056,
+          "peakSkinMeters": 0.23885558545589447,
+          "finalTipMeters": 2.512653918529395e-05
+        },
+        {
+          "chain": "Hair49_cheek_L_01",
+          "joints": 8,
+          "weightedVertices": 104,
+          "peakTipMeters": 0.32283738255500793,
+          "peakSkinMeters": 0.2754305899143219,
+          "finalTipMeters": 3.409974306123331e-05
+        },
+        {
+          "chain": "Tail49_upper_inner_R_01",
+          "joints": 6,
+          "weightedVertices": 464,
+          "peakTipMeters": 0.11302556842565536,
+          "peakSkinMeters": 0.16117382049560547,
+          "finalTipMeters": 5.0264468882232904e-05
+        },
+        {
+          "chain": "Tail49_upper_inner_L_01",
+          "joints": 6,
+          "weightedVertices": 464,
+          "peakTipMeters": 0.10364571958780289,
+          "peakSkinMeters": 0.16859517991542816,
+          "finalTipMeters": 9.082842734642327e-05
+        },
+        {
+          "chain": "Tail49_upper_outer_R_01",
+          "joints": 6,
+          "weightedVertices": 462,
+          "peakTipMeters": 0.1352129429578781,
+          "peakSkinMeters": 0.1471511572599411,
+          "finalTipMeters": 7.429868855979294e-05
+        },
+        {
+          "chain": "Tail49_upper_outer_L_01",
+          "joints": 6,
+          "weightedVertices": 462,
+          "peakTipMeters": 0.13256779313087463,
+          "peakSkinMeters": 0.14416727423667908,
+          "finalTipMeters": 6.914909590705065e-06
+        },
+        {
+          "chain": "Tail49_low_outside_R_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.13112977147102356,
+          "peakSkinMeters": 0.1314290314912796,
+          "finalTipMeters": 5.0311791710555553e-05
+        },
+        {
+          "chain": "Tail49_low_outside_L_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.14176909625530243,
+          "peakSkinMeters": 0.16454121470451355,
+          "finalTipMeters": 7.114992331480607e-05
+        },
+        {
+          "chain": "Tail49_low_middle_01",
+          "joints": 6,
+          "weightedVertices": 193,
+          "peakTipMeters": 0.10283144563436508,
+          "peakSkinMeters": 0.2068619579076767,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail49_low_wrap_R_01",
+          "joints": 10,
+          "weightedVertices": 611,
+          "peakTipMeters": 0.2689780294895172,
+          "peakSkinMeters": 0.17869576811790466,
+          "finalTipMeters": 0.00027248336118645966
+        },
+        {
+          "chain": "Tail49_low_wrap_L_01",
+          "joints": 10,
+          "weightedVertices": 611,
+          "peakTipMeters": 0.19912144541740417,
+          "peakSkinMeters": 0.15785174071788788,
+          "finalTipMeters": 0.0001768015936249867
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "sha256": "f5e81e968e009677f5b39e25616673c40f2176b98fcf22a984e7c80229e19f7c",
+      "unity": "6000.3.23f1",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "colorSpace": "Linear",
+      "renderPipeline": "PC_RPAsset",
+      "meshes": 5,
+      "humanoidBones": 53,
+      "colliderGroups": 2,
+      "playMode": true,
+      "validHumanoid": true,
+      "orthographicSize": 0.8799999952316284,
+      "expressions": [
+        {
+          "expression": "happy",
+          "maxVertexMeters": 0.06334210187196732
+        },
+        {
+          "expression": "angry",
+          "maxVertexMeters": 0.05218866840004921
+        },
+        {
+          "expression": "sad",
+          "maxVertexMeters": 0.10031137615442276
+        },
+        {
+          "expression": "relaxed",
+          "maxVertexMeters": 0.013851066119968891
+        },
+        {
+          "expression": "aa",
+          "maxVertexMeters": 0.03739514201879501
+        },
+        {
+          "expression": "ih",
+          "maxVertexMeters": 0.030432607978582382
+        },
+        {
+          "expression": "ou",
+          "maxVertexMeters": 0.034601856023073196
+        },
+        {
+          "expression": "ee",
+          "maxVertexMeters": 0.03058888576924801
+        },
+        {
+          "expression": "oh",
+          "maxVertexMeters": 0.027988452464342117
+        },
+        {
+          "expression": "blink",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkLeft",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkRight",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "Surprise",
+          "maxVertexMeters": 0.07021412253379822
+        }
+      ],
+      "springs": [
+        {
+          "chain": "Tail_Upper_01.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.11324819177389145,
+          "peakSkinMeters": 0.18413010239601135,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Upper_02.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.10819988697767258,
+          "peakSkinMeters": 0.1786806881427765,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Upper_03.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.1670893430709839,
+          "peakSkinMeters": 0.19714301824569702,
+          "finalTipMeters": 0.00012623541988432407
+        },
+        {
+          "chain": "Tail_Upper_04.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.1410502940416336,
+          "peakSkinMeters": 0.20580479502677917,
+          "finalTipMeters": 0.00023876743216533214
+        },
+        {
+          "chain": "Tail_Upper_05.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.13092027604579926,
+          "peakSkinMeters": 0.2867293655872345,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Lower_06.001",
+          "joints": 6,
+          "weightedVertices": 833,
+          "peakTipMeters": 0.19108186662197113,
+          "peakSkinMeters": 0.20015475153923035,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Lower_07.001",
+          "joints": 6,
+          "weightedVertices": 833,
+          "peakTipMeters": 0.2314760982990265,
+          "peakSkinMeters": 0.19584575295448303,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Hair_Ponytail_01",
+          "joints": 6,
+          "weightedVertices": 264,
+          "peakTipMeters": 0.14116743206977844,
+          "peakSkinMeters": 0.1477896124124527,
+          "finalTipMeters": 6.738358933944255e-05
+        },
+        {
+          "chain": "Hair_Side_R_01",
+          "joints": 5,
+          "weightedVertices": 75,
+          "peakTipMeters": 0.2055244743824005,
+          "peakSkinMeters": 0.1211671382188797,
+          "finalTipMeters": 2.4180264517781325e-05
+        },
+        {
+          "chain": "Hair_Side_L_01",
+          "joints": 5,
+          "weightedVertices": 66,
+          "peakTipMeters": 0.182620570063591,
+          "peakSkinMeters": 0.11211726069450378,
+          "finalTipMeters": 0.0
+        }
+      ]
+    },
+    {
+      "number": 85,
+      "sha256": "48f19e8a97704b506862cc947506e2f7413844cc2a3d98590edc062515b2edde",
+      "unity": "6000.3.23f1",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "colorSpace": "Linear",
+      "renderPipeline": "PC_RPAsset",
+      "meshes": 5,
+      "humanoidBones": 53,
+      "colliderGroups": 2,
+      "playMode": true,
+      "validHumanoid": true,
+      "orthographicSize": 0.8799999952316284,
+      "expressions": [
+        {
+          "expression": "happy",
+          "maxVertexMeters": 0.06334210187196732
+        },
+        {
+          "expression": "angry",
+          "maxVertexMeters": 0.05218866840004921
+        },
+        {
+          "expression": "sad",
+          "maxVertexMeters": 0.10031137615442276
+        },
+        {
+          "expression": "relaxed",
+          "maxVertexMeters": 0.013851066119968891
+        },
+        {
+          "expression": "aa",
+          "maxVertexMeters": 0.03866560012102127
+        },
+        {
+          "expression": "ih",
+          "maxVertexMeters": 0.025994325056672096
+        },
+        {
+          "expression": "ou",
+          "maxVertexMeters": 0.0363960862159729
+        },
+        {
+          "expression": "ee",
+          "maxVertexMeters": 0.026086626574397087
+        },
+        {
+          "expression": "oh",
+          "maxVertexMeters": 0.030139168724417686
+        },
+        {
+          "expression": "blink",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkLeft",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "blinkRight",
+          "maxVertexMeters": 0.08793257176876068
+        },
+        {
+          "expression": "Surprise",
+          "maxVertexMeters": 0.07021412253379822
+        }
+      ],
+      "springs": [
+        {
+          "chain": "Tail_Upper_01.001",
+          "joints": 6,
+          "weightedVertices": 834,
+          "peakTipMeters": 0.13464359939098358,
+          "peakSkinMeters": 0.19463975727558136,
+          "finalTipMeters": 5.5444710596930236e-05
+        },
+        {
+          "chain": "Tail_Upper_02.001",
+          "joints": 6,
+          "weightedVertices": 834,
+          "peakTipMeters": 0.15481798350811005,
+          "peakSkinMeters": 0.18076679110527039,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Upper_03.001",
+          "joints": 6,
+          "weightedVertices": 834,
+          "peakTipMeters": 0.13822324573993683,
+          "peakSkinMeters": 0.18727582693099976,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Lower_04.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.14137066900730133,
+          "peakSkinMeters": 0.17279905080795288,
+          "finalTipMeters": 0.0
+        },
+        {
+          "chain": "Tail_Lower_05.001",
+          "joints": 6,
+          "weightedVertices": 942,
+          "peakTipMeters": 0.11721833050251007,
+          "peakSkinMeters": 0.18141475319862366,
+          "finalTipMeters": 0.00014019617810845375
+        },
+        {
+          "chain": "Tail_Lower_06.001",
+          "joints": 6,
+          "weightedVertices": 939,
+          "peakTipMeters": 0.21310435235500336,
+          "peakSkinMeters": 0.2056122124195099,
+          "finalTipMeters": 0.00012454239185899496
+        },
+        {
+          "chain": "Tail_Lower_07.001",
+          "joints": 6,
+          "weightedVertices": 939,
+          "peakTipMeters": 0.23094254732131958,
+          "peakSkinMeters": 0.21081306040287018,
+          "finalTipMeters": 6.678627687506378e-05
+        },
+        {
+          "chain": "Tail_Lower_08.001",
+          "joints": 6,
+          "weightedVertices": 834,
+          "peakTipMeters": 0.1449584811925888,
+          "peakSkinMeters": 0.29116570949554443,
+          "finalTipMeters": 0.00022810435621067882
+        },
+        {
+          "chain": "Hair_Ponytail_01",
+          "joints": 9,
+          "weightedVertices": 470,
+          "peakTipMeters": 0.3130839467048645,
+          "peakSkinMeters": 0.25364160537719727,
+          "finalTipMeters": 4.630613693734631e-05
+        },
+        {
+          "chain": "Hair_Side_R_01",
+          "joints": 7,
+          "weightedVertices": 226,
+          "peakTipMeters": 0.20753046870231628,
+          "peakSkinMeters": 0.1981906294822693,
+          "finalTipMeters": 0.00011452957551227883
+        },
+        {
+          "chain": "Hair_Side_L_01",
+          "joints": 7,
+          "weightedVertices": 226,
+          "peakTipMeters": 0.1656533181667328,
+          "peakSkinMeters": 0.17397283017635345,
+          "finalTipMeters": 8.714068826520815e-05
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 4,
+      "sha256": "cfe8404e736e35350d810407ed20af8c8175054077818ad1aca6f8fd0961222f",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "orthographicSize": 0.8799999952316284
+    },
+    {
+      "number": 16,
+      "sha256": "99e6199ffdca2b2874b03de0481d4fd9e989a5d2f9bcc5352929e9dff019b4f3",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "orthographicSize": 0.8799999952316284
+    },
+    {
+      "number": 20,
+      "sha256": "75a811bea5307a8ec13a5440a737f7ce7052fef1c72e0b6c4341eb74d3e49b31",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "orthographicSize": 0.8799999952316284
+    },
+    {
+      "number": 22,
+      "sha256": "574935f76c992044296010d67f976b846f1c675986b1aecee83f59316698f3f9",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "orthographicSize": 0.8799999952316284
+    },
+    {
+      "number": 25,
+      "sha256": "ede58c2058633d79634e09b3b69462b7e86f7fcaa5c9a75b3adfe73daacb8242",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "orthographicSize": 0.8799999952316284
+    },
+    {
+      "number": 93,
+      "sha256": "1b9182258b6ba34e65f6f612109f23f4202789653b410f1026aa27f843f98588",
+      "shader": "VRM10/Universal Render Pipeline/MToon10",
+      "orthographicSize": 0.8799999952316284
+    }
+  ]
+}

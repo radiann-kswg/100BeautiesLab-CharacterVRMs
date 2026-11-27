@@ -1,0 +1,26 @@
+{
+  "Official corefolder art 2": {
+    "width_over_height": 1.0217,
+    "armband_olive_center_y": 0.5189,
+    "armband_olive_width_over_height": 0.11,
+    "olive_iris_area_over_silhouette": 0.0023,
+    "olive_iris_center_y": 0.3502,
+    "silhouette_IoU_with_art": 1.0
+  },
+  "Previous Refined VRM": {
+    "width_over_height": 0.9833,
+    "armband_olive_center_y": 0.5331,
+    "armband_olive_width_over_height": 0.105,
+    "olive_iris_area_over_silhouette": 0.0,
+    "olive_iris_center_y": null,
+    "silhouette_IoU_with_art": 0.8203
+  },
+  "Revised VRM": {
+    "width_over_height": 0.9333,
+    "armband_olive_center_y": 0.5621,
+    "armband_olive_width_over_height": 0.0583,
+    "olive_iris_area_over_silhouette": 0.00199,
+    "olive_iris_center_y": 0.33,
+    "silhouette_IoU_with_art": 0.7797
+  }
+}
